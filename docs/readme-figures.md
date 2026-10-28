@@ -1,5 +1,7 @@
 # README figure inputs and calculations
 
+**2026-10-28 chronology update:** the [officially named upgrade transaction](research-notes/016-2026-10-28-sync.md#upgrade-transaction-anchor) is anchored at block 49169385, timestamp 2026-10-21 22:00:02 UTC. The issuance image retains its October 22 observation caption and teaching calculations; it is not a reconstructed timeline of each rule activation. The dated source table below records what was available when those figures were made.
+
 The bilingual PAPER images now compare old and new issuance in place. Labels use plain language and B/M for large amounts
 (1B = 10^9, 1M = 10^6); the underlying calculations are unchanged. They
 separate an old-mode LP cross-section, an old-mode progress curve and a deliberately

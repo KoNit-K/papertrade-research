@@ -30,7 +30,7 @@
 
 🔎 We use official docs, public code and [REA](https://github.com/morluto/rea) to explain how it works and check what the evidence supports. [Progress](STATUS.md) · [Sources](docs/sources.md)
 
-**Versions:** the docs call the first release **Contract set 1**, live from **2026-10-07**, and the newer rules **Contract set 2**. This page covers set 2. Old docs remain available in the official version picker. [Official changes](https://docs.papertrade.xyz/dev/protocol-changes/) · [Our checks](docs/research-notes/015-contract-set-2.md)
+**Versions:** this page explains documented **Contract set 2**, which the official history dates from **2026-10-21**; set 1 ran October 7–21. The [October 28 review](docs/current-product-review.md) connects product, contracts, services and funding. [Confirmed updates and evidence](docs/research-notes/016-2026-10-28-sync.md) · [Official changes](https://docs.papertrade.xyz/dev/protocol-changes/)
 
 ## Features
 
@@ -43,7 +43,7 @@
 | ⏳ **Orders can wait** | The order service, called the relayer, groups requests and sends them on chain. Both opening and closing can take time. |
 | 🪙 **Losses can earn PAPER** | The mint rules decide how much of a loss earns PAPER. Stake those tokens to share in USDC rewards. |
 
-> 🖥️ <strong>You need to watch your positions:</strong> the web app we reviewed uses market orders, with no limit orders, automatic take-profit/stop-loss or separate mobile app.
+> 🖥️ <strong>Position-management scope:</strong> the client captured on October 22 used market orders and whole-position closes; native limit/TP/SL and partial-close interfaces were not established in that inspection. [Captured client scope](docs/research-notes/012-independent-clients-orders-and-bridges.md#position-management-and-order-types).
 > At high leverage, a small move against you can wipe out a position. A close request can still be waiting when liquidation happens.
 
 🧩 <strong>Why look at PAPER?</strong> A losing close or liquidation can create PAPER, which can then be staked for rewards. To understand that trade-off, look at the trading loss, the new tokens and the money available for rewards together.
@@ -66,7 +66,7 @@
 
 📍 **What we found on 2026-10-22:** about **8.903B PAPER** had been issued. The base rate for a small loss was about **9.802 PAPER per $1** before any shortfall bonus. These are values from that check, not live numbers. USDC rewards also depend on how much money is available, who has staked and when it is shared out.
 
-🗓️ **When it changed:** set 1 went live on **2026-10-07**. The new rules were announced at **6:30 AM on 2026-10-20** (timezone unknown). They were active when we checked on **October 22**; we have not found the exact upgrade time.
+🗓️ **When it changed:** the official set-2 transaction is in block **49169385**, timestamped **2026-10-21 22:00:02 UTC / October 22 06:00:02 Asia/Shanghai**. This dates the transaction block; individual initializer and parameter effects require their own evidence. [Receipt and block anchor](docs/research-notes/016-2026-10-28-sync.md#upgrade-transaction-anchor).
 
 [Old mint rules](https://docs.papertrade.xyz/v1/how/mint-curve/#shape) · [New mint rules](https://docs.papertrade.xyz/how/mint-curve/#shape) · [Examples and formulas](docs/readme-figures.md#issuance-old-vs-new) · [Versions and evidence](docs/research-notes/015-contract-set-2.md#6-issuance-old-docs-and-remaining-work)
 
@@ -77,10 +77,10 @@
 | **Open a position** | 0 opening fee |
 | **Keep it open** | 0 funding payments |
 | **The relayer sends your trade** | The relayer pays gas |
-| **Close with a profit** | Several deductions reduce the gain, then a fee takes **2% of the remaining profit** |
+| **Close with a profit** | Gain is reduced first; the normal fee-applicable branch charges **2% of scaled profit**, with an extra **0.5%** for an approved session builder |
 | **Close with a loss** | Your loss, with no extra trading fee added |
 
-💡 The first **0.002%** of a favorable price move does not count toward profit. This is called the **deadband**. The new rules add another cut for small gains, within **6bps (0.06%) in on-hours mode** or **10bps (0.1%) in off-hours mode**. This extra cut is zero at the ends of its set range and outside it. The cut also depends on where the move sits inside that range.
+💡 The documented order is **0.2 bps deadband → small-move holdback → asymmetric impact → win fee**. The complete holdback bands are **0.75–6 bps** for the standard curve and **0.3–10 bps** for off-hours. Holdback is zero at the endpoints and outside each band. These are price-move ranges, not fee rates.
 
 The docs say the payout still grows as the price moves further in your favor. A dedicated keeper account selects the standard or off-hours mode. Both formulas are built into the contract.
 
@@ -88,7 +88,7 @@ Those numbers describe price moves, not fee rates. Larger moves still face the e
 
 [Fee examples and formulas](docs/readme-figures.md#profit-retention-examples) · [How the new cut works](docs/research-notes/014-official-announcement-crosscheck.md#3-the-new-profit-adjustment-is-a-price-move-band)
 
-**Builder fees:** if your session key names an approved builder, the docs say a close pays it **0.5% of PnL (profit/loss)**. Liquidations pay none. The base is PnL, not position value; [our fee notes](docs/research-notes/015-contract-set-2.md#3-builder-fees-documented-rule-accounting-and-payment) explain what still needs checking about the full fee calculation.
+**Builder fees:** on the ordinary winning branch, 2% plus 0.5% leaves **97.5% of scaled profit**; without a builder it is 98%. On losses, the builder portion comes from LP gain and is excluded from PAPER basis, without adding to the trader’s loss. Builder accrual needs an empty payout queue and sufficient funding; an uncredited winning builder deduction stays with the LP. Liquidations pay none; the canonical frontend names no builder. [Official rules and scope](docs/current-product-review.md#settlement-and-the-meaning-of-trading-cost).
 
 **The rules can change.** Rule changes and upgrades use the protocol's governance permissions. The timelock we checked had a 1-day minimum delay. A guardian can pause new positions without that wait; the owner must approve reopening them. [Who can change the rules](docs/research-notes/011-loss-governance-staking-and-payments.md#2-who-can-change-rules-and-what-actually-changed) · [Upgrade history](docs/research-notes/013-market-state-funding-and-upgrade-followup.md#1-the-scheduled-implementations-are-now-installed)
 
@@ -125,7 +125,7 @@ New PAPER and the LP balance shown by the protocol do not tell you how much cash
 flowchart TB
     Loss[Loss counted by the mint rules] --> Mint[Receive PAPER]
     Mint --> Stake[Stake PAPER]
-    Fees[Half of paid trading fees] --> Rewards[USDC rewards]
+    Fees[Eligible staker fee share] --> Rewards[USDC rewards]
     Surplus[LP money above the set limit] --> Rewards
     Stake -.->|Share based on stake| Rewards
     Rewards --> Claim[Claim to trading balance]
@@ -138,10 +138,10 @@ flowchart TB
 |---|---|
 | 🪙 **Get PAPER** | The amount depends on the loss counted by the rules, the total supply and any LP-shortfall bonus. |
 | 📥 **Stake** | You share rewards based on your stake when they are divided up. Holding PAPER without staking earns no share. The docs list no lockup or cooldown. |
-| 💵 **Fund rewards** | Half of paid trading fees, plus LP money above the set limit that can be moved into rewards. The documented example limit is $5M. |
+| 💵 **Fund rewards** | The documented 1% share of applicable settled gains/losses, when queue and LP-funding conditions permit, plus distributable overflow above the $5M cap. Debt-funded liquidation is an exception. |
 | ↗️ **Claim** | Rewards enter your trading balance. Withdrawing to HyperCore is a separate step. |
 
-**Who can move the fees into staking?** Set 2 lets only the PaperStaking contract request this step from Exchange. Other addresses cannot call it directly. Moving fees, assigning rewards, claiming and withdrawing remain separate steps. [Old and new permissions](docs/research-notes/015-contract-set-2.md#4-fee-push-permission-and-the-keeper)
+**Who can move the fees into staking?** Only PaperStaking may request the Exchange fee push. The docs specify **keeper-signed `distributeBySig` through the relayer**; direct public distribution is disabled. Distribution updates reward shares; `pendingReward` includes already distributed amounts. Claim credits Exchange balance, then withdrawal is separate. [Documented flow](https://docs.papertrade.xyz/paper/staking/) · [Service architecture](docs/current-product-review.md#service-architecture-and-control).
 
 **When rewards are shared matters.** The code we checked gives no extra weight for staking longer. Adding or removing a stake does not first share out the waiting fees. For example, if 100 reward units are waiting and a second equal stake joins before they are shared, each gets 50. If they are shared first, the first stake gets 100. Rewards already assigned stay with that holder after unstaking. This is a code-based example, not a tested way to make money. [Reward timing](docs/research-notes/011-loss-governance-staking-and-payments.md#3-long-term-staking-versus-joining-immediately-before-allocation)
 
@@ -173,21 +173,21 @@ The higher the leverage, the bigger the buffer is relative to your margin. [Form
 | Account queries and live updates: `/query/accounts/…`, `/state/user/live?wallet=…` | Your balance, positions and past actions. The exact login and access rules still need checking. |
 | Signed requests: `POST /intents` | Session setup, open/close requests, withdrawal to HyperCore and PAPER actions. Match the reply to your request, then check execution. A request being accepted does not mean the trade happened. |
 
-You can close selected positions in full. Opening again creates a separate position. We have not found a confirmed interface for closing part of one position, built-in limit/TP/SL orders or changing an open position's margin or leverage.
+In the [previously captured client](docs/research-notes/012-independent-clients-orders-and-bridges.md#position-management-and-order-types), selected positions close in full and additional opens create separate positions. Its inspected interfaces did not establish single-position partial close, native limit/TP/SL, or updates to existing margin/leverage.
 
 **Deposits and withdrawals:**
 
 | Deposit source | Route |
 |---|---|
-| USDC on Ethereum, Arbitrum or Solana | Circle sends funds toward your deposit address. Papertrade then processes them and credits your trading balance. |
+| USDC on Ethereum, Arbitrum or Solana | Circle CCTP/forwarding reaches HyperEVM, then CoreDepositWallet credits the personal HyperCore address; Papertrade sweep/finalize credits trading balance. |
 | USDG on Robinhood | Across brings USDC to HyperEVM. The destination contracts then send it through CoreDepositWallet to your deposit address. |
-| USDC on HyperEVM or HyperCore | Core/EVM transfers send funds to your deposit address, followed by platform credit. |
+| USDC on HyperEVM or HyperCore | Use the guided CoreDepositWallet/Core route. A raw ERC-20 transfer to the matching HyperEVM address is not a normal deposit credit. |
 
 Withdrawals first move trading funds to your HyperCore spot account. Sending them onward to HyperEVM, Ethereum, Arbitrum or Solana needs extra transfer approval. The withdrawal routes we found do not include Robinhood. A bridge transfer, a platform credit and arrival at the final address are different steps.
 
-**Still needed for a full client:** permission to use the server and account APIs, reliable recovery after a lost connection, complete fee/payment/refund handling, and clear builder credit and payment rules. Across calls the captured `/suggested-fees` API legacy, so its replacement needs checking before a new integration uses it.
+**Funding implementation:** route construction above comes from the dated client study and current official descriptions. Circle’s [HyperCore guide](https://developers.circle.com/cctp/concepts/cctp-on-hypercore) corroborates the two-step design; Across’s [API reference](https://docs.across.to/api-reference) documents Bearer/`integratorId` and distinguishes current APIs from legacy routes. Vendor support is not a live app quote. [Routes, minimums and exceptional reconciliation](docs/current-product-review.md#funding-routes-providers-and-arrival).
 
-**Builder codes:** a builder named by the session key must also be approved to earn the documented 0.5% of close PnL. The timelock approves builders, sets the rate and can move unclaimed fees; the multisig can remove a builder immediately. Sign-up requirements, exact accounting and actual payment still need checking. [Builder fees and control](docs/research-notes/015-contract-set-2.md#3-builder-fees-documented-rule-accounting-and-payment)
+**Builder codes:** registration names an approved builder in `feeAddress`. Approval/rate changes use the 24-hour timelock, with a 1% rate cap; the multisig can remove a builder immediately. Previous earnings remain claimable. Claims credit Exchange balance, with an uncovered part queued. [Builder and payment rules](https://docs.papertrade.xyz/how/builder-codes/).
 
 [Client and signing guide](docs/independent-client-guide.md) · [Orders and funding routes](docs/research-notes/012-independent-clients-orders-and-bridges.md)
 
@@ -195,6 +195,8 @@ Withdrawals first move trading funds to your HyperCore spot account. Sending the
 
 | Start here | What you will find |
 |---|---|
+| [Product, contracts, services and business model](docs/current-product-review.md) | Bilingual integrated review and funding/provider maps |
+| [Confirmed October 28 updates](docs/research-notes/016-2026-10-28-sync.md) | Changes, source scope and the upgrade transaction block |
 | [How the parts fit together](docs/mechanism-map.md) | A map of 14 topics covered by this project |
 | [Notes](docs/research-notes/) · [Case records](research/cases/) | Explanations, sources and the results of checks |
 | [Losses, rule changes and reward timing](docs/research-notes/011-loss-governance-staking-and-payments.md) | Five common questions, examples and what is still unknown |

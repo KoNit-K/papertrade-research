@@ -30,7 +30,7 @@
 
 🔎 我们结合官网文档、公开代码和 [REA](https://github.com/morluto/rea)，解释它怎样运作，也核对哪些说法有证据支持。[进度](STATUS.md) · [来源](docs/sources.md)
 
-**版本说明：** 官网把最初版本叫 **Contract set 1**（2026-10-07 上线），新规则叫 **Contract set 2**。下面介绍新版规则；旧版文档仍可从官网的版本选择器查看。[官方变更表](https://docs.papertrade.xyz/dev/protocol-changes/) · [逐项核对](docs/research-notes/015-contract-set-2.md)
+**版本说明：** 本页介绍官网描述的 **Contract set 2**，官方记录为 **2026-10-21** 起；set 1 为 10 月 7–21 日。[10 月 28 日综合报告](docs/current-product-review.zh-CN.md)串联产品、合约、服务与资金路线。[确认更新与证据](docs/research-notes/016-2026-10-28-sync.md) · [官方变更表](https://docs.papertrade.xyz/dev/protocol-changes/)
 
 ## 特性介绍
 
@@ -43,7 +43,7 @@
 | ⏳ **下单可能排队** | 订单服务叫 relayer，会把请求分批上链。开仓和平仓都可能等待。 |
 | 🪙 **亏损可获得 PAPER** | 发币规则决定亏损中有多少能换算成 PAPER，拿到后可质押参与 USDC 分红。 |
 
-> 🖥️ <strong>需要自己盯仓：</strong> 我们查看的网页版本使用市价单，没有限价单、自动止盈止损或独立手机 App。
+> 🖥️ <strong>仓位管理的版本范围：</strong>10 月 22 日采集的客户端使用市价单、整仓关闭；当时检查的接口未建立原生限价、止盈止损或部分平仓能力。[当时的客户端范围](docs/research-notes/012-independent-clients-orders-and-bridges.md#position-management-and-order-types)。
 > 高杠杆下，价格稍微走反就可能爆仓。平仓请求还在排队时，仓位也可能先被清算。
 
 🧩 <strong>为什么关注 PAPER？</strong> 亏损平仓或清算后可能拿到 PAPER，再拿去质押分红。判断这件事值不值，要把交易亏损、拿到的币和真正可分的钱放在一起看。
@@ -66,7 +66,7 @@
 
 📍 **2026-10-22 查到的数值：** 总量约 **8.903B PAPER**，小额亏损的起始发币率约 **9.802 PAPER/$**，还没算 LP 缺口加成。这些是那次查询的数值，不是实时数据。能分到多少 USDC，还要看有多少钱可分、谁在质押，以及什么时候分。
 
-🗓️ **什么时候变的：** Contract set 1 于 **2026-10-07** 上线，新规则公告显示 **2026-10-20 6:30 AM**（时区未知）。**10月22日检查时，新规则已经启用**；精确升级时间还没找到。
+🗓️ **什么时候变的：** 官网指定的 set 2 交易位于区块 **49169385**，区块时间为 **2026-10-22 06:00:02（北京时间）／10 月 21 日 22:00:02 UTC**。这是交易所在区块的时间，具体初始化和参数效果须分别核对。[回执与区块证据](docs/research-notes/016-2026-10-28-sync.md#upgrade-transaction-anchor)。
 
 [旧版发币说明](https://docs.papertrade.xyz/v1/how/mint-curve/#shape) · [新版发币说明](https://docs.papertrade.xyz/how/mint-curve/#shape) · [算例与公式](docs/readme-figures.md#issuance-old-vs-new) · [版本与证据](docs/research-notes/015-contract-set-2.md#6-issuance-old-docs-and-remaining-work)
 
@@ -77,10 +77,10 @@
 | **开仓** | 0 开仓费 |
 | **持仓** | 0 资金费 |
 | **Relayer 发送交易** | Gas 由 relayer 支付 |
-| **盈利平仓** | 盈利先经过几项扣减，再收取 **剩余盈利的 2%** |
+| **盈利平仓** | 先调整盈利；正常费用适用分支收取**缩减后盈利的 2%**，获批会话 Builder 另收 **0.5%** |
 | **亏损平仓** | 承担亏损，不额外再加一笔交易费 |
 
-💡 顺向价格变动最前面的 **0.002%** 不计入盈利，这叫 **deadband**。新规则还会对小幅盈利多做一层扣减：正常时段模式的范围到 **6bps（0.06%）**，非正常时段模式到 **10bps（0.1%）**。在设定范围的两端和范围外，这层额外扣减为零；范围内扣多少，还取决于价格走到了哪里。
+💡 官网计算顺序是 **0.2 bps deadband → 小幅盈利 holdback → asymmetric impact → win fee**。holdback 完整区间为标准模式 **0.75–6 bps**、非正常时段模式 **0.3–10 bps**，两端及区间外为零。这些是价格变动范围，不是手续费率。
 
 官网说明，即使小幅盈利被扣减，价格继续朝有利方向走时，付款仍会增加。一个专门的 keeper 账户负责切换正常／非正常时段模式，两套算法都写在合约里；不是页面自己随意改算法。
 
@@ -88,7 +88,7 @@
 
 [费用算例与公式](docs/readme-figures.md#profit-retention-examples) · [新扣减怎样计算](docs/research-notes/014-official-announcement-crosscheck.md#3-the-new-profit-adjustment-is-a-price-move-band)
 
-**Builder 费用：** 如果签名用的会话密钥登记了获批 builder，官网说这类平仓会付给它 **PnL（盈亏）的 0.5%**，清算不付。这里说的是 PnL，不是仓位本金；它和原来手续费具体怎样合并，见[费用核对](docs/research-notes/015-contract-set-2.md#3-builder-fees-documented-rule-accounting-and-payment)。
+**Builder 费用：** 普通盈利分支中，2% 加 0.5% 后留下**缩减后盈利的 97.5%**，不带 Builder 为 98%。亏损时从 LP 收益划出 Builder 部分，并排除在 PAPER 基数外，不额外增加交易者亏损。Builder 记账要求付款队列为空且资金足够；盈利时未能记给 Builder 的额外扣减留在 LP。清算不收 Builder 费，官方前端不登记 Builder。[费用规则与范围](docs/current-product-review.zh-CN.md#合约结算与真实交易成本)。
 
 **规则可以修改。** 改规则和升级需要相应的治理权限。我们查到的时间锁最少等 1 天；guardian 可以不等时间锁就暂停新开仓，恢复开仓需要 owner 批准。[谁能改规则](docs/research-notes/011-loss-governance-staking-and-payments.md#2-who-can-change-rules-and-what-actually-changed) · [升级记录](docs/research-notes/013-market-state-funding-and-upgrade-followup.md#1-the-scheduled-implementations-are-now-installed)
 
@@ -125,7 +125,7 @@ flowchart TB
 flowchart TB
     Loss[计入发币的亏损] --> Mint[获得 PAPER]
     Mint --> Stake[质押 PAPER]
-    Fees[已付交易费的一半] --> Rewards[USDC 分红]
+    Fees[符合条件的质押费用份额] --> Rewards[USDC 分红]
     Surplus[LP 超过门槛的可用资金] --> Rewards
     Stake -.->|按质押份额分享| Rewards
     Rewards --> Claim[领取到交易余额]
@@ -138,10 +138,10 @@ flowchart TB
 |---|---|
 | 🪙 **拿 PAPER** | 取决于计入发币的亏损、当时总量，以及是否有 LP 缺口加成。 |
 | 📥 **质押** | 按分红那一刻的质押份额分享。只持币、不质押，没有这份分红。官网没有写锁定期或冷却期。 |
-| 💵 **准备分红资金** | 已付交易费的一半，加上 LP 超过设定门槛后能转入分红的钱；官网示例门槛为 $5M。 |
+| 💵 **准备分红资金** | 官网描述为队列及 LP 支付条件允许时，适用结算盈亏中的 1% 份额，加上 LP 超过 $5M 门槛后的可分配盈余；债权保证金清算有例外。 |
 | ↗️ **领取** | 先进入交易余额，提现到 HyperCore 是下一步。 |
 
-**谁能把费用送入分红？** 新版只允许 PaperStaking 合约向 Exchange 发起这一步，其他地址不能直接调用。费用送入、分红记到你名下、领取入账、提现到账，仍是不同的步骤。[新旧权限对比](docs/research-notes/015-contract-set-2.md#4-fee-push-permission-and-the-keeper)
+**谁能把费用送入分红？** 仅 PaperStaking 可请求 Exchange 推送费用。官网明确分配使用 **keeper 签名、经 relayer 提交的 `distributeBySig`**，直接公开分配已禁用。分配更新奖励份额，`pendingReward` 只含已分配部分；领取进入交易余额，提现另行完成。[官方流程](https://docs.papertrade.xyz/paper/staking/) · [服务架构](docs/current-product-review.zh-CN.md#服务架构与权限)。
 
 **什么时候分钱，会影响谁拿到多少。** 我们检查的代码不因为质押更久就多给权重，加入或退出质押也不会先把积累的费用分掉。例如有 100 单位奖励待分，后来者先加入相同份额，两人各得 50；如果先分再加入，原质押者拿 100。已经分给你的奖励，退出质押后也保留。这是按代码举例，还没验证成真实赚钱策略。[分红时机](docs/research-notes/011-loss-governance-staking-and-payments.md#3-long-term-staking-versus-joining-immediately-before-allocation)
 
@@ -158,7 +158,7 @@ flowchart TB
 > 🧮 <strong>100× 多仓例子：</strong> 开仓价 100 → 理论上保证金归零的价格 99 → 清算价约 99.0495，也就是 99.05。
 > 触发前平仓，可以拿回仓里剩余的钱；清算会损失全部保证金。
 
-**发了平仓请求，也可能按清算处理。** 在 set 2，如果平仓执行时价格已经达到或越过合约的爆仓价，这次平仓会按强制清算结算，损失全部保证金。排队时仍要留意这一点。[新版规则与边界检查](docs/research-notes/015-contract-set-2.md#5-hard-liquidation-at-the-boundary)
+**发了平仓请求，也可能按清算处理。** 在 set 2，如果平仓执行时价格已经达到或越过合约的保证金归零价（bust），这次平仓会按强制清算结算，损失全部保证金。排队时仍要留意这一点。[新版规则与边界检查](docs/research-notes/015-contract-set-2.md#5-hard-liquidation-at-the-boundary)
 
 杠杆越高，缓冲相当于保证金的比例越大。[公式与取整](docs/research-notes/006-current-mechanisms.md#liquidation-exact-buffer-basis-and-inclusive-threshold)。
 
@@ -173,21 +173,21 @@ flowchart TB
 | 账户查询和实时更新：`/query/accounts/…`、`/state/user/live?wallet=…` | 查看自己的余额、仓位和历史操作；具体登录及访问规则还要核对。 |
 | 签名请求：`POST /intents` | 设置会话授权、开平仓、提现到 HyperCore，以及 PAPER 操作。先把回复和请求对上，再查执行结果；被接收不等于已经成交。 |
 
-可以选择几个仓位分别全平，再次开仓会形成新仓位。单仓只平一部分、内置限价／止盈止损、修改已有仓位的保证金或杠杆，目前都还没找到已确认支持的接口。
+在[此前采集的客户端](docs/research-notes/012-independent-clients-orders-and-bridges.md#position-management-and-order-types)中，可选择若干仓位全平，再开仓形成独立仓位；当时检查未建立单仓部分平仓、原生限价／止盈止损或修改已有保证金／杠杆的接口。
 
 **充值和提现：**
 
 | 充值来源 | 怎么走 |
 |---|---|
-| Ethereum、Arbitrum、Solana 上的 USDC | Circle 把资金转向你的充值地址，再由 Papertrade 处理并记入交易余额。 |
+| Ethereum、Arbitrum、Solana 上的 USDC | Circle CCTP／转发先到 HyperEVM，再经 CoreDepositWallet 到个人 HyperCore 地址，最后归集确认后记入交易余额。 |
 | Robinhood 上的 USDG | Across 把 USDC 带到 HyperEVM，目标链合约再通过 CoreDepositWallet 送到充值地址。 |
-| HyperEVM、HyperCore 上的 USDC | 经 Core/EVM 转移到充值地址，再由平台入账。 |
+| HyperEVM、HyperCore 上的 USDC | 按 App 引导走 CoreDepositWallet／Core 路线；原始 ERC-20 转账到同地址的 HyperEVM 一侧，不会作为普通充值入账。 |
 
 提现先把交易资金转到 HyperCore 现货账户。继续转到 HyperEVM、Ethereum、Arbitrum 或 Solana，需要额外的转账授权。已找到的提现路线不包含 Robinhood。跨链完成、平台入账、最后一个地址收到钱，需要分开跟踪。
 
-**做成完整客户端还缺什么：** 服务器和账户 API 的使用权限、断线后可靠恢复、完整的费用／到账／退款流程，以及 builder 算谁的、怎样拿钱。Across 把这里使用的 `/suggested-fees` API 标为 legacy，新接入前还要核对替代接口。
+**资金实现范围：** 上表来自注明日期的客户端研究及当前官方描述。Circle [HyperCore 文档](https://developers.circle.com/cctp/concepts/cctp-on-hypercore)佐证两步路径；Across [API 文档](https://docs.across.to/api-reference)要求 Bearer／`integratorId`，并区分当前 API 与 legacy 路线。供应商支持不等于 App 的实时报价。[资金路线、最低金额与异常补记](docs/current-product-review.zh-CN.md#充值提现桥和服务商)。
 
-**Builder codes：** 会话密钥里登记的 builder 还必须获批，才能按官网规则拿平仓 PnL 的 0.5%。时间锁负责批准、设费率，也能转移尚未领取的费用；多签可以立即移除 builder。注册接入条件、精确记账和实际到账还需核对。[Builder 与管理权限](docs/research-notes/015-contract-set-2.md#3-builder-fees-documented-rule-accounting-and-payment)
+**Builder codes：** 会话注册在 `feeAddress` 指定获批 Builder；批准和费率修改经 24 小时时间锁，费率上限 1%，多签可立即移除。之前已赚费用仍可领取；领取先进入交易余额，无法覆盖部分进入兑付队列。[Builder 与付款规则](https://docs.papertrade.xyz/how/builder-codes/)。
 
 [客户端与签名指南](docs/independent-client-guide.md) · [订单和资金路线](docs/research-notes/012-independent-clients-orders-and-bridges.md)
 
@@ -195,6 +195,8 @@ flowchart TB
 
 | 从这里开始 | 可以看到什么 |
 |---|---|
+| [产品、合约、服务与业务模式](docs/current-product-review.zh-CN.md) | 综合报告、资金路线和服务商关系 |
+| [10 月 28 日确认更新](docs/research-notes/016-2026-10-28-sync.md) | 新旧差异、来源范围和升级交易区块 |
 | [各部分怎样连接](docs/mechanism-map.md) | 本项目关注的 14 个话题 |
 | [笔记](docs/research-notes/) · [案例记录](research/cases/) | 机制解释、来源和检查结果 |
 | [亏损、改规则与分红时机](docs/research-notes/011-loss-governance-staking-and-payments.md) | 五个常见问题、例子和还不清楚的地方 |

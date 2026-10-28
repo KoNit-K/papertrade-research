@@ -1,5 +1,7 @@
 # Contract set 2: official version guide and retained-code checks
 
+**2026-10-28 source addendum:** the [new synchronization note](016-2026-10-28-sync.md) supplies the official set-2 date/transaction, a separately checked transaction block, and documented builder accounting and keeper distribution details. The October 22 account below remains a historical record of the sources and narrow tests then available; its open source-description questions are superseded only where the addendum explicitly answers them.
+
 Updated: 2026-10-22. Baseline: `b20c2fe`. This note adds the owner's supplied
 [official protocol-changes text](https://docs.papertrade.xyz/dev/protocol-changes/)
 to the earlier [upgrade observations](013-market-state-funding-and-upgrade-followup.md)

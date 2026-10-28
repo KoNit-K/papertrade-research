@@ -1,5 +1,13 @@
 # Changelog
 
+## Product, services and contract-set-2 documentation — 2026-10-28
+
+- Add English/Chinese integrated reviews of product design, settlement, services, funding and business model.
+- Clarify builder fee branches, payout conditions, staking delivery and deposit reconciliation in the existing README structure.
+- Anchor the officially named upgrade transaction to its receipt/block coordinates and add scoped vendor/reference checks.
+- Preserve historical case evidence and calculation-helper behavior.
+
+
 ## Economic path and historical-state audit — 2026-10-21
 
 - Trace candidate 4 PnL and accounting calls into the returned economic library; document integer deadband, impact and fee consistency.

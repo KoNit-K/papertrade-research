@@ -1,5 +1,12 @@
 # Current status
 
+## Documentation synchronization — 2026-10-28
+
+The [bilingual product review](docs/current-product-review.md) connects documented set-2 product behavior, settlement, operational services, funding providers and business economics. [Confirmed updates](docs/research-notes/016-2026-10-28-sync.md) add full holdback bands, builder accounting/claims, signed keeper distribution, staged deposit recovery, vendor references and the named upgrade transaction’s checked block/time coordinates. Both READMEs retain their eight main sections. Local validation passed: 152 tests, type checking, the existing evidence-record validator and 226 local document links. These checks validate repository tooling and document structure, not full protocol reproduction.
+
+This is a documentation and bounded transaction-metadata increment. Historical cases, arithmetic helpers, claim statuses and the capability snapshot below retain their original scopes. It does not close the existing settlement-reproduction milestones.
+
+
 Updated: 2026-10-22. **Research preview; M0 evidence tooling.**
 
 ## P0 scope

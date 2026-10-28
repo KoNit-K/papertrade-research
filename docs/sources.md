@@ -1,5 +1,7 @@
 # Sources and access status
 
+**Current review: 2026-10-28.** The [synchronization evidence map](research-notes/016-2026-10-28-sync.md#documentation-evidence-map) indexes eight successful mediated official-page readings, a separately checked upgrade transaction, and vendor/reference checks. Original source IDs and historical access records below remain unchanged.
+
 Reviewed: 2026-10-21 (Asia/Singapore). Sources are leads or source statements,
 not independent chain reproduction. Source IDs remain stable as evidence grows.
 
@@ -341,3 +343,15 @@ source claims, retained bytecode checks and remaining gaps;
 This increment made one unsuccessful page-reader open, zero direct HTTP/RPC/search
 requests and no new REA run. It reused the earlier code captures for 16 narrow
 synthetic cases, not production settlement, payment or independent EVM replay.
+
+
+## October 28 successful-source increment
+
+The [bilingual product review](current-product-review.md) uses documented contract set 2, with a [confirmed-change table](research-notes/016-2026-10-28-sync.md#confirmed-differences--已确认差异). Official page descriptions, dated client captures, supplier capabilities and transaction metadata have separate scopes.
+
+- Official introduction, architecture, asymmetric impact, builder codes, staking, deposit internals, funding guide and protocol history: mediated readings during task planning on 2026-10-28; the retained introduction states a 2026-10-21 update. Exact upstream byte hashes are not assigned to these mediated readings.
+- Upgrade transaction: chain 999, receipt and matching block 49169385/hash, transaction index and block timestamp checked with the explorer and read-only RPC. The result establishes transaction coordinates, not all internal effects.
+- Circle HyperCore concepts and Across chain/API documentation: vendor primary sources read on October 28, with successful-byte identities in the synchronization note. Vendor support is kept distinct from Papertrade route execution.
+- Guardian official report/PDF, Galaxy, CertiK, Udit and a fixed community SDK commit: source scope checked; only attributed metadata, implementation scope and reference links are adopted. No external aggregate statistic, attack attribution or deployment-remediation conclusion is promoted to an independently reproduced result.
+
+The existing document/chain validators keep their established input profiles. This prose evidence index does not extend those schemas or change historical claim/reproduction statuses.

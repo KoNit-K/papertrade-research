@@ -1,5 +1,7 @@
 # Independent client integration guide
 
+**2026-10-28 documentation update:** [current product/service review](current-product-review.md) and [confirmed differences](research-notes/016-2026-10-28-sync.md) add documented builder win/loss routing, signed distribution, staged deposits and vendor API boundaries. Signing encodings and frontend construction below remain bound to their captured builds; the update does not certify a new production client.
+
 **Contract set 2 update:** [note 015](research-notes/015-contract-set-2.md) adds the official version names, approved-builder fee rule and the staking fee-push restriction. Earlier recovered interfaces below keep their stated version scope.
 
 Initial recovery: 2026-10-22, Asia/Singapore, build `38f2c40c4112`.

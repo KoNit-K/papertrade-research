@@ -1,5 +1,7 @@
 # Mechanism map
 
+**2026-10-28 review:** [product, contracts, services and business model](current-product-review.md) connects the current set-2 documentation; [confirmed updates](research-notes/016-2026-10-28-sync.md) records the upgrade transaction block, fee routing, keeper distribution and deposit reconciliation. The research agenda below retains its original evidence scopes.
+
 **Contract set 2:** [note 015](research-notes/015-contract-set-2.md) adds the official eight-change guide and retained-code checks. Builder rate/base and named governance roles now have source-level answers; exact fee accounting, payment and upgrade chronology remain partial.
 
 Status: research agenda, not a verified protocol specification. Updated: 2026-10-22.
