@@ -1,5 +1,7 @@
 # Papertrade：产品、合约、服务架构与业务模式
 
+[Mechanism/funding follow-up · 机制与资金补充](research-notes/018-mechanism-funding-and-authority.md).
+
 核查日期：**2026-10-28**。[English](current-product-review.md) · [确认更新与证据](research-notes/016-2026-10-28-sync.md)。
 
 本文按**官网描述的 Contract set 2**解释机制，不是实时市场参数快照。官方页面来自 10 月 28 日成功的网页读取，包括[体验与排队补充核查](research-notes/017-responsiveness-and-queue-stages.md)；实现路径沿用仓库注明日期的客户端采集，供应商资料用于核对其能力。升级交易另有回执和区块证据。这几类证据不能互相替代。
@@ -14,6 +16,20 @@ Papertrade 提供高杠杆合成敞口，直接与协议 LP 结算。Hyperliquid
 
 **设计分析：** 预编译读取价格，使协议省去独立撮合引擎；把成本放在成功交易的结果上，避免极高杠杆下按名义本金收取的费用立即吞噬保证金；亏损发币则鼓励用户间接提供风险资本。这同时把交易、发币稀释和未来亏损流量绑在一起，发行 PAPER 本身不会增加 USDC。
 
+## 定价风险与停市权限
+
+[官网定价说明](https://docs.papertrade.xyz/how/pricing-bbo/)描述了零报价和交叉盘口（`ask < bid`）拒绝检查，但没有最大偏离、TWAP 时间加权价格或历史回看熔断。读取共识状态能确认读到哪组盘口，不能证明盘口没有受到经济操纵。Deadband、impact 和 OI 控制可以降低部分收益或限制敞口，仍不足以证明操纵无利可图。
+
+| 控制方式 | 新开仓 | 已有仓位平仓和清算 | 能否恢复 |
+|---|---|---|---|
+| Guardian 退市一个市场 ID | 该 ID 禁止开仓 | 使用退市时冻结的买卖报价 | 同 ID 永久退市；重新上线需新 ID |
+| Guardian 开启全局交易暂停 | 所有市场禁止开仓 | 继续使用实时 BBO | Owner 可以解除 |
+| Market keeper 降低某侧 OI 上限 | 超过该侧上限的开仓失败 | 继续使用实时 BBO | 调整上限不等于退市 |
+
+[风险页面](https://docs.papertrade.xyz/how/risk/)把 market keeper 权限限定在方向 OI 上限和开仓最低要求，off-hours keeper 只能选择两条固定盈利曲线。Owner 可管理参数、relayer／keeper、上币、异常充值补记及合约升级；Builder 批准和费率走治理，multisig 可即时移除 Builder。官网的启动 OI 策略是每侧已有持仓之外，保留按 BBO 计价的 **10 亿美元新增容量**，超出 10% 带宽后再调整。这是运营策略描述，不能当作今天实测的参数、全市场总 OI 上限或最大损失保证。
+
+上述属于 set 2 文档规则；当前存储、运营响应速度及审计修复是否部署，需要各自验证。
+
 ## 合约结算与真实交易成本
 
 [官网盈利计算](https://docs.papertrade.xyz/how/asymmetric-impact/)的顺序是：
@@ -21,7 +37,7 @@ Papertrade 提供高杠杆合成敞口，直接与协议 LP 结算。Hyperliquid
 1. 扣掉最前面 0.2 bps 顺向价格变动，称为 deadband。
 2. 在选中的小幅盈利区间内应用 holdback。
 3. 对调整后的盈利应用 asymmetric impact。
-4. 在费用适用分支，对缩减后的盈利扣 win fee。
+4. 从缩减后的盈利扣 win fee；资金条件决定费用接收方能否计提。
 
 标准曲线的 holdback 区间为 **0.75–6 bps**，非正常时段曲线为 **0.3–10 bps**，由专门 keeper 在两套合约曲线之间切换。impact 使用每市场参考名义本金，不按用户实际仓位大小提高扣减比例。因此，“按同一个中间价执行”和“小额毛利被大幅扣减”可以同时成立。零滑点并不保证拿到价格变动对应的全部杠杆毛利。
 
@@ -36,6 +52,23 @@ Papertrade 提供高杠杆合成敞口，直接与协议 LP 结算。Hyperliquid
 Builder 记账要求付款队列为空且 LP 能支付。盈利时，即使不满足 Builder 记账条件，交易者仍承担该额外扣减，资金留在 LP。官方前端不登记 Builder。Builder 领取先进入交易余额，覆盖不了的部分可以进入兑付队列。批准与费率修改经过时间锁，费率上限 1%；多签可立即移除 Builder。[Builder 细则](https://docs.papertrade.xyz/how/builder-codes/)
 
 普通盈利算例不能替代不同现金、债权及费用豁免分支的账务。[既有账务研究](research-notes/011-loss-governance-staking-and-payments.md#1-why-equal-losses-can-produce-different-paper-amounts)保留这些区别。清算触发缓冲与保证金归零边界也应分开，具体公式须保留[原核查的版本和舍入范围](research-notes/006-current-mechanisms.md#liquidation-exact-buffer-basis-and-inclusive-threshold)。
+
+### 现金、债权与不同结算分支
+
+这里 `M` 是保证金，`L` 是已实现亏损，`G` 是经过 deadband、holdback 和 impact 后的正盈利。普通净盈利为 `0.98G`，带文档所述获批 Builder 时为 `0.975G`。下表解释[第二版规则](https://docs.papertrade.xyz/how/solvency-queue/)，不代表整数结算复现。
+
+| 保证金／结果 | 余额或债权 | 现金与费用 |
+|---|---|---|
+| 现金／盈利 | 返还 `M`；净盈利能付的付、剩余排队；已有旧债时新盈利全部排队 | 用户扣减与费用能否分给接收人分别判断 |
+| 债权／盈利 | `M＋净盈利` 是剩余付款义务，按条件付款或排队 | 重用债权没有带来新现金 |
+| 微小顺向波动被 deadband 抹去 | 无正调整后盈利；现金保证金返还，债权保证金仍为债权 | 原始报价顺向变化不保证正净盈利 |
+| 现金／亏损、队列为空 | 返还 `M-L`；LP 留下净亏损资金 | 适用费用从 LP 收益划出，不额外扣用户 |
+| 现金／亏损、已有队列 | 返还 `M-L`；亏损资金经 `sideBucket` 支持旧债 | 亏损费用豁免，PAPER 资格另算 |
+| 债权／亏损 | 销毁 `L`；剩余 `M-L` 付款或再排队 | 不增加现金；普通亏损费用要求空队列且现金覆盖剩余债权及费用，Builder 也有资金条件 |
+| 现金／硬清算 | 全部保证金损失 | 现金补 LP 或支持旧债；队列状态影响清算费用；无 Builder |
+| 债权／硬清算 | 全部保证金债权销毁 | 无现金或 sideBucket 流入，无清算及 Builder 费用 |
+
+一个**顺向波动 4 bps 的教学例**：按官网公式，标准曲线 holdback 约 **1.05024 bps**，off-hours 约 **2.03250 bps**；再扣 0.2 bps deadband，有效波动约为 2.74976 或 1.76750 bps，之后才做 impact 和费用计算。这是十进制公式解释，不是当前参数或 Solidity 舍入复现。另假设缩减后盈利已是 100，扣费后为 98 或 97.5，返还保证金另算。这里不推导临界资金下多种费用的精确执行顺序。
 
 ## LP、PAPER 与分红
 
@@ -171,6 +204,25 @@ flowchart TD
 
 因此，来源链回执、桥和转发完成、Core 到账、归集、平台余额入账，应分别确认。产品激活预留、HyperCore 账户激活和桥／转发费也需分开记账，不能用供应商收费说明替换 App 产品规则。
 
+### 资金确认与收费口径
+
+| 最后确认阶段 | 可以说明什么 | 仍需分别确认什么 |
+|---|---|---|
+| 源链回执或供应商 fill | 源链或供应商动作 | Core 到账与 Exchange 入账 |
+| CoreWriter 指令 | 已发出转账指令 | HyperCore 执行结果 |
+| 归集确认事件 | 记录报告的归集确认及金额 | 完整余额对账和来源归因 |
+| 继续转出哈希 | 已识别或提交下一段转账 | 目的链成功回执与实际资产到账 |
+
+10 月 22 日客户端比较累计 `depositedRaw`；累计值增加不能严格归因于某一笔并发或延迟跨链。继续转出续签更新的是 onward 授权，不是再次从 Exchange 提现。[旧版资金逻辑](research-notes/013-market-state-funding-and-upgrade-followup.md)
+
+Papertrade 描述首存 1 USDC 激活预留，Circle 按首次 outbound 动作解释 HyperCore 激活扣费。二者范围和时点不同，不能叠加成已经观察到的两笔收费。App 的 10 USDC 到账／归集门槛也不是 Circle 全局最低存款要求。桥费和转发费随路线变化。[Circle 激活说明](https://developers.circle.com/cctp/concepts/cctp-on-hypercore)
+
+本次核对的 Across legacy 警告针对 `available-routes`，不能扩展为所有旧端点都弃用，也不证明 Papertrade 已迁移、handler 已执行或退款已完成。[供应商说明](https://docs.across.to/api-reference/available-routes/get)
+
+### 一笔归集阶段观察
+
+[请求归集](https://hyperevmscan.io/tx/0x36a6bbbb73ed5b18a741ac1554dbf3662151461d68993ed33f4782c3bfaac2d2)与[确认归集](https://hyperevmscan.io/tx/0x1edb1e87295ea5c831fd7e20954532e2b6535de93aaa43124389e1d6c108efb7)记录均报告成功，区块 **49713666 → 49713667**，时间为 **10 月 28 日 UTC 02:43:35 → 02:43:36**。用户字段相符，CoreWriter 与 `Swept` 金额按既有 8／18 位单位换算对应 **38,287.75 USDC**。这支持两笔归集记录的一致性；一秒是区块时间戳差，没有计入来源资金、桥、Core 回执或网页更新。[核对值与范围](research-notes/018-mechanism-funding-and-authority.md#sweep-stage-observation)
+
 ## 业务模式与参考研究
 
 | 参与者 | 经济角色 |
@@ -178,9 +230,29 @@ flowchart TD
 | 交易者 | 承担亏损和盈利扣减，获得已付盈利、债权及符合条件的 PAPER。 |
 | 协议 LP | 留存净亏损与扣减、支付盈利和负债、提供可分配盈余。 |
 | PAPER 质押者 | 分享分配；持币不变时会被新增发行稀释，USDC 回报依赖资金和分配。 |
+| 指定开发费用接收方 | Owner 可设置该地址，官网把开发费用领取权限赋予该接收方；角色本身不证明最终受益主体。 |
 | 获批 Builder | 提供前端和流量，获得有条件的归因费用；准入需要批准。 |
 | Relayer、keeper | 提供执行和账户处理服务，代付交易 gas 属于运营成本，不代表跨链路线免费。 |
 | 桥与转发服务商 | 提供跨生态资金移动，其费用独立于交易盈亏。 |
+
+```mermaid
+flowchart TD
+    D[用户充值] --> U[用户余额与对应付款义务]
+    U --> C[现金保证金]
+    C --> L[实际现金亏损]
+    L --> P[LP 现金或队列预留资金]
+    P --> W[已付款的盈利债权]
+    Q[未付债权] --> R[债权保证金]
+    R --> X[亏损减少负债而不增加现金]
+    P -->|空队列且资金足够| F[适用费用分配]
+    F --> S[PAPER 质押者]
+    F --> V[指定开发费用接收方]
+    P -->|空队列且资金足够| B[Builder 费用记账]
+    P -->|门槛与资金条件| O[LP 溢出分红]
+    L -.-> T[符合条件的 PAPER 发行]
+```
+
+图中表示资金依赖关系，不代表每次整数记账的执行顺序。盈利扣减可能改善 LP 状况，却没有马上作为收入付给外部接收人；即使队列或资金条件不允许分配，盈利费用仍可能先被扣除。费用计提、奖励分配、领取到交易余额和提现，是不同环节。[队列与费用资金条件](https://docs.papertrade.xyz/how/solvency-queue/) · [接收方权限](https://docs.papertrade.xyz/how/risk/)
 
 整体模式是亏损补充资金池、按交易结果收费，再通过 PAPER 和 Builder 分配激励。成交量、交易者亏损、LP 留存、协议费用、质押分配和经营利润属于不同口径。公开费率不能推出团队利润表；自举解释初始资本来源，不证明未来所有负债都能及时支付。
 

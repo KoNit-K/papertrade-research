@@ -1,5 +1,11 @@
 # Changelog
 
+## Mechanism, funding and authority clarification — 2026-10-28
+
+- Explain BBO residual risk, permanent retirement, global opening pause and scoped administrator roles.
+- Add cash/debt settlement branches, funding confirmations, fee scopes and a bounded sweep-pair observation to the bilingual reviews and Chinese narrative.
+- Link six scheduled upgrade actions to the retained execution payload; distinguish explorer labels from state verification and qualify session-signature findings.
+
 ## Current Chinese narrative and liquidation wording — 2026-10-28
 
 - Add a current-mechanism Chinese narrative for document drafting, with README navigation.

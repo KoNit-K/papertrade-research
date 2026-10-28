@@ -165,9 +165,25 @@ field. Additional JSON fields do not establish an on-chain price constraint.
 The captured client uses a registered session key for open/close and the master
 wallet for registration, withdrawal and PAPER actions. The prior captured
 [session documentation](https://docs.papertrade.xyz/learn/session-keys/) describes
-scoped authorization and a 30-day session. A replacement signer/custody design
-still needs its own verification; merely observing session use does not prove
-that master-signed opens are rejected by the server or signature validator.
+scoped authorization and a 30-day session. The later [new Session inspection](research-notes/013-market-state-funding-and-upgrade-followup.md#7-new-session-and-builder-paths-narrow-two-earlier-unknowns)
+narrows the original master-wallet question: in the inspected open/close paths,
+mocked recovery to the master address did not automatically bypass session-record
+checks. That is a dated captured-code result with mocked recovery, not real
+cryptographic verification, every-entry coverage or production server rejection.
+
+| Action | Known authorizer / route | Known fields and scope |
+|---|---|---|
+| Open / close | Registered session key in the captured client; authorized relayer/batcher | Captured Exchange domain above, `uint256 nonce`, `uint64 deadline`; client default +3600 seconds. |
+| RegisterSessionKey | Main wallet; relayer-mediated registration | Captured Exchange type contains nonce, key expiry and separate deadline; docs describe 30-day keys. |
+| Withdraw to Core | Main wallet signature for signed delivery; wallet also has a direct path | Exchange withdrawal and optional Hyperliquid onward transfer have separate authorizations. The latter has its own millisecond nonce. |
+| Stake / unstake / claim | Main wallet signatures via relayer | Official `stakeBySig`, `unstakeBySig`, `claimBySig`; staking domain differs from Exchange. |
+| Revoke session | Wallet sends a direct HyperEVM transaction | Transaction nonce/gas apply; this is not a relayer intent or its typed-data deadline. |
+| Distribute | Keeper signature through relayer | Official `distributeBySig` pushes fees first; direct public distribution is disabled. |
+
+This table lists established fields, not a complete signing specification for
+every action. [Session scope](https://docs.papertrade.xyz/learn/session-keys/)
+and [staking delivery](https://docs.papertrade.xyz/paper/staking/) are current
+documentation; exact encoding details above remain dated client evidence.
 
 Nonce state is partitioned by chain, contract, user and the client's paper/session
 routing group, with a random initial seed and subsequent increments. It is not
@@ -225,14 +241,19 @@ explicitly authorized end-to-end order lifecycle. Those tests are outside this
 research authorization. Relayer availability, scheduling, execution price and
 on-chain item failure still matter even with correct encoding.
 
-The captured registration path supplies the zero address as `feeAddress`.
-[Builder codes](https://docs.papertrade.xyz/how/builder-codes/) are an integration
-lead: that page was denied during this research session. The team's October 20
-announcement specifies an initial whitelist; recovered registry/enablement gates
-support controlled admission. The later owner-supplied official set-2 text states **0.5% of PnL** for closes
-using approved builders and no builder fee on liquidations. It assigns approval,
-rate setting and moving unclaimed fees to the timelock, with immediate removal
-by the multisig. Exact PnL stage/sign treatment, rounding, fee addition versus
-carve-out, admission criteria and realized payment remain unresolved. See
-[builder accounting and control](research-notes/015-contract-set-2.md#3-builder-fees-documented-rule-accounting-and-payment).
-No builder registration or fee configuration was performed.
+The captured canonical registration path supplies zero `feeAddress`. The
+successfully reread [set-2 builder rules](https://docs.papertrade.xyz/how/builder-codes/)
+describe approved named builders: ordinary wins deduct another 0.5% of scaled
+gain, losses carve the applicable fee from LP gain and exclude it from PAPER
+basis, and liquidations pay none. Accrual requires an empty queue and funding;
+an uncredited winning deduction remains with LP. Approval/rate changes and fee
+migration use the timelock; the multisig can remove builders immediately.
+Claims credit Exchange balance or queue rather than an external wallet.
+This closes those documentation questions, not integer rounding, realized
+builder payment or production admission. See the [current review](current-product-review.md#settlement-and-the-meaning-of-trading-cost)
+and [scoped follow-up](research-notes/018-mechanism-funding-and-authority.md).
+
+Client nonce partitioning and deterministic intent IDs correlate requests; they
+do not prove contract nonce consumption/rollback, cross-domain replay safety,
+revocation/re-registration races or server acceptance. No signatures, builder
+registrations or fee configurations were performed.

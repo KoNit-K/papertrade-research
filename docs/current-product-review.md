@@ -1,5 +1,7 @@
 # Papertrade: product, settlement, services and business model
 
+[Mechanism/funding follow-up · 机制与资金补充](research-notes/018-mechanism-funding-and-authority.md).
+
 Reviewed: **2026-10-28**. [中文](current-product-review.zh-CN.md) · [Confirmed updates and evidence](research-notes/016-2026-10-28-sync.md).
 
 This review explains **documented Contract set 2**, rather than a live market-parameter snapshot. Official-page evidence comes from successful mediated page readings on October 28, including a [responsiveness and queue follow-up](research-notes/017-responsiveness-and-queue-stages.md). Implementation references are the repository's dated client captures; vendor documentation is additional evidence about vendor capabilities. The upgrade transaction has separate receipt/block evidence. These evidence types are not interchangeable.
@@ -14,6 +16,20 @@ The previously inspected client used whole-position closes and separate long/sho
 
 **Design interpretation:** precompile pricing avoids running a separate matching engine; charging against successful outcomes makes extreme leverage usable without a notional fee consuming margin immediately. Loss-based issuance encourages users to supply the pool's risk capital indirectly. This also couples trader incentives, token dilution and future loss flow: PAPER issuance itself supplies no USDC.
 
+## Pricing risk and market controls
+
+The [pricing description](https://docs.papertrade.xyz/how/pricing-bbo/) rejects zero quotes and crossed books (`ask < bid`), but describes no maximum-deviation, TWAP or lookback breaker. Reading consensus state authenticates the quoted book; it does not establish that the quote is economically undistorted. Deadband, impact and OI controls can constrain payoffs or exposure without proving manipulation unprofitable.
+
+| Control | Opens | Existing closes and liquidations | Restoration |
+|---|---|---|---|
+| Guardian retires one market ID | Rejected for that ID | Use the bid/ask frozen at retirement | Permanent for that ID; a relist needs a new ID |
+| Guardian engages global trading pause | Rejected across markets | Continue using live BBO | Owner can lift the gate |
+| Market keeper lowers a side's OI cap | Opens exceeding that cap fail | Live BBO continues | Changing the cap does not retire the market |
+
+The [risk page](https://docs.papertrade.xyz/how/risk/) scopes market-keeper authority to directional OI caps and opening minimums; the off-hours keeper selects between two fixed payout curves. Owner authority covers parameters, relayers/keepers, listings, exceptional deposit reconciliation and upgrades. Builder approval/rate changes use governance; the multisig can remove a builder immediately. The documented launch cap policy targets each side's existing OI **plus $1B of BBO-valued headroom**, adjusted outside a 10% band. That is an operating policy, not a verified current value, a total-OI ceiling or a maximum-loss guarantee.
+
+These are set-2 documentation statements. Current storage, operator responsiveness and upgrade-remediation equivalence are separate verification questions.
+
 ## Settlement and the meaning of trading cost
 
 The [documented winning-close calculation](https://docs.papertrade.xyz/how/asymmetric-impact/) is:
@@ -21,7 +37,7 @@ The [documented winning-close calculation](https://docs.papertrade.xyz/how/asymm
 1. Remove the first 0.2 bps of favorable price movement (the deadband).
 2. Apply the selected small-move holdback.
 3. Scale the resulting gain using asymmetric impact.
-4. Apply the win fee to that scaled gain in the fee-applicable branch.
+4. Deduct the win fee from that scaled gain; funding determines whether recipients can accrue it.
 
 The standard holdback band is **0.75–6 bps**; the off-hours band is **0.3–10 bps**. A dedicated keeper selects between the two contract-defined curves. The percentage impact uses a per-market reference notional, not the user's position size. Consequently, execution at the same midpoint can coexist with substantial deductions from a small gross gain. “No slippage” is not a promise to receive raw leveraged PnL.
 
@@ -36,6 +52,23 @@ The standard holdback band is **0.75–6 bps**; the off-hours band is **0.3–10
 Builder accrual requires an empty payout queue and enough LP funding. On a winning close the extra trader deduction still applies if that builder-credit condition fails; it remains with the LP. The official frontend names no builder. Builder fee claims credit Exchange balance; an uncovered part can enter the payout queue. Approval and rate changes use the timelock, the rate is capped at 1%, and the multisig can remove a builder immediately. [Official builder rules](https://docs.papertrade.xyz/how/builder-codes/).
 
 The ordinary win example does not replace branch-specific cash/debt and fee-waiver accounting. The [existing ledger research](research-notes/011-loss-governance-staking-and-payments.md#1-why-equal-losses-can-produce-different-paper-amounts) keeps those distinctions. Liquidation also has a buffered trigger and a zero-equity boundary; the [existing formula analysis](research-notes/006-current-mechanisms.md#liquidation-exact-buffer-basis-and-inclusive-threshold) must be read with its version and rounding scope.
+
+### Cash, debt and outcome branches
+
+Here `M` is margin, `L` realized loss and `G` positive gain after deadband, holdback and impact. Ordinary winning net profit is `0.98G`, or `0.975G` with the documented approved builder. This is a conceptual [set-2 table](https://docs.papertrade.xyz/how/solvency-queue/), not an integer replay.
+
+| Margin / outcome | Balance or claim | Cash and fees |
+|---|---|---|
+| Cash / win | Return `M`; pay allowed net profit and queue the remainder. Earlier claims make all new profit queue. | Trader deduction and funded fee allocation are separate. |
+| Debt / win | `M + net profit` survives as an obligation, paid or queued under the gates. | Reusing debt supplied no new cash. |
+| Favorable move erased by deadband | No positive adjusted gain: cash margin returns; debt margin remains a claim. | A favorable raw quote does not guarantee positive net profit. |
+| Cash / loss, empty queue | Return `M-L`; LP retains net loss proceeds. | Applicable loss fees come from LP gain, not an extra trader debit. |
+| Cash / loss, active queue | Return `M-L`; loss cash backs old claims through `sideBucket`. | Loss fees are waived; PAPER eligibility is calculated separately. |
+| Debt / loss | Destroy `L`; pay or queue survivor `M-L`. | No cash inflow. Normal loss fee requires empty queue and funding for survivor plus fee; builder has a funding gate too. |
+| Cash / hard liquidation | Full margin lost. | Cash backs LP/old claims; queue state affects liquidation fees. No builder. |
+| Debt / hard liquidation | Entire margin claim destroyed. | No new cash/sideBucket; no liquidation or builder fee. |
+
+For a **teaching 4-bps favorable move**, the documented formulas yield holdback of about **1.05024 bps standard** or **2.03250 bps off-hours**. After the 0.2-bps deadband, effective moves are about 2.74976 or 1.76750 bps, before impact and fees. This is decimal arithmetic, not a current parameter snapshot or Solidity rounding. A synthetic already-scaled gain of 100 leaves 98 or 97.5 before returned margin. Exact combined fee-funding order is not inferred.
 
 ## Liquidity, PAPER and distribution
 
@@ -171,6 +204,25 @@ The [deposit internals](https://docs.papertrade.xyz/how/deposits/) add an import
 
 Thus source receipt → bridge/forwarding completion → Core credit → sweep → internal credit are distinct confirmations. Product activation allowance, HyperCore activation and bridge/forwarding fees also require separate accounting; a supplier's account-activation wording must not be substituted for the app's product fee rule.
 
+### Funding confirmations and fee scopes
+
+| Last confirmed stage | What it establishes | Separate confirmation |
+|---|---|---|
+| Source receipt or provider fill | A source/provider action | Core arrival and Exchange credit |
+| CoreWriter action | A transfer instruction | HyperCore execution result |
+| Sweep finalization event | Reported finalization and credited amount | Full balance reconciliation and source attribution |
+| Onward hash | A further transfer identified/submitted | Successful destination receipt and asset credit |
+
+The retained October 22 client compares cumulative `depositedRaw` with an earlier value; an increase cannot uniquely attribute one concurrent or delayed bridge transfer. Its continuation signature renews onward authorization, not a second Exchange withdrawal. [Dated funding logic](research-notes/013-market-state-funding-and-upgrade-followup.md).
+
+Papertrade describes a first-deposit 1-USDC activation allowance; Circle describes HyperCore activation charging on first outbound. Keep their scopes and charging points: do not add them into two observed charges. The app's 10-USDC arrival/sweep thresholds are not a Circle-wide minimum. Bridge/forwarding fees are route-dependent. [Circle activation](https://developers.circle.com/cctp/concepts/cctp-on-hypercore).
+
+The checked Across legacy warning concerns `available-routes`; it does not establish deprecation of every old endpoint, actual Papertrade migration, handler execution or refunds. [Vendor reference](https://docs.across.to/api-reference/available-routes/get).
+
+### One bounded sweep-stage observation
+
+The [request](https://hyperevmscan.io/tx/0x36a6bbbb73ed5b18a741ac1554dbf3662151461d68993ed33f4782c3bfaac2d2) and [finalize](https://hyperevmscan.io/tx/0x1edb1e87295ea5c831fd7e20954532e2b6535de93aaa43124389e1d6c108efb7) explorer records report success in blocks **49713666 → 49713667**, at **02:43:35 → 02:43:36 UTC on October 28**. User fields match; CoreWriter and `Swept` amounts match after the retained 8-to-18-decimal conversion, representing **38,287.75 USDC**. This is consistency of a request/finalization pair. The one-second block-timestamp difference excludes source funding, bridge, Core receipt and UI timing. [Values and scope](research-notes/018-mechanism-funding-and-authority.md#sweep-stage-observation).
+
 ## Business model and research references
 
 | Participant | Economic role |
@@ -178,9 +230,29 @@ Thus source receipt → bridge/forwarding completion → Core credit → sweep �
 | Trader | Pays losses and profitable-close deductions; receives paid gains, claims and eligible PAPER issuance. |
 | Protocol LP | Retains net losses and deductions, pays gains and liabilities, and supplies eligible overflow. |
 | PAPER staker | Shares distributions; issuance dilutes unchanged holdings, and reward realization depends on funded allocation. |
+| Configured dev-fee recipient | The owner sets the recipient; the documented claim permission belongs to that recipient. The operator's final beneficial ownership is not established by this role. |
 | Approved builder | Distributes a frontend and earns conditional attributed fees; approval is not permissionless. |
 | Relayer/keepers | Supply execution and account-processing services; trade gas sponsorship is an operating cost, not proof all funding routes are free. |
 | Bridge/forwarding provider | Moves funds between ecosystems and may charge route/service fees distinct from trading economics. |
+
+```mermaid
+flowchart TD
+    D[User deposit] --> U[User balance and matching obligation]
+    U --> C[Cash-funded margin]
+    C --> L[Realized cash loss]
+    L --> P[LP cash or earmarked queue backing]
+    P --> W[Paid winning claims]
+    Q[Unpaid payout claim] --> R[Claim-funded margin]
+    R --> X[Loss reduces debt without new cash]
+    P -->|empty queue and funding| F[Eligible fee allocation]
+    F --> S[PAPER stakers]
+    F --> V[Configured dev-fee recipient]
+    P -->|empty queue and funding| B[Approved-builder accrual]
+    P -->|cap and funding gates| O[Eligible LP overflow to staking]
+    L -.-> T[Eligible PAPER issuance]
+```
+
+This diagram summarizes funding dependencies, not the order of every integer ledger update. Profit deductions can improve the LP's position without being paid as revenue to an external recipient; a win fee can be deducted even when the queue/funding gate prevents its distribution. Fee accrual, reward distribution, claiming to Exchange balance and withdrawal are distinct stages. [Queue funding rules](https://docs.papertrade.xyz/how/solvency-queue/) · [Recipient authority](https://docs.papertrade.xyz/how/risk/).
 
 The business combines a loss-funded trading pool, outcome-dependent monetization and a builder distribution channel. Trader losses, LP retained cash, protocol fees, staker allocations and operator profit are separate measures. Public fee rules do not disclose a complete operating-cost or owner-profit statement. “Self-bootstrapping” explains initial funding; it is not proof every future obligation can be paid on time.
 

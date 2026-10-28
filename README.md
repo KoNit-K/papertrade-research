@@ -54,6 +54,8 @@
 
 **Why it can feel fast:** the October 22 client receives live quotes/candles and account updates through separate push channels; session keys avoid a wallet popup for every open/close. Personal deposit addresses, forwarding and automated sweeps reduce funding steps. Price updates, request acceptance and final settlement finish independently. [Experience and technical details](docs/current-product-review.md#why-it-can-feel-fast).
 
+**Pricing and pause controls:** the documented oracle has no deviation/TWAP breaker. Per-market retirement freezes exit prices permanently for that ID; the separate global opens pause retains live exit prices. [Rules and authority](docs/current-product-review.md#pricing-risk-and-market-controls).
+
 ## PAPER mint curve
 
 **Before, the old curve gave fewer PAPER per $1 as it progressed. Now, new tokens are based on the total PAPER already issued.** As that total grows, the same loss can earn more tokens, while existing holders own a smaller share.

@@ -366,3 +366,10 @@ The supplement reuses October 22 build `2b8e2c45a33e` source identities from [CA
 ## Current Chinese narrative — 2026-10-28
 
 The [Chinese long-form summary](papertrade-summary.zh-CN.md) consolidates current product, settlement, services, funding and economics for document drafting. It retains material client/version boundaries while omitting research ledgers and obsolete rate snapshots. A successful mediated rereading of [Liquidations](https://docs.papertrade.xyz/learn/liquidations/), labeled contract set 2 and updated 2026-10-21, clarifies that displayed bust is the buffered hard-liquidation trigger, distinct from the theoretical zero-equity reference. The README wording now makes that distinction explicit; no deployment or liquidation replay is inferred.
+
+
+## Mechanism, funding-stage and authority follow-up — 2026-10-28
+
+[Note 018](research-notes/018-mechanism-funding-and-authority.md) maps successful official rereadings of BBO pricing, risk, impact, builders, session keys, solvency, staking, addresses and protocol changes to the current reviews. Pages identify contract set 2 and an October 21 update date. Older successful funding-page readings and dated client findings retain their existing scopes.
+
+A fixed request/finalize pair was read through normal explorer navigation and checked offline for matching fields, selectors, event topics, dynamic CoreWriter data and exact amount scaling. Five implementation labels were displayed, without a common-block code/storage authentication. The six-action scheduling payload matches the retained successful upgrade execution event byte-for-byte. These successful observations do not establish final source-to-destination funding, all initialization effects or current security properties. Reader responses and raw identity joins remain private; no upstream content hash, historical state or actual signature validation is invented.
