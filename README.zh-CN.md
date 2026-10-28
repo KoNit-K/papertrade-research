@@ -165,7 +165,7 @@ flowchart TB
 > 🧮 <strong>100× 多仓例子：</strong> 开仓价 100 → 理论上保证金归零的价格 99 → 清算价约 99.0495，也就是 99.05。
 > 触发前平仓，可以拿回仓里剩余的钱；清算会损失全部保证金。
 
-**发了平仓请求，也可能按清算处理。** 在 set 2，如果平仓执行时价格已经达到或越过合约的保证金归零价（bust），这次平仓会按强制清算结算，损失全部保证金。排队时仍要留意这一点。[新版规则与边界检查](docs/research-notes/015-contract-set-2.md#5-hard-liquidation-at-the-boundary)
+**发了平仓请求，也可能按清算处理。** 在 set 2，如果平仓执行时价格已经达到或越过合约的清算触发价（bust，已含缓冲），这次平仓会按强制清算结算，损失全部保证金。排队时仍要留意这一点。[新版规则与边界检查](docs/research-notes/015-contract-set-2.md#5-hard-liquidation-at-the-boundary)
 
 杠杆越高，缓冲相当于保证金的比例越大。[公式与取整](docs/research-notes/006-current-mechanisms.md#liquidation-exact-buffer-basis-and-inclusive-threshold)。
 
@@ -202,6 +202,7 @@ flowchart TB
 
 | 从这里开始 | 可以看到什么 |
 |---|---|
+| [中文文字汇总](docs/papertrade-summary.zh-CN.md) | 可直接整理成文档的现行机制与业务说明 |
 | [产品、合约、服务与业务模式](docs/current-product-review.zh-CN.md) | 综合报告、资金路线和服务商关系 |
 | [10 月 28 日确认更新](docs/research-notes/016-2026-10-28-sync.md) | 新旧差异、来源范围和升级交易区块 |
 | [各部分怎样连接](docs/mechanism-map.md) | 本项目关注的 14 个话题 |

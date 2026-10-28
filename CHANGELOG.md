@@ -1,5 +1,10 @@
 # Changelog
 
+## Current Chinese narrative and liquidation wording — 2026-10-28
+
+- Add a current-mechanism Chinese narrative for document drafting, with README navigation.
+- Clarify that bust is the buffered liquidation trigger rather than the theoretical zero-equity price.
+
 ## Responsive UX and distinct waiting stages — 2026-10-28
 
 - Explain quote/candle push, account reconciliation, session signing and deposit orchestration in both product reviews.

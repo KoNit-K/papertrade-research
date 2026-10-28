@@ -165,7 +165,7 @@ We checked 8 reward distributions in two periods; their amounts matched fee fund
 > 🧮 <strong>Example: 100× long.</strong> Entry price 100 → zero-margin price 99 → liquidation price about 99.0495, or 99.05.
 > Closing before that point can return the margin left in the position. Liquidation takes it all.
 
-**A close request can still end as liquidation.** In set 2, a close executed at or beyond the contract's bust price settles as hard liquidation and takes the full margin. This matters while a close waits in the queue. [Rule and boundary checks](docs/research-notes/015-contract-set-2.md#5-hard-liquidation-at-the-boundary)
+**A close request can still end as liquidation.** In set 2, a close executed at or beyond the contract's bust price (the buffered liquidation trigger) settles as hard liquidation and takes the full margin. This matters while a close waits in the queue. [Rule and boundary checks](docs/research-notes/015-contract-set-2.md#5-hard-liquidation-at-the-boundary)
 
 The higher the leverage, the bigger the buffer is relative to your margin. [Formula and rounding](docs/research-notes/006-current-mechanisms.md#liquidation-exact-buffer-basis-and-inclusive-threshold).
 
@@ -202,6 +202,7 @@ Withdrawals first move trading funds to your HyperCore spot account. Sending the
 
 | Start here | What you will find |
 |---|---|
+| [Chinese long-form summary](docs/papertrade-summary.zh-CN.md) | Current product and mechanism narrative for document drafting |
 | [Product, contracts, services and business model](docs/current-product-review.md) | Bilingual integrated review and funding/provider maps |
 | [Confirmed October 28 updates](docs/research-notes/016-2026-10-28-sync.md) | Changes, source scope and the upgrade transaction block |
 | [How the parts fit together](docs/mechanism-map.md) | A map of 14 topics covered by this project |
