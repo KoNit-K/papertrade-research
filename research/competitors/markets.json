@@ -1,0 +1,2050 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-28T01:56:57.672920+00:00",
+  "scope": "Supported underlyings are separated from collateral, payout and loss-reward assets. Each project retains source-specific observation and activation limits.",
+  "projects": [
+    {
+      "project_id": "papertrade",
+      "crypto_underlyings": [
+        "BTC",
+        "ETH"
+      ],
+      "other_underlyings": [],
+      "non_crypto_scope": "No non-crypto market established by the retained baseline.",
+      "collateral_assets": [
+        "USDC"
+      ],
+      "payout_assets": [
+        "USDC"
+      ],
+      "market_status": "current-turn-official-reader-plus-retained-baseline",
+      "source_ids": [
+        "EVD-COMP-MARKETS-PT-FAQ",
+        "EVD-COMP-PAPERTRADE-PREFLIGHT",
+        "EVD-COMP-PAPERTRADE-BASELINE"
+      ],
+      "limitations": [
+        "Current-turn official FAQ reader explicitly states BTC and ETH; exact transport time/raw response bytes were not retained. This is not a live contract-market query.",
+        "Prior direct documentation access returned 403; no new direct request was made in this markets workstream.",
+        "USDC/USDG bridge inputs must not be confused with collateral or trading underlyings."
+      ],
+      "reward_assets": [
+        "PAPER"
+      ],
+      "evidence_observed_at": null,
+      "evidence_observed_date": "2026-10-28",
+      "tradable_reward_token_claim": false
+    },
+    {
+      "project_id": "yolo",
+      "crypto_underlyings": [
+        "SOL",
+        "BTC",
+        "ETH",
+        "ZEC",
+        "HYPE"
+      ],
+      "other_underlyings": [],
+      "non_crypto_scope": "No non-crypto market established by the preflight official reading.",
+      "collateral_assets": [
+        "JupUSD"
+      ],
+      "payout_assets": [
+        "JupUSD"
+      ],
+      "market_status": "current-turn-official-reader-no-live-market-capture",
+      "source_ids": [
+        "EVD-COMP-MARKETS-YOLO-OVERVIEW",
+        "EVD-COMP-YOLO-001",
+        "EVD-COMP-YOLO-002"
+      ],
+      "limitations": [
+        "The five markets are stated by the current-turn official overview reader and the earlier preflight; exact transport time/raw bytes were not retained.",
+        "Market addition dates, current program and activated market config are unverified.",
+        "A non-JupUSD payment swap is not an additional collateral asset or traded underlying.",
+        "Prior direct documentation access returned 403; no new direct request was made in this markets workstream."
+      ],
+      "reward_assets": [],
+      "evidence_observed_at": null,
+      "evidence_observed_date": "2026-10-28"
+    },
+    {
+      "project_id": "cardboard",
+      "crypto_underlyings": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "other_underlyings": [],
+      "non_crypto_scope": "No non-crypto market established.",
+      "collateral_assets": [
+        "USDC"
+      ],
+      "payout_assets": [
+        "USDC"
+      ],
+      "market_status": "official-documentation-and-product-api",
+      "source_ids": [
+        "EVD-COMP-CARDBOARD-001",
+        "EVD-COMP-CARDBOARD-015",
+        "EVD-COMP-CARDBOARD-016"
+      ],
+      "limitations": [
+        "Market names and aggregate market fields agree, but no deployed-program market registry was independently read."
+      ],
+      "reward_assets": [
+        "CARDBOARD"
+      ],
+      "evidence_observed_at": "2026-10-28T01:32:45.647870+00:00",
+      "current_config_max_leverage": 1000
+    },
+    {
+      "project_id": "trade-everything",
+      "crypto_underlyings": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "HYPE",
+        "BCH"
+      ],
+      "other_underlyings": [
+        {
+          "symbol": "AAAU",
+          "name": "Goldman Sachs Physical Gold Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "AAL",
+          "name": "American Airlines Group Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "AAOI",
+          "name": "Applied Optoelectronics Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "AAPL",
+          "name": "Apple Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "ADBE",
+          "name": "Adobe Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "ADM",
+          "name": "Archer-Daniels-Midland Company",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "AEHR",
+          "name": "Aehr Test Systems",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "AFRM",
+          "name": "Affirm Holdings Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "AIQ",
+          "name": "Global X Ai & Technology Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "ALAB",
+          "name": "Astera Labs Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "AMAT",
+          "name": "Applied Materials Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "AMD",
+          "name": "Advanced Micro Devices Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "AMZN",
+          "name": "Amazon.Com, Inc.",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "ANET",
+          "name": "Arista Networks Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "APD",
+          "name": "Air Products And Chemicals Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "APLD",
+          "name": "Applied Digital Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "APP",
+          "name": "Applovin Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "ARKK",
+          "name": "Ark Innovation Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "ARM",
+          "name": "Arm Holdings Plc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "ASML",
+          "name": "Asml Holding Nv",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "ASTS",
+          "name": "Ast Spacemobile Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "AVAV",
+          "name": "Aerovironment Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "AVGO",
+          "name": "Broadcom Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "AXP",
+          "name": "American Express Company",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "AXTI",
+          "name": "Axt Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "AZN",
+          "name": "Astrazeneca Plc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "BA",
+          "name": "Boeing Co",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "BABA",
+          "name": "Alibaba Group Limited",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "BAC",
+          "name": "Bank Of America Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "BB",
+          "name": "Blackberry Ltd",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "BE",
+          "name": "Bloom Energy Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "BIDU",
+          "name": "Baidu Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "BILI",
+          "name": "Bilibili Inc Adr",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "BIRD",
+          "name": "Allbirds Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "BKNG",
+          "name": "Booking Holdings Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "BLK",
+          "name": "Blackrock Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "BMNR",
+          "name": "Bitmine Immersion Technologies Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "BOTZ",
+          "name": "Global X Robotics & Artificial Intelligence Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "BRK.B",
+          "name": "Berkshire Hathaway Inc Class B",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "BX",
+          "name": "Blackstone Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "CBRS",
+          "name": "Cerebras Systems",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "CCJ",
+          "name": "Cameco Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "CELH",
+          "name": "Celsius Holdings Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "CIEN",
+          "name": "Ciena Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "CLSK",
+          "name": "Cleanspark Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "COF",
+          "name": "Capital One Financial Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "COHR",
+          "name": "Coherent Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "COIN",
+          "name": "Coinbase Global Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "COP",
+          "name": "Conocophillips",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "COST",
+          "name": "Costco Wholesale Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "CPER",
+          "name": "United States Copper Index Fund",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "CRCL",
+          "name": "Circle Internet Group Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "CRDO",
+          "name": "Credo Technology Group Holding Ltd",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "CRM",
+          "name": "Salesforce Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "CRWD",
+          "name": "Crowdstrike Holdings Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "CRWV",
+          "name": "Coreweave Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "CSCO",
+          "name": "Cisco Systems Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "CVX",
+          "name": "Chevron Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "DDOG",
+          "name": "Datadog Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "DELL",
+          "name": "Dell Technologies Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "DIA",
+          "name": "Dia",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "DIS",
+          "name": "Walt Disney Co",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "DKNG",
+          "name": "Draftkings Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "DRAM",
+          "name": "Roundhill Memory Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "EBAY",
+          "name": "Ebay Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "ECHO",
+          "name": "Echostar Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "ETN",
+          "name": "Eaton Corporation Plc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "EWH",
+          "name": "Ishares Msci Hong Kong Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "EWJ",
+          "name": "Ishares Msci Japan Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "EWT",
+          "name": "Ishares Msci Taiwan Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "EWY",
+          "name": "Ishares Msci South Korea Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "EWZ",
+          "name": "Ishares Msci Brazil Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "FCX",
+          "name": "Freeport-Mcmoran Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "FLUT",
+          "name": "Flutter Entertainment Plc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "FUTU",
+          "name": "Futu Holdings Ltd",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "FXI",
+          "name": "Ishares China Large-Cap Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "GDX",
+          "name": "Vaneck Gold Miners Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "GDXJ",
+          "name": "Vaneck Junior Gold Miners Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "GEV",
+          "name": "Ge Vernova Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "GLD",
+          "name": "Spdr Gold Shares Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "GLW",
+          "name": "Corning Incorporated",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "GME",
+          "name": "Gamestop Corp.",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "GOOG",
+          "name": "Alphabet Inc Class C",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "GOOGL",
+          "name": "Alphabet Inc Class A",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "GRAB",
+          "name": "Grab Holdings Ltd",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "HAL",
+          "name": "Halliburton Company",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "HD",
+          "name": "Home Depot Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "HIMS",
+          "name": "Hims & Hers Health Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "HOOD",
+          "name": "Robinhood Markets Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "HPE",
+          "name": "Hewlett Packard Enterprise Company",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "IAU",
+          "name": "Ishares Gold Trust",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "IBIT",
+          "name": "Ishares Bitcoin Trust",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "IBKR",
+          "name": "Interactive Brokers Group Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "IBM",
+          "name": "International Business Machines Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "IEF",
+          "name": "Ishares 7-10 Year Treasury Bond Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "IGV",
+          "name": "Ishares Expanded Tech-Software Sector Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "INDA",
+          "name": "Ishares Msci India Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "INTC",
+          "name": "Intel Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "INTU",
+          "name": "Intuit Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "IONQ",
+          "name": "Ionq Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "IREN",
+          "name": "Iren Ltd",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "IVV",
+          "name": "Ishares Core S&P 500 Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "IWM",
+          "name": "Ishares Russell 2000 Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "JD",
+          "name": "Jd.Com Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "JEPQ",
+          "name": "Jpmorgan Nasdaq Equity Premium Income Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "JPM",
+          "name": "Jpmorgan Chase & Co",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "KHC",
+          "name": "The Kraft Heinz Company",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "KLAC",
+          "name": "Kla Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "KO",
+          "name": "Coca-Cola Co",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "KWEB",
+          "name": "Kraneshares Csi China Internet Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "LITE",
+          "name": "Lumentum Hldgs Inc Com",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "LLY",
+          "name": "Eli Lilly And Company",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "LMT",
+          "name": "Lockheed Martin Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "LRCX",
+          "name": "Lam Research Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "LUNR",
+          "name": "Intuitive Machines Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "MA",
+          "name": "Mastercard Incorporated",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "MAGS",
+          "name": "Roundhill Magnificent Seven Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "MARA",
+          "name": "Marathon Digital Holdings Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "META",
+          "name": "Meta Platforms Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "MRK",
+          "name": "Merck & Co Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "MRVL",
+          "name": "Marvell Technology Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Microsoft Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "MSTR",
+          "name": "Microstrategy Inc. - Class A",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "MU",
+          "name": "Micron Technology Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "MXL",
+          "name": "Maxlinear Inc.",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "NBIS",
+          "name": "Nebius Group Nv",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "NEM",
+          "name": "Newmont Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "NFLX",
+          "name": "Netflix Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "NIO",
+          "name": "Nio Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "NLR",
+          "name": "Vaneck Uranium & Nuclear Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "NNE",
+          "name": "Nano Nuclear Energy Inc.",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "NOW",
+          "name": "Servicenow Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "NU",
+          "name": "Nu Holdings Ltd.",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "NVDA",
+          "name": "Nvidia Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "NVO",
+          "name": "Novo Nordisk As",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "NVTS",
+          "name": "Navitas Semiconductor Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "OKLO",
+          "name": "Oklo Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "ONDS",
+          "name": "Ondas Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "OPEN",
+          "name": "Opendoor Technologies Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "ORCL",
+          "name": "Oracle Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "OXY",
+          "name": "Occidental Petroleum Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "PANW",
+          "name": "Palo Alto Networks Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "PAYP",
+          "name": "Paypay Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "PDD",
+          "name": "Pdd Holdings Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "PENG",
+          "name": "Penguin Solutions Inc.",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "PLTR",
+          "name": "Palantir Technologies Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "POET",
+          "name": "Poet Technologies Inc.",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "PURR",
+          "name": "Hyperliquid Strategies Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "PYPL",
+          "name": "Paypal Holdings Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "QBTS",
+          "name": "D-Wave Quantum Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "QCOM",
+          "name": "Qualcomm Incorporated",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "QQQ",
+          "name": "Invesco Qqq Trust Series 1",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "QQQM",
+          "name": "Invesco Nasdaq 100 Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "QUBT",
+          "name": "Quantum Computing Inc.",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "RDW",
+          "name": "Redwire  Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "RGTI",
+          "name": "Rigetti Computing Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "RIVN",
+          "name": "Rivian Automotive Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "RKLB",
+          "name": "Rocket Lab Usa Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "RTX",
+          "name": "Rtx Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SBUX",
+          "name": "Starbucks Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SGOV",
+          "name": "Ishares 0-3 Month Treasury Bond Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SHLD",
+          "name": "Global X Defense Tech Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SILJ",
+          "name": "Amplify Junior Silver Miners Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SIVR",
+          "name": "Aberdeen Standard Physical Silver Shares Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SKHY",
+          "name": "Sk Hynix Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SLB",
+          "name": "Schlumberger Limited",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SLV",
+          "name": "Ishares Silver Trust",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SMCI",
+          "name": "Super Micro Computer Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SMH",
+          "name": "Vaneck Semiconductor Ucits Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SMR",
+          "name": "Nuscale Power Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SNDK",
+          "name": "Sandisk Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SOFI",
+          "name": "Sofi Technologies Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SONY",
+          "name": "Sony Group Corp Adr",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SOXX",
+          "name": "Ishares Semiconductor Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SPCX",
+          "name": "Space Exploration Technology Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SPMO",
+          "name": "Invesco S&P 500 Momentum Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SPOT",
+          "name": "Spotify Technology Sa",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SPY",
+          "name": "Spy",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SPYM",
+          "name": "Spym",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "STX",
+          "name": "Seagate Technology Holdings Plc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "SYF",
+          "name": "Synchrony Financial",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "TCOM",
+          "name": "Tripcom Group Ltd",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "TEM",
+          "name": "Tempus Ai Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "TER",
+          "name": "Teradyne Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "TLT",
+          "name": "Ishares 20+ Year Treasury Bond Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "TSEM",
+          "name": "Tower Semiconductor Ltd.",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "TSLA",
+          "name": "Tesla Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "TSM",
+          "name": "Taiwan Semiconductor Manufacturing Co Limited",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "TXN",
+          "name": "Texas Instruments Incorporated",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "UBER",
+          "name": "Uber Technologies Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "UMC",
+          "name": "United Microelectronics Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "UPST",
+          "name": "Upstart Holdings Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "URA",
+          "name": "Global X Uranium Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "USAR",
+          "name": "Usa Rare Earth Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "USO",
+          "name": "United States Oil Fund Lp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "V",
+          "name": "Visa Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "VOO",
+          "name": "Vanguard S&P 500 Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "VRT",
+          "name": "Vertiv Holdings Co",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "VST",
+          "name": "Vistra Corp",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "VT",
+          "name": "Vanguard Total World Stock Index Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "WDC",
+          "name": "Western Digital Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "WMT",
+          "name": "Walmart Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "XBI",
+          "name": "Spdr S&P Biotech Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "XLE",
+          "name": "Spdr Select Sector Fund - Energy",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "XLK",
+          "name": "Spdr Select Sector Fund - Technology",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "XOM",
+          "name": "Exxon Mobil Corporation",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "XOP",
+          "name": "Spdr S&P Oil & Gas Exploration & Production Etf",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        },
+        {
+          "symbol": "ZM",
+          "name": "Zoom Video Communications Inc",
+          "category": "stock-or-etf",
+          "source_scope": "landing-demo-host-market-metadata"
+        }
+      ],
+      "non_crypto_scope": "208 unique stock/ETF metadata symbols from the default/demo-host market-summary; six Asian markets additionally named by Draft documentation. These populations can overlap.",
+      "collateral_assets": [
+        "USDC"
+      ],
+      "payout_assets": [
+        "USDC"
+      ],
+      "market_status": "demo-host-market-metadata-plus-conflicting-draft-documentation",
+      "source_ids": [
+        "EVD-COMP-MARKETS-TE-SUMMARY",
+        "EVD-COMP-MARKETS-TE-SCRIPT",
+        "EVD-COMP-TRADEEVERYTHING-001",
+        "EVD-COMP-TRADEEVERYTHING-002",
+        "EVD-COMP-TRADEEVERYTHING-009",
+        "EVD-COMP-TRADEEVERYTHING-015",
+        "EVD-COMP-TRADEEVERYTHING-021",
+        "EVD-COMP-TRADEEVERYTHING-023"
+      ],
+      "limitations": [
+        "The 208 entries are a complete extraction of this response, not a verified mainnet active-market list or trade count.",
+        "Per-entry stock versus ETF types are not provided; no ticker-to-company or pair mapping is guessed.",
+        "Draft introduction documents BTC/ETH/SOL/HYPE/BCH; retained Built-on-Paper page routes BTC/ETH to Papertrade, while pricing pages describe independent Pyth-priced crypto. Actual deployed routes remain unresolved.",
+        "Six Asian documentation names may overlap the 208 metadata entries (e.g. the response names SKHY as Sk Hynix Inc); do not sum 208+6 as distinct active markets.",
+        "Earlier chain-999 aggregate/config responses returned 502.",
+        "No claim of independent competitor volume may include BTC/ETH routing without removing double counting."
+      ],
+      "reward_assets": [
+        "EVERYTHING"
+      ],
+      "evidence_observed_at": "2026-10-28T01:56:00.413352+00:00",
+      "documented_crypto_underlyings": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "HYPE",
+        "BCH"
+      ],
+      "crypto_mainnet_observed": null,
+      "documented_routed_underlyings": [
+        "BTC",
+        "ETH"
+      ],
+      "documented_asian_underlyings": [
+        {
+          "symbol": null,
+          "name": "Nikkei 225",
+          "source_scope": "official-draft-trading-hours",
+          "category": "index"
+        },
+        {
+          "symbol": null,
+          "name": "KOSPI 200",
+          "source_scope": "official-draft-trading-hours",
+          "category": "index"
+        },
+        {
+          "symbol": null,
+          "name": "SK hynix",
+          "source_scope": "official-draft-trading-hours",
+          "category": "stock"
+        },
+        {
+          "symbol": null,
+          "name": "Samsung Electronics",
+          "source_scope": "official-draft-trading-hours",
+          "category": "stock"
+        },
+        {
+          "symbol": null,
+          "name": "Xiaomi",
+          "source_scope": "official-draft-trading-hours",
+          "category": "stock"
+        },
+        {
+          "symbol": null,
+          "name": "SoftBank Group",
+          "source_scope": "official-draft-trading-hours",
+          "category": "stock"
+        }
+      ],
+      "symbol_list_count": 208,
+      "symbol_list_scope": "complete-ticker.quotes-array-from-demo-host-response",
+      "supplier_generated_at_unix_ms": 1793152560896,
+      "supplier_quotes_updated_at_unix_ms": 1793145599800,
+      "mainnet_active_market_count": null
+    },
+    {
+      "project_id": "rektrade",
+      "crypto_underlyings": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "ZEC",
+        "NEAR",
+        "XMR",
+        "HYPE"
+      ],
+      "other_underlyings": [],
+      "non_crypto_scope": "No non-crypto market established.",
+      "collateral_assets": [
+        "USDC"
+      ],
+      "payout_assets": [
+        "USDC"
+      ],
+      "market_status": "official-current-api-with-config-conflicts",
+      "source_ids": [
+        "EVD-COMP-REKTRADE-002",
+        "EVD-COMP-REKTRADE-004",
+        "EVD-COMP-REKTRADE-008"
+      ],
+      "limitations": [
+        "/api/markets reports all seven maximum leverage caps at 1000x, while the same-round /api/config still carries SOL500x and ZEC/NEAR/XMR200x; neither response alone proves executable caps.",
+        "Underlying Hyperliquid dayVolume fields are not Rektrade product volumes.",
+        "No chain registry or execution was independently verified."
+      ],
+      "reward_assets": [
+        "REKT"
+      ],
+      "evidence_observed_at": "2026-10-28T01:33:12.457861+00:00",
+      "api_market_entries": [
+        {
+          "symbol": "BTC",
+          "listed": true,
+          "retired": false,
+          "max_leverage": 1000,
+          "settlement_price_kind": "bbo"
+        },
+        {
+          "symbol": "ETH",
+          "listed": true,
+          "retired": false,
+          "max_leverage": 1000,
+          "settlement_price_kind": "bbo"
+        },
+        {
+          "symbol": "SOL",
+          "listed": true,
+          "retired": false,
+          "max_leverage": 1000,
+          "settlement_price_kind": "bbo"
+        },
+        {
+          "symbol": "ZEC",
+          "listed": true,
+          "retired": false,
+          "max_leverage": 1000,
+          "settlement_price_kind": "oracle"
+        },
+        {
+          "symbol": "NEAR",
+          "listed": true,
+          "retired": false,
+          "max_leverage": 1000,
+          "settlement_price_kind": "oracle"
+        },
+        {
+          "symbol": "XMR",
+          "listed": true,
+          "retired": false,
+          "max_leverage": 1000,
+          "settlement_price_kind": "oracle"
+        },
+        {
+          "symbol": "HYPE",
+          "listed": true,
+          "retired": false,
+          "max_leverage": 1000,
+          "settlement_price_kind": "mark"
+        }
+      ],
+      "config_market_entries": [
+        {
+          "symbol": "BTC",
+          "max_leverage": 1000
+        },
+        {
+          "symbol": "ETH",
+          "max_leverage": 1000
+        },
+        {
+          "symbol": "SOL",
+          "max_leverage": 500
+        },
+        {
+          "symbol": "ZEC",
+          "max_leverage": 200
+        },
+        {
+          "symbol": "NEAR",
+          "max_leverage": 200
+        },
+        {
+          "symbol": "XMR",
+          "max_leverage": 200
+        },
+        {
+          "symbol": "HYPE",
+          "max_leverage": 1000
+        }
+      ]
+    },
+    {
+      "project_id": "stox",
+      "crypto_underlyings": [],
+      "other_underlyings": [
+        {
+          "symbol": "NVDA",
+          "category": "stocks",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:NVDA",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "AAPL",
+          "category": "stocks",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:AAPL",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "MSFT",
+          "category": "stocks",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:MSFT",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "AMZN",
+          "category": "stocks",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:AMZN",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "GOOGL",
+          "category": "stocks",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:GOOGL",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "META",
+          "category": "stocks",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:META",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "TSLA",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:TSLA",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "COIN",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:COIN",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "MSTR",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:MSTR",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "PLTR",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:PLTR",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "CRCL",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:CRCL",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "SP500",
+          "category": "index",
+          "source_class": "index",
+          "price_feed_label": "xyz:SP500",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "XYZ100",
+          "category": "index",
+          "source_class": "index",
+          "price_feed_label": "xyz:XYZ100",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "SPCX",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:SPCX",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "SNDK",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:SNDK",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "MU",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:MU",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "INTC",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:INTC",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "CRWV",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:CRWV",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "AMD",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:AMD",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "MRVL",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:MRVL",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "NBIS",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:NBIS",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "CBRS",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:CBRS",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "MRNA",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:MRNA",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "HOOD",
+          "category": "stocks",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:HOOD",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "SMH",
+          "category": "etf",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:SMH",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "MAGS",
+          "category": "etf",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:MAGS",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "XLE",
+          "category": "etf",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:XLE",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "XBI",
+          "category": "etf",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:XBI",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "URNM",
+          "category": "etf",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:URNM",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "TLT",
+          "category": "etf",
+          "source_class": "index",
+          "price_feed_label": "xyz:TLT",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "EWJ",
+          "category": "etf",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:EWJ",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "EWY",
+          "category": "etf",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:EWY",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "GOLD",
+          "category": "commodity",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:GOLD",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "SILVER",
+          "category": "commodity",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:SILVER",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "CL",
+          "category": "commodity",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:CL",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "BRENTOIL",
+          "category": "commodity",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:BRENTOIL",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "COPPER",
+          "category": "commodity",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:COPPER",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "NATGAS",
+          "category": "commodity",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:NATGAS",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "PLATINUM",
+          "category": "commodity",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:PLATINUM",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "PALLADIUM",
+          "category": "commodity",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:PALLADIUM",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "EUR",
+          "category": "fx",
+          "source_class": "index",
+          "price_feed_label": "xyz:EUR",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "JPY",
+          "category": "fx",
+          "source_class": "index",
+          "price_feed_label": "xyz:JPY",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "GBP",
+          "category": "fx",
+          "source_class": "index",
+          "price_feed_label": "xyz:GBP",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "JP225",
+          "category": "index",
+          "source_class": "index",
+          "price_feed_label": "xyz:JP225",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "KR200",
+          "category": "index",
+          "source_class": "index",
+          "price_feed_label": "xyz:KR200",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "TSM",
+          "category": "intl",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:TSM",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "ASML",
+          "category": "intl",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:ASML",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "SMSN",
+          "category": "intl",
+          "source_class": "largecap",
+          "price_feed_label": "xyz:SMSN",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "SKHX",
+          "category": "intl",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:SKHX",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "BABA",
+          "category": "intl",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:BABA",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "HYUNDAI",
+          "category": "intl",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:HYUNDAI",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "SOFTBANK",
+          "category": "intl",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:SOFTBANK",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "KIOXIA",
+          "category": "intl",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:KIOXIA",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "CAMBRICON",
+          "category": "intl",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:CAMBRICON",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "CXMT",
+          "category": "intl",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:CXMT",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "GIGADEV",
+          "category": "intl",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:GIGADEV",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "ZHIPU",
+          "category": "intl",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:ZHIPU",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "MINIMAX",
+          "category": "intl",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:MINIMAX",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "UNITREE",
+          "category": "intl",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:UNITREE",
+          "source_scope": "retained-frontend-deployment-config"
+        },
+        {
+          "symbol": "SHEIN",
+          "category": "intl",
+          "source_class": "highvol",
+          "price_feed_label": "xyz:SHEIN",
+          "source_scope": "retained-frontend-deployment-config"
+        }
+      ],
+      "non_crypto_scope": "60 frontend-config entries: stocks, ETF, commodity, FX, index and source-labelled intl; no crypto entries in this configuration.",
+      "collateral_assets": [
+        "USDG"
+      ],
+      "payout_assets": [
+        "USDG"
+      ],
+      "market_status": "retained-frontend-config-not-onchain-activation",
+      "source_ids": [
+        "EVD-COMP-MARKETS-STOX-CONFIG",
+        "EVD-COMP-STOX-001",
+        "EVD-COMP-STOX-003"
+      ],
+      "limitations": [
+        "Source group intl is preserved, not independently classified as listed equities.",
+        "FX symbols EUR/JPY/GBP are preserved; no quote-currency/pair mapping is inferred.",
+        "Configured symbols do not establish market identity, live quotes, listing legitimacy, active contracts or actual executed trading.",
+        "STOX is also a reward/staking asset; its separate secondary token market is not a listed derivative underlying in this file.",
+        "House Shares are nontransferable participation rights, not a tradable underlying.",
+        "USDG is trade collateral and trade-profit settlement. USDG/STOX/ETH additionally describe documented shareholder/staker distribution paths; they are not three trading settlement choices."
+      ],
+      "reward_assets": [
+        "STOX"
+      ],
+      "participation_rights": [
+        "House Shares"
+      ],
+      "evidence_observed_at": "2026-10-28T01:31:58.111992+00:00",
+      "symbol_list_count": 60,
+      "source_group_counts": {
+        "stocks": 22,
+        "index": 4,
+        "etf": 8,
+        "commodity": 8,
+        "fx": 3,
+        "intl": 15
+      },
+      "mainnet_active_market_count": null,
+      "distribution_assets": [
+        "USDG",
+        "STOX",
+        "ETH"
+      ],
+      "reward_asset_scope": "STOX is a distribution/reward asset, not asserted to be minted by trading losses; loss-issued participation is House Shares."
+    },
+    {
+      "project_id": "parchment",
+      "crypto_underlyings": null,
+      "other_underlyings": null,
+      "non_crypto_scope": null,
+      "collateral_assets": null,
+      "payout_assets": null,
+      "market_status": "unknown",
+      "source_ids": [
+        "EVD-COMP-CANDIDATES-003"
+      ],
+      "limitations": [
+        "A mirrored introduction mentions 1000x/Pyth but does not establish market names, collateral, settlement or an active deployment."
+      ],
+      "reward_assets": null,
+      "evidence_observed_at": null
+    }
+  ]
+}

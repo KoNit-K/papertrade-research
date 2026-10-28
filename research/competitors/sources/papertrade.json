@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "EVD-COMP-PAPERTRADE-001",
+      "project_id": "papertrade",
+      "title": "Papertrade overview",
+      "url": "https://docs.papertrade.xyz/",
+      "provenance": "official_doc",
+      "retrieved_at": "2026-10-28T01:30:56.333928+00:00",
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": 403,
+      "capture_sha256": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c",
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "http_error"
+      ]
+    },
+    {
+      "id": "EVD-COMP-PAPERTRADE-004",
+      "project_id": "papertrade",
+      "title": "Papertrade official account mirror",
+      "url": "https://teapawt.net/papertrade_xyz",
+      "provenance": "mirror",
+      "retrieved_at": "2026-10-28T01:30:58.112163+00:00",
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": 403,
+      "capture_sha256": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c",
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "http_error"
+      ]
+    },
+    {
+      "id": "EVD-COMP-PAPERTRADE-BASELINE",
+      "project_id": "papertrade",
+      "title": "Existing set-2 product review at baseline commit",
+      "url": "https://github.com/KoNit-K/papertrade-research/blob/d3fba1edd93d2fb1d492c0cdbe26dcf6fffa0050/docs/current-product-review.md",
+      "provenance": "research_repository",
+      "retrieved_at": "2026-10-28T01:33:32.196293+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": "998266a71ad1c947cffb0b406bf018671a51997a5dea0cea41f408e200515c68",
+      "source_dependency_ids": [],
+      "supports": [
+        "The existing research review documents the set-2 baseline, separate cash liabilities and protocol services."
+      ],
+      "limitations": [
+        "Local repository reading, not a new official-page or chain observation; inherits the review evidence limitations."
+      ]
+    },
+    {
+      "id": "EVD-COMP-PAPERTRADE-PREFLIGHT",
+      "project_id": "papertrade",
+      "title": "Papertrade documentation overview read during planning preflight",
+      "url": "https://docs.papertrade.xyz/",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader_preflight",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "Documentation labels contract set 1 as 7\u201321 October 2026 and set 2 as current since 21 October 2026."
+      ],
+      "limitations": [
+        "Read earlier in this conversation; exact capture time and original response bytes not retained.",
+        "Documentation version start is not proof of frontend launch or first trade."
+      ]
+    }
+  ]
+}

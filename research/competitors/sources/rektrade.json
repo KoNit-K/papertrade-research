@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "collection": {
+    "scope": "This scout collection only; later adapters or other agents have separate request ledgers.",
+    "request_count": 8,
+    "successful_200_count": 7,
+    "failed_count": 1,
+    "max_requests": 60,
+    "min_interval_ms": 1000,
+    "methods": [
+      "GET"
+    ],
+    "wallet_operations": 0,
+    "account_specific_queries": 0,
+    "raw_captures_public": false
+  },
+  "sources": [
+    {
+      "id": "EVD-COMP-REKTRADE-001",
+      "project_id": "rektrade",
+      "title": "Rektrade",
+      "url": "https://rektrade.fun/",
+      "provenance": "official-frontend",
+      "retrieved_at": "2026-10-28T01:31:43.396742+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "5bfdc74abd3cfcb289cd002328af16318ad09ea6033c312058db1f917a8019c4",
+      "source_dependency_ids": [],
+      "supports": [
+        "Official frontend shell identifies its application asset."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-REKTRADE-002",
+      "project_id": "rektrade",
+      "title": "https://rektrade.fun/assets/index-AG-HGKxf.js",
+      "url": "https://rektrade.fun/assets/index-AG-HGKxf.js",
+      "provenance": "official-frontend-asset",
+      "retrieved_at": "2026-10-28T01:32:17.694018+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "00c116234a5ef321f4daf04793e75d62e71a648e1f8ad58c32fa065f380dfbaf",
+      "source_dependency_ids": [],
+      "supports": [
+        "Official embedded documentation describes house trading, queue, loss issuance, staking and owner powers; frontend exposes public aggregate routes and six-decimal USDC formatting."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-REKTRADE-003",
+      "project_id": "rektrade",
+      "title": "rektrade (@rektradefun) | teapawt",
+      "url": "https://teapawt.net/rektradefun",
+      "provenance": "third-party-mirror-of-social-posts",
+      "retrieved_at": "2026-10-28T01:32:19.496807+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "7774c6b008e2785ed29164ad527155c546b217c77c2549931869bef85bf8d2b5",
+      "source_dependency_ids": [],
+      "supports": [
+        "Third-party mirror attributes a 22 October HyperEVM live announcement and shared-contract Ember interface statement to project accounts."
+      ],
+      "limitations": [
+        "Mirror copy only; original account content and exact post timestamps were not authenticated.",
+        "Profile capture may contain multiple posts; source_published_at is null."
+      ]
+    },
+    {
+      "id": "EVD-COMP-REKTRADE-004",
+      "project_id": "rektrade",
+      "title": "https://rektrade.fun/api/config",
+      "url": "https://rektrade.fun/api/config",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:32:50.899724+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "f18aedc73babacd5063af04ef33be23ebbc1ae02e2c0ae898dac008a050ac40b",
+      "source_dependency_ids": [
+        "EVD-COMP-REKTRADE-002"
+      ],
+      "supports": [
+        "Official API reports chain 999, deployed contract identities and current parameter values."
+      ],
+      "limitations": [
+        "Supplier response, not independently authenticated canonical chain state.",
+        "Retrieval timestamp is not automatically the business-as-of timestamp."
+      ]
+    },
+    {
+      "id": "EVD-COMP-REKTRADE-005",
+      "project_id": "rektrade",
+      "title": "https://rektrade.fun/api/house",
+      "url": "https://rektrade.fun/api/house",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:32:52.846183+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "75c633a72ef81853908a5c0cc726f6cf0a6a0f698cccdf3905a725fc4613b00f",
+      "source_dependency_ids": [
+        "EVD-COMP-REKTRADE-002"
+      ],
+      "supports": [
+        "Official API reports cash/liability accounting, mint schedule and market configuration."
+      ],
+      "limitations": [
+        "Supplier response, not independently authenticated canonical chain state.",
+        "Retrieval timestamp is not automatically the business-as-of timestamp."
+      ]
+    },
+    {
+      "id": "EVD-COMP-REKTRADE-006",
+      "project_id": "rektrade",
+      "title": "https://rektrade.fun/api/stats",
+      "url": "https://rektrade.fun/api/stats",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:32:54.624729+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "eec7ee9a7819930676d222619b91f563972bb4d0065b81d583aeabcd89321c91",
+      "source_dependency_ids": [
+        "EVD-COMP-REKTRADE-002"
+      ],
+      "supports": [
+        "Official API reports cumulative venue activity and supplier timestamp."
+      ],
+      "limitations": [
+        "Supplier response, not independently authenticated canonical chain state.",
+        "Retrieval timestamp is not automatically the business-as-of timestamp."
+      ]
+    },
+    {
+      "id": "EVD-COMP-REKTRADE-007",
+      "project_id": "rektrade",
+      "title": "https://rektrade.fun/api/status",
+      "url": "https://rektrade.fun/api/status",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:32:56.212915+00:00",
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "none",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [
+        "EVD-COMP-REKTRADE-002"
+      ],
+      "supports": [],
+      "limitations": [
+        "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
+        "No substantive claim is supported by the failed response."
+      ]
+    },
+    {
+      "id": "EVD-COMP-REKTRADE-008",
+      "project_id": "rektrade",
+      "title": "https://rektrade.fun/api/markets",
+      "url": "https://rektrade.fun/api/markets",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:33:12.457861+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "71c8d744f71bd9f53a69ff844640455746ad28e25a9d232e4884c0648ec35d84",
+      "source_dependency_ids": [
+        "EVD-COMP-REKTRADE-002"
+      ],
+      "supports": [
+        "Official API lists seven markets and heterogeneous BBO, oracle and mark settlement indicators."
+      ],
+      "limitations": [
+        "Supplier response, not independently authenticated canonical chain state.",
+        "Retrieval timestamp is not automatically the business-as-of timestamp."
+      ]
+    }
+  ]
+}

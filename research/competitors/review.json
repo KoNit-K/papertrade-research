@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "reviewer": "yolo_sources",
+  "started_at": null,
+  "finished_at": "2026-10-28T01:45:29.301278+00:00",
+  "status": "complete_no_open_findings",
+  "files_checked": [
+    {
+      "path": "docs/competitors/methodology.md",
+      "sha256": "29242b7a5e13ff967f7995f766db33ba8af8fa3d4ce64b61ee2fe8b95d27fa00",
+      "scope": "Claims and source-boundary review; key raw-capture cross-checks"
+    },
+    {
+      "path": "docs/competitors/methodology.zh-CN.md",
+      "sha256": "95db861b1da47538a84a20fab1ec842ebe07d69b0a3a24b265af5d1df7fb1af4",
+      "scope": "Claims and source-boundary review; key raw-capture cross-checks"
+    },
+    {
+      "path": "docs/competitors/projects/papertrade.md",
+      "sha256": "4b1e7744769cbe097af0d1a6b9a141071940de0ef64239dca56d708898a3953b",
+      "scope": "Claims and source-boundary review; key raw-capture cross-checks"
+    },
+    {
+      "path": "docs/competitors/projects/papertrade.zh-CN.md",
+      "sha256": "c57ef2c408acae4aa64ad27734eca48742a73815ebf9ce1d6f38f37d7df5c37a",
+      "scope": "Claims and source-boundary review; key raw-capture cross-checks"
+    },
+    {
+      "path": "docs/competitors/projects/stox.md",
+      "sha256": "31ac3b7369968d920ff6b320c44f66128aaaf95e97a33ea795271d0d81c2802b",
+      "scope": "Claims and source-boundary review; key raw-capture cross-checks"
+    },
+    {
+      "path": "docs/competitors/projects/stox.zh-CN.md",
+      "sha256": "e85f569f79a4f385ef9828420e6e3f40ac867b5800c1030a167999e2000c0b0b",
+      "scope": "Claims and source-boundary review; key raw-capture cross-checks"
+    },
+    {
+      "path": "docs/competitors/projects/cardboard.md",
+      "sha256": "b2425e6eb8cadb44f1e2947a9915a55aa713d85685530712e581d2457f191cba",
+      "scope": "Claims and source-boundary review; key raw-capture cross-checks"
+    },
+    {
+      "path": "docs/competitors/projects/cardboard.zh-CN.md",
+      "sha256": "9c554f2dfd69c5fe7047335a5c6fe981ed2bfddbec4368841cf341d084b4914d",
+      "scope": "Claims and source-boundary review; key raw-capture cross-checks"
+    },
+    {
+      "path": "docs/competitors/projects/trade-everything.md",
+      "sha256": "5084506d37abea57a6c26b90f03e5aa644d157323f75ffb3d11d839f1b4faab5",
+      "scope": "Claims and source-boundary review; key raw-capture cross-checks"
+    },
+    {
+      "path": "docs/competitors/projects/trade-everything.zh-CN.md",
+      "sha256": "947b7a291bddcba7fefa5f397b74005e0dbcb71543bd50e8489c777157e56123",
+      "scope": "Claims and source-boundary review; key raw-capture cross-checks"
+    },
+    {
+      "path": "docs/competitors/projects/rektrade.md",
+      "sha256": "322e52608444abe5213bd4e0253fc235c9e8d7acec78d2a43f666119af19128c",
+      "scope": "Claims and source-boundary review; key raw-capture cross-checks"
+    },
+    {
+      "path": "docs/competitors/projects/rektrade.zh-CN.md",
+      "sha256": "ba0ac102ee5eecf57619e483986d137822064bab894ef4b8f9092ae1a3ebf282",
+      "scope": "Claims and source-boundary review; key raw-capture cross-checks"
+    },
+    {
+      "path": "research/competitors/sources/papertrade.json",
+      "sha256": "1f3b203c4b4e16323ecfdb81a8eb11272b922a2d198ae5236d474f9f0d3fa1cb",
+      "scope": "Metadata fields, capture hashes/dependencies and selected atomic supports; not independent authentication of uncaptured sources"
+    },
+    {
+      "path": "research/competitors/sources/stox.json",
+      "sha256": "5ce494e57706075c8db3e5d6ccd24486f96575c22d162e32311a38105783e7fb",
+      "scope": "Metadata fields, capture hashes/dependencies and selected atomic supports; not independent authentication of uncaptured sources"
+    },
+    {
+      "path": "research/competitors/sources/cardboard.json",
+      "sha256": "9e2418c1a8ebcf480efed116472123f21bca5701e391e5af28a530a0c8143edf",
+      "scope": "Metadata fields, capture hashes/dependencies and selected atomic supports; not independent authentication of uncaptured sources"
+    },
+    {
+      "path": "research/competitors/sources/trade-everything.json",
+      "sha256": "9ca0a8c722346f7e1136b6e6376bff7317d589493a02a5192afb02164b988800",
+      "scope": "Metadata fields, capture hashes/dependencies and selected atomic supports; not independent authentication of uncaptured sources"
+    },
+    {
+      "path": "research/competitors/sources/rektrade.json",
+      "sha256": "82669a469cb082c14fc4910adec7bcf9d5885443147a3558293ef4b9eac2de82",
+      "scope": "Metadata fields, capture hashes/dependencies and selected atomic supports; not independent authentication of uncaptured sources"
+    },
+    {
+      "path": "research/competitors/sources/metrics.json",
+      "sha256": "dba62d23c3474e98510612a2b3b1a2e5b882f381dd6c6879caaeb2b838121fa8",
+      "scope": "Metadata fields, capture hashes/dependencies and selected atomic supports; not independent authentication of uncaptured sources"
+    },
+    {
+      "path": "research/competitors/sources/candidates.json",
+      "sha256": "b7470dd62050a0333ef4ba22dc7a0cf5922f2b8232cf6a84788daf0ea6d34473",
+      "scope": "Metadata fields, capture hashes/dependencies and selected atomic supports; not independent authentication of uncaptured sources"
+    },
+    {
+      "path": "packages/competitors/core.ts",
+      "sha256": "3ae58264c1bebaca14154d053ae924ffeac8005e2947c5334cbc1065e9ac8b09",
+      "scope": "Read and reviewed at this digest"
+    },
+    {
+      "path": "packages/competitors/adapters.ts",
+      "sha256": "2e2091cdd702547726f75b5bd78281f536454df71933ceab1f1c7629eec6aba1",
+      "scope": "Read and reviewed at this digest"
+    },
+    {
+      "path": "packages/competitors/validate.ts",
+      "sha256": "fcb08d140271da3eb0e44f95fa11fcb93b32c12911ada8551cb7b77115f08b08",
+      "scope": "Read and reviewed at this digest"
+    },
+    {
+      "path": "packages/competitors/cli.ts",
+      "sha256": "92fcda2fbf3d8736f297db75b12dd4abc1994fe283bfce47ed62942b3eb40fb0",
+      "scope": "Read and reviewed at this digest"
+    },
+    {
+      "path": "tests/competitors.test.ts",
+      "sha256": "f8ba38ea4f439e06d027765c7ee0fea81169386646072df11e5bd4906fb2859c",
+      "scope": "Read and reviewed at this digest"
+    },
+    {
+      "path": "docs/competitors/README.md",
+      "sha256": "14e20a26c27a5505123170918f22232b9eb0a83a8e6a8fa183992c442dfa9a95",
+      "scope": "Read summary claims and independently compared displayed business values/rounding with source-bound snapshot; not a new protocol reproduction"
+    },
+    {
+      "path": "docs/competitors/README.zh-CN.md",
+      "sha256": "f5591b6482103e07fdba08c75eb94da2334d5970326330d3c8008e382aa703c5",
+      "scope": "Read Chinese summary for equivalent claim boundaries and displayed business values"
+    },
+    {
+      "path": "research/competitors/snapshots/latest.json",
+      "sha256": "82b3041c428d7321c1a6227d6cd2a3b2cfa935db6aa6fe1d1c6816f17262b39f",
+      "scope": "All67 metrics independently rebuilt from its six named retained runs and JSON-equivalence checked"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "claim": "Research source metadata passes the competitor validator",
+      "source_ids": [
+        "EVD-COMP-CANDIDATES-001",
+        "EVD-COMP-CANDIDATES-002",
+        "EVD-COMP-CANDIDATES-003",
+        "EVD-COMP-CANDIDATES-004",
+        "EVD-COMP-CANDIDATES-005"
+      ],
+      "issue": "CLI validate currently fails Unknown source project: discovery records use project_id candidates, outside accepted project IDs. Discovery records must be assigned to actual projects or supported by an explicit separate schema.",
+      "resolution_status": "resolved",
+      "file": "research/competitors/sources/candidates.json",
+      "resolution": "Discovery source IDs retained while project_id values were mapped to stox/rektrade/parchment; independent final validator passed98sources/67metrics."
+    }
+  ],
+  "checks": [
+    {
+      "name": "Independent focused tests",
+      "result": "passed",
+      "details": "Final independent focused rerun:16/16tests passed using bundledNode, including new snapshot unit/source/coverage/window regression. Zero network."
+    },
+    {
+      "name": "Immutable capture/replay scope",
+      "result": "passed",
+      "details": "Seven retained collector runs passed readRun source/order/hash validation; eight response hashes checked; two pure buildReport evaluations per run matched. No refresh or network run during review. Test suite also rejects capture overwrite, bytes/source tampering and response traversal."
+    },
+    {
+      "name": "Metric boundary review",
+      "result": "passed",
+      "details": "Empty TVL stays null; TVL never becomes bankroll. Provider rolling fees retain unknown exact boundaries and narrow fee semantics. Cardboard cumulative vs 24h fields differ; USD6 is explicit. Rektrade stats timestamps are not inherited by its untimed house response. Missing activity, aligned7d and independently reconciled PnL remain null."
+    },
+    {
+      "name": "Access policy review",
+      "result": "passed",
+      "details": "Collector fixed GET allowlist, omitted credentials, manual redirects, timeout/size/request limits and stop after401/403/429 reviewed. No-adapter sources make zero requests."
+    },
+    {
+      "name": "Independent source/capture checks",
+      "result": "passed",
+      "details": "Six Papertrade/STOX captures and baseline review digest matched. STOX launchTime independently converted to2026-10-20T00:12:28Z. All48 successful scout captures matched (Cardboard17, TradeEverything20, Rektrade7, discovery4); source metadata hashes match ledgers. Discovery has5 attempts/4 successful captures; no denial retries made in review."
+    },
+    {
+      "name": "Key candidate claims",
+      "result": "passed",
+      "details": "Cardboard operator/fees/freeze/queue and top-level75008trades/1388users checked. TradeEverything model attribution/routing-vs-independent-market conflict, draft status, mixed50/50queue and502mainnet reads checked. Rektrade API params/mint conflict/counts/sevenmarket scope checked. Advisory: config market leverage differs from markets endpoint; author notified to preserve the conflict. Final recheck confirms leverage-cap advisory resolved bilingually; TE now also records pricing-page immediate-payment versus delayed-queue conflict; raw pricing text checked. STOX now accurately separates this dossier403 from parallel scout200, without authenticity or first-trade inference."
+    },
+    {
+      "name": "Final research validator",
+      "result": "passed",
+      "details": "Independent CLI validate accepted98sources and67snapshotmetrics. Inspected new numeric-source/evidence/coverage and paired-window guards and their focused regression."
+    },
+    {
+      "name": "Published numeric snapshot reconstruction",
+      "result": "passed",
+      "details": "Loaded the six runs named by latest.json with readRun, rebuilt every report offline, concatenated67metrics; JSON exactly matches public snapshot. No writes to captures or network."
+    },
+    {
+      "name": "Root bilingual comparison",
+      "result": "passed",
+      "details": "Displayed TVL/fee/notional/count/cash/queue/OI numbers and two-decimal rounding match latest.json. Missing current YOLO House/leaderboard and TE/STOX business metrics remain unknown; source windows, notional/cash, TVL/bankroll, queued/paid and zero-queue boundaries are preserved. YOLO summary was checked against existing source records and separately captured profit-fee metrics, not independently re-authenticated official pages."
+    }
+  ],
+  "limitations": [
+    "Review is bounded to high-impact evidence/metric issues, not a complete contract or source authenticity audit.",
+    "YOLO dossier and its sourceJSON were authored by this reviewer and are explicitly excluded from independent review.",
+    "Preflight reader sources without raw captures were checked for accurate limitations, not independently authenticated.",
+    "No new public-source, wallet, chain, credential or transaction reads occurred during review.",
+    "Source truth, wash trading, full historical coverage, legal identity and deployed execution are not established by passing tests or hashes.",
+    "Files are recorded at SHA-256; later edits require explicit recheck.",
+    "Exact review start timestamp was not recorded; started_at remains null.",
+    "Final comparison and latest.json received the stated bounded checks; latest.csv, refresh/progress guides, verification.json and review-data.json were not independently checked in this review.",
+    "Final TypeScript check was reported by root but was not independently rerun by this reviewer.",
+    "All checked-file hashes were updated only after reading the changed scopes; future edits require recheck."
+  ],
+  "advisories": [
+    {
+      "file": "docs/competitors/projects/rektrade.md",
+      "source_ids": [
+        "EVD-COMP-REKTRADE-004",
+        "EVD-COMP-REKTRADE-008"
+      ],
+      "issue": "config reports SOL500x/ZEC-NEAR-XMR200x while markets reports all1000x. Existing wording is explicitly scoped to markets, so this is a clarification advisory, not a false-source finding.",
+      "resolution_status": "resolved",
+      "resolution": "Both language dossiers now explicitly preserve the /api/config versus /api/markets leverage-cap conflict; checked against retained responses."
+    }
+  ],
+  "started_date": "2026-10-28",
+  "changed_since_checked": [],
+  "final_recheck_date": "2026-10-28"
+}

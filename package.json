@@ -14,7 +14,10 @@
     "validate:records": "node packages/evidence/cli.ts",
     "validate:chain": "node packages/evidence/chain-cli.ts",
     "collect": "node packages/collector/cli.ts",
-    "export:metadata": "node packages/export/cli.ts"
+    "export:metadata": "node packages/export/cli.ts",
+    "competitors:refresh": "node --use-env-proxy packages/competitors/cli.ts refresh",
+    "competitors:report": "node packages/competitors/cli.ts report",
+    "validate:competitors": "node packages/competitors/cli.ts validate"
   },
   "dependencies": {
     "@noble/hashes": "2.4.0",

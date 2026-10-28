@@ -1,0 +1,414 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "EVD-COMP-YOLO-001",
+      "project_id": "yolo",
+      "title": "YOLO overview",
+      "url": "https://docs.jup.ag/user-docs/labs/yolo",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "YOLO is a Jupiter Labs beta using JupUSD collateral and a separate House.",
+        "The documented markets include SOL, BTC, ETH, ZEC and HYPE."
+      ],
+      "limitations": [
+        "Read earlier in this conversation; exact retrieval time and original response bytes were not retained. Not a fresh execution-phase capture."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader_preflight"
+    },
+    {
+      "id": "EVD-COMP-YOLO-002",
+      "project_id": "yolo",
+      "title": "Trade on YOLO",
+      "url": "https://docs.jup.ag/user-docs/labs/yolo/trading",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "Documented fills use the onchain Pyth Pro price about two seconds after submission.",
+        "Earliest close is 15 seconds; automatic close occurs at 72 hours or the adjusted-profit cap.",
+        "Leaderboard ranks closed-trade realized PnL, open-and-close notional volume, or longest held position over 24H, 7D and All time.",
+        "The trade service co-signs opens and closes."
+      ],
+      "limitations": [
+        "Read earlier in this conversation; exact retrieval time and original response bytes were not retained. Not a fresh execution-phase capture."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader_preflight"
+    },
+    {
+      "id": "EVD-COMP-YOLO-003",
+      "project_id": "yolo",
+      "title": "YOLO profit adjustment and fees",
+      "url": "https://docs.jup.ag/user-docs/labs/yolo/profit-and-fees",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "Winning calculation applies a 0.2 bp deadband, nonlinear adjustment, 50-times-collateral cap, and 2% win fee.",
+        "Every close and liquidation charges 0.2 bp of position size from collateral.",
+        "Profits and fees round down and losses round up to 0.000001 JupUSD.",
+        "Team-changeable settings include win fee, close fee, profit cap and 72-hour duration."
+      ],
+      "limitations": [
+        "Read earlier in this conversation; exact retrieval time and original response bytes were not retained. Not a fresh execution-phase capture."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader_preflight"
+    },
+    {
+      "id": "EVD-COMP-YOLO-004",
+      "project_id": "yolo",
+      "title": "YOLO payouts and the House",
+      "url": "https://docs.jup.ag/user-docs/labs/yolo/payouts",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "Settled trader losses replenish the House, separate from JLP and without direct LP deposits.",
+        "Remaining collateral returns at close; profit is paid in full or queued in full.",
+        "FIFO claims pay one at a time and a large earlier claim can block later claims.",
+        "There is no payout deadline and queued profit may never be paid."
+      ],
+      "limitations": [
+        "Read earlier in this conversation; exact retrieval time and original response bytes were not retained. Not a fresh execution-phase capture."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader_preflight"
+    },
+    {
+      "id": "EVD-COMP-YOLO-005",
+      "project_id": "yolo",
+      "title": "YOLO risks",
+      "url": "https://docs.jup.ag/user-docs/labs/yolo/risks",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "Positions can liquidate during the initial close restriction and a trading pause.",
+        "Manual close submission does not guarantee execution before liquidation."
+      ],
+      "limitations": [
+        "Read earlier in this conversation; exact retrieval time and original response bytes were not retained. Not a fresh execution-phase capture."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader_preflight"
+    },
+    {
+      "id": "EVD-COMP-YOLO-006",
+      "project_id": "yolo",
+      "title": "Execution-phase overview HTTP denial",
+      "url": "https://docs.jup.ag/user-docs/labs/yolo",
+      "provenance": "official_doc",
+      "retrieved_at": "2026-10-28T01:29:59.775581+00:00",
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": 403,
+      "capture_sha256": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c",
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "403 body only; no official page content. Host collection stopped after this first denial."
+      ]
+    },
+    {
+      "id": "EVD-COMP-YOLO-007",
+      "project_id": "yolo",
+      "title": "Is Jupiter YOLO Solana answer to Papertrade",
+      "url": "https://solanafloor.com/news/is-jupiter-s-yolo-solana-s-answer-to-papertrade",
+      "provenance": "media",
+      "retrieved_at": "2026-10-28T01:31:13.405126+00:00",
+      "source_published_at": "2026-10-16",
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": 200,
+      "capture_sha256": "5ba2b0b7ef5cc7edad56724bf37bf664160cd0f850b9772882ddfc85de643135",
+      "source_dependency_ids": [
+        "EVD-COMP-YOLO-009",
+        "EVD-COMP-YOLO-010",
+        "EVD-COMP-YOLO-011"
+      ],
+      "supports": [
+        "The article reports an October 15 beta launch and attributes a sub-24-hour $1 billion volume claim to Jupiter.",
+        "The article interprets volume as leveraged open-and-close notional.",
+        "The article names Siong Ong as Jupiter co-founder and reports Papertrade design inspiration."
+      ],
+      "limitations": [
+        "Media report, not an independent volume reconciliation; embedded X links were extracted from the captured HTML.",
+        "Publication date is known; publication timezone is not established."
+      ]
+    },
+    {
+      "id": "EVD-COMP-YOLO-009",
+      "project_id": "yolo",
+      "title": "Siong original YOLO launch post",
+      "url": "https://x.com/sssionggg/status/2110717157566988335",
+      "provenance": "official_announcement",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": 403,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "Original X access denied; content and timestamp are available through mirror record 012.",
+        "Read earlier in this conversation; exact retrieval time and original response bytes were not retained. Not a fresh execution-phase capture."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader_preflight"
+    },
+    {
+      "id": "EVD-COMP-YOLO-010",
+      "project_id": "yolo",
+      "title": "Siong original Papertrade attribution",
+      "url": "https://x.com/sssionggg/status/2110903439467360645",
+      "provenance": "official_announcement",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": 403,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "Original X access denied; attribution is available through mirror record 013 and media record 007.",
+        "Read earlier in this conversation; exact retrieval time and original response bytes were not retained. Not a fresh execution-phase capture."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader_preflight"
+    },
+    {
+      "id": "EVD-COMP-YOLO-011",
+      "project_id": "yolo",
+      "title": "Jupiter original sub-24-hour volume claim",
+      "url": "https://x.com/JupiterExchange/status/2111040151761850723",
+      "provenance": "official_announcement",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "Original link extracted from media record 007; no new X request was made after earlier host denials.",
+        "Original post timestamp and complete content have not been directly verified."
+      ]
+    },
+    {
+      "id": "EVD-COMP-YOLO-012",
+      "project_id": "yolo",
+      "title": "Mirror of Siong YOLO launch",
+      "url": "https://teapawt.org/sssionggg/status/2110717157566988335",
+      "provenance": "social_mirror",
+      "retrieved_at": null,
+      "source_published_at": "2026-10-15T12:59:00Z",
+      "access_status": "partial",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [
+        "EVD-COMP-YOLO-009"
+      ],
+      "supports": [
+        "The mirror displays a Jupiter Labs launch announcement dated October 15, 2026 at 12:59 UTC."
+      ],
+      "limitations": [
+        "Mirror is not the original publisher; original post authenticity and timestamp are not independently authenticated.",
+        "Read earlier in this conversation; exact retrieval time and original response bytes were not retained. Not a fresh execution-phase capture."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader_preflight"
+    },
+    {
+      "id": "EVD-COMP-YOLO-013",
+      "project_id": "yolo",
+      "title": "Mirror of Siong Papertrade attribution",
+      "url": "https://teapawt.org/sssionggg/status/2110903439467360645",
+      "provenance": "social_mirror",
+      "retrieved_at": null,
+      "source_published_at": "2026-10-16T01:19:00Z",
+      "access_status": "partial",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [
+        "EVD-COMP-YOLO-010"
+      ],
+      "supports": [
+        "The mirror attributes payout-queue inspiration to Papertrade."
+      ],
+      "limitations": [
+        "Mirror is not the original publisher; does not establish shared ownership, code, funding or partnership.",
+        "Read earlier in this conversation; exact retrieval time and original response bytes were not retained. Not a fresh execution-phase capture."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader_preflight"
+    },
+    {
+      "id": "EVD-COMP-YOLO-014",
+      "project_id": "yolo",
+      "title": "The Defiant volume article shell",
+      "url": "https://thedefiant.io/news/defi/jupiter-says-yolo-hit-1-billion-in-volume-in-under-24-hours",
+      "provenance": "media",
+      "retrieved_at": "2026-10-28T01:30:30Z",
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": "a5cc25997c0d3bf6615ffbd6a1c99378abbdfc008df576799ffa4517008efc8d",
+      "source_dependency_ids": [
+        "EVD-COMP-YOLO-011"
+      ],
+      "supports": [
+        "The visible title reports Jupiter claimed $1 billion volume in under 24 hours."
+      ],
+      "limitations": [
+        "Reader output only; HTTP status unavailable. Body remained Loading this article; no full-text claim is made.",
+        "SHA-256 identifies retained reader representation, not publisher HTML."
+      ]
+    },
+    {
+      "id": "EVD-COMP-YOLO-015",
+      "project_id": "yolo",
+      "title": "Solana Guides YOLO explanation",
+      "url": "https://solanaguides.com/jupiter-yolo",
+      "provenance": "media",
+      "retrieved_at": null,
+      "source_published_at": "2026-10-27",
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": "8ff2d6f08f5ae92fcddf0842acba351fa0cfd7639e6a9063f71a7c57d643cd4e",
+      "source_dependency_ids": [
+        "EVD-COMP-YOLO-001",
+        "EVD-COMP-YOLO-002",
+        "EVD-COMP-YOLO-003",
+        "EVD-COMP-YOLO-004",
+        "EVD-COMP-YOLO-005"
+      ],
+      "supports": [
+        "The October 27 guide repeats 15-second close restriction, Pyth Pro pricing, 72-hour close, 50-times cap and close fees."
+      ],
+      "limitations": [
+        "Derivative guide, not independent protocol verification. Its business statistics were not adopted.",
+        "SHA-256 identifies retained reader representation; precise tool completion time was not captured and exact retrieval time was not retained."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader"
+    },
+    {
+      "id": "EVD-COMP-YOLO-016",
+      "project_id": "yolo",
+      "title": "Siong personal website",
+      "url": "https://siong.com/",
+      "provenance": "self_description",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": "f24de0fcd12abe5e20b95f9ab0ee144056d8e1385038c6e65a127b1b52a9947c",
+      "source_dependency_ids": [],
+      "supports": [
+        "Siong self-describes as currently building Jupiter."
+      ],
+      "limitations": [
+        "Does not establish legal entity, geography or detailed employment history.",
+        "SHA-256 identifies retained reader representation; exact retrieval time was not retained."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader"
+    },
+    {
+      "id": "EVD-COMP-YOLO-017",
+      "project_id": "yolo",
+      "title": "Anonymous YOLO leaderboard browser attempt",
+      "url": "https://jup.ag/yolo/leaderboard?period=24h&category=pnl",
+      "provenance": "official_frontend",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "Browser inventory was empty and createBrowserTab returned Browser is not available: iab. No leaderboard content or API endpoint was collected.",
+        "This is a tool-availability failure, not proof of site authentication requirements."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "browser_attempt"
+    },
+    {
+      "id": "EVD-COMP-YOLO-018",
+      "project_id": "yolo",
+      "title": "Execution-phase mirror reader failure",
+      "url": "https://teapawt.org/sssionggg/status/2110717157566988335",
+      "provenance": "social_mirror",
+      "retrieved_at": "2026-10-28T01:30:30Z",
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": null,
+      "capture_sha256": "24f7a0e19d946bb2efd4a018334b3b2c8906fb3a9e2d6da6b80dc11983c42f07",
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "Reader returned inaccessible without HTTP status; no original post content in this response."
+      ]
+    },
+    {
+      "id": "EVD-COMP-YOLO-019",
+      "project_id": "yolo",
+      "title": "Execution-phase mirror reader failure",
+      "url": "https://teapawt.org/sssionggg/status/2110903439467360645",
+      "provenance": "social_mirror",
+      "retrieved_at": "2026-10-28T01:30:30Z",
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": null,
+      "capture_sha256": "35a8ecde580e40879d6453cddfdee4ac6a00db11edd041a81bb44830bb4478fe",
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "Reader returned inaccessible without HTTP status; no original post content in this response."
+      ]
+    }
+  ]
+}

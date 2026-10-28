@@ -1,0 +1,539 @@
+{
+  "schema_version": 1,
+  "collection": {
+    "scope": "This scout collection only; later adapters or other agents have separate request ledgers.",
+    "request_count": 25,
+    "successful_200_count": 20,
+    "failed_count": 5,
+    "max_requests": 60,
+    "min_interval_ms": 1000,
+    "methods": [
+      "GET"
+    ],
+    "wallet_operations": 0,
+    "account_specific_queries": 0,
+    "raw_captures_public": false
+  },
+  "sources": [
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-001",
+      "project_id": "trade-everything",
+      "title": "What is trade everything? · trade everything docs",
+      "url": "https://docs.tradeeverything.xyz/intro/what-is-tradeeverything/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:31:00.833916+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "05dc6f07feb5c0cbbb7f2541f21e502bcb0607e30eede032dd3fa6f0d5b158b1",
+      "source_dependency_ids": [],
+      "supports": [
+        "Draft documentation describes stock and ETF house-counterparty trading and token revenue participation."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-002",
+      "project_id": "trade-everything",
+      "title": "Built on Paper Trade · trade everything docs",
+      "url": "https://docs.tradeeverything.xyz/built-on-paper/overview/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:31:02.674572+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "982d2b2255fd440ee5425ab177ac9ebb0aa55af82b8f6a514ac4fdb1bff7f573",
+      "source_dependency_ids": [],
+      "supports": [
+        "Officially acknowledges Papertrade model borrowing and describes one-for-one BTC/ETH routing."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-003",
+      "project_id": "trade-everything",
+      "title": "Fees · trade everything docs",
+      "url": "https://docs.tradeeverything.xyz/learn/fees/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:31:04.372121+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "097bd2845368b3a546dfc3c87c0a8425314e2ac35697336660398790951d9c6b",
+      "source_dependency_ids": [],
+      "supports": [
+        "Draft documentation describes winning deductions, house-side loss fees and fee recipients."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-004",
+      "project_id": "trade-everything",
+      "title": "The pool and the payout queue · trade everything docs",
+      "url": "https://docs.tradeeverything.xyz/learn/pool-queue/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:31:06.185976+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "4c205c5366c87ef572d880df0ff84aace7ba0da5b6b7969551d41bf2450af704",
+      "source_dependency_ids": [],
+      "supports": [
+        "Documents a zero-seed pool and a queue paid half in order and half pro rata."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-005",
+      "project_id": "trade-everything",
+      "title": "Liquidations and halts · trade everything docs",
+      "url": "https://docs.tradeeverything.xyz/learn/liquidations/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:31:07.946183+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "65a07f89590bffece23335f5852a28b646bfc8c002d62edab6159d53f004ee0d",
+      "source_dependency_ids": [],
+      "supports": [
+        "Documents liquidation buffers, halts and gap-profit caps."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-006",
+      "project_id": "trade-everything",
+      "title": "Admin roles · trade everything docs",
+      "url": "https://docs.tradeeverything.xyz/how/admin/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:31:09.549600+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "d5f24dd01028b75aff2592b37fedef1e5dfd2d8ff15c3556cf8de992c74c172c",
+      "source_dependency_ids": [],
+      "supports": [
+        "Describes owner, guardian and keeper powers with a claimed seven-day upgrade delay."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-007",
+      "project_id": "trade-everything",
+      "title": "Architecture overview · trade everything docs",
+      "url": "https://docs.tradeeverything.xyz/how/architecture/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:31:12.170353+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "c99e227a8f4a3da600107c6e9542c70ae0afeec951c71eb01e4af1115256a8f2",
+      "source_dependency_ids": [],
+      "supports": [
+        "Official architecture names HyperEVM chain 999, HyperCore USDC, Pyth Pro and offchain keepers."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-008",
+      "project_id": "trade-everything",
+      "title": "$EVERYTHING · trade everything docs",
+      "url": "https://docs.tradeeverything.xyz/learn/trade-token/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:31:13.901374+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "39c4d1fad2dab4bf57a70624c69d431eebbd019c636dcaff6ad3019c161a6029",
+      "source_dependency_ids": [],
+      "supports": [
+        "Documents loss-issued participation and staking revenue mechanics."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-009",
+      "project_id": "trade-everything",
+      "title": "Trading hours · trade everything docs",
+      "url": "https://docs.tradeeverything.xyz/learn/trading-hours/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:31:15.947823+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "caca26d659301dc1b0cb5db61ff3770c7ccdd5557e052df8046c3115ea9753f2",
+      "source_dependency_ids": [],
+      "supports": [
+        "Documents session-dependent leverage and managed exposure trims."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-010",
+      "project_id": "trade-everything",
+      "title": "https://docs.tradeeverything.xyz/terms/",
+      "url": "https://docs.tradeeverything.xyz/terms/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:31:17.642377+00:00",
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "none",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "<urlopen error _ssl.c:1063: The handshake operation timed out>",
+        "No substantive claim is supported by the failed response."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-011",
+      "project_id": "trade-everything",
+      "title": "trade everything",
+      "url": "https://tradeeverything.xyz/",
+      "provenance": "official-frontend",
+      "retrieved_at": "2026-10-28T01:31:38.713853+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "3b20315cb1fe6c39f9748a224d81809c92e572f91ffd4269a354d6151c92044d",
+      "source_dependency_ids": [],
+      "supports": [
+        "Landing HTML contains launch countdown, live wording and demo/testnet links."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-012",
+      "project_id": "trade-everything",
+      "title": "Trade · trade everything (demo)",
+      "url": "https://exchange.tradeeverything.xyz/",
+      "provenance": "official-frontend",
+      "retrieved_at": "2026-10-28T01:31:40.833554+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "ef7669a9ed41db4303e16821f96613a98e5e06aa5e72b3accf956194e3c436bd",
+      "source_dependency_ids": [],
+      "supports": [
+        "Exchange default HTML is labelled demo."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-013",
+      "project_id": "trade-everything",
+      "title": "https://exchange.tradeeverything.xyz/js/net.js",
+      "url": "https://exchange.tradeeverything.xyz/js/net.js",
+      "provenance": "official-frontend-asset",
+      "retrieved_at": "2026-10-28T01:32:05.352202+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "86fb74a790deecf8f7c72a41064d0e4bf4588038fb4b01781688e12d28ecf79e",
+      "source_dependency_ids": [],
+      "supports": [
+        "Network script distinguishes demo from chain 998/999 paths and specifies mainnet launch instant."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-014",
+      "project_id": "trade-everything",
+      "title": "https://tradeeverything.xyz/market-summary.js",
+      "url": "https://tradeeverything.xyz/market-summary.js",
+      "provenance": "official-frontend-asset",
+      "retrieved_at": "2026-10-28T01:32:06.961109+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "d8c31c01421c358f9ec4bc69b9f6f1981436e334f358c0f9de327c667ae9fd5c",
+      "source_dependency_ids": [],
+      "supports": [
+        "Landing market-summary script points to the demo-host public API."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-015",
+      "project_id": "trade-everything",
+      "title": "Trades and pricing · trade everything docs",
+      "url": "https://docs.tradeeverything.xyz/learn/trades-pricing/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:32:08.547585+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "d41bad934f2ae0ef04428be0fbc3ee823a4d3d8f8dc6cb6c43ffca44d48f7290",
+      "source_dependency_ids": [],
+      "supports": [
+        "Draft pricing page describes Pyth-priced BTC/ETH, conflicting with the routing page."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-016",
+      "project_id": "trade-everything",
+      "title": "Leverage and positions · trade everything docs",
+      "url": "https://docs.tradeeverything.xyz/learn/leverage/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:32:10.244583+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "f52da96a1c01433c7a0756a91748a33eb42497531d744f7ad3b420ac7b6e0508",
+      "source_dependency_ids": [],
+      "supports": [
+        "Draft leverage page describes an independent crypto basket and recovery controls."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-017",
+      "project_id": "trade-everything",
+      "title": "Solvency and queue · trade everything docs Pool cash, sideBucket and the payout queue",
+      "url": "https://docs.tradeeverything.xyz/how/solvency-queue/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:32:11.981359+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "a307f56e25258a52a80339fc7d1544ab29f58b44fb6aa3bff29e922c665b1e48",
+      "source_dependency_ids": [],
+      "supports": [
+        "Documents half-in-order, half-pro-rata queue harvest mechanics."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-018",
+      "project_id": "trade-everything",
+      "title": "Terms · trade everything",
+      "url": "https://tradeeverything.xyz/terms/",
+      "provenance": "official-frontend",
+      "retrieved_at": "2026-10-28T01:32:13.674938+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "c32a506301bc6c011e23c405a0542cfe1579f57a0078c93a165cebae37e1c23b",
+      "source_dependency_ids": [],
+      "supports": [
+        "Acquired Terms define an unnamed interface operator; no legal entity was established."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-019",
+      "project_id": "trade-everything",
+      "title": "Trade Everything (@TradeEverythin_) | teapawt",
+      "url": "https://teapawt.net/TradeEverythin_",
+      "provenance": "third-party-mirror-of-social-posts",
+      "retrieved_at": "2026-10-28T01:32:15.351337+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "8cf96fe3a597e1455cfa65163f79279d77b62df6d988f9b2af409966898f91a5",
+      "source_dependency_ids": [],
+      "supports": [
+        "Third-party mirror attributes a 22 October planned 26 October 13:30 UTC launch post to the official account."
+      ],
+      "limitations": [
+        "Mirror copy only; original account content and exact post timestamps were not authenticated.",
+        "Profile capture may contain multiple posts; source_published_at is null."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-020",
+      "project_id": "trade-everything",
+      "title": "Trade · trade everything (demo)",
+      "url": "https://testnet.tradeeverything.xyz/?net=mainnet",
+      "provenance": "official-frontend",
+      "retrieved_at": "2026-10-28T01:33:14.585976+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "9ef8d0489b5b4126c16f4804c2ba6aa7dd9cb6c8738e2ec0f16e1fa3031bcea5",
+      "source_dependency_ids": [],
+      "supports": [
+        "Officially configured chain-host frontend is publicly reachable."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-021",
+      "project_id": "trade-everything",
+      "title": "https://testnet.tradeeverything.xyz/js/te-chain.js",
+      "url": "https://testnet.tradeeverything.xyz/js/te-chain.js",
+      "provenance": "official-frontend-asset",
+      "retrieved_at": "2026-10-28T01:33:17.906723+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "f06387892a8a56df99d0f0e78f1e126ad77ffde5e19e68c929e4ea2a6580af8e",
+      "source_dependency_ids": [],
+      "supports": [
+        "Official application asset exposes chain 999 deployment configuration and aggregate read paths."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-022",
+      "project_id": "trade-everything",
+      "title": "https://testnet.tradeeverything.xyz/api/999/config",
+      "url": "https://testnet.tradeeverything.xyz/api/999/config",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:34:03.949736+00:00",
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "none",
+      "http_status": 502,
+      "capture_sha256": null,
+      "source_dependency_ids": [
+        "EVD-COMP-TRADEEVERYTHING-013",
+        "EVD-COMP-TRADEEVERYTHING-021"
+      ],
+      "supports": [],
+      "limitations": [
+        "HTTP Error 502: Bad Gateway",
+        "No substantive claim is supported by the failed response."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-023",
+      "project_id": "trade-everything",
+      "title": "https://testnet.tradeeverything.xyz/api/999/query/protocol/summary",
+      "url": "https://testnet.tradeeverything.xyz/api/999/query/protocol/summary",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:34:05.636348+00:00",
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "none",
+      "http_status": 502,
+      "capture_sha256": null,
+      "source_dependency_ids": [
+        "EVD-COMP-TRADEEVERYTHING-013",
+        "EVD-COMP-TRADEEVERYTHING-021"
+      ],
+      "supports": [],
+      "limitations": [
+        "HTTP Error 502: Bad Gateway",
+        "No substantive claim is supported by the failed response."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-024",
+      "project_id": "trade-everything",
+      "title": "https://testnet.tradeeverything.xyz/api/999/state/house/current",
+      "url": "https://testnet.tradeeverything.xyz/api/999/state/house/current",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:34:07.276054+00:00",
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "none",
+      "http_status": 502,
+      "capture_sha256": null,
+      "source_dependency_ids": [
+        "EVD-COMP-TRADEEVERYTHING-013",
+        "EVD-COMP-TRADEEVERYTHING-021"
+      ],
+      "supports": [],
+      "limitations": [
+        "HTTP Error 502: Bad Gateway",
+        "No substantive claim is supported by the failed response."
+      ]
+    },
+    {
+      "id": "EVD-COMP-TRADEEVERYTHING-025",
+      "project_id": "trade-everything",
+      "title": "https://testnet.tradeeverything.xyz/api/999/query/protocol/queue-summary",
+      "url": "https://testnet.tradeeverything.xyz/api/999/query/protocol/queue-summary",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:34:08.873139+00:00",
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "none",
+      "http_status": 502,
+      "capture_sha256": null,
+      "source_dependency_ids": [
+        "EVD-COMP-TRADEEVERYTHING-013",
+        "EVD-COMP-TRADEEVERYTHING-021"
+      ],
+      "supports": [],
+      "limitations": [
+        "HTTP Error 502: Bad Gateway",
+        "No substantive claim is supported by the failed response."
+      ]
+    }
+  ]
+}

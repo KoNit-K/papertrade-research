@@ -34,6 +34,8 @@
 
 ## Features
 
+**Competitor research:** [YOLO, Cardboard, Trade Everything, Rektrade and STOX](docs/competitors/README.md) — bilingual dossiers, dated business observations and [manual refresh commands](docs/competitors/refresh.md).
+
 | Feature | How it works |
 |---|---|
 | 🤝 **Trade against the pool** | You trade against Papertrade's LP. Your gains come from the pool; cash losses add to it. |

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "EVD-COMP-MARKETS-PT-FAQ",
+      "project_id": "papertrade",
+      "title": "Current official Papertrade FAQ markets",
+      "url": "https://docs.papertrade.xyz/intro/faq/",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "recorded_at": "2026-10-28T01:56:48.728553+00:00",
+      "retrieval_method": "web_reader_current_turn",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "FAQ currently lists BTC and ETH, both up to 1000x leverage; additional HIP-3 markets are a capability, not a current listing.",
+        "USDC balance and settlement infrastructure is described separately from traded underlyings."
+      ],
+      "limitations": [
+        "Actually opened via web reader in the market-inventory update; no endpoint response bytes or precise transport timestamp were provided.",
+        "Official description does not establish deployed market activation, capacity or program parameters."
+      ]
+    },
+    {
+      "id": "EVD-COMP-MARKETS-YOLO-OVERVIEW",
+      "project_id": "yolo",
+      "title": "Current official Jupiter YOLO overview markets",
+      "url": "https://docs.jup.ag/user-docs/labs/yolo",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "recorded_at": "2026-10-28T01:56:48.728553+00:00",
+      "retrieval_method": "web_reader_current_turn",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "Overview lists SOL, BTC, ETH, ZEC and HYPE, 500\u20131000x, with JupUSD collateral and payouts.",
+        "Other input tokens are swapped to JupUSD and are not additional YOLO trading markets."
+      ],
+      "limitations": [
+        "Actually opened via web reader in the market-inventory update; no endpoint response bytes or precise transport timestamp were provided.",
+        "Official description does not establish deployed market activation, capacity or program parameters."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "EVD-COMP-STOX-001",
+      "project_id": "stox",
+      "title": "STOX application",
+      "url": "https://stoxpreps.com/",
+      "provenance": "frontend_observation",
+      "retrieved_at": "2026-10-28T01:30:59.710405+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": 200,
+      "capture_sha256": "9c19bdb423590eaa7dc14b8db1e8eef889107510ee1b3f9ce0df91197ed64509",
+      "source_dependency_ids": [],
+      "supports": [
+        "The app describes synthetic pooled trades, nontransferable House Shares, permanent House capital deposits, conditional orders and partial closes.",
+        "The page declares independence from Robinhood and Hyperliquid."
+      ],
+      "limitations": [
+        "Static HTML contains metric placeholders; no live business values obtained.",
+        "Marketing statements and controls have not been checked against deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-STOX-002",
+      "project_id": "stox",
+      "title": "STOX official account mirror",
+      "url": "https://teapawt.net/STOXPREPS",
+      "provenance": "mirror",
+      "retrieved_at": "2026-10-28T01:31:01.312486+00:00",
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": 403,
+      "capture_sha256": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c",
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "http_error"
+      ]
+    },
+    {
+      "id": "EVD-COMP-STOX-003",
+      "project_id": "stox",
+      "title": "STOX application JavaScript",
+      "url": "https://stoxpreps.com/app.js",
+      "provenance": "frontend_observation",
+      "retrieved_at": "2026-10-28T01:31:43.655292+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "38df9b01bd438b72030a6803bd3de12508661c58006630587360984fa8fdd679",
+      "source_dependency_ids": [
+        "EVD-COMP-STOX-001"
+      ],
+      "supports": [
+        "Static application code names Robinhood Chain 4663 and references deployment.json, PriceRelay and Exchange contracts."
+      ],
+      "limitations": [
+        "Static code inspection only; not executed and not proof of deployed contracts."
+      ]
+    },
+    {
+      "id": "EVD-COMP-STOX-004",
+      "project_id": "stox",
+      "title": "STOX frontend deployment configuration",
+      "url": "https://stoxpreps.com/deployment.json",
+      "provenance": "frontend_observation",
+      "retrieved_at": "2026-10-28T01:31:58.111992+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": 200,
+      "capture_sha256": "9e57b547a46c1897f6afe7b63dfd54011ae0d61dbf8006c5bd160d1394a46b20",
+      "source_dependency_ids": [
+        "EVD-COMP-STOX-003"
+      ],
+      "supports": [
+        "The frontend supplies Robinhood Chain 4663 contract configuration; this is not independent deployment verification."
+      ],
+      "limitations": [
+        "No chain reads, contract verification or creation-time lookup performed."
+      ]
+    }
+  ]
+}

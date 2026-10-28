@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "reviewer": "metrics_method (independent review of yolo_research and candidate_scout dossiers; no self-review of collection code)",
+  "reviewed_at": "2026-10-28T01:38:05.896177+00:00",
+  "files_checked": [
+    {
+      "path": "docs/competitors/projects/yolo.md",
+      "sha256": "25dcfb76534cbc40aeb3188da0cc85d0bfb9bcb6316f98b4e1cf641d4e660fac"
+    },
+    {
+      "path": "docs/competitors/projects/yolo.zh-CN.md",
+      "sha256": "3ead9972e6ff9c8e08eb840585507e69e1e2f0fd632f0f60ec629f72a2747329"
+    },
+    {
+      "path": "research/competitors/sources/yolo.json",
+      "sha256": "18738b05186f2cdd821cf866970aaf1b3adc7e81107ed475b963254e245c9f75"
+    },
+    {
+      "path": "docs/competitors/projects/cardboard.md",
+      "sha256": "b2425e6eb8cadb44f1e2947a9915a55aa713d85685530712e581d2457f191cba"
+    },
+    {
+      "path": "docs/competitors/projects/cardboard.zh-CN.md",
+      "sha256": "9c554f2dfd69c5fe7047335a5c6fe981ed2bfddbec4368841cf341d084b4914d"
+    },
+    {
+      "path": "research/competitors/sources/cardboard.json",
+      "sha256": "9e2418c1a8ebcf480efed116472123f21bca5701e391e5af28a530a0c8143edf"
+    },
+    {
+      "path": "docs/competitors/projects/trade-everything.md",
+      "sha256": "66b453313ebca868c9c14daf3a3eed86bfe03acca8639129d424694fde0b0ed3"
+    },
+    {
+      "path": "docs/competitors/projects/trade-everything.zh-CN.md",
+      "sha256": "c208c2edcbf9930074cce94b70853ab1e7db1b21710c27d4ca460b16e6410c2e"
+    },
+    {
+      "path": "research/competitors/sources/trade-everything.json",
+      "sha256": "9ca0a8c722346f7e1136b6e6376bff7317d589493a02a5192afb02164b988800"
+    }
+  ],
+  "capture_checks": [
+    {
+      "source_id": "EVD-COMP-YOLO-016",
+      "sha256": "f24de0fcd12abe5e20b95f9ab0ee144056d8e1385038c6e65a127b1b52a9947c",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-YOLO-014",
+      "sha256": "a5cc25997c0d3bf6615ffbd6a1c99378abbdfc008df576799ffa4517008efc8d",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-YOLO-019",
+      "sha256": "35a8ecde580e40879d6453cddfdee4ac6a00db11edd041a81bb44830bb4478fe",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-YOLO-006",
+      "sha256": "2938e9f1284180959e33ab1718d0793a72ff6e4cdb8108c34dcd14e69446de5c",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-YOLO-007",
+      "sha256": "5ba2b0b7ef5cc7edad56724bf37bf664160cd0f850b9772882ddfc85de643135",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-YOLO-015",
+      "sha256": "8ff2d6f08f5ae92fcddf0842acba351fa0cfd7639e6a9063f71a7c57d643cd4e",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-YOLO-018",
+      "sha256": "24f7a0e19d946bb2efd4a018334b3b2c8906fb3a9e2d6da6b80dc11983c42f07",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-CARDBOARD-002",
+      "sha256": "2c90f7e6b8f9dd2afbe392743f8c6538a77b44ec900b7fab05fd0e408a3e9358",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-CARDBOARD-003",
+      "sha256": "4529373add91e6f4f3e1b573fb353c8722dcbfdbf535bd679b16286154f64d10",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-CARDBOARD-004",
+      "sha256": "cb708a286cff85cf37bf92fc1be66042d6f438729f285ff9c822f324e8391b2d",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-CARDBOARD-006",
+      "sha256": "a7512c43e38421b194c69a944e79c59875aa4189426af44d2b98483f444ba334",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-CARDBOARD-008",
+      "sha256": "bb25c101e6cf6ce05fc69557425d7614a9f01e9c22c0ff9db45271a2f8529ff9",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-CARDBOARD-009",
+      "sha256": "24dcc724a690d2d5203a589e96287342126eff0506d7a3c5d7d1783b3ad89ed7",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-CARDBOARD-010",
+      "sha256": "b95cdad0330b97eeb9b03fd9e9a29d95d22740e52e02d92cfcd3e70c4a779d4c",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-CARDBOARD-015",
+      "sha256": "3d1543139f8fab5ae8d34c27120597c5afe3854227351f7e8044a240741588d6",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-TRADEEVERYTHING-002",
+      "sha256": "982d2b2255fd440ee5425ab177ac9ebb0aa55af82b8f6a514ac4fdb1bff7f573",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-TRADEEVERYTHING-003",
+      "sha256": "097bd2845368b3a546dfc3c87c0a8425314e2ac35697336660398790951d9c6b",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-TRADEEVERYTHING-004",
+      "sha256": "4c205c5366c87ef572d880df0ff84aace7ba0da5b6b7969551d41bf2450af704",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-TRADEEVERYTHING-006",
+      "sha256": "d5f24dd01028b75aff2592b37fedef1e5dfd2d8ff15c3556cf8de992c74c172c",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-TRADEEVERYTHING-007",
+      "sha256": "c99e227a8f4a3da600107c6e9542c70ae0afeec951c71eb01e4af1115256a8f2",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-TRADEEVERYTHING-015",
+      "sha256": "d41bad934f2ae0ef04428be0fbc3ee823a4d3d8f8dc6cb6c43ffca44d48f7290",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-TRADEEVERYTHING-016",
+      "sha256": "f52da96a1c01433c7a0756a91748a33eb42497531d744f7ad3b420ac7b6e0508",
+      "byte_hash_match": true
+    },
+    {
+      "source_id": "EVD-COMP-TRADEEVERYTHING-017",
+      "sha256": "a307f56e25258a52a80339fc7d1544ab29f58b44fb6aa3bff29e922c665b1e48",
+      "byte_hash_match": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "REVIEW-DATA-001",
+      "severity": "medium",
+      "status": "resolved_in_integrated_documents",
+      "files": [
+        "docs/competitors/projects/trade-everything.md",
+        "docs/competitors/projects/trade-everything.zh-CN.md"
+      ],
+      "source_ids": [
+        "EVD-COMP-TRADEEVERYTHING-015",
+        "EVD-COMP-TRADEEVERYTHING-017"
+      ],
+      "finding": "Pricing page asserts immediate payment of every win while queue page permits unpaid/partially paid winning claims. Current dossiers identify BTC/ETH routing inconsistency but omit this payment-language inconsistency.",
+      "requested_resolution": "Add a bilingual sentence preserving the contradiction and no deployed-payment guarantee; do not select one page as authoritative."
+    },
+    {
+      "id": "REVIEW-DATA-002",
+      "severity": "low",
+      "status": "resolved_in_integrated_documents",
+      "files": [
+        "docs/competitors/projects/yolo.md",
+        "docs/competitors/projects/yolo.zh-CN.md"
+      ],
+      "source_ids": [
+        "EVD-COMP-YOLO-002"
+      ],
+      "finding": "Dossier says no live fee revenue was captured; the combined module now has separately captured DefiLlama winning-profit-fee aggregates. This is a collection-scope wording conflict, not independent verification of complete fees.",
+      "requested_resolution": "Qualify missing data as first-party official fee/accounting data and point to provider-defined profit fees in the business snapshot without treating them as total costs."
+    },
+    {
+      "id": "REVIEW-DATA-003",
+      "severity": "low",
+      "status": "resolved_in_integrated_documents",
+      "files": [
+        "research/competitors/sources/yolo.json"
+      ],
+      "source_ids": [
+        "EVD-COMP-YOLO-001",
+        "EVD-COMP-YOLO-002",
+        "EVD-COMP-YOLO-003",
+        "EVD-COMP-YOLO-004",
+        "EVD-COMP-YOLO-005"
+      ],
+      "finding": "Each preflight limitations list repeats the same caveat five times. Caveat itself is accurate and does not conceal a scope upgrade.",
+      "requested_resolution": "Deduplicate repeated caveat if convenient."
+    }
+  ],
+  "resolutions": [
+    {
+      "finding_id": "REVIEW-DATA-001",
+      "action": "Re-read both integrated dossiers: explicit immediate-payment versus queue conflict added, with no payment guarantee and no deployment resolution claimed",
+      "status": "resolved",
+      "verified_at": "2026-10-28T01:45:45.742212+00:00"
+    },
+    {
+      "finding_id": "REVIEW-DATA-002",
+      "action": "Re-read both integrated YOLO dossiers: missing official first-party fee ledger is separated from third-party provider profit-fee observations and limitations",
+      "status": "resolved",
+      "verified_at": "2026-10-28T01:45:45.742212+00:00"
+    },
+    {
+      "check": "YOLO attribution, original versus mirror, issuer volume claim",
+      "result": "pass_with_limits",
+      "detail": "October 15 date is attributed to mirror/media; original timestamp unverified. $1B is a relayed issuer notional claim, not independent volume/collateral reconciliation; The Defiant partial body is explicitly disclosed."
+    },
+    {
+      "check": "YOLO House, fees and bilingual parity",
+      "result": "pass_with_limits",
+      "detail": "House is separated from JLP; whole-claim FIFO is not given Papertrade partial-payment behavior. Deadband 0.00002 = 0.2bp and close charge at 1000x gives 0.098% bust distance; cap precedes 2% win fee. Exact nonlinear constant is only preflight source attribution because official bytes are missing."
+    },
+    {
+      "check": "Cardboard mechanism and business units",
+      "result": "pass_with_limits",
+      "detail": "Captured texts support opening-locked winning exposure, full adverse notional, partial-payment FIFO, cash versus unpaid claim separation, operator freeze powers and markup as a percentage of base fees. 200 ppm = 2bp; docs dynamic placeholders do not override supplier config. Cumulative stats.volume is not one-day volume."
+    },
+    {
+      "check": "Trade Everything mechanism and business boundary",
+      "result": "pass_with_change_request",
+      "detail": "Captured texts support Papertrade-routing versus independent crypto-description conflict, half-order/half-pro-rata harvest and Draft status. Planned launch/live wording is not promoted to observed real trading; failed mainnet reads remain null."
+    },
+    {
+      "finding_id": "REVIEW-DATA-003",
+      "status": "resolved",
+      "action": "Checked first five YOLO source records: duplicated caveat reduced to one instance per limitations list",
+      "verified_at": "2026-10-28T01:45:45.742212+00:00"
+    }
+  ],
+  "limits": [
+    "Read-only local review; no new network access and no retry of denied hosts",
+    "No independent deployed-code, event completeness, wallet/person deduplication, settlement, funding provenance or legal-entity authentication",
+    "Official YOLO preflight sources 001-005 and mirror sources 012-013 have no retained bytes; only metadata attribution and internal arithmetic could be reviewed",
+    "Hash matches establish retained byte identity, not authenticity, source accuracy or redistribution permission",
+    "Reviewed only selected Cardboard/Trade Everything core mechanisms and their cited captures, not exhaustive whole-source or whole-site consistency",
+    "Did not review own collector/report/validator code or treat synthetic tests as live business evidence",
+    "Findings remain open until author/integrator records concrete corrections; this file is not an approval to publish raw captures"
+  ],
+  "final_checks": {
+    "reviewed_at": "2026-10-28T01:45:45.742212+00:00",
+    "status": "consistent_with_minor_editorial_requests",
+    "files_checked": [
+      {
+        "path": "docs/competitors/projects/yolo.md",
+        "sha256": "d6e56370158fbfb548f88c1400f6ab44b89222f0674607216276b28d1392c116"
+      },
+      {
+        "path": "docs/competitors/projects/yolo.zh-CN.md",
+        "sha256": "cd5baa5a85b7a150a6c509fe9043aa5206d0d39a585f061868f31a6a3d2111ca"
+      },
+      {
+        "path": "research/competitors/sources/yolo.json",
+        "sha256": "881ef050510a099d44b8993e2f504cfdebaa0856423c63ae8fe7aa0a8cb0afc5"
+      },
+      {
+        "path": "docs/competitors/projects/cardboard.md",
+        "sha256": "b2425e6eb8cadb44f1e2947a9915a55aa713d85685530712e581d2457f191cba"
+      },
+      {
+        "path": "docs/competitors/projects/cardboard.zh-CN.md",
+        "sha256": "9c554f2dfd69c5fe7047335a5c6fe981ed2bfddbec4368841cf341d084b4914d"
+      },
+      {
+        "path": "research/competitors/sources/cardboard.json",
+        "sha256": "9e2418c1a8ebcf480efed116472123f21bca5701e391e5af28a530a0c8143edf"
+      },
+      {
+        "path": "docs/competitors/projects/trade-everything.md",
+        "sha256": "5084506d37abea57a6c26b90f03e5aa644d157323f75ffb3d11d839f1b4faab5"
+      },
+      {
+        "path": "docs/competitors/projects/trade-everything.zh-CN.md",
+        "sha256": "947b7a291bddcba7fefa5f397b74005e0dbcb71543bd50e8489c777157e56123"
+      },
+      {
+        "path": "research/competitors/sources/trade-everything.json",
+        "sha256": "9ca0a8c722346f7e1136b6e6376bff7317d589493a02a5192afb02164b988800"
+      },
+      {
+        "path": "docs/competitors/README.md",
+        "sha256": "14e20a26c27a5505123170918f22232b9eb0a83a8e6a8fa183992c442dfa9a95"
+      },
+      {
+        "path": "docs/competitors/README.zh-CN.md",
+        "sha256": "f5591b6482103e07fdba08c75eb94da2334d5970326330d3c8008e382aa703c5"
+      },
+      {
+        "path": "docs/competitors/refresh.md",
+        "sha256": "c886fb2dbcc85bf4a269f07c03c0eb6c1f9bd94ce8aad243cb1f05c51e7c821c"
+      },
+      {
+        "path": "docs/competitors/refresh.zh-CN.md",
+        "sha256": "b3c3be358860fcb20b7072abb82e192ee7f96d48cd6737afa5072e08f1e34d12"
+      },
+      {
+        "path": "research/competitors/snapshots/latest.json",
+        "sha256": "82b3041c428d7321c1a6227d6cd2a3b2cfa935db6aa6fe1d1c6816f17262b39f"
+      },
+      {
+        "path": "research/competitors/snapshots/latest.csv",
+        "sha256": "594f39fa568e37d4e1edeeffc939e622006da8ac6a5ed2de18294d3a7c8d1d07"
+      }
+    ],
+    "scope": "Local consistency review of integrated prose and aggregate projection. Reviewer authored the collection/transformation code: this is not an independent review of that code, independent authentication of supplier metric truth, or protocol reproduction.",
+    "snapshot_checks": {
+      "rows": 67,
+      "known_values": 28,
+      "unknown_values": 39,
+      "raw_response_hashes_rechecked": 7,
+      "known_values_compared_to_original_fields": 28,
+      "json_csv_rows_compared_all_fields": 67,
+      "result": "match",
+      "method": "Standalone local Python mapping of original response fields and USD6 conversions; no import or execution of authored collector/report code"
+    },
+    "business_scope_checks": [
+      "Both languages separate provider 24h/7d windows from exact aligned periods; provider boundaries remain null.",
+      "Cardboard cumulative volume remains distinct from its three explicit market 24h fields; cumulative wallets/trades are not described as daily-active humans.",
+      "Rektrade stats timestamp is not inherited by separate House fields, and paid-to-winners/lost are not called net realized PnL.",
+      "Papertrade TVL includes user funds; YOLO empty TVL is unknown, and provider profit fees are not total trader costs.",
+      "Treasury, LP cash, free cash and queue remain distinct; no same-time balance-sheet or cross-product totals are inferred.",
+      "Mainnet read failures and zero-request no-adapter records preserve null values and do not establish inactivity.",
+      "Published rounded headline numbers match retained raw response assertions and the JSON values; no metric truth is authenticated."
+    ],
+    "time_checks": {
+      "successful_network_started_at": "2026-10-28T01:31:54.850Z",
+      "successful_network_finished_at": "2026-10-28T01:35:04.865Z",
+      "displayed_network_window": "01:31:54–01:35:05 UTC",
+      "display_rounding": "Outward rounding to whole seconds; valid enclosing network interval if labelled as such",
+      "blocked_no_request_records_at": [
+        "2026-10-28T01:36:57.289Z",
+        "2026-10-28T01:36:57.304Z"
+      ],
+      "business_time_note": "Retrieval/execution times are not common business as-of times"
+    },
+    "editorial_requests": [
+      {
+        "id": "REVIEW-DATA-FINAL-001",
+        "severity": "low",
+        "status": "sent_to_integrator",
+        "files": [
+          "docs/competitors/README.md",
+          "docs/competitors/README.zh-CN.md"
+        ],
+        "request": "Say that snapshot/CSV stores evidence IDs and source hashes are in sources/metrics.json. Current prose implies hashes are directly in metric rows, where they are absent."
+      },
+      {
+        "id": "REVIEW-DATA-FINAL-002",
+        "severity": "low",
+        "status": "sent_to_integrator",
+        "files": [
+          "docs/competitors/README.md",
+          "docs/competitors/README.zh-CN.md",
+          "docs/competitors/refresh.md",
+          "docs/competitors/refresh.zh-CN.md"
+        ],
+        "request": "Clarify displayed collection interval is the successful network-read window rounded outward to seconds; two blocked zero-request records were generated later at 01:36:57 UTC."
+      }
+    ],
+    "limits": [
+      "Initial review hashes retained unchanged in files_checked; final_checks has new hashes for integrated documents",
+      "No additional network requests",
+      "No self-review approval of collection or transformation implementation",
+      "No independent verification of provider data accuracy, complete event/population coverage, mainnet execution or solvency"
+    ]
+  }
+}

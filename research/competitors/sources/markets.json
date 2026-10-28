@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "collection": {
+    "new_public_get_requests": 2,
+    "new_rpc_requests": 0,
+    "wallet_operations": 0,
+    "retained_capture_reuse": true,
+    "min_interval_ms": 1000,
+    "max_requests": 60,
+    "denied_hosts_revisited": false
+  },
+  "sources": [
+    {
+      "id": "EVD-COMP-MARKETS-TE-SCRIPT",
+      "project_id": "trade-everything",
+      "title": "Trade Everything demo common script",
+      "url": "https://exchange.tradeeverything.xyz/js/common.js",
+      "provenance": "official-frontend-asset",
+      "retrieved_at": "2026-10-28T01:55:30.592228+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "7e35606599b111bedfc8faccb6ac11c00cdb01daec56a4c395bbb0774bfc59f8",
+      "source_dependency_ids": [
+        "EVD-COMP-TRADEEVERYTHING-013"
+      ],
+      "supports": [
+        "Identifies demo USDC flows on the default exchange host."
+      ],
+      "limitations": [
+        "Static source, not executed; no account endpoint was requested."
+      ]
+    },
+    {
+      "id": "EVD-COMP-MARKETS-TE-SUMMARY",
+      "project_id": "trade-everything",
+      "title": "Trade Everything landing/demo-host market summary",
+      "url": "https://exchange.tradeeverything.xyz/api/market-summary",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:56:00.413352+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "6379e2616e2faf15b4575b2b5bf87aa87102bfe95805136e7c649d927c2c5715",
+      "source_dependency_ids": [
+        "EVD-COMP-TRADEEVERYTHING-014",
+        "EVD-COMP-TRADEEVERYTHING-013"
+      ],
+      "supports": [
+        "Reports 208 supported stock/ETF metadata entries; ticker.quotes contains 208 unique tickers.",
+        "Names Pyth prices and Nasdaq most-active ranking as separate source scopes."
+      ],
+      "limitations": [
+        "Default/demo-host metadata is not a chain-999 active-market or execution check.",
+        "No per-entry stock/ETF category is provided; classifications are not guessed from names."
+      ]
+    },
+    {
+      "id": "EVD-COMP-MARKETS-STOX-CONFIG",
+      "project_id": "stox",
+      "title": "Retained STOX frontend market configuration",
+      "url": "https://stoxpreps.com/deployment.json",
+      "provenance": "official-frontend-configuration",
+      "retrieved_at": "2026-10-28T01:31:58.111992+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": 200,
+      "capture_sha256": "9e57b547a46c1897f6afe7b63dfd54011ae0d61dbf8006c5bd160d1394a46b20",
+      "source_dependency_ids": [
+        "EVD-COMP-STOX-004"
+      ],
+      "supports": [
+        "The retained deployment file lists 60 market symbols with source group and class labels.",
+        "The file is configured for Robinhood Chain 4663; market activation is not verified."
+      ],
+      "limitations": [
+        "Re-read retained bytes; no new request.",
+        "Company/asset identity and actual onchain market activation were not independently verified."
+      ]
+    }
+  ]
+}

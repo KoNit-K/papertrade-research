@@ -1,0 +1,724 @@
+{
+  "schema_version": 1,
+  "reviewer": "metrics_method",
+  "reviewed_at": "2026-10-28T02:02:17.599246+00:00",
+  "assessment": "Final: ready for the user-authorized publication of the exact allowlisted file versions, subject to the stated bounded-review limitations and final staged-diff/outgoing-history inspection by the integrator. No blocking publication-material finding remains.",
+  "authorization_scope": "Read-only publication review for the user-authorized competitor-topic GitHub update. This reviewer did not stage, commit, push or publish.",
+  "allowlist_paths": [
+    "README.md",
+    "README.zh-CN.md",
+    "STATUS.md",
+    "docs/competitors/README.md",
+    "docs/competitors/README.zh-CN.md",
+    "docs/competitors/markets.md",
+    "docs/competitors/markets.zh-CN.md",
+    "docs/competitors/methodology.md",
+    "docs/competitors/methodology.zh-CN.md",
+    "docs/competitors/progress.md",
+    "docs/competitors/progress.zh-CN.md",
+    "docs/competitors/projects/cardboard.md",
+    "docs/competitors/projects/cardboard.zh-CN.md",
+    "docs/competitors/projects/papertrade.md",
+    "docs/competitors/projects/papertrade.zh-CN.md",
+    "docs/competitors/projects/rektrade.md",
+    "docs/competitors/projects/rektrade.zh-CN.md",
+    "docs/competitors/projects/stox.md",
+    "docs/competitors/projects/stox.zh-CN.md",
+    "docs/competitors/projects/trade-everything.md",
+    "docs/competitors/projects/trade-everything.zh-CN.md",
+    "docs/competitors/projects/yolo.md",
+    "docs/competitors/projects/yolo.zh-CN.md",
+    "docs/competitors/refresh.md",
+    "docs/competitors/refresh.zh-CN.md",
+    "docs/competitors/summary.zh-CN.md",
+    "package.json",
+    "packages/competitors/adapters.ts",
+    "packages/competitors/cli.ts",
+    "packages/competitors/core.ts",
+    "packages/competitors/validate.ts",
+    "research/competitors/candidates.json",
+    "research/competitors/followup.json",
+    "research/competitors/markets.json",
+    "research/competitors/milestones.json",
+    "research/competitors/protocol.json",
+    "research/competitors/review-data.json",
+    "research/competitors/review.json",
+    "research/competitors/snapshots/latest.csv",
+    "research/competitors/snapshots/latest.json",
+    "research/competitors/sources/candidates.json",
+    "research/competitors/sources/cardboard.json",
+    "research/competitors/sources/markets-reader.json",
+    "research/competitors/sources/markets.json",
+    "research/competitors/sources/metrics.json",
+    "research/competitors/sources/papertrade.json",
+    "research/competitors/sources/rektrade.json",
+    "research/competitors/sources/stox.json",
+    "research/competitors/sources/trade-everything.json",
+    "research/competitors/sources/yolo.json",
+    "research/competitors/verification.json",
+    "tests/competitors.test.ts",
+    "research/competitors/publication-review.json"
+  ],
+  "file_manifest": [
+    {
+      "path": "README.md",
+      "bytes": 21456,
+      "sha256": "67cf96fe3f898ebd4bd1a6d6feb034af437a55322b2c2c167cb5aff7a50485d3"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "bytes": 20155,
+      "sha256": "301ef8db610fc8d4d5b2d5b913c4f179a9d576829744bc8a456f6b522007781d"
+    },
+    {
+      "path": "STATUS.md",
+      "bytes": 42573,
+      "sha256": "66fff850b2470d1ccf995fbc9326ae77d914ddd8f535dc8231e2dbd277c710cc"
+    },
+    {
+      "path": "docs/competitors/README.md",
+      "bytes": 12423,
+      "sha256": "cd57434fdd4d15825b9807bb5d17bada9c476b7e8935d66dbb2344862d1f7a9a"
+    },
+    {
+      "path": "docs/competitors/README.zh-CN.md",
+      "bytes": 10810,
+      "sha256": "136c971e4ece8bf2601c4932b8c871e80309e07d1d2925d9b4adec04fea616c7"
+    },
+    {
+      "path": "docs/competitors/markets.md",
+      "bytes": 5439,
+      "sha256": "afe723d28b9ffec29a40240dd58a6c8f68d545a371eec60c5f81ff256372f937"
+    },
+    {
+      "path": "docs/competitors/markets.zh-CN.md",
+      "bytes": 5190,
+      "sha256": "f536c106fc4aacd875e9046630ae7c8481f455e0a8dc35dda559a20fdef1a369"
+    },
+    {
+      "path": "docs/competitors/methodology.md",
+      "bytes": 5259,
+      "sha256": "29242b7a5e13ff967f7995f766db33ba8af8fa3d4ce64b61ee2fe8b95d27fa00"
+    },
+    {
+      "path": "docs/competitors/methodology.zh-CN.md",
+      "bytes": 4345,
+      "sha256": "95db861b1da47538a84a20fab1ec842ebe07d69b0a3a24b265af5d1df7fb1af4"
+    },
+    {
+      "path": "docs/competitors/progress.md",
+      "bytes": 5552,
+      "sha256": "3b18e6b00ebdfbcf29753047ed8ccf3be7f6c4d7717eeb18a09de7a6e72cd34a"
+    },
+    {
+      "path": "docs/competitors/progress.zh-CN.md",
+      "bytes": 3977,
+      "sha256": "c1001590faa92833e08ae4b7bbb2a45540a5ce12bcfb983e5950b00ec646e640"
+    },
+    {
+      "path": "docs/competitors/projects/cardboard.md",
+      "bytes": 6262,
+      "sha256": "309ae32ea91e5a71060a240d2b5a063d3ce852efd8b0032934505bf91cefeade"
+    },
+    {
+      "path": "docs/competitors/projects/cardboard.zh-CN.md",
+      "bytes": 5216,
+      "sha256": "6393af6f2c7e599aea0917d15b335d30ef277c20eb261967fcff9f1b66f0c3e8"
+    },
+    {
+      "path": "docs/competitors/projects/papertrade.md",
+      "bytes": 4788,
+      "sha256": "a6bed668e7f9a83422966c350ddc63d99b85a1bc0de0632b99142b1f1ad599c7"
+    },
+    {
+      "path": "docs/competitors/projects/papertrade.zh-CN.md",
+      "bytes": 4016,
+      "sha256": "f12192603650401e342f38ab72bfd6ff2a21bfc353eafbfee7c590480d16fffc"
+    },
+    {
+      "path": "docs/competitors/projects/rektrade.md",
+      "bytes": 6385,
+      "sha256": "4c70f04b3903c7a4ea2d33a2a5e9d82fef92a3dd349faf2ba14a40ed1a5fca39"
+    },
+    {
+      "path": "docs/competitors/projects/rektrade.zh-CN.md",
+      "bytes": 5245,
+      "sha256": "8c1f816f6a1150260a64d1a40434bdad9f78f62467b23e2250d071437c7bf9b4"
+    },
+    {
+      "path": "docs/competitors/projects/stox.md",
+      "bytes": 4514,
+      "sha256": "b0dcb395323fcdb02242076dc290ca890c2b6dfe7db3942e8d6420299a261b69"
+    },
+    {
+      "path": "docs/competitors/projects/stox.zh-CN.md",
+      "bytes": 3836,
+      "sha256": "cb9623930f802f7cf449c6bd2d015af9c42be92cfbfe68adb96d02111430e662"
+    },
+    {
+      "path": "docs/competitors/projects/trade-everything.md",
+      "bytes": 7090,
+      "sha256": "81131c05fdb9e48a2b53a9f61044bef3f19777c8c29bd9c796f03dcab215fe53"
+    },
+    {
+      "path": "docs/competitors/projects/trade-everything.zh-CN.md",
+      "bytes": 5829,
+      "sha256": "21cbe63b090d7abdaea18817e446b636e6797a9f8aa23fe5d5c361340a65082a"
+    },
+    {
+      "path": "docs/competitors/projects/yolo.md",
+      "bytes": 10968,
+      "sha256": "7d23b1d5f33b79d2b7d8af52fcbef350f6365b633ae30f6c898b4bf3a336c27f"
+    },
+    {
+      "path": "docs/competitors/projects/yolo.zh-CN.md",
+      "bytes": 9261,
+      "sha256": "f23c2bccfda0033f160a08807a7b39750dab728f8c1d2ccce546e9774e65e1d3"
+    },
+    {
+      "path": "docs/competitors/refresh.md",
+      "bytes": 4996,
+      "sha256": "fb018ec92eca0a3015572f7eb85c197f4afb0d216030c8498aeeb6bccc68b829"
+    },
+    {
+      "path": "docs/competitors/refresh.zh-CN.md",
+      "bytes": 4289,
+      "sha256": "3b65e0ac5e555110861eade67b782ccb227b36166635e00d3a352d3a0d7ebd8c"
+    },
+    {
+      "path": "docs/competitors/summary.zh-CN.md",
+      "bytes": 12177,
+      "sha256": "d74344f8d02194799e615b4417b1f60a00357721cee65dcd803fac805d822481"
+    },
+    {
+      "path": "package.json",
+      "bytes": 915,
+      "sha256": "b1a14088f29348636c24110e1a2a912ae82f66ca360ee8d6af415871ac54ab41"
+    },
+    {
+      "path": "packages/competitors/adapters.ts",
+      "bytes": 1711,
+      "sha256": "2e2091cdd702547726f75b5bd78281f536454df71933ceab1f1c7629eec6aba1"
+    },
+    {
+      "path": "packages/competitors/cli.ts",
+      "bytes": 1238,
+      "sha256": "92fcda2fbf3d8736f297db75b12dd4abc1994fe283bfce47ed62942b3eb40fb0"
+    },
+    {
+      "path": "packages/competitors/core.ts",
+      "bytes": 21305,
+      "sha256": "3ae58264c1bebaca14154d053ae924ffeac8005e2947c5334cbc1065e9ac8b09"
+    },
+    {
+      "path": "packages/competitors/validate.ts",
+      "bytes": 7187,
+      "sha256": "fcb08d140271da3eb0e44f95fa11fcb93b32c12911ada8551cb7b77115f08b08"
+    },
+    {
+      "path": "research/competitors/candidates.json",
+      "bytes": 6564,
+      "sha256": "ad29dc912c21b05be7a0ec38b3994122abc8213ffd7b0bc43d9e739d1a4f725e"
+    },
+    {
+      "path": "research/competitors/followup.json",
+      "bytes": 3636,
+      "sha256": "f4fddb40b7cbb9f6bb0cf3dadcdc9b4043f345fc9ff8657e0b377740504b6ee6"
+    },
+    {
+      "path": "research/competitors/markets.json",
+      "bytes": 65700,
+      "sha256": "2f979b05830f7883dbcd7742efe1dbc2560a79a31ffeb5441d52c6030221f13b"
+    },
+    {
+      "path": "research/competitors/milestones.json",
+      "bytes": 10560,
+      "sha256": "53868758df916debcd1a47eda1844ecda3dfb3c23c55f812e778317977275ad4"
+    },
+    {
+      "path": "research/competitors/protocol.json",
+      "bytes": 2793,
+      "sha256": "0982d9be1c013c76793d9feb8d5ff0a634f545cd46242ef5faa90f18d8e02154"
+    },
+    {
+      "path": "research/competitors/review-data.json",
+      "bytes": 17413,
+      "sha256": "318545944657dd8aac33509636bf30ffe79345f0e9b0acecd9cc3a4fbdcf359f"
+    },
+    {
+      "path": "research/competitors/review.json",
+      "bytes": 13391,
+      "sha256": "9e1ba1af13f7c2ece4300c989f69201874280e43cdfac11d469b3ac025da9ece"
+    },
+    {
+      "path": "research/competitors/snapshots/latest.csv",
+      "bytes": 16715,
+      "sha256": "594f39fa568e37d4e1edeeffc939e622006da8ac6a5ed2de18294d3a7c8d1d07"
+    },
+    {
+      "path": "research/competitors/snapshots/latest.json",
+      "bytes": 41363,
+      "sha256": "82b3041c428d7321c1a6227d6cd2a3b2cfa935db6aa6fe1d1c6816f17262b39f"
+    },
+    {
+      "path": "research/competitors/sources/candidates.json",
+      "bytes": 4819,
+      "sha256": "b7470dd62050a0333ef4ba22dc7a0cf5922f2b8232cf6a84788daf0ea6d34473"
+    },
+    {
+      "path": "research/competitors/sources/cardboard.json",
+      "bytes": 15410,
+      "sha256": "9e2418c1a8ebcf480efed116472123f21bca5701e391e5af28a530a0c8143edf"
+    },
+    {
+      "path": "research/competitors/sources/markets-reader.json",
+      "bytes": 2332,
+      "sha256": "f0c9121177d2d02500089d9a88d278d41404bbf43f1daa2c4e741017300a2d69"
+    },
+    {
+      "path": "research/competitors/sources/markets.json",
+      "bytes": 3224,
+      "sha256": "d0d73a7b8a33c5c629c40205c2fd60f216f606e5b5baf2d0a9efd18abf609a9c"
+    },
+    {
+      "path": "research/competitors/sources/metrics.json",
+      "bytes": 15390,
+      "sha256": "dba62d23c3474e98510612a2b3b1a2e5b882f381dd6c6879caaeb2b838121fa8"
+    },
+    {
+      "path": "research/competitors/sources/papertrade.json",
+      "bytes": 3126,
+      "sha256": "1f3b203c4b4e16323ecfdb81a8eb11272b922a2d198ae5236d474f9f0d3fa1cb"
+    },
+    {
+      "path": "research/competitors/sources/rektrade.json",
+      "bytes": 7305,
+      "sha256": "82669a469cb082c14fc4910adec7bcf9d5885443147a3558293ef4b9eac2de82"
+    },
+    {
+      "path": "research/competitors/sources/stox.json",
+      "bytes": 3275,
+      "sha256": "5ce494e57706075c8db3e5d6ccd24486f96575c22d162e32311a38105783e7fb"
+    },
+    {
+      "path": "research/competitors/sources/trade-everything.json",
+      "bytes": 21750,
+      "sha256": "9ca0a8c722346f7e1136b6e6376bff7317d589493a02a5192afb02164b988800"
+    },
+    {
+      "path": "research/competitors/sources/yolo.json",
+      "bytes": 16742,
+      "sha256": "881ef050510a099d44b8993e2f504cfdebaa0856423c63ae8fe7aa0a8cb0afc5"
+    },
+    {
+      "path": "research/competitors/verification.json",
+      "bytes": 4871,
+      "sha256": "d1ce0718e80f25036e9e327bfe53522de64bdab944bb8009244a40db467fc697"
+    },
+    {
+      "path": "tests/competitors.test.ts",
+      "bytes": 12898,
+      "sha256": "f8ba38ea4f439e06d027765c7ee0fea81169386646072df11e5bd4906fb2859c"
+    }
+  ],
+  "self_manifest_note": "This review file is allowlisted by exact path; its own hash is omitted to avoid a self-referential digest. Later additions and edits require explicit incremental review.",
+  "checks": [
+    {
+      "name": "Actual untracked-tree inventory",
+      "result": "passed",
+      "detail": "Enumerated 46 current files (448237 bytes) across topic docs, research, tooling, focused tests and four modified repository files. Untracked files were read from disk, not assumed absent because git diff omits them. No symlinks found."
+    },
+    {
+      "name": "Private material boundary",
+      "result": "passed_with_stated_limits",
+      "detail": "No raw HTML, HTTP response bodies, long base64 captures, real credentials, private user-home paths or wallet-to-person/report identity joins found in enumerated files. Relative data/private output paths in tooling are intentional. Published research JSON contains source summaries, IDs, URLs, timestamps, selected aggregate metrics and digests, not response payloads."
+    },
+    {
+      "name": "Credential-pattern triage",
+      "result": "passed_with_stated_limits",
+      "detail": "Selected credential/authorization/private-key/seed markers and email/path patterns were checked. A test-only user:password@example.org URL is a synthetic rejection fixture; it is not a real credential. Authorization-related prose describes product behavior without containing authorization values. No secrecy guarantee is inferred from pattern checks."
+    },
+    {
+      "name": "Address and identity triage",
+      "result": "passed_with_stated_limits",
+      "detail": "The visible STOX Exchange address is attributed to a public frontend deployment configuration, with no claim of authenticated deployment or connection to an individual wallet. Topic source URLs include public product/social locators. No captured wallet activity lists or owner/account records are in the publication allowlist."
+    },
+    {
+      "name": "Existing modified-file scope",
+      "result": "passed",
+      "detail": "Read actual diffs for README.md, README.zh-CN.md, STATUS.md and package.json: topic navigation/status additions and three explicit manual scripts only. No new dependencies or lockfile changes were introduced in these diffs. git diff --check passed at review time."
+    },
+    {
+      "name": "Private outputs excluded",
+      "result": "passed_with_stated_limits",
+      "detail": "A representative retained run.json is ignored by Git. No data/private path is in the explicit publication allowlist. Ignore rules are not treated as proof of sanitization or authorization to publish private captures."
+    },
+    {
+      "name": "Evidence and completion wording",
+      "result": "passed_with_stated_limits",
+      "detail": "M3 remains partial. Review/verification records distinguish structural checks, byte identity, processing consistency and source assertions from protocol reproduction, supplier truth and source completeness. Missing figures, uncaptured preflight pages and failed access are disclosed. Earlier no-commit/no-push statements describe collection history, not a claim that a GitHub update has already occurred."
+    },
+    {
+      "name": "JSON/readability sanity",
+      "result": "passed",
+      "detail": "All current publication JSON files parse. Source-register strings are short explanatory metadata rather than copied raw source bodies. No automatic source-license or general secret-scanning certification is claimed."
+    },
+    {
+      "name": "Final market-inventory increment",
+      "result": "passed_with_stated_limits",
+      "detail": "Read six added files and changed integration scopes; explicit Draft/demo/config versus activated-market distinctions are retained. Selected raw captures support the published metadata lists. Inventory does not refresh or replace the business observation window."
+    }
+  ],
+  "findings": [
+    {
+      "id": "PUB-001",
+      "severity": "informational",
+      "status": "resolved_market_increment_reviewed",
+      "detail": "Market additions and Chinese narrative were checked as recorded in incremental_reviews; no blocking disclosure or market-scope issue found."
+    },
+    {
+      "id": "PUB-002",
+      "severity": "informational",
+      "status": "historical_state_disclosed",
+      "detail": "review-data.json retains two sent-to-integrator editorial request states while verification.json records the integrated resolutions. This is historical review state, not an unresolved protocol claim; append final resolutions if a single current status is desired."
+    }
+  ],
+  "limitations": [
+    "This is a bounded public-material review, not a blanket guarantee that every secret, personal detail, licensing issue or factual error has been detected.",
+    "Review covers only exact enumerated paths and digests, not the entire repository history, remote branches, future changes, ignored files or the final staged commit.",
+    "Raw captures and private ledgers remain outside public history; a public source URL or blockchain address is not blanket redistribution permission.",
+    "The reviewer authored competitor tooling and data transformations; their presence was inspected for public-material leakage only, not independently approved for correctness by this review.",
+    "No signing, wallet/account access, network requests, staging, commits or pushes occurred during this review.",
+    "The integrator must stage an explicit reviewed file allowlist and inspect the final staged diff/outgoing history before publication; this record is not an automatic publication approval.",
+    "Topic documents include fact summaries and source attribution; this review does not authenticate publisher identity, operator claims, deployed code, metric truth, exhaustive market availability or solvency."
+  ],
+  "incremental_reviews": [
+    {
+      "reviewed_at": "2026-10-28T02:01:45.709391+00:00",
+      "scope": "Market inventory, bilingual catalog, Chinese narrative and integration updates; local-only",
+      "files_added_or_changed": [
+        "STATUS.md",
+        "docs/competitors/README.md",
+        "docs/competitors/README.zh-CN.md",
+        "docs/competitors/markets.md",
+        "docs/competitors/markets.zh-CN.md",
+        "docs/competitors/progress.md",
+        "docs/competitors/progress.zh-CN.md",
+        "docs/competitors/projects/cardboard.md",
+        "docs/competitors/projects/cardboard.zh-CN.md",
+        "docs/competitors/projects/papertrade.md",
+        "docs/competitors/projects/papertrade.zh-CN.md",
+        "docs/competitors/projects/rektrade.md",
+        "docs/competitors/projects/rektrade.zh-CN.md",
+        "docs/competitors/projects/stox.md",
+        "docs/competitors/projects/stox.zh-CN.md",
+        "docs/competitors/projects/trade-everything.md",
+        "docs/competitors/projects/trade-everything.zh-CN.md",
+        "docs/competitors/projects/yolo.md",
+        "docs/competitors/projects/yolo.zh-CN.md",
+        "docs/competitors/summary.zh-CN.md",
+        "research/competitors/markets.json",
+        "research/competitors/milestones.json",
+        "research/competitors/protocol.json",
+        "research/competitors/sources/markets-reader.json",
+        "research/competitors/sources/markets.json",
+        "research/competitors/verification.json"
+      ],
+      "prior_file_manifest": [
+        {
+          "path": "README.md",
+          "bytes": 21456,
+          "sha256": "67cf96fe3f898ebd4bd1a6d6feb034af437a55322b2c2c167cb5aff7a50485d3"
+        },
+        {
+          "path": "README.zh-CN.md",
+          "bytes": 20155,
+          "sha256": "301ef8db610fc8d4d5b2d5b913c4f179a9d576829744bc8a456f6b522007781d"
+        },
+        {
+          "path": "STATUS.md",
+          "bytes": 42164,
+          "sha256": "7522b499df30d2bb4d1bf346a823e2cc1906bedc972461dd2f09f1d66ebfabaa"
+        },
+        {
+          "path": "docs/competitors/README.md",
+          "bytes": 10913,
+          "sha256": "4e4582ab4a1133c03bc81d5d0b4b9129720a9f92a68d029f1f693d9c8256af7c"
+        },
+        {
+          "path": "docs/competitors/README.zh-CN.md",
+          "bytes": 9406,
+          "sha256": "9d7bba3fefdb662018ecbea9eb8439fb61e38cc8c2a5329109503cda9d9f289a"
+        },
+        {
+          "path": "docs/competitors/methodology.md",
+          "bytes": 5259,
+          "sha256": "29242b7a5e13ff967f7995f766db33ba8af8fa3d4ce64b61ee2fe8b95d27fa00"
+        },
+        {
+          "path": "docs/competitors/methodology.zh-CN.md",
+          "bytes": 4345,
+          "sha256": "95db861b1da47538a84a20fab1ec842ebe07d69b0a3a24b265af5d1df7fb1af4"
+        },
+        {
+          "path": "docs/competitors/progress.md",
+          "bytes": 5071,
+          "sha256": "3c2804b7f8c7ffb3e07b7f6fb090773c1f74ae8e34de91c3fd0942d76af1c18d"
+        },
+        {
+          "path": "docs/competitors/progress.zh-CN.md",
+          "bytes": 3541,
+          "sha256": "9fa85d245a8fb8da699fb0ca7981832f4c0d9120dfc823503700cdcfb5edfa77"
+        },
+        {
+          "path": "docs/competitors/projects/cardboard.md",
+          "bytes": 6038,
+          "sha256": "b2425e6eb8cadb44f1e2947a9915a55aa713d85685530712e581d2457f191cba"
+        },
+        {
+          "path": "docs/competitors/projects/cardboard.zh-CN.md",
+          "bytes": 5003,
+          "sha256": "9c554f2dfd69c5fe7047335a5c6fe981ed2bfddbec4368841cf341d084b4914d"
+        },
+        {
+          "path": "docs/competitors/projects/papertrade.md",
+          "bytes": 4545,
+          "sha256": "4b1e7744769cbe097af0d1a6b9a141071940de0ef64239dca56d708898a3953b"
+        },
+        {
+          "path": "docs/competitors/projects/papertrade.zh-CN.md",
+          "bytes": 3799,
+          "sha256": "c57ef2c408acae4aa64ad27734eca48742a73815ebf9ce1d6f38f37d7df5c37a"
+        },
+        {
+          "path": "docs/competitors/projects/rektrade.md",
+          "bytes": 6158,
+          "sha256": "322e52608444abe5213bd4e0253fc235c9e8d7acec78d2a43f666119af19128c"
+        },
+        {
+          "path": "docs/competitors/projects/rektrade.zh-CN.md",
+          "bytes": 5025,
+          "sha256": "ba0ac102ee5eecf57619e483986d137822064bab894ef4b8f9092ae1a3ebf282"
+        },
+        {
+          "path": "docs/competitors/projects/stox.md",
+          "bytes": 4142,
+          "sha256": "31ac3b7369968d920ff6b320c44f66128aaaf95e97a33ea795271d0d81c2802b"
+        },
+        {
+          "path": "docs/competitors/projects/stox.zh-CN.md",
+          "bytes": 3530,
+          "sha256": "e85f569f79a4f385ef9828420e6e3f40ac867b5800c1030a167999e2000c0b0b"
+        },
+        {
+          "path": "docs/competitors/projects/trade-everything.md",
+          "bytes": 6720,
+          "sha256": "5084506d37abea57a6c26b90f03e5aa644d157323f75ffb3d11d839f1b4faab5"
+        },
+        {
+          "path": "docs/competitors/projects/trade-everything.zh-CN.md",
+          "bytes": 5498,
+          "sha256": "947b7a291bddcba7fefa5f397b74005e0dbcb71543bd50e8489c777157e56123"
+        },
+        {
+          "path": "docs/competitors/projects/yolo.md",
+          "bytes": 10735,
+          "sha256": "d6e56370158fbfb548f88c1400f6ab44b89222f0674607216276b28d1392c116"
+        },
+        {
+          "path": "docs/competitors/projects/yolo.zh-CN.md",
+          "bytes": 9043,
+          "sha256": "cd5baa5a85b7a150a6c509fe9043aa5206d0d39a585f061868f31a6a3d2111ca"
+        },
+        {
+          "path": "docs/competitors/refresh.md",
+          "bytes": 4996,
+          "sha256": "fb018ec92eca0a3015572f7eb85c197f4afb0d216030c8498aeeb6bccc68b829"
+        },
+        {
+          "path": "docs/competitors/refresh.zh-CN.md",
+          "bytes": 4289,
+          "sha256": "3b65e0ac5e555110861eade67b782ccb227b36166635e00d3a352d3a0d7ebd8c"
+        },
+        {
+          "path": "package.json",
+          "bytes": 915,
+          "sha256": "b1a14088f29348636c24110e1a2a912ae82f66ca360ee8d6af415871ac54ab41"
+        },
+        {
+          "path": "packages/competitors/adapters.ts",
+          "bytes": 1711,
+          "sha256": "2e2091cdd702547726f75b5bd78281f536454df71933ceab1f1c7629eec6aba1"
+        },
+        {
+          "path": "packages/competitors/cli.ts",
+          "bytes": 1238,
+          "sha256": "92fcda2fbf3d8736f297db75b12dd4abc1994fe283bfce47ed62942b3eb40fb0"
+        },
+        {
+          "path": "packages/competitors/core.ts",
+          "bytes": 21305,
+          "sha256": "3ae58264c1bebaca14154d053ae924ffeac8005e2947c5334cbc1065e9ac8b09"
+        },
+        {
+          "path": "packages/competitors/validate.ts",
+          "bytes": 7187,
+          "sha256": "fcb08d140271da3eb0e44f95fa11fcb93b32c12911ada8551cb7b77115f08b08"
+        },
+        {
+          "path": "research/competitors/candidates.json",
+          "bytes": 6564,
+          "sha256": "ad29dc912c21b05be7a0ec38b3994122abc8213ffd7b0bc43d9e739d1a4f725e"
+        },
+        {
+          "path": "research/competitors/followup.json",
+          "bytes": 3636,
+          "sha256": "f4fddb40b7cbb9f6bb0cf3dadcdc9b4043f345fc9ff8657e0b377740504b6ee6"
+        },
+        {
+          "path": "research/competitors/milestones.json",
+          "bytes": 8343,
+          "sha256": "bfa7690d2d8c394b80342bee2fda94582e278ad2c9344111b1d23360e2a13bc9"
+        },
+        {
+          "path": "research/competitors/protocol.json",
+          "bytes": 2357,
+          "sha256": "313b0ee3256c23db4e27b95b1dd21d3e75913c1825e87451f9c6d83f7deaf625"
+        },
+        {
+          "path": "research/competitors/review-data.json",
+          "bytes": 17413,
+          "sha256": "318545944657dd8aac33509636bf30ffe79345f0e9b0acecd9cc3a4fbdcf359f"
+        },
+        {
+          "path": "research/competitors/review.json",
+          "bytes": 13391,
+          "sha256": "9e1ba1af13f7c2ece4300c989f69201874280e43cdfac11d469b3ac025da9ece"
+        },
+        {
+          "path": "research/competitors/snapshots/latest.csv",
+          "bytes": 16715,
+          "sha256": "594f39fa568e37d4e1edeeffc939e622006da8ac6a5ed2de18294d3a7c8d1d07"
+        },
+        {
+          "path": "research/competitors/snapshots/latest.json",
+          "bytes": 41363,
+          "sha256": "82b3041c428d7321c1a6227d6cd2a3b2cfa935db6aa6fe1d1c6816f17262b39f"
+        },
+        {
+          "path": "research/competitors/sources/candidates.json",
+          "bytes": 4819,
+          "sha256": "b7470dd62050a0333ef4ba22dc7a0cf5922f2b8232cf6a84788daf0ea6d34473"
+        },
+        {
+          "path": "research/competitors/sources/cardboard.json",
+          "bytes": 15410,
+          "sha256": "9e2418c1a8ebcf480efed116472123f21bca5701e391e5af28a530a0c8143edf"
+        },
+        {
+          "path": "research/competitors/sources/metrics.json",
+          "bytes": 15390,
+          "sha256": "dba62d23c3474e98510612a2b3b1a2e5b882f381dd6c6879caaeb2b838121fa8"
+        },
+        {
+          "path": "research/competitors/sources/papertrade.json",
+          "bytes": 3126,
+          "sha256": "1f3b203c4b4e16323ecfdb81a8eb11272b922a2d198ae5236d474f9f0d3fa1cb"
+        },
+        {
+          "path": "research/competitors/sources/rektrade.json",
+          "bytes": 7305,
+          "sha256": "82669a469cb082c14fc4910adec7bcf9d5885443147a3558293ef4b9eac2de82"
+        },
+        {
+          "path": "research/competitors/sources/stox.json",
+          "bytes": 3275,
+          "sha256": "5ce494e57706075c8db3e5d6ccd24486f96575c22d162e32311a38105783e7fb"
+        },
+        {
+          "path": "research/competitors/sources/trade-everything.json",
+          "bytes": 21750,
+          "sha256": "9ca0a8c722346f7e1136b6e6376bff7317d589493a02a5192afb02164b988800"
+        },
+        {
+          "path": "research/competitors/sources/yolo.json",
+          "bytes": 16742,
+          "sha256": "881ef050510a099d44b8993e2f504cfdebaa0856423c63ae8fe7aa0a8cb0afc5"
+        },
+        {
+          "path": "research/competitors/verification.json",
+          "bytes": 3553,
+          "sha256": "9eb0fa5f0c2e5277da9e8d9f2ea4af30bdeddda6cc389762155c6db2554573b8"
+        },
+        {
+          "path": "tests/competitors.test.ts",
+          "bytes": 12898,
+          "sha256": "f8ba38ea4f439e06d027765c7ee0fea81169386646072df11e5bd4906fb2859c"
+        }
+      ],
+      "current_file_count_excluding_self": 52,
+      "checks": [
+        "Read both market guides and the full Chinese narrative; read all new source metadata and inventory scope fields.",
+        "Matched three retained market-source capture hashes; no network retrieval was performed.",
+        "Compared all 208 Trade Everything ticker/name pairs with the retained demo-host ticker.quotes array, with no discrepancy.",
+        "Compared all 60 STOX configured symbols with retained configuration; group counts stocks22/index4/etf8/commodity8/fx3/intl15 match.",
+        "Five Trade Everything crypto names remain explicitly a Draft-documentation union with unresolved BTC/ETH routing, not five observed independent mainnet markets.",
+        "208 demo metadata entries and six Asian names may overlap; neither guides nor narrative claims 214 active markets.",
+        "STOX retained config has no crypto entry; USDG trade collateral/payout is separated from STOX/ETH distributions and nontransferable House Shares.",
+        "Loss/reward tokens are explicitly not promoted into listed derivative underlyings.",
+        "Chinese narrative preserves provider-defined windows, cumulative-wallet versus active-person distinction, funding-field scope and unresolved data gaps.",
+        "Business snapshot remains67rows/28known/39unknown; source register now has103records; M3 remains partial and M6 complete denotes inventory/narrative deliverables.",
+        "Re-ran local-only file/credential/raw-body checks across all enumerated files; no new material-leakage finding."
+      ],
+      "limitations": [
+        "Reader-only market sources have no raw bytes or precise transport timestamp; nulls are preserved and authenticity was not independently verified.",
+        "Market capacity, live activation, execution, deployed parameters and legal asset identities were not independently checked.",
+        "This is publication-material and scoped evidence review, not independent authentication of supplier data or review of the author's own tooling correctness."
+      ]
+    },
+    {
+      "reviewed_at": "2026-10-28T02:02:17.599246+00:00",
+      "scope": "Final frozen verification/integration-record re-read and exact manifest closure",
+      "actually_re_read": [
+        "research/competitors/verification.json",
+        "research/competitors/protocol.json",
+        "research/competitors/milestones.json",
+        "docs/competitors/progress.md",
+        "docs/competitors/progress.zh-CN.md",
+        "STATUS.md"
+      ],
+      "files_changed_since_previous_manifest": [
+        "research/competitors/verification.json"
+      ],
+      "prior_changed_file_hashes": [
+        {
+          "path": "research/competitors/verification.json",
+          "bytes": 4338,
+          "sha256": "a8a196eac44478e43452074f9daff840c6dd8e58607034d5fa8f561c5944066c"
+        }
+      ],
+      "checks": [
+        "All52 external-file SHA-256 digests exactly match the final on-disk files; self review path remains allowlisted without a self hash.",
+        "Actual directory traversal finds no additional topic file outside the exact allowlist.",
+        "Verification records103sources/67business metrics and291links/26Markdown files; business snapshot was not refreshed.",
+        "All final_integration_hashes in verification.json match the current referenced files.",
+        "M3 remains partial. M6 complete means market inventory and Chinese narrative were delivered, not complete market activation or protocol reproduction.",
+        "Final changed records contain check metadata and digests rather than raw responses, credentials, private paths or wallet identity associations."
+      ],
+      "limitations": [
+        "Final validation/typecheck/link results are attributed to the integrator record; this reviewer did not independently rerun them in this final safety pass.",
+        "No network, staging, commit, push or publication was performed by this reviewer."
+      ]
+    }
+  ],
+  "final_manifest_check": {
+    "checked_at": "2026-10-28T02:02:17.599246+00:00",
+    "external_file_count": 52,
+    "self_path": "research/competitors/publication-review.json",
+    "total_allowlist_paths": 53,
+    "all_external_sha256_match": true,
+    "additional_topic_files": [],
+    "blocking_findings": [],
+    "ready_for_authorized_staging": true
+  }
+}

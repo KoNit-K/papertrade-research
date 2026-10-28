@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "collection": {
+    "scope": "This scout collection only; later adapters or other agents have separate request ledgers.",
+    "request_count": 18,
+    "successful_200_count": 17,
+    "failed_count": 1,
+    "max_requests": 60,
+    "min_interval_ms": 1000,
+    "methods": [
+      "GET"
+    ],
+    "wallet_operations": 0,
+    "account_specific_queries": 0,
+    "raw_captures_public": false
+  },
+  "sources": [
+    {
+      "id": "EVD-COMP-CARDBOARD-001",
+      "project_id": "cardboard",
+      "title": "What is Cardboard Trade? · Cardboard Trade Docs",
+      "url": "https://docs.cardboardtrade.xyz/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:24.190008+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "dd65afc7315e5b6d2a1339d74c22fc54badfb21085b11c3236d9a84362060778",
+      "source_dependency_ids": [],
+      "supports": [
+        "Officially describes Solana USDC house-counterparty trading on BTC, ETH and SOL with leverage up to 1000x."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-002",
+      "project_id": "cardboard",
+      "title": "Trades and pricing · Cardboard Trade Docs",
+      "url": "https://docs.cardboardtrade.xyz/trading.html",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:25.771300+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "2c90f7e6b8f9dd2afbe392743f8c6538a77b44ec900b7fab05fd0e408a3e9358",
+      "source_dependency_ids": [],
+      "supports": [
+        "Documents accepted midpoint pricing, isolated uneditable positions and no periodic funding."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-003",
+      "project_id": "cardboard",
+      "title": "Winning payout factor · Cardboard Trade Docs",
+      "url": "https://docs.cardboardtrade.xyz/payout-factor.html",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:28.117936+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "4529373add91e6f4f3e1b573fb353c8722dcbfdbf535bd679b16286154f64d10",
+      "source_dependency_ids": [],
+      "supports": [
+        "Describes locked winning-exposure curves, separate side capacity and dynamic parameter placeholders."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-004",
+      "project_id": "cardboard",
+      "title": "Wins and losses · Cardboard Trade Docs",
+      "url": "https://docs.cardboardtrade.xyz/wins-losses.html",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:30.433601+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "cb708a286cff85cf37bf92fc1be66042d6f438729f285ff9c822f324e8391b2d",
+      "source_dependency_ids": [],
+      "supports": [
+        "Describes winning deductions, loss-side fees and loss-eligible issuance."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-005",
+      "project_id": "cardboard",
+      "title": "https://docs.cardboardtrade.xyz/liquidations.html",
+      "url": "https://docs.cardboardtrade.xyz/liquidations.html",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:32.733136+00:00",
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "none",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
+        "No substantive claim is supported by the failed response."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-006",
+      "project_id": "cardboard",
+      "title": "House and payout queue · Cardboard Trade Docs",
+      "url": "https://docs.cardboardtrade.xyz/payouts.html",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:44.048387+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "a7512c43e38421b194c69a944e79c59875aa4189426af44d2b98483f444ba334",
+      "source_dependency_ids": [],
+      "supports": [
+        "Documents FIFO unpaid-profit queue, partial payments and queued-claim collateral."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-007",
+      "project_id": "cardboard",
+      "title": "CARDBOARD emissions · Cardboard Trade Docs",
+      "url": "https://docs.cardboardtrade.xyz/cardboard.html",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:48.047177+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "736134d56c6f988e28d334b886fa27975bbe79168901569fd2c4e12df9b99a72",
+      "source_dependency_ids": [],
+      "supports": [
+        "Describes zero-initial-supply loss issuance and the progress-dependent emissions curve."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-008",
+      "project_id": "cardboard",
+      "title": "Staking and rewards · Cardboard Trade Docs",
+      "url": "https://docs.cardboardtrade.xyz/staking.html",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:49.666778+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "bb25c101e6cf6ce05fc69557425d7614a9f01e9c22c0ff9db45271a2f8529ff9",
+      "source_dependency_ids": [],
+      "supports": [
+        "Describes staking fee allocation, house-funded close charges and queue priority."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-009",
+      "project_id": "cardboard",
+      "title": "Risks and safeguards · Cardboard Trade Docs",
+      "url": "https://docs.cardboardtrade.xyz/risk.html",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:51.967304+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "24dcc724a690d2d5203a589e96287342126eff0506d7a3c5d7d1783b3ad89ed7",
+      "source_dependency_ids": [],
+      "supports": [
+        "Describes relayer delay and account/market freeze and forced-price close powers."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-010",
+      "project_id": "cardboard",
+      "title": "Builder integration · Cardboard Trade Docs",
+      "url": "https://docs.cardboardtrade.xyz/builders.html",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:53.457609+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "b95cdad0330b97eeb9b03fd9e9a29d95d22740e52e02d92cfcd3e70c4a779d4c",
+      "source_dependency_ids": [],
+      "supports": [
+        "Documents builder authorization and markups relative to base fees."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-011",
+      "project_id": "cardboard",
+      "title": "Terms of Service · Cardboard Trade Docs",
+      "url": "https://docs.cardboardtrade.xyz/terms.html",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:55.724507+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "53169698070f80d3a75d06c1bf79c1eca058cc391de2a0ac7f7abd24a00a0b18",
+      "source_dependency_ids": [],
+      "supports": [
+        "Terms name Attractor Labs, Inc. as operator and state version date 2026-10-25."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-012",
+      "project_id": "cardboard",
+      "title": "cardboard trade",
+      "url": "https://cardboardtrade.xyz/",
+      "provenance": "official-frontend",
+      "retrieved_at": "2026-10-28T01:30:58.355745+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "9daa853b4146598eace46ebe39ac5458d941ca12e72b907a32db286320c7aeed",
+      "source_dependency_ids": [],
+      "supports": [
+        "Official frontend shell links the acquired application asset."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-013",
+      "project_id": "cardboard",
+      "title": "https://cardboardtrade.xyz/assets/index-BnNp2jGu.js",
+      "url": "https://cardboardtrade.xyz/assets/index-BnNp2jGu.js",
+      "provenance": "official-frontend-asset",
+      "retrieved_at": "2026-10-28T01:32:00.111125+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "3d452dbeddfe52e297c26be736bba8b14936ca02965f47986eba9342ba70678a",
+      "source_dependency_ids": [],
+      "supports": [
+        "Frontend uses public aggregate API routes and six-decimal USDC formatters."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-014",
+      "project_id": "cardboard",
+      "title": "cardboardtrade.xyz (@cardboard_trade) | teapawt",
+      "url": "https://teapawt.net/cardboard_trade",
+      "provenance": "third-party-mirror-of-social-posts",
+      "retrieved_at": "2026-10-28T01:32:02.712394+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "994929dbd7e5382e1f2cdf5cb821c09cf19408ee82fcd71f4a05df748bdd86ed",
+      "source_dependency_ids": [],
+      "supports": [
+        "Third-party mirror attributes operating updates in October to the official Cardboard account."
+      ],
+      "limitations": [
+        "Mirror copy only; original account content and exact post timestamps were not authenticated.",
+        "Profile capture may contain multiple posts; source_published_at is null."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-015",
+      "project_id": "cardboard",
+      "title": "https://cardboardtrade.xyz/v1/config",
+      "url": "https://cardboardtrade.xyz/v1/config",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:32:43.924355+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "3d1543139f8fab5ae8d34c27120597c5afe3854227351f7e8044a240741588d6",
+      "source_dependency_ids": [
+        "EVD-COMP-CARDBOARD-013"
+      ],
+      "supports": [
+        "Official API reports maximum leverage, current deadband and notional-close-charge configuration."
+      ],
+      "limitations": [
+        "Supplier response, not independently authenticated canonical chain state.",
+        "Retrieval timestamp is not automatically the business-as-of timestamp."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-016",
+      "project_id": "cardboard",
+      "title": "https://cardboardtrade.xyz/v1/analytics?range=1d",
+      "url": "https://cardboardtrade.xyz/v1/analytics?range=1d",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:32:45.647870+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "db0de43b00d7eba83ca046b38f9e8ac7170dacc3ae6ee92af5db05bcb9d7f299",
+      "source_dependency_ids": [
+        "EVD-COMP-CARDBOARD-013"
+      ],
+      "supports": [
+        "Official API reports cumulative activity, separate market 24h volume and pool accounting aggregates."
+      ],
+      "limitations": [
+        "Supplier response, not independently authenticated canonical chain state.",
+        "Retrieval timestamp is not automatically the business-as-of timestamp."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-017",
+      "project_id": "cardboard",
+      "title": "https://cardboardtrade.xyz/v1/system",
+      "url": "https://cardboardtrade.xyz/v1/system",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:32:47.697593+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "ca9b050c5b675c4b92c0b68f926b344100534b2cae782188fa54720154dfa651",
+      "source_dependency_ids": [
+        "EVD-COMP-CARDBOARD-013"
+      ],
+      "supports": [
+        "Official API reports index freshness, slots, open-position and queue counts."
+      ],
+      "limitations": [
+        "Supplier response, not independently authenticated canonical chain state.",
+        "Retrieval timestamp is not automatically the business-as-of timestamp."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CARDBOARD-018",
+      "project_id": "cardboard",
+      "title": "https://cardboardtrade.xyz/v1/house/topology",
+      "url": "https://cardboardtrade.xyz/v1/house/topology",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:32:49.302970+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "f6e19677b6130396f07e2a4c5f74ae8695f02badde8b3aea9a5074e790c500ab",
+      "source_dependency_ids": [
+        "EVD-COMP-CARDBOARD-013"
+      ],
+      "supports": [
+        "Official topology API responds; no individual position data is published."
+      ],
+      "limitations": [
+        "Supplier response, not independently authenticated canonical chain state.",
+        "Retrieval timestamp is not automatically the business-as-of timestamp."
+      ]
+    }
+  ]
+}

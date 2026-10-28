@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "started_at": "2026-10-28T01:29:05.026248+00:00",
+  "baseline_commit": "d3fba1edd93d2fb1d492c0cdbe26dcf6fffa0050",
+  "baseline_status": "",
+  "as_of_policy": "Observed at collection; align windows only with complete historical coverage",
+  "language": [
+    "en",
+    "zh-CN"
+  ],
+  "scope": "Business only; Papertrade baseline plus at most six competitors",
+  "agent_configuration": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "medium",
+    "service_tier_requested": "priority",
+    "service_tier_verified": null
+  },
+  "network_policy": {
+    "max_requests_per_project_per_run": 60,
+    "min_interval_ms": 1000,
+    "stop_http_statuses": [
+      401,
+      403,
+      429
+    ],
+    "wallet_operations": false
+  },
+  "source_fields": [
+    "id",
+    "project_id",
+    "title",
+    "url",
+    "provenance",
+    "retrieved_at",
+    "source_published_at",
+    "access_status",
+    "content_read",
+    "http_status",
+    "capture_sha256",
+    "source_dependency_ids",
+    "supports",
+    "limitations"
+  ],
+  "status_vocabulary": [
+    "not_started",
+    "in_progress",
+    "partial",
+    "blocked",
+    "complete"
+  ],
+  "baseline_note": "Initial checkout was clean; unrelated documentation edits appeared concurrently during execution and were preserved. Benchmark evidence stays pinned to baseline commit.",
+  "implementation_paths": {
+    "documentation": "docs/competitors/",
+    "data": "research/competitors/",
+    "tooling": "packages/competitors/"
+  },
+  "tooling_sha256": {
+    "packages/competitors/adapters.ts": "2e2091cdd702547726f75b5bd78281f536454df71933ceab1f1c7629eec6aba1",
+    "packages/competitors/cli.ts": "92fcda2fbf3d8736f297db75b12dd4abc1994fe283bfce47ed62942b3eb40fb0",
+    "packages/competitors/core.ts": "3ae58264c1bebaca14154d053ae924ffeac8005e2947c5334cbc1065e9ac8b09",
+    "packages/competitors/validate.ts": "fcb08d140271da3eb0e44f95fa11fcb93b32c12911ada8551cb7b77115f08b08"
+  },
+  "task_pack_fields": [
+    "objective",
+    "confirmed_facts",
+    "entry_urls",
+    "date_and_version_scope",
+    "metric_definitions",
+    "owned_paths",
+    "request_budget",
+    "acceptance",
+    "forbidden_actions",
+    "handoff_and_gaps"
+  ],
+  "adapter_version": "competitors-defillama-v1",
+  "source_count": 103,
+  "snapshot_rows": 67,
+  "snapshot_numeric_values": 28,
+  "snapshot_unknown_values": 39,
+  "market_inventory": {
+    "path": "research/competitors/markets.json",
+    "subjects": 7,
+    "te_metadata_symbols": 208,
+    "stox_config_symbols": 60,
+    "sha256": "2f979b05830f7883dbcd7742efe1dbc2560a79a31ffeb5441d52c6030221f13b"
+  },
+  "publication_authorization": "Owner explicitly requested GitHub update in the trading-assets follow-up; supersedes the initial local-only delivery boundary for the reviewed research subset."
+}

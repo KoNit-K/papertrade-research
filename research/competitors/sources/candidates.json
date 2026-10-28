@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "collection": {
+    "scope": "This scout collection only; later adapters or other agents have separate request ledgers.",
+    "request_count": 5,
+    "successful_200_count": 4,
+    "failed_count": 1,
+    "max_requests": 60,
+    "min_interval_ms": 1000,
+    "methods": [
+      "GET"
+    ],
+    "wallet_operations": 0,
+    "account_specific_queries": 0,
+    "raw_captures_public": false
+  },
+  "sources": [
+    {
+      "id": "EVD-COMP-CANDIDATES-001",
+      "project_id": "stox",
+      "title": "STOX perps — stocks, ETFs, gold, oil, FX and Asia with leverage, on-chain",
+      "url": "https://stoxpreps.com/",
+      "provenance": "official-frontend",
+      "retrieved_at": "2026-10-28T01:31:44.926530+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "9c19bdb423590eaa7dc14b8db1e8eef889107510ee1b3f9ce0df91197ed64509",
+      "source_dependency_ids": [],
+      "supports": [
+        "Official STOX frontend describes Robinhood Chain USDG house trading, delayed payouts and loss-issued House Shares."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CANDIDATES-002",
+      "project_id": "rektrade",
+      "title": "rektrade (@rektradefun) | teapawt",
+      "url": "https://teapawt.net/rektradefun",
+      "provenance": "third-party-mirror-of-social-posts",
+      "retrieved_at": "2026-10-28T01:31:46.333874+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "7774c6b008e2785ed29164ad527155c546b217c77c2549931869bef85bf8d2b5",
+      "source_dependency_ids": [],
+      "supports": [
+        "Third-party ecosystem list supplies discovery leads but incorrectly places Trade Everything under Solana."
+      ],
+      "limitations": [
+        "Mirror copy only; original account content and exact post timestamps were not authenticated.",
+        "Profile capture may contain multiple posts; source_published_at is null."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CANDIDATES-003",
+      "project_id": "parchment",
+      "title": "Pyth Network 🔮 (@PythNetwork): &quot;@tradeparchment&quot; | teapawt",
+      "url": "https://teapaw.org/PythNetwork/status/2113289298455785516",
+      "provenance": "third-party-mirror-of-social-posts",
+      "retrieved_at": "2026-10-28T01:31:49.177306+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "09adc645e55f043075bf8ef59d91496d08905aa69f3561a02f2c554617ef90f0",
+      "source_dependency_ids": [],
+      "supports": [
+        "Third-party mirror displays a 22 October Parchment introduction and Pyth interaction; this is not verified live trading."
+      ],
+      "limitations": [
+        "Mirror copy only; original account content and exact post timestamps were not authenticated.",
+        "Profile capture may contain multiple posts; source_published_at is null."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CANDIDATES-004",
+      "project_id": "stox",
+      "title": "STOX (@STOXPREPS) | teapawt",
+      "url": "https://teapawt.net/STOXPREPS",
+      "provenance": "third-party-mirror-of-social-posts",
+      "retrieved_at": "2026-10-28T01:32:20.968985+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "033d524bfcd0ec6792973f3be4cf314febb28c9977de3507c7fb365863151091",
+      "source_dependency_ids": [],
+      "supports": [
+        "Third-party mirror attributes live-trading and business-statistic claims to the STOX account."
+      ],
+      "limitations": [
+        "Mirror copy only; original account content and exact post timestamps were not authenticated.",
+        "Profile capture may contain multiple posts; source_published_at is null."
+      ]
+    },
+    {
+      "id": "EVD-COMP-CANDIDATES-005",
+      "project_id": "parchment",
+      "title": "https://teapawt.net/tradeparchment",
+      "url": "https://teapawt.net/tradeparchment",
+      "provenance": "third-party-mirror-of-social-posts",
+      "retrieved_at": "2026-10-28T01:32:23.695874+00:00",
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "none",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
+        "No substantive claim is supported by the failed response."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "tasks": [
+    {
+      "id": "COMP-FOLLOW-YOLO",
+      "project_id": "yolo",
+      "status": "blocked",
+      "question": "Capture current House/queue and actual leaderboard with complete period/category/page scope; resolve PnL recognition of unpaid claims.",
+      "entry_urls": [
+        "https://jup.ag/yolo/",
+        "https://jup.ag/yolo/leaderboard?period=24h&category=pnl",
+        "https://docs.jup.ag/user-docs/labs/yolo/trading"
+      ],
+      "prerequisite": "Ordinary anonymous browser available without access-control bypass",
+      "acceptance": "Dated first-party capture; actual public aggregate request identity/units/coverage; missing values retained if unavailable",
+      "stop": "No wallet/login/signature; stop on denial or 60 requests; do not substitute Jupiter Perps"
+    },
+    {
+      "id": "COMP-FOLLOW-FIRST-TRADE",
+      "project_id": null,
+      "status": "partial",
+      "question": "Separate announcements, deployment dates and earliest real public fills for selected products.",
+      "entry_urls": [
+        "https://x.com/sssionggg/status/2110717157566988335",
+        "https://docs.cardboardtrade.xyz/",
+        "https://rektrade.fun/"
+      ],
+      "prerequisite": "Original announcement or verified product-address/chain and bounded transaction locator",
+      "acceptance": "Original timestamp or block/hash/receipt anchor; unknown exact times remain null",
+      "stop": "No full-chain scans or dates inferred from news publication"
+    },
+    {
+      "id": "COMP-FOLLOW-TE",
+      "project_id": "trade-everything",
+      "status": "blocked",
+      "question": "Confirm live mainnet, route BTC/ETH, and reconcile instantaneous-payment versus queued-payment documentation.",
+      "entry_urls": [
+        "https://docs.tradeeverything.xyz/built-on-paper/overview/",
+        "https://tradeeverything.xyz/",
+        "https://testnet.tradeeverything.xyz/api/999/query/protocol/summary"
+      ],
+      "prerequisite": "Normal public mainnet read available; documented /api/999 route from frontend",
+      "acceptance": "Successful identified mainnet config and aggregates; bind routing/version; no demo substitution",
+      "stop": "Stop on denial/failure budget; no trade or account access"
+    },
+    {
+      "id": "COMP-FOLLOW-REKT-CONFIG",
+      "project_id": "rektrade",
+      "status": "partial",
+      "question": "Resolve current effective caps, mint schedule and settlement mode conflicts across embedded docs/config/markets.",
+      "entry_urls": [
+        "https://rektrade.fun/api/config",
+        "https://rektrade.fun/api/markets",
+        "https://rektrade.fun/api/house"
+      ],
+      "prerequisite": "Version-bound contract identity or explicit official reconciliation",
+      "acceptance": "Separate source claims from actual effective settings with scope; do not silently choose a page",
+      "stop": "No economic or security guarantee from unverified config"
+    },
+    {
+      "id": "COMP-FOLLOW-ENTITY",
+      "project_id": null,
+      "status": "partial",
+      "question": "Find product-specific legal entities, founders and funding only from public attributable evidence.",
+      "entry_urls": [
+        "https://docs.cardboardtrade.xyz/terms.html",
+        "https://docs.jup.ag/user-docs/labs/yolo",
+        "https://stoxpreps.com/"
+      ],
+      "prerequisite": "Public primary terms, company disclosure or attributable biography",
+      "acceptance": "Entity/person/role/jurisdiction and evidence scope separately recorded; absence is not proof of no financing",
+      "stop": "No outreach, identity guessing or private records"
+    }
+  ]
+}

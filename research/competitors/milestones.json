@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "milestones": [
+    {
+      "id": "COMP-M0",
+      "title": "Baseline and protocol",
+      "status": "complete",
+      "owner": "root",
+      "started_at": "2026-10-28T01:29:05.026248+00:00",
+      "finished_at": "2026-10-28T01:45:01.228070+00:00",
+      "inputs": [
+        "AGENTS.md",
+        "STATUS.md",
+        "DATA_POLICY.md"
+      ],
+      "outputs": [
+        "research/competitors/protocol.json",
+        "docs/competitors/methodology.md",
+        "docs/competitors/methodology.zh-CN.md",
+        "docs/competitors/progress.md",
+        "docs/competitors/progress.zh-CN.md"
+      ],
+      "evidence_ids": [
+        "EVD-COMP-PAPERTRADE-BASELINE"
+      ],
+      "checks": [
+        "Initial clean checkout and tracked SHA-256 baseline recorded privately",
+        "Scope, source fields, metric dictionary, boundaries and task-pack fields written"
+      ],
+      "reviewer": "yolo_sources",
+      "open_questions": [
+        "Unrelated documentation changed concurrently after the initial baseline and was preserved."
+      ],
+      "next_step": "Baseline remains pinned to d3fba1e; no adoption of unrelated new conclusions without review"
+    },
+    {
+      "id": "COMP-M1",
+      "title": "Candidate identity and chronology",
+      "status": "complete",
+      "owner": "root",
+      "started_at": "2026-10-28T01:30:37.577007+00:00",
+      "finished_at": "2026-10-28T01:45:01.228070+00:00",
+      "inputs": [
+        "research/competitors/protocol.json"
+      ],
+      "outputs": [
+        "research/competitors/candidates.json",
+        "research/competitors/sources/candidates.json"
+      ],
+      "evidence_ids": [
+        "EVD-COMP-CANDIDATES-002",
+        "EVD-COMP-CANDIDATES-003",
+        "EVD-COMP-TRADEEVERYTHING-002",
+        "EVD-COMP-CARDBOARD-011"
+      ],
+      "checks": [
+        "Six candidate records; five selected or conditional dossiers and Papertrade baseline",
+        "Parchment kept as watchlist; independent venues separated from routes/frontends",
+        "Source subject IDs corrected after independent validator finding"
+      ],
+      "reviewer": "yolo_sources",
+      "open_questions": [
+        "Exact first-trade dates remain unverified for selected products.",
+        "Several legal entities, founders and financing details remain unknown."
+      ],
+      "next_step": "Use bounded announcement/first-trade tasks in followup.json; no expansion to fill project cap"
+    },
+    {
+      "id": "COMP-M2",
+      "title": "Mechanisms and background",
+      "status": "complete",
+      "owner": "root",
+      "started_at": "2026-10-28T01:30:37.577007+00:00",
+      "finished_at": "2026-10-28T01:45:01.228070+00:00",
+      "inputs": [
+        "research/competitors/protocol.json"
+      ],
+      "outputs": [
+        "docs/competitors/projects/",
+        "research/competitors/sources/"
+      ],
+      "evidence_ids": [
+        "EVD-COMP-YOLO-003",
+        "EVD-COMP-CARDBOARD-006",
+        "EVD-COMP-TRADEEVERYTHING-017",
+        "EVD-COMP-REKTRADE-004",
+        "EVD-COMP-STOX-004"
+      ],
+      "checks": [
+        "Six bilingual dossiers including benchmark; each question answered with scoped evidence or explicit unknown",
+        "Trade Everything mixed payment/routing/payment-time conflicts retained",
+        "Rektrade configuration/pricing/mint contradictions retained"
+      ],
+      "reviewer": "metrics_method and yolo_sources on work not authored by themselves",
+      "open_questions": [
+        "Source descriptions not independently verified deployed execution",
+        "YOLO official preflight pages have no retained raw bytes or exact capture time"
+      ],
+      "next_step": "Keep deployment, permissions and conflicting settings as unresolved source-level questions"
+    },
+    {
+      "id": "COMP-M3",
+      "title": "Business data and refresh tools",
+      "status": "partial",
+      "owner": "root",
+      "started_at": "2026-10-28T01:30:37.577007+00:00",
+      "finished_at": "2026-10-28T01:45:01.228070+00:00",
+      "inputs": [
+        "research/competitors/protocol.json"
+      ],
+      "outputs": [
+        "packages/competitors/",
+        "tests/competitors.test.ts",
+        "research/competitors/snapshots/latest.json",
+        "research/competitors/snapshots/latest.csv",
+        "docs/competitors/refresh.md",
+        "docs/competitors/refresh.zh-CN.md"
+      ],
+      "evidence_ids": [
+        "yolo-20261028013154844-f51cfecb-2",
+        "papertrade-20261028013210996-ad2fa1cf-1",
+        "cardboard-20261028013503487-4e0cf1d7-1",
+        "rektrade-20261028013503470-994dd300-1"
+      ],
+      "checks": [
+        "Four fixed-source project adapters made seven successful GET requests",
+        "Four captured project reports recomputed twice with identical metrics",
+        "Second Cardboard refresh created a new immutable run",
+        "Explicit no-adapter blocked runs made zero requests for Trade Everything and STOX",
+        "67 reviewed metric rows; 28 numeric values and 39 nulls with reasons"
+      ],
+      "reviewer": "yolo_sources; root recomputation and field/unit review",
+      "open_questions": [
+        "YOLO current House, queue, volume and real leaderboard unavailable",
+        "Papertrade official history blocked; volume/OI unavailable",
+        "Trade Everything mainnet reads failed; STOX lacks verified aggregate adapter",
+        "No complete aligned 7d event/history coverage or active-wallet cohorts"
+      ],
+      "next_step": "Resume only from followup.json prerequisites; preserve missing data and raw run history"
+    },
+    {
+      "id": "COMP-M4",
+      "title": "Independent review",
+      "status": "complete",
+      "owner": "root",
+      "started_at": "2026-10-28T01:45:01.228070+00:00",
+      "finished_at": "2026-10-28T01:46:49.385058+00:00",
+      "inputs": [],
+      "outputs": [
+        "research/competitors/review.json",
+        "research/competitors/review-data.json",
+        "research/competitors/verification.json"
+      ],
+      "evidence_ids": [],
+      "checks": [
+        "Two independent agents cross-reviewed work they did not author; source-capture and claim limits retained",
+        "Final full repository suite: 168 passed, 0 failed; focused competitor suite: 16 passed",
+        "Strict TypeScript passed; existing evidence validator passed without reproduction claim",
+        "Competitor validator passed 98 source records and 67 metric rows",
+        "255 local file links across 23 Markdown files resolved; anchors not checked",
+        "JSON/CSV all 67 rows and fields matched; all initial review findings and final editorial requests integrated"
+      ],
+      "reviewer": "yolo_sources and metrics_method",
+      "open_questions": [
+        "Original source truth, deployed semantics, complete event history and identity authentication remain outside completed tooling review"
+      ],
+      "next_step": "See recorded scoped review limits and followup tasks"
+    },
+    {
+      "id": "COMP-M5",
+      "title": "Bilingual integration and acceptance",
+      "status": "complete",
+      "owner": "root",
+      "started_at": "2026-10-28T01:45:01.228070+00:00",
+      "finished_at": "2026-10-28T01:46:49.385058+00:00",
+      "inputs": [],
+      "outputs": [
+        "docs/competitors/README.md",
+        "docs/competitors/README.zh-CN.md",
+        "docs/competitors/progress.md",
+        "docs/competitors/progress.zh-CN.md",
+        "research/competitors/followup.json"
+      ],
+      "evidence_ids": [],
+      "checks": [
+        "Six paired bilingual dossiers including the benchmark plus bilingual comparison, methods, refresh and progress guides",
+        "Five competitors covered; Parchment watchlist; no project-count padding",
+        "Reviewed snapshot has 67 rows, 28 numeric values and 39 explicit unknowns",
+        "Manual scripts are connected to package.json and offline replay checked",
+        "Concurrent unrelated documentation retained; no Git commit, push, publishing or onchain action"
+      ],
+      "reviewer": "root plus independent final review",
+      "open_questions": [
+        "COMP-M3 remains partial for unavailable current business data; report delivery does not close those gaps"
+      ],
+      "next_step": "Reader can inspect sources and refresh supported projects; resume blocked data tasks only when prerequisites change"
+    },
+    {
+      "id": "COMP-M6",
+      "title": "Trading-asset inventory and Chinese narrative update",
+      "status": "complete",
+      "owner": "root with candidate_scout",
+      "started_at": "2026-10-28T01:54:29Z",
+      "finished_at": "2026-10-28T02:00:36.460282+00:00",
+      "inputs": [
+        "User follow-up requesting trading assets, GitHub update and Chinese narrative",
+        "Retained official market/config/documentation captures",
+        "Current-turn official Papertrade FAQ and YOLO overview readers"
+      ],
+      "outputs": [
+        "research/competitors/markets.json",
+        "research/competitors/sources/markets.json",
+        "research/competitors/sources/markets-reader.json",
+        "docs/competitors/markets.md",
+        "docs/competitors/markets.zh-CN.md",
+        "docs/competitors/summary.zh-CN.md"
+      ],
+      "evidence_ids": [
+        "EVD-COMP-MARKETS-PT-FAQ",
+        "EVD-COMP-MARKETS-YOLO-OVERVIEW",
+        "EVD-COMP-MARKETS-TE-SUMMARY",
+        "EVD-COMP-MARKETS-STOX-CONFIG"
+      ],
+      "checks": [
+        "Seven subject records including Parchment unknown; distinguish crypto underlyings, non-crypto assets, collateral, trade payouts and rewards",
+        "Trade Everything metadata: 208 unique symbol/name entries; mainnet activation unverified and Asian names may overlap",
+        "STOX retained config: 60 unique entries and source group counts sum to 60; USDG settlement separate from STOX/ETH distributions",
+        "Only two new direct public GET reads, both 200; no direct retry of denied hosts",
+        "Bilingual central tables and all six dossier pairs updated; standalone Chinese narrative added",
+        "Publication authorized by this follow-up; separate publication review and exact GitHub head verification govern the remote update"
+      ],
+      "reviewer": "metrics_method publication/incremental review; root source and count review",
+      "open_questions": [
+        "Market catalogs do not establish complete mainnet activation, capacity or fills",
+        "COMP-M3 business-data gaps remain unchanged"
+      ],
+      "next_step": "Use the public market inventory and document summary; refresh supported business sources separately"
+    }
+  ]
+}

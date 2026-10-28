@@ -1,0 +1,129 @@
+{
+  "verified_at": "2026-10-28T01:36:57.309Z",
+  "offline": [
+    {
+      "run_id": "yolo-20261028013154844-f51cfecb",
+      "offline_replay_equal": true,
+      "metrics": 10
+    },
+    {
+      "run_id": "papertrade-20261028013210996-ad2fa1cf",
+      "offline_replay_equal": true,
+      "metrics": 10
+    },
+    {
+      "run_id": "cardboard-20261028013503487-4e0cf1d7",
+      "offline_replay_equal": true,
+      "metrics": 14
+    },
+    {
+      "run_id": "rektrade-20261028013503470-994dd300",
+      "offline_replay_equal": true,
+      "metrics": 13
+    }
+  ],
+  "repeat": {
+    "run_id": "cardboard-20261028013655504-39d7afe8",
+    "status": "complete",
+    "metrics": 14
+  },
+  "unsupported": [
+    {
+      "project": "trade-everything",
+      "run_id": "trade-everything-20261028013657288-489010ca",
+      "status": "blocked",
+      "requests": 0,
+      "reason": "No verified public aggregate GET adapter"
+    },
+    {
+      "project": "stox",
+      "run_id": "stox-20261028013657303-0ba0989a",
+      "status": "blocked",
+      "requests": 0,
+      "reason": "No verified public aggregate GET adapter"
+    }
+  ],
+  "checks": {
+    "full_suite_tests": 168,
+    "full_suite_passed": 168,
+    "typecheck": "passed",
+    "existing_evidence_validator": {
+      "claims": 13,
+      "evidence": 6,
+      "versions": 1,
+      "protocol_reproduced": false
+    },
+    "competitor_validator": {
+      "sources": 103,
+      "metrics": 67,
+      "result": "passed"
+    },
+    "local_links": {
+      "checked_at": "2026-10-28T01:46:16.233658+00:00",
+      "markdown_files": 23,
+      "local_file_links": 255,
+      "broken_local_file_links": 0,
+      "anchors_checked": false,
+      "csv_rows": 67,
+      "csv_all_fields_match_json": true,
+      "private_absolute_paths_in_topic": 0,
+      "limitations": [
+        "Path and selected sensitive-marker checks, not a general secret scanner or source-rights review"
+      ]
+    },
+    "focused_tests": 16,
+    "focused_passed": 16
+  },
+  "scope": "Source-byte replay and tooling validation; not independent protocol or population-data verification",
+  "completed_at": "2026-10-28T01:46:49.385058+00:00",
+  "integration_resolutions": [
+    {
+      "finding_id": "REVIEW-DATA-FINAL-001",
+      "status": "resolved_by_integrator",
+      "action": "Both report languages now link response hashes to sources/metrics.json and identify evidence IDs in metric rows."
+    },
+    {
+      "finding_id": "REVIEW-DATA-FINAL-002",
+      "status": "resolved_by_integrator",
+      "action": "Both report languages use exact successful-network bounds and separate the later zero-request blocked records. Refresh guides already scope the interval to successful project runs."
+    }
+  ],
+  "final_integration_hashes": {
+    "docs/competitors/README.md": "cd57434fdd4d15825b9807bb5d17bada9c476b7e8935d66dbb2344862d1f7a9a",
+    "docs/competitors/README.zh-CN.md": "136c971e4ece8bf2601c4932b8c871e80309e07d1d2925d9b4adec04fea616c7",
+    "docs/competitors/refresh.md": "fb018ec92eca0a3015572f7eb85c197f4afb0d216030c8498aeeb6bccc68b829",
+    "docs/competitors/refresh.zh-CN.md": "3b65e0ac5e555110861eade67b782ccb227b36166635e00d3a352d3a0d7ebd8c",
+    "packages/competitors/validate.ts": "fcb08d140271da3eb0e44f95fa11fcb93b32c12911ada8551cb7b77115f08b08",
+    "tests/competitors.test.ts": "f8ba38ea4f439e06d027765c7ee0fea81169386646072df11e5bd4906fb2859c",
+    "docs/competitors/markets.md": "afe723d28b9ffec29a40240dd58a6c8f68d545a371eec60c5f81ff256372f937",
+    "docs/competitors/markets.zh-CN.md": "f536c106fc4aacd875e9046630ae7c8481f455e0a8dc35dda559a20fdef1a369",
+    "docs/competitors/summary.zh-CN.md": "d74344f8d02194799e615b4417b1f60a00357721cee65dcd803fac805d822481",
+    "research/competitors/markets.json": "2f979b05830f7883dbcd7742efe1dbc2560a79a31ffeb5441d52c6030221f13b"
+  },
+  "attribution": "Competitor-specific files and package scripts/navigation only. Other concurrently modified existing documentation is preserved and not attributed to this task.",
+  "market_update": {
+    "checked_at": "2026-10-28T02:01:30.419667+00:00",
+    "source_records": 103,
+    "market_subjects": 7,
+    "te_metadata_unique_symbols": 208,
+    "stox_config_unique_symbols": 60,
+    "crypto_lists": [
+      "papertrade:BTC,ETH",
+      "yolo:SOL,BTC,ETH,ZEC,HYPE",
+      "cardboard:BTC,ETH,SOL",
+      "rektrade:BTC,ETH,SOL,ZEC,NEAR,XMR,HYPE"
+    ],
+    "markdown_files": 26,
+    "local_file_links": 291,
+    "broken_local_file_links": 0,
+    "anchors_checked": false,
+    "business_snapshot_refreshed": false,
+    "limitations": [
+      "Market catalog and configuration checks do not prove mainnet activation, executable capacity or actual fills",
+      "Sources without raw reader bytes retain null hashes and exact retrieval times"
+    ],
+    "typecheck": "passed",
+    "git_diff_check": "passed",
+    "completed_at": "2026-10-28T02:01:49.023584+00:00"
+  }
+}

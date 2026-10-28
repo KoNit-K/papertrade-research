@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "papertrade-20261028013210996-ad2fa1cf-1",
+      "project_id": "papertrade",
+      "title": "DefiLlama protocol response",
+      "url": "https://api.llama.fi/protocol/papertrade",
+      "provenance": "third_party_aggregate",
+      "retrieved_at": "2026-10-28T01:32:11.370Z",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": 200,
+      "capture_sha256": "9a83880fa31036b824c7a3df44bc712cf5b42e5aace27a33bf1c03ff0d8c8280",
+      "source_dependency_ids": [],
+      "supports": [
+        "Provider-reported TVL snapshot; not house bankroll"
+      ],
+      "limitations": [
+        "Private raw response bytes; reviewed business projection only",
+        "Unknown upstream source version; adapter competitors-defillama-v1",
+        "No token market metrics exported"
+      ],
+      "retrieval_method": "bounded GET collector",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "papertrade-20261028013210996-ad2fa1cf-2",
+      "project_id": "papertrade",
+      "title": "DefiLlama fees response",
+      "url": "https://api.llama.fi/summary/fees/papertrade",
+      "provenance": "third_party_aggregate",
+      "retrieved_at": "2026-10-28T01:32:12.126Z",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": 200,
+      "capture_sha256": "8fd7f31d07c3a71c3ae96eb4e8ddbe5aefbdd7f96d0f6aba391cbc58e64da798",
+      "source_dependency_ids": [],
+      "supports": [
+        "Provider-defined fees; exact period boundaries unavailable"
+      ],
+      "limitations": [
+        "Private raw response bytes; reviewed business projection only",
+        "Unknown upstream source version; adapter competitors-defillama-v1",
+        "No token market metrics exported"
+      ],
+      "retrieval_method": "bounded GET collector",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "yolo-20261028013154844-f51cfecb-1",
+      "project_id": "yolo",
+      "title": "DefiLlama protocol response",
+      "url": "https://api.llama.fi/protocol/jupiter-yolo",
+      "provenance": "third_party_aggregate",
+      "retrieved_at": "2026-10-28T01:31:55.215Z",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": 200,
+      "capture_sha256": "45682e5864d9b113f67603c822d6ad63f40000e571a3225f4e44cc8fb5801291",
+      "source_dependency_ids": [],
+      "supports": [
+        "Provider-reported TVL snapshot; not house bankroll"
+      ],
+      "limitations": [
+        "Private raw response bytes; reviewed business projection only",
+        "Unknown upstream source version; adapter competitors-defillama-v1",
+        "No token market metrics exported"
+      ],
+      "retrieval_method": "bounded GET collector",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "yolo-20261028013154844-f51cfecb-2",
+      "project_id": "yolo",
+      "title": "DefiLlama fees response",
+      "url": "https://api.llama.fi/summary/fees/jupiter-yolo",
+      "provenance": "third_party_aggregate",
+      "retrieved_at": "2026-10-28T01:31:55.960Z",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": 200,
+      "capture_sha256": "12d82957163587901268392fc07ee38e23bc397bc22317e103993a3cb37dbce2",
+      "source_dependency_ids": [],
+      "supports": [
+        "Provider-defined fees; exact period boundaries unavailable"
+      ],
+      "limitations": [
+        "Private raw response bytes; reviewed business projection only",
+        "Unknown upstream source version; adapter competitors-defillama-v1",
+        "No token market metrics exported"
+      ],
+      "retrieval_method": "bounded GET collector",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "EVD-COMP-METRICS-YOLO-METHOD",
+      "project_id": "yolo",
+      "title": "DefiLlama YOLO fees/notional adapter",
+      "url": "https://raw.githubusercontent.com/DefiLlama/dimension-adapters/master/dexs/jupiter-yolo.ts",
+      "provenance": "third_party_implementation",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "Only winning-profit fees exported; not total user costs",
+        "dailyVolume return is commented out"
+      ],
+      "limitations": [
+        "Read in session; exact retrieval timestamp/raw capture hash not retained",
+        "Mutable branch URL; not a pinned deployment version"
+      ],
+      "retrieval_method": "web page read",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "EVD-COMP-METRICS-YOLO-PARSER",
+      "project_id": "yolo",
+      "title": "DefiLlama YOLO event layout and ingestion guards",
+      "url": "https://raw.githubusercontent.com/DefiLlama/dimension-adapters/master/helpers/jupiter-yolo.ts",
+      "provenance": "third_party_implementation",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "YOLO program-specific parsing; unknown-layout and ingestion guards",
+        "Third-party implementation not independently executed"
+      ],
+      "limitations": [
+        "Read in session; exact retrieval timestamp/raw capture hash not retained",
+        "Mutable branch URL; not a pinned deployment version"
+      ],
+      "retrieval_method": "web page read",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "EVD-COMP-METRICS-PT-TVL",
+      "project_id": "papertrade",
+      "title": "DefiLlama Papertrade TVL adapter",
+      "url": "https://raw.githubusercontent.com/DefiLlama/DefiLlama-Adapters/main/projects/papertrade/index.js",
+      "provenance": "third_party_implementation",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "TVL is Exchange HyperCore spot USDC including trader funds",
+        "timetravel false"
+      ],
+      "limitations": [
+        "Read in session; exact retrieval timestamp/raw capture hash not retained",
+        "Mutable branch URL; not a pinned deployment version"
+      ],
+      "retrieval_method": "web page read",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "EVD-COMP-METRICS-PT-FEES",
+      "project_id": "papertrade",
+      "title": "DefiLlama Papertrade fees adapter",
+      "url": "https://raw.githubusercontent.com/DefiLlama/dimension-adapters/master/fees/papertrade.ts",
+      "provenance": "third_party_implementation",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "Fee measure includes realized-PnL/liquidation fees and LP surplus distributions",
+        "Old cap description needs current deployment review"
+      ],
+      "limitations": [
+        "Read in session; exact retrieval timestamp/raw capture hash not retained",
+        "Mutable branch URL; not a pinned deployment version"
+      ],
+      "retrieval_method": "web page read",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "EVD-COMP-METRICS-PT-VOLUME",
+      "project_id": "papertrade",
+      "title": "DefiLlama Papertrade volume/OI adapter deliberately disabled",
+      "url": "https://raw.githubusercontent.com/DefiLlama/dimension-adapters/master/dexs/papertrade.ts",
+      "provenance": "third_party_implementation",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "Function throws before volume or OI output",
+        "Intended inactive volume definition excludes liquidation outcome notional"
+      ],
+      "limitations": [
+        "Read in session; exact retrieval timestamp/raw capture hash not retained",
+        "Mutable branch URL; not a pinned deployment version"
+      ],
+      "retrieval_method": "web page read",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "EVD-COMP-METRICS-PT-HISTORY",
+      "project_id": "papertrade",
+      "title": "DefiLlama Papertrade cumulative history interpretation",
+      "url": "https://raw.githubusercontent.com/DefiLlama/dimension-adapters/master/helpers/papertrade.ts",
+      "provenance": "third_party_implementation",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "History holds cumulative counters at bucket end; exact endpoint differences required",
+        "OI adds trader long and short entry notional once"
+      ],
+      "limitations": [
+        "Read in session; exact retrieval timestamp/raw capture hash not retained",
+        "Mutable branch URL; not a pinned deployment version"
+      ],
+      "retrieval_method": "web page read",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "EVD-COMP-METRICS-PT-DERIVATIVES",
+      "project_id": "papertrade",
+      "title": "DefiLlama derivatives summary preflight",
+      "url": "https://api.llama.fi/summary/derivatives/papertrade",
+      "provenance": "third_party_aggregate",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": 402,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "HTTP 402 Payment Required; no usable public metrics obtained",
+        "No raw body or exact timestamp retained; no retry or authentication"
+      ],
+      "retrieval_method": "direct public GET preflight",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "EVD-COMP-METRICS-PT-OI",
+      "project_id": "papertrade",
+      "title": "DefiLlama open-interest summary preflight",
+      "url": "https://api.llama.fi/summary/open-interest/papertrade",
+      "provenance": "third_party_aggregate",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": 400,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "HTTP 400 Bad Request; no usable public metrics obtained",
+        "Protocol dimension declaration does not prove public summary route availability",
+        "No raw body or exact timestamp retained"
+      ],
+      "retrieval_method": "direct public GET preflight",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "EVD-COMP-METRICS-PT-OFFICIAL-HISTORY",
+      "project_id": "papertrade",
+      "title": "Papertrade public history preflight denied",
+      "url": "https://exchange.papertrade.xyz/query/protocol/history?interval=1h",
+      "provenance": "official_api",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": 403,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "HTTP 403; stopped official-domain exploration, no workaround or authenticated access",
+        "No raw body or exact timestamp retained; cumulative window data remains unavailable"
+      ],
+      "retrieval_method": "direct public GET preflight",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "rektrade-20261028013503470-994dd300-1",
+      "project_id": "rektrade",
+      "title": "Public rekt-stats response",
+      "url": "https://rektrade.fun/api/stats",
+      "provenance": "official_api",
+      "retrieved_at": "2026-10-28T01:35:04.461Z",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": 200,
+      "capture_sha256": "9b237860c3582a2aa2a9361aa44255db0972b1e8d21349edee69067a124922f6",
+      "source_dependency_ids": [],
+      "supports": [
+        "Strict aggregate business projection; USD6 scale independently checked against captured frontend formatter"
+      ],
+      "limitations": [
+        "Raw response includes owner/account lists and remains private",
+        "Cumulative volume has unverified open/close/liquidation leg convention and unknown starting boundary",
+        "Only explicit *_24h fields represent provider-defined 24h volume",
+        "House and stats responses are not a synchronized balance sheet"
+      ],
+      "retrieval_method": "bounded GET collector",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "rektrade-20261028013503470-994dd300-2",
+      "project_id": "rektrade",
+      "title": "Public rekt-house response",
+      "url": "https://rektrade.fun/api/house",
+      "provenance": "official_api",
+      "retrieved_at": "2026-10-28T01:35:04.865Z",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": 200,
+      "capture_sha256": "9ef845d526761d865f8cac1039deb0c1ca213857921b798f351bf5ce5d1c3fc3",
+      "source_dependency_ids": [],
+      "supports": [
+        "Strict aggregate business projection; USD6 scale independently checked against captured frontend formatter"
+      ],
+      "limitations": [
+        "Raw response includes owner/account lists and remains private",
+        "Cumulative volume has unverified open/close/liquidation leg convention and unknown starting boundary",
+        "Only explicit *_24h fields represent provider-defined 24h volume",
+        "House and stats responses are not a synchronized balance sheet"
+      ],
+      "retrieval_method": "bounded GET collector",
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "cardboard-20261028013503487-4e0cf1d7-1",
+      "project_id": "cardboard",
+      "title": "Public cardboard-analytics response",
+      "url": "https://cardboardtrade.xyz/v1/analytics?range=1d",
+      "provenance": "official_api",
+      "retrieved_at": "2026-10-28T01:35:04.608Z",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": 200,
+      "capture_sha256": "e5305d993199d85ca2c40fefb5e00763ff06fac909105c8be81518c783e8ad9b",
+      "source_dependency_ids": [],
+      "supports": [
+        "Strict aggregate business projection; USD6 scale independently checked against captured frontend formatter"
+      ],
+      "limitations": [
+        "Raw response includes owner/account lists and remains private",
+        "Cumulative volume has unverified open/close/liquidation leg convention and unknown starting boundary",
+        "Only explicit *_24h fields represent provider-defined 24h volume",
+        "House and stats responses are not a synchronized balance sheet"
+      ],
+      "retrieval_method": "bounded GET collector",
+      "observed_date": "2026-10-28"
+    }
+  ]
+}

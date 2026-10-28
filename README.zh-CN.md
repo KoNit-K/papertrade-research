@@ -34,6 +34,8 @@
 
 ## 特性介绍
 
+**竞品研究：** [YOLO、Cardboard、Trade Everything、Rektrade与STOX](docs/competitors/README.zh-CN.md)，含双语档案、带时点的业务观测和[手动刷新命令](docs/competitors/refresh.zh-CN.md)。
+
 | 特性 | 怎么运作 |
 |---|---|
 | 🤝 **和资金池交易** | 盈利由 Papertrade 的 LP 支付，现金亏损则进入池子。 |

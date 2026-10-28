@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "selection_scope": "Jupiter YOLO plus at most five relevant projects; no count target.",
+  "maximum_competitors": 6,
+  "selected_or_conditional_count": 5,
+  "candidates": [
+    {
+      "project_id": "yolo",
+      "name": "Jupiter YOLO",
+      "decision": "selected",
+      "chain": "solana",
+      "official_url": "https://jup.ag/yolo/",
+      "relationship": "acknowledged-inspiration-candidate",
+      "rationale": "Mandatory anchor; official identity and explicit-inspiration primary-source verification is owned by the YOLO profile.",
+      "launch_at": null,
+      "independent_business_data_status": "see-project-profile",
+      "source_ids": []
+    },
+    {
+      "project_id": "cardboard",
+      "name": "Cardboard Trade",
+      "decision": "selected",
+      "chain": "solana",
+      "official_url": "https://cardboardtrade.xyz/",
+      "relationship": "strong-mechanism-analogue",
+      "rationale": "Official house/FIFO/loss-issued-staking-token documentation plus public product-specific activity API. Code-fork ancestry not established.",
+      "launch_at": null,
+      "independent_business_data_status": "supplier-aggregate-api-acquired",
+      "source_ids": [
+        "EVD-COMP-CARDBOARD-001",
+        "EVD-COMP-CARDBOARD-006",
+        "EVD-COMP-CARDBOARD-016"
+      ]
+    },
+    {
+      "project_id": "trade-everything",
+      "name": "Trade Everything",
+      "decision": "selected-with-live-status-gap",
+      "chain": "hyperevm",
+      "official_url": "https://tradeeverything.xyz/",
+      "relationship": "acknowledged-model-borrowing-plus-documented-routing",
+      "rationale": "Explicit official model attribution; useful equity-market extension. Corrects third-party Solana attribution. Mainnet aggregate paths returned 502; BTC/ETH routing conflicts with other Draft pages and cannot be independently aggregated.",
+      "launch_at": null,
+      "announced_launch_at": "2026-10-26T13:30:00Z",
+      "independent_business_data_status": "mainnet-read-failed-502",
+      "source_ids": [
+        "EVD-COMP-TRADEEVERYTHING-002",
+        "EVD-COMP-TRADEEVERYTHING-007",
+        "EVD-COMP-TRADEEVERYTHING-013",
+        "EVD-COMP-TRADEEVERYTHING-023"
+      ]
+    },
+    {
+      "project_id": "rektrade",
+      "name": "Rektrade",
+      "decision": "selected",
+      "chain": "hyperevm",
+      "official_url": "https://rektrade.fun/",
+      "relationship": "strong-mechanism-analogue",
+      "rationale": "Official embedded docs and public API support house/FIFO/loss-issued-token mechanism and operating activity; historical mint/price descriptions conflict with current API. Ember is a second frontend for the same venue.",
+      "launch_at": null,
+      "official_launch_claim_date": "2026-10-22",
+      "independent_business_data_status": "supplier-aggregate-api-acquired",
+      "source_ids": [
+        "EVD-COMP-REKTRADE-002",
+        "EVD-COMP-REKTRADE-003",
+        "EVD-COMP-REKTRADE-006"
+      ]
+    },
+    {
+      "project_id": "stox",
+      "name": "STOX",
+      "decision": "conditional-adjacent-selection",
+      "chain": "robinhood",
+      "official_url": "https://stoxpreps.com/",
+      "relationship": "mechanism-adjacent",
+      "rationale": "Official frontend supports house, queue and loss-issued shares, with a direct house-deposit difference. Mirrored live-trading claims exist; contract/config binding and independent live-fill evidence remain needed before firm operational classification. Root agent owns full profile.",
+      "launch_at": null,
+      "independent_business_data_status": "official-frontend-and-mirrored-claims-only-in-this-scout",
+      "source_ids": [
+        "EVD-COMP-CANDIDATES-001",
+        "EVD-COMP-CANDIDATES-004"
+      ]
+    },
+    {
+      "project_id": "parchment",
+      "name": "Parchment Trade",
+      "decision": "watchlist-not-selected",
+      "chain": null,
+      "chain_claim_in_discovery_list": "sui",
+      "official_url": null,
+      "official_account_claim": "https://x.com/tradeparchment",
+      "relationship": "unverified-discovery-lead",
+      "rationale": "Only mirrored introduction/Pyth interaction acquired; no established official application domain, deployment or real-money trading. 1000x alone is insufficient.",
+      "launch_at": null,
+      "independent_business_data_status": "unavailable",
+      "source_ids": [
+        "EVD-COMP-CANDIDATES-002",
+        "EVD-COMP-CANDIDATES-003"
+      ]
+    }
+  ],
+  "exclusions": [
+    {
+      "category": "generic-paper-trading-simulators",
+      "examples": [
+        "papertra.de",
+        "anandav/PaperTrade"
+      ],
+      "reason": "Virtual-money simulation does not create the real-USDC house/liability mechanism."
+    },
+    {
+      "category": "name-squatting-tokens",
+      "examples": [
+        "unverified PAPER tickers on other chains"
+      ],
+      "reason": "Ticker/name alone does not establish a derivative product or affiliation."
+    },
+    {
+      "category": "bots-frontends-and-treasuries",
+      "examples": [
+        "Papiron",
+        "PaperJet",
+        "Bankr Papertrade integration",
+        "Paperstrategy",
+        "Ember second interface"
+      ],
+      "reason": "Integrations or participation in an existing venue are not independent house LP competitors; track routing separately."
+    },
+    {
+      "category": "unverified-cross-chain-list-entries",
+      "examples": [
+        "BluffTrade",
+        "Papurrtrade",
+        "33Trade",
+        "Kiltr",
+        "Parchment"
+      ],
+      "reason": "Discovery-list membership is not product/deployment/live-trading verification."
+    }
+  ],
+  "discovery_source_ids": [
+    "EVD-COMP-CANDIDATES-002"
+  ],
+  "known_corrections": [
+    "Trade Everything is documented on HyperEVM, despite the third-party list grouping it under Solana.",
+    "Ember and Rektrade share a venue according to mirrored official statements.",
+    "No evidence establishes code-fork ancestry merely from similar leverage."
+  ],
+  "search_boundary": {
+    "method": "Use discovery lists only as leads, then official-domain/account links, documentation, published frontend aggregate paths and bounded deployment/transaction checks.",
+    "stop_conditions": [
+      "403/401/429: stop that project; do not bypass.",
+      "No identity or live-product evidence: preserve unknowns and exclude from firm operating comparisons.",
+      "No reason to fill the six-project cap."
+    ],
+    "not_performed": [
+      "wallet actions",
+      "login",
+      "personal-wallet queries",
+      "large chain scans",
+      "source-code ancestry proof"
+    ]
+  }
+}
