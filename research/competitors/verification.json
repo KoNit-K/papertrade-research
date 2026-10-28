@@ -125,5 +125,40 @@
     "typecheck": "passed",
     "git_diff_check": "passed",
     "completed_at": "2026-10-28T02:01:49.023584+00:00"
+  },
+  "public_basics_increment": {
+    "checked_at": "2026-10-28T03:28:49.259142+00:00",
+    "checks": [
+      {
+        "command": "pnpm validate:competitors",
+        "result": "passed",
+        "source_count": 164,
+        "metric_rows": 67
+      },
+      {
+        "command": "pnpm typecheck",
+        "result": "passed"
+      },
+      {
+        "command": "git diff --check",
+        "result": "passed"
+      },
+      {
+        "method": "custom Python structural/hash/file checks",
+        "result": "passed",
+        "structured_source_references": 123,
+        "source_graph_acyclic": true,
+        "local_file_links": 279,
+        "screenshots_sha256_matched": 7
+      }
+    ],
+    "business_snapshot_unchanged": true,
+    "limits": [
+      "Existing shipped validator does not validate all fields of the new basic/background/browser JSON; custom checks supplement it.",
+      "No source-truth, alias authentication, mainnet settlement or complete business-data validation; no new adapter or code changed.",
+      "Independent review is recorded separately in review-basics.json."
+    ],
+    "independent_review": "research/competitors/review-basics.json",
+    "scope_note": "Independent131reference count includes singular references; root custom array-reference count has a narrower field selection."
   }
 }

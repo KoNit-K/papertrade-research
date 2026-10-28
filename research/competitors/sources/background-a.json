@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "collection": {
+    "new_direct_get_requests": 7,
+    "successful_capture_count": 4,
+    "direct_denials": 3,
+    "min_interval_ms": 1000,
+    "max_requests_per_project": 60,
+    "mediated_reader_used": true,
+    "no_post_denial_host_retry": true,
+    "retained_source_reuse": true
+  },
+  "sources": [
+    {
+      "id": "EVD-COMP-BGA-001",
+      "project_id": "papertrade",
+      "title": "wpt public background source / direct request",
+      "url": "https://www.worldpokertour.com/article/meet-the-final-table-of-the-wpt-prime-championship",
+      "provenance": "official-site",
+      "retrieved_at": "2026-10-28T03:00:55.462991+00:00",
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": 403,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "Direct request denied; host stopped. This response supports no biographical claim."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGA-002",
+      "project_id": "papertrade",
+      "title": "moni public background source / direct request",
+      "url": "https://research.moni.ai/articles/papertrade",
+      "provenance": "third-party-publication",
+      "retrieved_at": "2026-10-28T03:00:57.128159+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "961d9f3e30a625b678e55b50314e637fc2e6db57ef75bc9e569b4c93474b5202",
+      "source_dependency_ids": [],
+      "supports": [
+        "HONKAYO identifies Jez as Colin Hong and describes Jez and Blurr as the project builders."
+      ],
+      "limitations": [
+        "Partial relevant-section reading; publisher identity/claims are not independently audited."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGA-003",
+      "project_id": "papertrade",
+      "title": "bidclub public background source / direct request",
+      "url": "https://bidclub.ai/e/papertrade-launch-1000x-leverage-onchain-war-sto",
+      "provenance": "third-party-publication",
+      "retrieved_at": "2026-10-28T03:01:01.235602+00:00",
+      "source_published_at": "2026-09-29T00:00:00.000Z",
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "b02631ecbade61294cf7e840e87313bbee993c065a6905ca1ee8180d02d51800",
+      "source_dependency_ids": [],
+      "supports": [
+        "Third-party interview transcript attributes early onchain experimentation and Papertrade collaboration history to Blurr."
+      ],
+      "limitations": [
+        "Partial relevant-section reading; publisher identity/claims are not independently audited."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGA-004",
+      "project_id": "papertrade",
+      "title": "panews public background source / direct request",
+      "url": "https://www.panews.io/articles/01a12eb9-598a-722e-8f60-1a3104d5c217",
+      "provenance": "third-party-publication",
+      "retrieved_at": "2026-10-28T03:01:03.509069+00:00",
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": 403,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "Direct request denied; host stopped. This response supports no biographical claim."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGA-005",
+      "project_id": "cardboard",
+      "title": "community public background source / direct request",
+      "url": "https://www.kucoin.com/news/insight/NVDA/6ad48400c31ba80007320bdd",
+      "provenance": "third-party-publication",
+      "retrieved_at": "2026-10-28T03:01:05.461772+00:00",
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": 403,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "Direct request denied; host stopped. This response supports no biographical claim."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGA-006",
+      "project_id": "cardboard",
+      "title": "namesake public background source / direct request",
+      "url": "https://f.inc/offseason/2/teams",
+      "provenance": "official-site",
+      "retrieved_at": "2026-10-28T03:01:06.996387+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "460c22765dfa85475a760c4e33aac3ad6a1af462f2366f67647932fdf755516d",
+      "source_dependency_ids": [],
+      "supports": [
+        "Founders Inc lists an Attractor Labs enterprise-behavior-simulation team; no Cardboard linkage is supplied."
+      ],
+      "limitations": [
+        "Partial relevant-section reading; publisher identity/claims are not independently audited."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGA-007",
+      "project_id": "rektrade",
+      "title": "ember public background source / direct request",
+      "url": "https://embercurve.fun/rekt/",
+      "provenance": "official-site",
+      "retrieved_at": "2026-10-28T03:01:09.649005+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "64f8d42ff03998a763e238d928db1c8e7570f6f284a6f4450dad8fed9a41ab1a",
+      "source_dependency_ids": [],
+      "supports": [
+        "Ember-owned /rekt/ URL returns a Rektrade app shell and /rekt/assets client paths, supporting a public product-hosting association."
+      ],
+      "limitations": [
+        "Partial relevant-section reading; publisher identity/claims are not independently audited.",
+        "Retained994-byte HTML is an unhydrated app shell and does not contain Built by Ember text. That attribution comes from the separately retained project-account mirror, not these HTML bytes."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGA-WPT-READER",
+      "project_id": "papertrade",
+      "title": "World Poker Tour finalist profile: Colin Hong",
+      "url": "https://www.worldpokertour.com/article/meet-the-final-table-of-the-wpt-prime-championship",
+      "provenance": "mediated-public-page-reader",
+      "retrieved_at": null,
+      "recorded_at": "2026-10-28T03:02:49.907212+00:00",
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader_current_turn",
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "WPT lists MIT 2015, four Morgan Stanley years and a then-current Standard Crypto venture-partner role.",
+        "The profile lists Connecticut as a player geographic label."
+      ],
+      "limitations": [
+        "Relevant page sections actually opened/read; exact transport time and original response bytes not retained.",
+        "Earlier reader succeeded; a later direct GET returned 403 and was stopped.",
+        "WPT does not itself identify the Jez alias; that linkage comes from MONI.",
+        "Event-profile geographic label is not a 2026 protocol headquarters or personal residence verification."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGA-PANEWS-READER",
+      "project_id": "papertrade",
+      "title": "PANews transcript of Jez interview",
+      "url": "https://www.panews.io/articles/01a12eb9-598a-722e-8f60-1a3104d5c217",
+      "provenance": "mediated-public-page-reader",
+      "retrieved_at": null,
+      "recorded_at": "2026-10-28T03:02:49.907212+00:00",
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader_current_turn",
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "PANews attributes Millennium quant work, Lighter advisory work and a personal-check investing circle with Will Price and Blurr to Jez.",
+        "The interview describes the Papertrade idea and earlier Rollbit interest."
+      ],
+      "limitations": [
+        "Relevant page sections actually opened/read; exact transport time and original response bytes not retained.",
+        "Derivative translation/transcript; original audio/video not independently checked.",
+        "Page identifies the interview air date as 2026-10-09; publication timestamp not recovered.",
+        "Earlier reader succeeded; subsequent direct GET returned 403 and was stopped."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGA-CARDBOARD-COMMUNITY",
+      "project_id": "cardboard",
+      "title": "sanyi.eth community post syndicated by KuCoin",
+      "url": "https://www.kucoin.com/news/insight/NVDA/6ad48400c31ba80007320bdd",
+      "provenance": "mediated-public-page-reader",
+      "retrieved_at": null,
+      "recorded_at": "2026-10-28T03:02:49.907212+00:00",
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader_current_turn",
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "The syndicated community post calls Cardboard a Papertrade clone."
+      ],
+      "limitations": [
+        "Relevant page sections actually opened/read; exact transport time and original response bytes not retained.",
+        "Post text dated 2026-10-18 08:34:05, timezone unspecified.",
+        "This is an author opinion about product resemblance, not founder or code-ancestry proof.",
+        "Reader page opened before the direct request was denied; no post-denial retry."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGA-UNGUS-GUIDE",
+      "project_id": "papertrade",
+      "title": "Razzaer guide: who runs Papertrade",
+      "url": "https://solanaguides.com/papertrade-xyz",
+      "provenance": "mediated-public-page-reader",
+      "retrieved_at": null,
+      "recorded_at": "2026-10-28T03:02:49.907212+00:00",
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader_current_turn",
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "Razzaer describes Jez (izebel_eth) and Blurr as cofounders, and UngusTrade as the additional multisig holder."
+      ],
+      "limitations": [
+        "Relevant page sections actually opened/read; exact transport time and original response bytes not retained.",
+        "Independent community guide; handle-role mapping is not an onchain signer verification.",
+        "Published 2026-10-11 and updated 2026-10-25 according to displayed dates."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGA-CARDBOARD-TERMS",
+      "project_id": "cardboard",
+      "title": "Terms of Service · Cardboard Trade Docs",
+      "url": "https://docs.cardboardtrade.xyz/terms.html",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:55.724507+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "53169698070f80d3a75d06c1bf79c1eca058cc391de2a0ac7f7abd24a00a0b18",
+      "source_dependency_ids": [
+        "EVD-COMP-CARDBOARD-011"
+      ],
+      "supports": [
+        "The official Terms name Attractor Labs, Inc. as operator and display version 2026-10-25."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Retained bytes re-read; no new request."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGA-REKT-MIRROR",
+      "project_id": "rektrade",
+      "title": "rektrade (@rektradefun) | teapawt",
+      "url": "https://teapawt.net/rektradefun",
+      "provenance": "third-party-mirror-of-social-posts",
+      "retrieved_at": "2026-10-28T01:32:19.496807+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "7774c6b008e2785ed29164ad527155c546b217c77c2549931869bef85bf8d2b5",
+      "source_dependency_ids": [
+        "EVD-COMP-REKTRADE-003"
+      ],
+      "supports": [
+        "A retained official-account mirror includes biiiiymeister self-attribution as deploying REKT.",
+        "A retained Ember post says Ember and Rektrade are two interfaces to the same contracts and keeper."
+      ],
+      "limitations": [
+        "Mirror copy only; original account content and exact post timestamps were not authenticated.",
+        "Profile capture may contain multiple posts; source_published_at is null.",
+        "Retained bytes re-read; no new request."
+      ]
+    }
+  ]
+}

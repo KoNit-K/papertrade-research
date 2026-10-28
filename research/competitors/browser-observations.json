@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "assembled_at": "2026-10-28T03:15:55.294352+00:00",
+  "observations": [
+    {
+      "project_id": "yolo",
+      "url": "https://docs.jup.ag/user-docs/labs/yolo",
+      "evidence_id": "EVD-COMP-BROWSER-YOLO",
+      "screenshot_path": "docs/competitors/assets/yolo-overview-20261028.jpg",
+      "screenshot_sha256": "f734dd865e83337e5a3d99c345c4e36f8cf9ea8737089281d522c1e7e3bcc3c2",
+      "recorded_at": "2026-10-28T03:04:39.043Z",
+      "business_as_of": null,
+      "scope": [
+        "Official overview displays 500–1000x, SOL/BTC/ETH/ZEC/HYPE and JupUSD."
+      ],
+      "coverage": "page_observation"
+    },
+    {
+      "project_id": "cardboard",
+      "url": "https://cardboardtrade.xyz/trade/btc",
+      "evidence_id": "EVD-COMP-BROWSER-CARDBOARD",
+      "screenshot_path": "docs/competitors/assets/cardboard-trade-20261028.jpg",
+      "screenshot_sha256": "b5e1eaec21bbda50c1b5d83213ae92c7317db0ed2832ddabd3306dc4fa8b7399",
+      "recorded_at": "2026-10-28T03:05:30.316Z",
+      "business_as_of": null,
+      "scope": [
+        "BTC/ETH/SOL navigation; BTC ticket shows x1–1000, default leverage10 and 2bp round-trip fee on close.",
+        "Default margin input1 is not proof of minimum admissible margin."
+      ],
+      "coverage": "page_observation"
+    },
+    {
+      "project_id": "stox",
+      "url": "https://stoxpreps.com/",
+      "evidence_id": "EVD-COMP-BROWSER-STOX",
+      "screenshot_path": "docs/competitors/assets/stox-trade-20261028.jpg",
+      "screenshot_sha256": "088fc75f7a0301e719002e3ccde719f57675579179ece7b65c673538ef06a1a9",
+      "recorded_at": "2026-10-28T03:09:53.740Z",
+      "business_as_of": null,
+      "scope": [
+        "NVDA page shows MAX LEVERAGE1000x, x1–1000 slider and 5/20/50/100/500/1000 presets; USDG ticket.",
+        "Displayed market groups:22 USstocks,8ETFs,4indices,8commodities,3FX,15Asia&Global.",
+        "NVDA header displays rounded24hvolume$62.7M,longOI$250,shortOI$0; house-today$0,busts0,paid$0 are page labels, not independently reconciled onchain values."
+      ],
+      "coverage": "page_observation"
+    },
+    {
+      "project_id": "rektrade",
+      "url": "https://rektrade.fun/",
+      "evidence_id": "EVD-COMP-BROWSER-REKT",
+      "screenshot_path": "docs/competitors/assets/rektrade-home-20261028.jpg",
+      "screenshot_sha256": "3deea0582be2932a526115fc072b33ff008efe6533c29084d674c13e90efbf72",
+      "recorded_at": "2026-10-28T03:11:15.943Z",
+      "business_as_of": null,
+      "scope": [
+        "Home lists BTC/ETH/SOL/ZEC/NEAR/XMR/HYPE, each labelled1000x; does not resolve lower limits in /api/config.",
+        "Rounded home counters:traded$135225758,losttohouse$69430,minted1228494REKT,housecash$1104; no business-as-of."
+      ],
+      "coverage": "page_observation"
+    },
+    {
+      "project_id": "trade-everything",
+      "url": "https://tradeeverything.xyz/",
+      "evidence_id": "EVD-COMP-BROWSER-TE-HOME",
+      "screenshot_path": "docs/competitors/assets/trade-everything-home-20261028.jpg",
+      "screenshot_sha256": "35803e0cbf772ca029d63a37f30d040449fe9362a078fba1f710d798b3c01c5e",
+      "recorded_at": "2026-10-28T03:11:53.156Z",
+      "business_as_of": null,
+      "scope": [
+        "Home claims200+globalstocks,500xmax,0marketimpact,0%funding.",
+        "Home displays Mainnet is live and advertised opening Mon26Oct13:30UTC; issuer claim, not verified first mainnet fill."
+      ],
+      "coverage": "page_observation"
+    },
+    {
+      "project_id": "trade-everything",
+      "url": "https://exchange.tradeeverything.xyz/trade/nvda",
+      "evidence_id": "EVD-COMP-BROWSER-TE-DEMO",
+      "screenshot_path": "docs/competitors/assets/trade-everything-demo-20261028.jpg",
+      "screenshot_sha256": "2d3c589113e75a2c5f96ff4591270eef7da77be235f25646e7a70922b8fba470",
+      "recorded_at": "2026-10-28T03:14:27.320Z",
+      "business_as_of": null,
+      "scope": [
+        "Default environment is Demo, demoequity$10000; not actual customer deposit.",
+        "Screenshot shows current NVDA overnightMax250x and selected125x."
+      ],
+      "coverage": "page_observation"
+    },
+    {
+      "project_id": "papertrade",
+      "url": "https://exchange.papertrade.xyz/trade/btc",
+      "evidence_id": "EVD-COMP-BROWSER-PT",
+      "screenshot_path": "docs/competitors/assets/papertrade-btc-20261028.jpg",
+      "screenshot_sha256": "4201dd73f85f37c5eb0f2d32c6818c26ac04d7507a60384365303b570d2d1a45",
+      "recorded_at": "2026-10-28T03:15:10.119Z",
+      "business_as_of": null,
+      "scope": [
+        "BTC ticket shows x1Safe to Wildx1000, default10x, marginUSDCdefault1; defaults do not establish admission minimum.",
+        "BTC selected header shows rounded VOL24H$7.68B,LONGOI$84.2M,SHORTOI$32.6M; not established whole-platform total or exact unrounded measure."
+      ],
+      "coverage": "page_observation"
+    }
+  ],
+  "attempts": [
+    {
+      "project_id": "yolo",
+      "url": "https://jup.ag/yolo/?market=SOL&mode=classic",
+      "status": "failed",
+      "reason": "ERR_CONNECTION_CLOSED",
+      "business_data_obtained": false
+    }
+  ],
+  "limitations": [
+    "Seven retained JPEG viewports are distinct from the frozen67-row adapter snapshot; rounded page counters were not inserted into that snapshot.",
+    "Only optional referral-code prompt dismissed in the public Demo; no code entered, account connected or order submitted.",
+    "Public interface excerpts were selected and visually reviewed for minimal research illustration at the explicit owner request; raw network/DOM captures remain private."
+  ],
+  "dom_observations": [
+    {
+      "project_id": "trade-everything",
+      "evidence_id": "EVD-COMP-BROWSER-TE-DOM",
+      "scope": "DOM, not screenshot pixels: five crypto market names including off-viewport BCH; next pre-market NVDA cap375x.",
+      "retrieved_at": null,
+      "business_as_of": null,
+      "capture_sha256": null
+    }
+  ]
+}

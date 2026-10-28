@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "researcher": "yolo_sources",
+  "observed_date": "2026-10-28",
+  "finished_at": "2026-10-28T03:04:28.644229+00:00",
+  "scope": "Public professional/project background only; separate people, historical team, current product and legal entity.",
+  "projects": [
+    {
+      "project_id": "yolo",
+      "readable_summary_zh": "YOLO背后可明确写Jupiter Labs／Jupiter公开建设者，而非全匿名新团队。Siong和Meow具有早期Solana流动性协议Mercurial/Meteora背景；但历史共同建设不能推成当前YOLO完整人员表。Jupiter界面条款已明确一个Panama法律连接，不能继续把全部Jupiter主体信息写成未知，也不能直接当YOLO专用注册实体。",
+      "public_people": [
+        {
+          "name": "Siong Ong",
+          "handle": "@sssionggg",
+          "role": "Jupiter co-founder (interview identification); YOLO launch attribution is separately recorded in yolo sources",
+          "background_zh": "历史Mercurial官方团队页：Envoy founding engineer、Expa resident engineer、YC alumnus、UIUC CS。属于项目自述履历，未逐家雇主独立核实。",
+          "source_ids": [
+            "EVD-COMP-BGB-002",
+            "EVD-COMP-BGB-004"
+          ]
+        },
+        {
+          "name": "Meow",
+          "handle": null,
+          "role": "Jupiter founder in interview framing; personal site says Cat at Jupiter",
+          "background_zh": "个人站自述曾任Instadapp、Fluid、Kyber、Blockfolio顾问，参与Handshake创始贡献，并发起Meteora；访谈转载另称Raccoons Labs创始人。这里不推断法定姓名或国籍。",
+          "source_ids": [
+            "EVD-COMP-BGB-001",
+            "EVD-COMP-BGB-005"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "id": "BGB-YOLO-ORIGIN",
+          "text_zh": "Meteora官方2025-10-13文章署名Zhen，回顾与Meow/Siong共同建设Mercurial、FTX后团队大体保留并重建Meteora；LP Army从社区电话发展。可写历史团队与社区连续性，不能写Meteora现在负责YOLO。",
+          "source_ids": [
+            "EVD-COMP-BGB-003",
+            "EVD-COMP-BGB-004"
+          ],
+          "evidence_level": "source_assertion"
+        },
+        {
+          "id": "BGB-YOLO-ENTITY",
+          "text_zh": "Jupiter官方条款称jup.ag界面由Block Raccoon S.A.提供，协议由其部署；适用Panama法律并将界面视为仅位于Panama。可作为Jupiter界面的公开法律主体和法律地域背景，非YOLO单独法律实体或团队办公地点证明。",
+          "source_ids": [
+            "EVD-COMP-BGB-007",
+            "EVD-COMP-BGB-008"
+          ],
+          "evidence_level": "source_assertion"
+        },
+        {
+          "id": "BGB-YOLO-COMMUNITY",
+          "text_zh": "公开访谈及项目历史把Jupiter置于Solana原生流动性建设、Mercurial用户和治理社区背景；ChainCatcher报道Meow主动寻求中文社区交流，说明跨语言社群参与，不证明中国或任何国家运营。",
+          "source_ids": [
+            "EVD-COMP-BGB-003",
+            "EVD-COMP-BGB-004",
+            "EVD-COMP-BGB-006"
+          ],
+          "evidence_level": "source_assertion"
+        }
+      ],
+      "unknowns": [
+        "YOLO专项雇员和职责清单",
+        "YOLO单独签约或注册实体",
+        "团队实际办公地",
+        "具体YOLO融资与初始House出资方"
+      ]
+    },
+    {
+      "project_id": "trade-everything",
+      "readable_summary_zh": "已经有可明确写出的社区来历：项目官方自称Papertrade社区中的独立项目，承认借鉴其模型，并面向股票/ETF扩展。不能把这一归属写成Jez/Blurr同团队。发现Mark Lamb第一人称宣发的有用线索，但本轮仅有搜索缓存，正文受阻，必须留在待核区。",
+      "public_people": [],
+      "claims": [
+        {
+          "id": "BGB-TE-COMMUNITY",
+          "text_zh": "官方Draft页面称自己是Papertrade社区中的独立项目，将该模型用于美国股票/ETF；这是官方自我定位，不是代码同源或共同公司证据。",
+          "source_ids": [
+            "EVD-COMP-BGB-012"
+          ],
+          "evidence_level": "source_assertion"
+        },
+        {
+          "id": "BGB-TE-CHANNEL",
+          "text_zh": "公开项目账号是@TradeEverythin_，镜像保存10月22日上线预告。可描述其HyperEVM/Pyth/股票交易用户定位，但账号没有给出经过核实的成员姓名。",
+          "source_ids": [
+            "EVD-COMP-BGB-013"
+          ],
+          "evidence_level": "source_assertion"
+        }
+      ],
+      "unverified_leads": [
+        {
+          "person": "Mark Lamb / @MarkDavidLamb",
+          "status": "discovery_only_not_adopted_as_founder",
+          "claimed_date": "2026-10-22",
+          "discovery_url": "https://nitter.rdrama.net/ArthurB",
+          "original_post_url": null,
+          "why_look": "Search engine result attributes a first-person announcement using we and recounting prior exchange-building to MarkDavidLamb, retweeted by ArthurB.",
+          "content_opened": false,
+          "reason_not_promoted_zh": "实际打开403；其他公开个人镜像也不可达，未取得原帖直接URL。不能只凭检索缓存认定创始人，也未把Mark既往交易所或争议带入本项目。",
+          "source_ids": [
+            "EVD-COMP-BGB-014",
+            "EVD-COMP-BGB-015"
+          ]
+        }
+      ],
+      "jez_blurr_connection": {
+        "status": "not_established",
+        "explanation_zh": "有明确Papertrade社区/模型关系，无明确Jez或Blurr成员、管理、融资或股权关系证据；不能从PAPER分配或路由计划推断同团队。"
+      },
+      "unknowns": [
+        "具名发起人确认",
+        "法定主体与司法辖区",
+        "办公地",
+        "融资和团队履历"
+      ]
+    },
+    {
+      "project_id": "stox",
+      "readable_summary_zh": "可描述为通过@STOXPREPS面向Robinhood Chain股票衍生品社群自发建设和营销的独立协议；其官网与账号明确不隶属Robinhood。具名成员暂未核实，但有一个公开自称创始/开发者的化名handle以及第三方团队履历线索，应保留层级。",
+      "public_people": [],
+      "claims": [
+        {
+          "id": "BGB-STOX-ORIGIN",
+          "text_zh": "官方前端声明独立协议、不隶属Robinhood、Hyperliquid或标的发行方；镜像官方账号面向Robinhood创始人及相关社区宣传1000倍股票交易。可写Robinhood Chain生态的独立项目，不可写Robinhood官方产品。",
+          "source_ids": [
+            "EVD-COMP-BGB-010",
+            "EVD-COMP-BGB-016"
+          ],
+          "evidence_level": "source_assertion"
+        }
+      ],
+      "community_claims": [
+        {
+          "claim_zh": "@Iplaychart1公开自称STOX创始人/主要开发者，其帖被@STOXPREPS在10月22日的镜像feed引用并致谢。可写“出现由项目账号放大的开发者自述”，未验证雇佣、控制权或法定身份。",
+          "author": "@Iplaychart1",
+          "date": "2026-10-22",
+          "direct_url": "https://x.com/Iplaychart1/status/2113404018190106744",
+          "read_via": "https://teapawt.net/STOXPREPS",
+          "why_look": "Self-identification as a founder/lead developer, displayed as a quoted post in the project account feed.",
+          "only_repetition": true,
+          "limitations_zh": "原帖未直接认证；引文写@STOX而非完整@STOXPREPS，存在身份范围歧义。不得据此声称独立审计已完成或资金安全。",
+          "source_ids": [
+            "EVD-COMP-BGB-010"
+          ]
+        },
+        {
+          "claim_zh": "@LAPOSSCRYPT将STOXPREPS解释为Robinhood Chain上的合成股票交易和House Shares实验。用于展示社区如何理解项目，不证明作者参与团队。",
+          "author": "@LAPOSSCRYPT",
+          "date": "2026-10-20",
+          "direct_url": "https://x.com/LAPOSSCRYPT/status/2112694335686717830",
+          "read_via": "https://teapawt.net/STOXPREPS",
+          "why_look": "Project feed repeats this outside explanatory post, discussing House Shares and explicitly saying not affiliated with Robinhood.",
+          "only_repetition": true,
+          "source_ids": [
+            "EVD-COMP-BGB-010"
+          ]
+        }
+      ],
+      "unverified_leads": [
+        {
+          "claim_zh": "Bitget Wallet无署名项目描述称团队5人，Mei有芝加哥prop quant履历并负责风险/定价。页面对应当前公开STOXPREPS产品标识，但没有来源链接或发布日期。",
+          "publisher": "Bitget Wallet",
+          "author": null,
+          "date": null,
+          "direct_url": "https://web3.bitget.com/en/swap/robinhood/0xB4D3A6097B765d094c0950ac03e917A2773EEf4d",
+          "status": "unverified_listing_claim_not_adopted",
+          "why_not_promoted_zh": "不满足可追溯的原创作者/日期/团队自述依据；不写成已确认成员，不据Chicago推断团队所在地。",
+          "source_ids": [
+            "EVD-COMP-BGB-011"
+          ]
+        }
+      ],
+      "unknowns": [
+        "法定主体与注册地",
+        "成员实名和正式履历",
+        "融资与股权",
+        "实际办公地点"
+      ]
+    }
+  ],
+  "collection_limits": [
+    "No CUA, wallet identity joins, private-person investigation, credentials, contact or transactions.",
+    "No defamatory allegations or unrelated same-name STOX tokens were used. Lawsuit search results were not adopted as biographical facts.",
+    "No retried nitter or LEI host after403; prior raw scout captures were explicitly reused.",
+    "Geography is stated only as the scope of Jupiter interface terms; no country inferred from names, language, chain or token."
+  ]
+}

@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "EVD-COMP-BGB-001",
+      "project_id": "yolo",
+      "title": "Meow personal biography",
+      "url": "https://meow.bio/",
+      "provenance": "self_description",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": "d8725a9d74d40ceae77bbbae7e9902a02654808b8fa51b79153b88fd65827ddd",
+      "source_dependency_ids": [],
+      "supports": [
+        "Meow self-describes Jupiter involvement, former adviser roles at Instadapp/Fluid/Kyber/Blockfolio, Handshake founding contribution and starting Meteora."
+      ],
+      "limitations": [
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGB-002",
+      "project_id": "yolo",
+      "title": "Mercurial founding team",
+      "url": "https://docs.mercurial.finance/mercurial/team",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": "4215a810e4742e2c05becfde1fc77f8461723c5c3471826aa810bab2ddc78bed",
+      "source_dependency_ids": [],
+      "supports": [
+        "Historical official team page lists Siong as Envoy founding engineer, Expa resident engineer, YC alumnus and UIUC CS graduate.",
+        "The old team roster also includes Ming and Ben Chow."
+      ],
+      "limitations": [
+        "Historical Mercurial roster, not a current YOLO staffing list or independently checked employment record.",
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGB-003",
+      "project_id": "yolo",
+      "title": "From Mercurial to Meteora: My Story",
+      "url": "https://meteoraag.medium.com/from-mercurial-to-meteora-my-story-caafd372a577",
+      "provenance": "official_announcement",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader",
+      "source_published_at": "2025-10-13",
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": "d7e7cdd844f1e90db0db2b501593e00805034ab8c1072f9ec5b1b15d6f8a5f47",
+      "source_dependency_ids": [],
+      "supports": [
+        "Meteora article signed Zhen describes joining Meow and Siong at Mercurial and the largely intact team building Meteora after FTX.",
+        "The article describes LP Army emerging from community calls."
+      ],
+      "limitations": [
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGB-004",
+      "project_id": "yolo",
+      "title": "Solfate interview with Siong",
+      "url": "https://solfate.com/podcast/42",
+      "provenance": "interview_show_notes",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader",
+      "source_published_at": "2024-01-02",
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": "229268ae1d9500e012e64b11e5d646d8e3084c8577d7d34b12566e12a7b1a80a",
+      "source_dependency_ids": [],
+      "supports": [
+        "Show identifies Siong as Jupiter co-founder and links the public handle sssionggg.",
+        "Published takeaways describe Jupiter beginning as an effort to bring volume to Mercurial."
+      ],
+      "limitations": [
+        "Read show notes, not independently listened to the audio or verified transcript.",
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication.",
+        "Source was not independently employment/legal-entity authenticated; SHA-256 identifies a mediated reader representation, not original server bytes."
+      ],
+      "capture_representation": "relevant section of retained mediated web-reader text; not upstream HTTP body",
+      "capture_bytes": 4604,
+      "hash_correction": {
+        "corrected_at": "2026-10-28T03:22:26.022728+00:00",
+        "previous_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "reason": "Independent review found an empty newline-only split file was hashed instead of the actual retained section. Rebound to a non-empty section of the combined reader capture.",
+        "combined_reader_sha256": "6b4b446d2e499019082450df88d5c6adde569588d8cad86b9e434013517d4695",
+        "combined_reader_line_range_1based": [
+          17,
+          94
+        ]
+      }
+    },
+    {
+      "id": "EVD-COMP-BGB-005",
+      "project_id": "yolo",
+      "title": "Translated Luke Belmar interview with Meow",
+      "url": "https://www.techflowpost.com/en-US/article/16209",
+      "provenance": "media",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader",
+      "source_published_at": "2024-02-05",
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": "d5cc4e34dcc153123e540ab42a7edb1ff2cece6a95c317a08d36090907ec9db7",
+      "source_dependency_ids": [],
+      "supports": [
+        "Translated interview introduces Meow as Jupiter founder and Raccoons Labs founder, with earlier DeFi adviser work."
+      ],
+      "limitations": [
+        "TechFlow publication credits Luccy/BlockBeats translation; biographical introduction is media framing. No company-register validation.",
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGB-006",
+      "project_id": "yolo",
+      "title": "Meow Chinese-community statement report",
+      "url": "https://www.chaincatcher.com/en/article/2133348",
+      "provenance": "media",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader",
+      "source_published_at": "2024-07-12",
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": "db412e7d3c047073c4ae709267840d4b38f4df75ce68b262e84fa35cdf915264",
+      "source_dependency_ids": [],
+      "supports": [
+        "ChainCatcher reports Meow wanted greater engagement with the Chinese-language community."
+      ],
+      "limitations": [
+        "Repetition of an X statement; no inference of nationality, citizenship or country of operation.",
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGB-007",
+      "project_id": "yolo",
+      "title": "Jupiter Terms of Use",
+      "url": "https://developers.jup.ag/docs/legal/terms-of-use",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": "a063f029400783bc93627639f8abe82daea147614f9d5d7dc06f0771225a8cf8",
+      "source_dependency_ids": [],
+      "supports": [
+        "Terms name Block Raccoon S.A. as jup.ag interface provider and protocol deployer."
+      ],
+      "limitations": [
+        "Scope is Jupiter interface terms, not a YOLO-specific incorporation record. Requested legacy URL redirected normally to developers.jup.ag.",
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication.",
+        "Source was not independently employment/legal-entity authenticated; SHA-256 identifies a mediated reader representation, not original server bytes."
+      ],
+      "capture_representation": "relevant section of retained mediated web-reader text; not upstream HTTP body",
+      "capture_bytes": 30447,
+      "hash_correction": {
+        "corrected_at": "2026-10-28T03:22:26.022728+00:00",
+        "previous_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "reason": "Independent review found an empty newline-only split file was hashed instead of the actual retained section. Rebound to a non-empty section of the combined reader capture.",
+        "combined_reader_sha256": "6b4b446d2e499019082450df88d5c6adde569588d8cad86b9e434013517d4695",
+        "combined_reader_line_range_1based": [
+          99,
+          261
+        ]
+      }
+    },
+    {
+      "id": "EVD-COMP-BGB-008",
+      "project_id": "yolo",
+      "title": "Jupiter terms Panama clauses",
+      "url": "https://developers.jup.ag/docs/legal/terms-of-use",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": "64f7e5a81af4cf8a82f2d8c5269c43cacde613693cc9026ca3c5765438a3ad16",
+      "source_dependency_ids": [
+        "EVD-COMP-BGB-007"
+      ],
+      "supports": [
+        "Terms choose Panamanian law and deem the interface based solely in Panama."
+      ],
+      "limitations": [
+        "Legal wording does not prove headquarters, staff location, corporate registration or a separate YOLO contracting entity.",
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGB-009",
+      "project_id": "yolo",
+      "title": "Institutional staking counterparty report",
+      "url": "https://solanahub.de/en/news/jupiter-staking-seite-institutionen/",
+      "provenance": "media",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader",
+      "source_published_at": "2026-10-26",
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": "e189f7d25daad92602af06d28ff58fc77c64a6a2fdea908a0979c37c076b23c8",
+      "source_dependency_ids": [],
+      "supports": [
+        "SOLANA HUB reports Block Raccoon S.A., Panama as counterparty on Jupiter institutional staking page."
+      ],
+      "limitations": [
+        "Secondary report about staking, not YOLO; not used to establish YOLO legal identity.",
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGB-010",
+      "project_id": "stox",
+      "title": "STOX public account mirror retained scout capture",
+      "url": "https://teapawt.net/STOXPREPS",
+      "provenance": "social_mirror",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "retained_capture_read",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": "033d524bfcd0ec6792973f3be4cf314febb28c9977de3507c7fb365863151091",
+      "source_dependency_ids": [
+        "EVD-COMP-CANDIDATES-004"
+      ],
+      "supports": [
+        "Mirror places STOX in Robinhood-chain stock-perpetual community and explicitly disclaims Robinhood affiliation.",
+        "Mirror shows STOX account amplifying a founder self-identification post by Iplaychart1 and community commentary by LAPOSSCRYPT."
+      ],
+      "limitations": [
+        "Original X not directly authenticated. Account amplification is not verification of employment, founder identity, audit claims or issuer endorsement.",
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGB-011",
+      "project_id": "stox",
+      "title": "Bitget Wallet STOXPREPS description",
+      "url": "https://web3.bitget.com/en/swap/robinhood/0xB4D3A6097B765d094c0950ac03e917A2773EEf4d",
+      "provenance": "third_party_listing",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": "4b8ef715cd4ca640f4129f0f1a3e1a681fe351563821f9e45bb9bb8239821afe",
+      "source_dependency_ids": [],
+      "supports": [
+        "Listing asserts a five-person team and a person called Mei with prop-quant background."
+      ],
+      "limitations": [
+        "No named author, publication date, underlying citation or original team statement was supplied; retain as unverified lead, not accepted biography. No token market values adopted.",
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGB-012",
+      "project_id": "trade-everything",
+      "title": "Built on Paper Trade",
+      "url": "https://docs.tradeeverything.xyz/built-on-paper/overview/",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "retained_capture_read",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": "982d2b2255fd440ee5425ab177ac9ebb0aa55af82b8f6a514ac4fdb1bff7f573",
+      "source_dependency_ids": [
+        "EVD-COMP-TRADEEVERYTHING-002"
+      ],
+      "supports": [
+        "Official draft documentation describes a separate project in the Papertrade community and credits Papertrade model."
+      ],
+      "limitations": [
+        "Does not name Jez, Blurr or a founder; community affiliation does not establish common team or ownership.",
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGB-013",
+      "project_id": "trade-everything",
+      "title": "Trade Everything public account mirror",
+      "url": "https://teapawt.net/TradeEverythin_",
+      "provenance": "social_mirror",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "retained_capture_read",
+      "source_published_at": "2026-10-22",
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": "8cf96fe3a597e1455cfa65163f79279d77b62df6d988f9b2af409966898f91a5",
+      "source_dependency_ids": [
+        "EVD-COMP-TRADEEVERYTHING-019"
+      ],
+      "supports": [
+        "Mirror attributes the October22 stock-perpetual launch announcement to TradeEverythin_."
+      ],
+      "limitations": [
+        "Not original X authentication; announcement does not identify named founder.",
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGB-014",
+      "project_id": "trade-everything",
+      "title": "Mark Lamb discovery result",
+      "url": "https://nitter.rdrama.net/ArthurB",
+      "provenance": "search_result",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader",
+      "source_published_at": "2026-10-22",
+      "access_status": "partial",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": "253a3dc6d8341262a6af5874f925452c09c7d99ed9f21d0cb392b9dcc60111f1",
+      "source_dependency_ids": [],
+      "supports": [
+        "Search result attributes an October22 first-person Trade Everything announcement to MarkDavidLamb."
+      ],
+      "limitations": [
+        "Search result only; actual page opening returned403. No direct original-post locator or opened full article acquired. Not promoted to a founder attribution. Search response includes unrelated results retained privately.",
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGB-015",
+      "project_id": "trade-everything",
+      "title": "Mark Lamb mirror access denial",
+      "url": "https://nitter.rdrama.net/ArthurB",
+      "provenance": "social_mirror",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "web_reader",
+      "source_published_at": null,
+      "access_status": "blocked",
+      "content_read": "none",
+      "http_status": 403,
+      "capture_sha256": "0c238225dc5a9c1b5881319b982b2669d9dc6f82dff5db89cb95fc6c3d766717",
+      "source_dependency_ids": [],
+      "supports": [],
+      "limitations": [
+        "Host not retried after403; later search engine results are discovery evidence only.",
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BGB-016",
+      "project_id": "stox",
+      "title": "STOX application independence declaration",
+      "url": "https://stoxpreps.com/",
+      "provenance": "official_frontend",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "retrieval_method": "retained_capture_read",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": "9c19bdb423590eaa7dc14b8db1e8eef889107510ee1b3f9ce0df91197ed64509",
+      "source_dependency_ids": [
+        "EVD-COMP-STOX-001"
+      ],
+      "supports": [
+        "Application declares independent synthetic protocol and no Robinhood, Hyperliquid or issuer affiliation."
+      ],
+      "limitations": [
+        "No verified legal entity or named team supplied; network choice does not establish corporate sponsorship.",
+        "Exact new reading time was not retained; observed date is known. Hash binds the retained response representation; it is not source authentication."
+      ]
+    }
+  ]
+}

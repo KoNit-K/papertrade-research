@@ -12,7 +12,6 @@
 | Trade Everything | Draft文档：BTC、ETH、SOL、HYPE、BCH | 208条股票/ETF元数据；另有六个亚洲标的名称，可能重叠 | USDC／USDC | demo域名元数据及Draft范围，不是已验证主网激活清单；加密业务路线未解 |
 | Rektrade | BTC、ETH、SOL、ZEC、NEAR、XMR、HYPE | 本次未建立 | USDC／USDC | 产品市场API；杠杆上限与config冲突 |
 | STOX | 保留配置未列加密币标的 | 60条股票、ETF、商品、FX、指数及intl配置 | USDG／USDG | 前端配置，不是独立核验的活跃市场登记 |
-| Parchment | 未知 | 未知 | 未知 | 仅观察名单 |
 
 PAPER、CARDBOARD、REKT和EVERYTHING是本研究涉及的亏损激励/分配资产，不能因此把它们列为各产品已开通的合约交易标的。STOX的House Shares是不可转让收入权益；其STOX/ETH分配路径不改变USDG交易结算。原始symbol和完整名称见[机器清单](../../research/competitors/markets.json)，对应来源见[市场补充证据](../../research/competitors/sources/markets.json)和[本轮官方reader记录](../../research/competitors/sources/markets-reader.json)。
 

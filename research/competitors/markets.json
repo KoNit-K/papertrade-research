@@ -2028,23 +2028,6 @@
         "ETH"
       ],
       "reward_asset_scope": "STOX is a distribution/reward asset, not asserted to be minted by trading losses; loss-issued participation is House Shares."
-    },
-    {
-      "project_id": "parchment",
-      "crypto_underlyings": null,
-      "other_underlyings": null,
-      "non_crypto_scope": null,
-      "collateral_assets": null,
-      "payout_assets": null,
-      "market_status": "unknown",
-      "source_ids": [
-        "EVD-COMP-CANDIDATES-003"
-      ],
-      "limitations": [
-        "A mirrored introduction mentions 1000x/Pyth but does not establish market names, collateral, settlement or an active deployment."
-      ],
-      "reward_assets": null,
-      "evidence_observed_at": null
     }
   ]
 }

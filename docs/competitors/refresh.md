@@ -10,11 +10,11 @@
 | `yolo` | DefiLlama `jupiter-yolo` protocol and fees summaries | Winning-profit fee windows; empty TVL history remains unknown |
 | `cardboard` | Official `/v1/analytics?range=1d` | Cumulative counters, provider 24h volume, OI and pool fields |
 | `rektrade` | Official `/api/stats` and `/api/house` | Cumulative venue counters and separate pool fields |
-| `trade-everything`, `stox`, `parchment` | No verified adapter | Explicit blocked result with zero requests |
+| `trade-everything`, `stox` | No verified adapter | Explicit blocked result with zero requests |
 
 Hosts, paths and query strings are fixed in the adapter. `params` also records the URL query, such as `range=1d`; it is empty for URLs without query parameters. Callers cannot supply endpoints, headers, credentials or wallets. The adapter version and final source-code digests are recorded in the research protocol.
 
-The reviewed collection has 67 metric rows, including missing values: four successful project runs collected between 01:31:54 and 01:35:05 UTC on 28 October 2026 (09:31:54–09:35:05 Beijing), plus two blocked no-adapter runs. Business cutoffs differ or are absent. See [JSON](../../research/competitors/snapshots/latest.json) and [CSV](../../research/competitors/snapshots/latest.csv) for exact times, definitions and evidence IDs. Parchment remains a watchlist entry.
+The reviewed collection has 67 metric rows, including missing values: four successful project runs collected between 01:31:54 and 01:35:05 UTC on 28 October 2026 (09:31:54–09:35:05 Beijing), plus two blocked no-adapter runs. Business cutoffs differ or are absent. See [JSON](../../research/competitors/snapshots/latest.json) and [CSV](../../research/competitors/snapshots/latest.csv) for exact times, definitions and evidence IDs.
 
 ## Commands
 
@@ -53,3 +53,9 @@ An unavailable official source is not replaced by an old media number or ordinar
 When an ordinary anonymous YOLO browser becomes available, record UTC time, selected leaderboard period/category, visible House/queue values and page coverage. Inspect only public requests actually made by that page. A fixed aggregate adapter requires verified identity, units and access. Queued-profit treatment, net PnL and complete leaderboard coverage remain unresolved.
 
 Supported adapters have no pagination. Duplicate source/outcome bindings are rejected; complete leaderboard/event coverage is not claimed. The cumulative helper rejects missing/duplicate boundaries and unexplained decreases, but live aligned 7d reconstruction is not implemented. The existing chain-999 collector is unchanged.
+
+## Manually rechecking basic facts, backgrounds and screenshots
+
+The [basic-facts guide](basics.md) and [browser register](browser-checks.md) are not new adapter-support claims. Open the recorded URL; retain selected market, network/Demo label, session, slider range, fee basis and UTC observation time. Capture an anonymous viewport and calculate `sha256sum <image.jpg>`. Input defaults are not admission minimums; selected-market headers are not automatically platform totals. Record blocked access instead of relabelling an old image as fresh.
+
+Recheck [background claims](backgrounds.md) at each linked source: first seek the original author's dated text and product cross-links. Preserve the distinction between search cache, mirror, self-claim and third-party attribution. New evidence can promote or retract a specific claim; it does not inherit unverified nationality, headquarters, shared ownership or institutional financing. Keep dated historical evidence rather than silently overwriting it.

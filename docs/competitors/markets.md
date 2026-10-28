@@ -12,7 +12,6 @@ Checked on 28 October 2026. Trading underlyings, collateral/settlement assets an
 | Trade Everything | BTC, ETH, SOL, HYPE, BCH **in Draft docs** | 208 stock/ETF metadata entries; six Asian names additionally documented, potentially overlapping | USDC / USDC | Demo-host metadata and Draft scope; mainnet activation/crypto routes unverified |
 | Rektrade | BTC, ETH, SOL, ZEC, NEAR, XMR, HYPE | None established | USDC / USDC | Product market API; leverage caps conflict with config |
 | STOX | No crypto entry in retained config | 60 configured entries across stocks, ETF, commodity, FX, index and intl | USDG / USDG | Frontend configuration; not independently checked active-market registry |
-| Parchment | Unknown | Unknown | Unknown | Watchlist only |
 
 PAPER, CARDBOARD, REKT and EVERYTHING are loss-incentive/participation assets in this research, not thereby listed derivative underlyings. STOX House Shares are nontransferable participation rights; separate STOX/ETH distributions do not change USDG trade settlement. Original symbols and full names are in the [machine inventory](../../research/competitors/markets.json), with [supplemental evidence](../../research/competitors/sources/markets.json) and [current official reader records](../../research/competitors/sources/markets-reader.json).
 

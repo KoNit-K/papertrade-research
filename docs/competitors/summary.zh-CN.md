@@ -1,6 +1,6 @@
 # Papertrade走红之后：高杠杆庄家池产品的跟随、分化与业务现状
 
-整理日期：2026年10月28日。本文供中文文字文档整理使用，基于[双语研究专题](README.zh-CN.md)、[市场清单](markets.zh-CN.md)和[带口径的数据快照](../../research/competitors/snapshots/latest.json)。业务数字主要采集于北京时间当天09:31–09:35；后续补充标的目录没有刷新业务量。官方描述、API自报与研究判断分别标明。
+整理日期：2026年10月28日。本文供中文文字文档整理使用，基于[双语研究专题](README.zh-CN.md)、[市场清单](markets.zh-CN.md)和[带口径的数据快照](../../research/competitors/snapshots/latest.json)。业务数字主要采集于北京时间当天09:31–09:35；后续标的目录没有刷新接口业务量；本轮北京时间约11:04—11:15另增页面观察，取整数和范围见第十节。官方描述、API自报与研究判断分别标明。
 
 ## 一、Papertrade被跟随的究竟是什么
 
@@ -63,7 +63,7 @@ Trade Everything的官方资料明确承认模型来自Papertrade，并将自己
 
 STOX的前端配置指向Robinhood Chain 4663，交易用USDG结算，合成标的覆盖股票、ETF、商品、FX、指数等。它声明不隶属于Robinhood或Hyperliquid，不能把所在链当成发行方背书。配置时间换算为10月20日北京时间08:12:28，但没有独立核对首笔实盘或当前v2部署；团队和法定主体未知。
 
-它比较值得关注的区别是：House Shares既可来自亏损，也可来自永久投入庄家资本，另有Reserve、部分平仓和keeper止盈止损。这改变了资金池资本和收入权益的形成方式。本次取得60条前端配置标的，但未取得可核的成交、活跃度和资金池数值，不能据界面字段补零。Parchment则只留在观察名单，公开入口和实际市场清单均未建立。
+它比较值得关注的区别是：House Shares既可来自亏损，也可来自永久投入庄家资本，另有Reserve、部分平仓和keeper止盈止损。这改变了资金池资本和收入权益的形成方式。本次取得60条前端配置标的，但未取得可核的成交、活跃度和资金池数值，不能据界面字段补零。
 
 ## 七、这组研究可以得出哪些判断
 
@@ -76,3 +76,27 @@ STOX的前端配置指向Robinhood Chain 4663，交易用USDG结算，合成标�
 如果把本研究整理为文章，比较稳妥的主线是：**Papertrade带动了一批高杠杆、庄家池和亏损参与收入的合成交易产品；跟随者已开始改变标的范围、费用与债权规则，但大额名义成交量、奖励权益和已实现盈利都需要进一步拆解，才能判断它们究竟形成了多少真实业务、可支付现金和持续需求。**
 
 每项事实的来源、访问限制和后续任务见[项目档案](README.zh-CN.md)、[标的清单](markets.zh-CN.md)、[统计口径](methodology.zh-CN.md)及[里程碑](progress.zh-CN.md)。工具和文档交付已完成，YOLO当前官方House/榜单等数据缺口仍保持未解决。
+
+## 八、补齐基本信息：不要把所有平台只写成“最高1000倍”
+
+Papertrade的BTC/ETH文档最高1000倍，本次BTC页面滑杆1—1000倍；YOLO是500—1000倍，每档100倍，最低保证金文档为5JupUSD。Cardboard文档与BTC票据为1—1000倍，名义额上限文档为1000万美元；其输入默认1USDC不能证明最低门槛1USDC。
+
+Trade Everything的层次更复杂：Draft对BTC/ETH写最高1000倍，但又描述路由到Papertrade，不能直接算作独立业务。成交排名前十美股常规最高500倍、盘前盘后375倍、隔夜250倍；其他股票最高100倍，还受benchmark公式和时段限制。亚洲正常时段，Nikkei225/KOSPI200是80倍、SKhynix/Samsung/Xiaomi100倍、SoftBank40倍。股票欠款保证金最高20倍，加密预言机恢复期新仓最高10倍。官网宣称Mainnet is live，默认Demo的NVDA隔夜票据实际显示250倍，这不证明已经核验主网执行。
+
+Rektrade首页把BTC、ETH、SOL、ZEC、NEAR、XMR、HYPE七个市场都标为1000倍；但config对SOL给500、对ZEC/NEAR/XMR给200倍。两个来源矛盾，应一起列出。最低保证金配置1USDC，最低充值5USDC，是两个门槛。STOX本次NVDA页面实际显示1—1000倍，不能据此认证全部60个市场合约上限；其0.5%开仓费按保证金计，而非名义额。完整门槛、限额、费用基数与证据见[基本资料](basics.zh-CN.md)。
+
+## 九、团队来历：哪些能说，哪些只能写“社区称”
+
+Papertrade方面，HONKAYO在MONI的研究将Jez疑似识别为Colin Hong。另有WPT资料记录Colin Hong的MIT、Morgan Stanley、Standard Crypto历史履历；两份材料应分开，不能写成本研究独立核验了别名，也不能推导机构投资Papertrade。Blurr在BidClub采访转录中讲述2017年开始链上探索、2021年在纽约认识Jez和二三人开发。纽约及人物历史美国经历是地域线索，不是总部或国籍。Ungus在第三方指南中是额外多签持有人，不直接列第三位联合创始人。
+
+YOLO可追溯到Jupiter、Mercurial、Meteora历史建设圈。Siong的早期工程履历见Mercurial旧官方团队页，Meow的项目经历来自个人自述及访谈。Jupiter官方条款列Block Raccoon S.A.为界面提供方并适用Panama法律；这是界面条款范围，不能改写为YOLO员工都在Panama或已确认其独立注册主体。
+
+Cardboard的明确主体是条款中的Attractor Labs, Inc.，公开开发交流渠道为@cardboard_trade。社区sanyi.eth称它为Papertrade clone，可作为社区观点，但未证明代码fork；不与企业模拟领域的同名Attractor Labs合并。Ember自有域名提供Rektrade入口，项目账号镜像简介自称built by @embercurve，项目镜像中billymeth.eth／@biiiiymeister自称部署REKT，可列开发者自述；Ember和Rektrade不重复算两家。
+
+Trade Everything的官方定位是Papertrade社区中的独立项目。Mark Lamb疑似参与发布的线索来自Arthur B.镜像搜索缓存，原帖未定位、正文页受阻，只写待核线索。STOX项目feed镜像放大@Iplaychart1自称创始人／主要开发者的帖子，但原文@STOX有范围歧义；未独立验证法定身份。Bitget无署名简介所写五人团队、Mei量化经历缺原始依据，仅保留低置信线索，不当已知履历。每项具体出处、证据编号和读取状态均在[背景资料](backgrounds.zh-CN.md)。
+
+## 十、浏览器补充看到的体量与剩余限制
+
+本次七张真实截图还补到此前接口快照没有的可见数据。北京时间约11:15的Papertrade BTC所选视图显示24h量$7.68B、多OI$84.2M、空OI$32.6M；约11:09的STOX NVDA页显示24h量$62.7M、多OI$250、空OI$0。它们是取整页面自报，业务截止时间、计数定义及平台总体覆盖未知；不把它们当精确链上复算，也不与09:31—09:35的67行快照静默混用。Rektrade首页显示的累计量约$1.352亿与此前API量级相符，但这仍不是独立证明。
+
+[截图核验记录](browser-checks.zh-CN.md)留存URL、保存时间、SHA-256及逐项边界。当前基础资料已补到能支撑普通产品比较；YOLO当前House/队列/完整榜单、全部首笔成交时间、TE主网经营数据、STOX聚合口径以及参数冲突仍未解决。

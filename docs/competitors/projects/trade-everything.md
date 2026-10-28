@@ -39,3 +39,9 @@ The landing page also advertises Price Promise, a premium-paid contingent-positi
 The public application bundle reveals mainnet protocol-summary, house-current and queue-summary routes; their acquired responses were 502, so volume, trader counts, cash, revenue and queue measurements remain **null, not zero**. Demo `/api/` market summaries must not be substituted for `/api/999/` business data. A future deployment check needs successful mainnet configuration, contract/version identity and a bounded transaction or aggregate-history cross-check; none is claimed here. [T013, T021–T025]
 
 T001–T025 abbreviate `EVD-COMP-TRADEEVERYTHING-001`–`025`. Metadata retains the UTC retrieval instant and SHA-256 of successful captures. This collection used 25 low-rate public GET attempts, including one transport failure and four HTTP 502s; no login, account query, wallet connection or transaction occurred.
+
+## Public basics, builders and community clues
+
+Top equities are described at500xregular/375xpre-post/250xovernight; DraftBTC/ETH reach1000x. New captures show the home claiming Mainnetislive while the default exchange environment is Demo, NVDA overnightMax250x; mainnet fills remain unverified. The project self-identifies as independent and from the Papertrade community. A tentative MarkLamb/@MarkDavidLamb announcement association comes only from an ArthurB mirror search cache; body403/original unlocated, not a confirmed founder.
+
+[Basic facts and leverage tiers](../basics.md) · [Background sources and access status](../backgrounds.md) · [Real screenshots and evidence IDs](../browser-checks.md). These additions do not close legal-identity, first-fill or deployed-parameter gaps.

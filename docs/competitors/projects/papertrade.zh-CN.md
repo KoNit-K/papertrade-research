@@ -47,3 +47,9 @@ flowchart LR
 - 保留既有结算和历史状态问题，本次竞品研究不关闭它们。
 
 [来源元数据](../../../research/competitors/sources/papertrade.json) · [已有完整报告](../../current-product-review.zh-CN.md)
+
+## 基本信息、公开建设者及社区线索补充
+
+文档BTC/ETH最高1000倍；本次BTC页面滑杆1—1000倍。社区HONKAYO／MONI将Jez疑似识别为Colin Hong；WPT另列后者MIT、Morgan Stanley及Standard Crypto历史履历，但未核实两人同一身份。Blurr在BidClub转录自述2017年开始链上探索、2021年纽约认识Jez、二三人开发。不是总部、国籍或机构出资证明。
+
+[基本资料与分档杠杆](../basics.zh-CN.md) · [背景出处与读取状态](../backgrounds.zh-CN.md) · [真实截图与证据编号](../browser-checks.zh-CN.md)。新资料补足公开信息，未消除法定身份、精确首笔成交和实盘参数缺口。

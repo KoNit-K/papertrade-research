@@ -36,10 +36,16 @@ flowchart LR
 
 ## Business scale and evidence limits
 
-The HTML shows labels for House balance, queued winners, OI, settlements and lifetime losses/payouts, but numeric values were placeholders. No live values were collected; placeholders are not zero. Static code and the deployment file provide an integration path, but neither proves chain deployment or business activity. No private account or wallet query was made, and no contract execution was performed.
+The HTML shows labels for House balance, queued winners, OI, settlements and lifetime losses/payouts, but numeric values were placeholders. The initial HTML capture supplied no live values; placeholders are not zero. A later browser viewport displayed rounded selected-NVDA counters, recorded separately below and in the screenshot register; platform-wide scope and chain source remain unverified. Static code and the deployment file provide an integration path, but neither proves chain deployment or business activity. No private account or wallet query was made, and no contract execution was performed.
 
 This dossier therefore supports a design comparison, not a ranking of market share or solvency. A future extension should first confirm the configured Exchange and version on the named chain, then obtain aggregate-only values with block/time bindings. It should not treat the configured `launchTime` as a verified first public trade.
 
 ## Open fields
 
 Legal operator, founders, headquarters, financing, independently verified launch, current version deployment, trading volume, active wallets, bankroll, queue and realized paid PnL remain unknown. [Refresh guide](../refresh.md) explains the explicit unavailable-adapter result.
+
+## Public basics, builders and community clues
+
+The actual NVDA page now showsMAX1000x and a1–1000slider, beyond staticfallback evidence. Effective contract limits and other markets remain unverified. The project-feed mirror amplifies @Iplaychart1’s founder/lead-developer self-claim, with @STOX handle-scope ambiguity. @LAPOSSCRYPT is a community commentator, not assigned team membership. The unsigned Bitget five-person/Mei biography lacks primary support and remains a weak lead.
+
+[Basic facts and leverage tiers](../basics.md) · [Background sources and access status](../backgrounds.md) · [Real screenshots and evidence IDs](../browser-checks.md). These additions do not close legal-identity, first-fill or deployed-parameter gaps.

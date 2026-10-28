@@ -40,3 +40,9 @@ Cardboard 是 Solana 上以 USDC 结算的 BTC、ETH、SOL 合成长短仓产品
 响应没有明确业务截止时间，应保留 null，抓取时间单列。system接口有索引/slot新鲜度，但没有将analytics绑定到规范区块哈希。累计历史完整性、刷量过滤、真实人数、费用收入勾稽和排队时长均未独立验证。原始活动明细保持私有，对外仅发布聚合字段。[C016—C017]
 
 C001—C018 对应元数据中的 `EVD-COMP-CARDBOARD-001`—`018`；其中记录成功/失败请求、SHA-256及读取限制。本轮共18次低频公共GET，无登录或钱包操作。
+
+## 基本信息、公开建设者及社区线索补充
+
+文档和BTC交易面板1—1000倍，截图显示2bp关闭收费。Attractor Labs, Inc.是官方条款列明的界面运营方；@cardboard_trade是公开开发更新渠道。sanyi.eth社区转载称其为Papertrade clone，只是作者机制归因，不证明代码fork。Founders, Inc.名单中另一同名Attractor Labs没有交叉链接，未并入其团队背景。
+
+[基本资料与分档杠杆](../basics.zh-CN.md) · [背景出处与读取状态](../backgrounds.zh-CN.md) · [真实截图与证据编号](../browser-checks.zh-CN.md)。新资料补足公开信息，未消除法定身份、精确首笔成交和实盘参数缺口。

@@ -39,3 +39,9 @@ Draft加密标的：BTC、ETH、SOL、HYPE、BCH；保证金/结算为USDC。默
 官方应用bundle暴露主网summary、house-current、queue-summary路由，但本轮响应502，故成交量、用户数、现金、收入及欠付均是 **null，而不是零**。demo `/api/`的market-summary不能替代 `/api/999/`主网业务数据。后续需成功读取主网配置、绑定合约/版本，并做有界交易或聚合历史核对；本轮未声称完成。[T013、T021—T025]
 
 T001—T025 对应 `EVD-COMP-TRADEEVERYTHING-001`—`025`；元数据保留UTC抓取时间和成功capture的SHA-256。本轮25次低频公共GET，包括一次传输失败、四次502，无登录、账户查询、连接钱包或交易。
+
+## 基本信息、公开建设者及社区线索补充
+
+股票头部标的常规500、盘前盘后375、隔夜250倍；Draft还写BTC/ETH最高1000倍。新截图：官网Mainnet is live，默认交易环境Demo的NVDA隔夜Max250倍；未验证主网成交。官方自称独立Papertrade社区项目。Mark Lamb／@MarkDavidLamb疑似参与发布的线索来自Arthur B.镜像搜索缓存，全文页403、原帖未定位，只列待核，未确认为创始人。
+
+[基本资料与分档杠杆](../basics.zh-CN.md) · [背景出处与读取状态](../backgrounds.zh-CN.md) · [真实截图与证据编号](../browser-checks.zh-CN.md)。新资料补足公开信息，未消除法定身份、精确首笔成交和实盘参数缺口。

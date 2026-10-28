@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "reviewer": "candidate_scout",
+  "reviewed_at": "2026-10-28T03:24:15.016740+00:00",
+  "status": "passed_with_resolved_findings",
+  "independence": {
+    "authored_reviewed_increment": false,
+    "background_a": "Reference structure only; reviewer authored that prior material and does not independently approve its conclusions.",
+    "scope": "New basics/background-B/browser materials plus sampled integration into bilingual comparison, profile appendices and Chinese narrative."
+  },
+  "findings": [
+    {
+      "id": "BASICS-REV-001",
+      "priority": 2,
+      "status": "fixed",
+      "title": "Two background source hashes pointed at empty split files",
+      "detail": "BGB-004 and BGB-007 initially bound a one-byte newline instead of their acquired relevant text. The substantive passages existed in the retained combined reader result.",
+      "resolution": "Root created nonempty reviewed excerpts, marked relevant-section partial and mediated-reader representation, and retained correction provenance. Reviewer recomputed both byte lengths and SHA-256.",
+      "verified_corrections": [
+        {
+          "source_id": "EVD-COMP-BGB-004",
+          "byte_length": 4604,
+          "sha256": "229268ae1d9500e012e64b11e5d646d8e3084c8577d7d34b12566e12a7b1a80a"
+        },
+        {
+          "source_id": "EVD-COMP-BGB-007",
+          "byte_length": 30447,
+          "sha256": "a063f029400783bc93627639f8abe82daea147614f9d5d7dc06f0771225a8cf8"
+        }
+      ]
+    },
+    {
+      "id": "BASICS-REV-002",
+      "priority": 3,
+      "status": "fixed",
+      "title": "Off-viewport Demo claims needed DOM scope",
+      "detail": "BCH and next-session 375x are not visible in the retained TE Demo pixels; the image shows current overnight 250x and selected 125x.",
+      "resolution": "Root separated EVD-COMP-BROWSER-TE-DOM, with null raw-DOM hash/time, from the JPEG source; relevant prose and observation records now distinguish them."
+    },
+    {
+      "id": "BASICS-REV-003",
+      "priority": 3,
+      "status": "fixed",
+      "title": "YOLO screenshot does not show leverage increments",
+      "detail": "The appended English profile initially attached screenshot support to both range and 100x increments.",
+      "resolution": "The appendix now assigns increments to documentation and the visible 500–1000 range to the screenshot only."
+    },
+    {
+      "id": "BASICS-REV-ROOT-004",
+      "priority": 2,
+      "status": "fixed",
+      "found_by": "root integration self-check",
+      "title": "Ember HTML shell was over-attributed",
+      "detail": "The 994-byte Ember /rekt/ capture demonstrates a hosted Rektrade application entry, not visible Built by text. The separately retained project-account mirror bio supplies built by @embercurve.",
+      "resolution": "Root narrowed BGA-007 supports/limitations and corrected Background-A claim basis plus bilingual backgrounds/profile integration and Chinese summary. Reviewer re-read the 994 bytes, checked absence of Built by text and presence of client paths, verified the retained mirror bio and consistent corrected wording, and refreshed the two affected core-document digests.",
+      "independence_limit": "Underlying Background-A was authored by this reviewer; root performed the conclusion correction. This limited consistency check does not independently re-approve Background-A biographical conclusions."
+    }
+  ],
+  "checks": {
+    "actual_pixel_inspections": 7,
+    "screenshot_hashes_matched": 7,
+    "target_source_records": 48,
+    "retained_source_hash_matches": 40,
+    "explicit_null_capture_hashes": 8,
+    "all_source_records_checked_for_ids_and_dependencies": 164,
+    "structured_reference_instances": 131,
+    "missing_source_references": 0,
+    "source_dependency_graph_acyclic": true,
+    "remaining_newline_only_source_hashes": 0,
+    "boundaries_checked": [
+      "Default 1-unit margin inputs are not promoted to opening minimums.",
+      "Papertrade 7.68B/84.2M/32.6M belong to selected BTC page with unknown business-as-of, not an authenticated platform total.",
+      "STOX NVDA 1000x is a displayed cap, not contract certification or all-60-market enforcement.",
+      "TE home 500x and Demo overnight NVDA 250x/selected125x remain separate from Draft per-session limits and mainnet execution.",
+      "Rektrade seven 1000x labels do not resolve lower configuration caps.",
+      "Jupiter interface terms and historical Mercurial/Meteora biography are scoped separately from a YOLO legal entity or current employee roster.",
+      "STOX self-claimed founder, unsigned listing biography and Mark Lamb search-only lead remain explicitly unverified.",
+      "Seven anonymous screenshots show no connected personal wallet/account identifiers.",
+      "Browser rounded counters remain separate from the frozen 67-row adapter snapshot."
+    ]
+  },
+  "commands_and_tools_executed": [
+    {
+      "command": "view_image",
+      "scope": "Seven public JPEG paths listed by browser-observations.json; inspected actual pixels."
+    },
+    {
+      "command": "python3 -",
+      "scope": "Printed selected leverage/minimum fields, source metadata, retained relevant text and source-hash comparisons."
+    },
+    {
+      "command": "python3 <private review check script>",
+      "argument_redaction": "Private local script path omitted under publication policy.",
+      "script_sha256": "e7c77ce37a988dcd60bb4f9b1e16db2d84c288ff2b3814431207bc9364cbf1e2",
+      "scope": "Checked 48 target source hashes, source IDs/dependencies/DAG, 131 structured references, seven JPEG digests, corrected excerpts and scope assertions; last run passed."
+    },
+    {
+      "command": "tail -6 docs/competitors/projects/yolo.md",
+      "scope": "Verified corrected range-only screenshot wording."
+    },
+    {
+      "command": "rg -n",
+      "scope": "Targeted retained-source text and metadata inspection; private capture paths omitted."
+    }
+  ],
+  "reviewed_file_sha256": {
+    "docs/competitors/basics.md": "9af585b39bfe5beb3a4777eae288b25b59b9b28647917c78ea08149abc46196f",
+    "docs/competitors/basics.zh-CN.md": "88d26f47a0ba4efb93ba31266a94b05b32485be5384fc0f45e3e99864b2207a5",
+    "docs/competitors/backgrounds.md": "2b1332b4a1d1334b1a9fe3970ddfbd5d9239739c8dfb6824edbe1e2b2670b5db",
+    "docs/competitors/backgrounds.zh-CN.md": "846ac768ecb72ad40fe8e1f3451b3b7ff814842edef8b08ce0314e0bce6459dc",
+    "docs/competitors/browser-checks.md": "2fceee439945552aa9d14525757d6b0a5432d898a2e192e06ffbd4d8baed522f",
+    "docs/competitors/browser-checks.zh-CN.md": "a5e507feccc3e1b7e7df03827b6faf8902d64db133f8c5a5fdfd94fa0a625b99",
+    "research/competitors/basic-facts.json": "6d1e16c232545ae33760aac1de1df5b7a7c175c03372f35ae3a7625ab75a951a",
+    "research/competitors/background-b.json": "4441b629969911e81d114162db135ee7c7053dbb3df3cfa9e452f4c433500858",
+    "research/competitors/browser-observations.json": "4fe42bf89937592598ca1c7acabb219439fed149c8f4d1bfd0116cc64e82741b",
+    "research/competitors/sources/basic-facts.json": "ecb6c6c3fdf4cf7ebcfd05b74413cb1aadb177fd0e1cb16d717198aeac83cff5",
+    "research/competitors/sources/background-b.json": "f1a79fc4d2e25ced111b571ade0b63be92afc5cd712d430631029d286a61107a",
+    "research/competitors/sources/browser.json": "92f4117db30af4cca62e9a5c6531aa0952b40eb0c74409909396d7d78c85b808"
+  },
+  "remaining_findings": [],
+  "limitations": [
+    "Offline review only; no new network, browser interaction, login, account query, RPC, signing or order.",
+    "Source byte identity and screenshot pixels do not authenticate upstream claims, browser provenance, actual contract enforcement or historical completeness.",
+    "Original podcasts/posts and unsupported private-DOM bytes were not independently obtained; Mark Lamb remains search-only.",
+    "No new tests, full suite, CI or historical replay run by this reviewer; structural checks and arithmetic/source comparisons are described above.",
+    "Background-A conclusions were not independently re-approved by their author.",
+    "Integration appendices and comparison/narrative were sampled; the digest-bound core files above define the complete reviewed increment."
+  ],
+  "final_small_recheck_at": "2026-10-28T03:27:35.194850+00:00",
+  "final_small_recheck": {
+    "network_requests": 0,
+    "changed_core_files": [
+      "docs/competitors/backgrounds.md",
+      "docs/competitors/backgrounds.zh-CN.md"
+    ],
+    "other_core_digests_unchanged": true,
+    "corrected_html_length": 994,
+    "mirror_bio_attribution_present": true,
+    "background_a_conclusions_independently_approved": false
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-28T03:28:49.259142+00:00",
+  "reviewer": "root",
+  "status": "approved_for_publication",
+  "authorization": "Owner explicitly requested attributed community backgrounds, missing public facts/leverage, browser screenshots, Parchment removal and GitHub update.",
+  "parent_commit": "9e5d626a4236d66d2075a42d2b30861c40d9387e",
+  "independent_review": "research/competitors/review-basics.json",
+  "allowlist_paths": [
+    "CHANGELOG.md",
+    "STATUS.md",
+    "docs/competitors/README.md",
+    "docs/competitors/README.zh-CN.md",
+    "docs/competitors/assets/cardboard-trade-20261028.jpg",
+    "docs/competitors/assets/papertrade-btc-20261028.jpg",
+    "docs/competitors/assets/rektrade-home-20261028.jpg",
+    "docs/competitors/assets/stox-trade-20261028.jpg",
+    "docs/competitors/assets/trade-everything-demo-20261028.jpg",
+    "docs/competitors/assets/trade-everything-home-20261028.jpg",
+    "docs/competitors/assets/yolo-overview-20261028.jpg",
+    "docs/competitors/backgrounds.md",
+    "docs/competitors/backgrounds.zh-CN.md",
+    "docs/competitors/basics.md",
+    "docs/competitors/basics.zh-CN.md",
+    "docs/competitors/browser-checks.md",
+    "docs/competitors/browser-checks.zh-CN.md",
+    "docs/competitors/markets.md",
+    "docs/competitors/markets.zh-CN.md",
+    "docs/competitors/progress.md",
+    "docs/competitors/progress.zh-CN.md",
+    "docs/competitors/projects/cardboard.md",
+    "docs/competitors/projects/cardboard.zh-CN.md",
+    "docs/competitors/projects/papertrade.md",
+    "docs/competitors/projects/papertrade.zh-CN.md",
+    "docs/competitors/projects/rektrade.md",
+    "docs/competitors/projects/rektrade.zh-CN.md",
+    "docs/competitors/projects/stox.md",
+    "docs/competitors/projects/stox.zh-CN.md",
+    "docs/competitors/projects/trade-everything.md",
+    "docs/competitors/projects/trade-everything.zh-CN.md",
+    "docs/competitors/projects/yolo.md",
+    "docs/competitors/projects/yolo.zh-CN.md",
+    "docs/competitors/refresh.md",
+    "docs/competitors/refresh.zh-CN.md",
+    "docs/competitors/summary.zh-CN.md",
+    "research/competitors/background-a.json",
+    "research/competitors/background-b.json",
+    "research/competitors/basic-facts.json",
+    "research/competitors/browser-observations.json",
+    "research/competitors/candidates.json",
+    "research/competitors/markets.json",
+    "research/competitors/milestones.json",
+    "research/competitors/protocol.json",
+    "research/competitors/publication-basics.json",
+    "research/competitors/review-basics.json",
+    "research/competitors/sources/background-a.json",
+    "research/competitors/sources/background-b.json",
+    "research/competitors/sources/basic-facts.json",
+    "research/competitors/sources/browser.json",
+    "research/competitors/verification.json"
+  ],
+  "file_manifest": {
+    "CHANGELOG.md": {
+      "bytes": 6249,
+      "sha256": "9cc1c33d479c111b7d7df1d4ee003719fb69591847c87d64c8379a015ed66512"
+    },
+    "STATUS.md": {
+      "bytes": 44066,
+      "sha256": "080885284affd1fcdaaac5ceff1855d29d425962bfbcb187eb9823e04697b8ef"
+    },
+    "docs/competitors/README.md": {
+      "bytes": 14346,
+      "sha256": "500cd9d3395e2b96d03f609d4b4db537053f33e83715146d208f8a79edbda4c2"
+    },
+    "docs/competitors/README.zh-CN.md": {
+      "bytes": 12726,
+      "sha256": "16d391bfeb369b05fc4923fec563cea400cc4d0b8f58fd2234f1e3fc8c5f88f7"
+    },
+    "docs/competitors/assets/cardboard-trade-20261028.jpg": {
+      "bytes": 71659,
+      "sha256": "b5e1eaec21bbda50c1b5d83213ae92c7317db0ed2832ddabd3306dc4fa8b7399"
+    },
+    "docs/competitors/assets/papertrade-btc-20261028.jpg": {
+      "bytes": 63079,
+      "sha256": "4201dd73f85f37c5eb0f2d32c6818c26ac04d7507a60384365303b570d2d1a45"
+    },
+    "docs/competitors/assets/rektrade-home-20261028.jpg": {
+      "bytes": 66260,
+      "sha256": "3deea0582be2932a526115fc072b33ff008efe6533c29084d674c13e90efbf72"
+    },
+    "docs/competitors/assets/stox-trade-20261028.jpg": {
+      "bytes": 93446,
+      "sha256": "088fc75f7a0301e719002e3ccde719f57675579179ece7b65c673538ef06a1a9"
+    },
+    "docs/competitors/assets/trade-everything-demo-20261028.jpg": {
+      "bytes": 85432,
+      "sha256": "2d3c589113e75a2c5f96ff4591270eef7da77be235f25646e7a70922b8fba470"
+    },
+    "docs/competitors/assets/trade-everything-home-20261028.jpg": {
+      "bytes": 91398,
+      "sha256": "35803e0cbf772ca029d63a37f30d040449fe9362a078fba1f710d798b3c01c5e"
+    },
+    "docs/competitors/assets/yolo-overview-20261028.jpg": {
+      "bytes": 70553,
+      "sha256": "f734dd865e83337e5a3d99c345c4e36f8cf9ea8737089281d522c1e7e3bcc3c2"
+    },
+    "docs/competitors/backgrounds.md": {
+      "bytes": 13760,
+      "sha256": "2b1332b4a1d1334b1a9fe3970ddfbd5d9239739c8dfb6824edbe1e2b2670b5db"
+    },
+    "docs/competitors/backgrounds.zh-CN.md": {
+      "bytes": 12099,
+      "sha256": "846ac768ecb72ad40fe8e1f3451b3b7ff814842edef8b08ce0314e0bce6459dc"
+    },
+    "docs/competitors/basics.md": {
+      "bytes": 16583,
+      "sha256": "9af585b39bfe5beb3a4777eae288b25b59b9b28647917c78ea08149abc46196f"
+    },
+    "docs/competitors/basics.zh-CN.md": {
+      "bytes": 15192,
+      "sha256": "88d26f47a0ba4efb93ba31266a94b05b32485be5384fc0f45e3e99864b2207a5"
+    },
+    "docs/competitors/browser-checks.md": {
+      "bytes": 3953,
+      "sha256": "2fceee439945552aa9d14525757d6b0a5432d898a2e192e06ffbd4d8baed522f"
+    },
+    "docs/competitors/browser-checks.zh-CN.md": {
+      "bytes": 3418,
+      "sha256": "a5e507feccc3e1b7e7df03827b6faf8902d64db133f8c5a5fdfd94fa0a625b99"
+    },
+    "docs/competitors/markets.md": {
+      "bytes": 5378,
+      "sha256": "b6e18632dc14bf9a5389d4dbdc1ce751f53839252eaad7f3e1815a3a81f4ed00"
+    },
+    "docs/competitors/markets.zh-CN.md": {
+      "bytes": 5131,
+      "sha256": "ec0361320b14eda3fee7587aaaaf984afc19886088d64e432e29732668273ce0"
+    },
+    "docs/competitors/progress.md": {
+      "bytes": 6435,
+      "sha256": "6e2bf0b57b90cce4181c4993188b9dac3c77c3e8025ce7e8298984c6f1b266e3"
+    },
+    "docs/competitors/progress.zh-CN.md": {
+      "bytes": 4773,
+      "sha256": "87333a965151ab1df7d52db810969ece728e93372863d6b90dba43ac1b1b3d70"
+    },
+    "docs/competitors/projects/cardboard.md": {
+      "bytes": 6961,
+      "sha256": "30d5fcde01f4e46d1bacd39c36a4bd52360e87d1f43f0cc0f0b7ef8d5a35ade3"
+    },
+    "docs/competitors/projects/cardboard.zh-CN.md": {
+      "bytes": 5914,
+      "sha256": "49b8a12b44595eaa14d3848b404089b9c2ce3e126ae5adf34c212dafbc00c199"
+    },
+    "docs/competitors/projects/papertrade.md": {
+      "bytes": 5506,
+      "sha256": "5dbe0f4dc5e8f19e0e9f9946435024e64091ea98ae8d53e674955261189b3e81"
+    },
+    "docs/competitors/projects/papertrade.zh-CN.md": {
+      "bytes": 4705,
+      "sha256": "0b568cb0a0519e44b0237cb9b640d85757cc00b720be70e897cf325c41ac4996"
+    },
+    "docs/competitors/projects/rektrade.md": {
+      "bytes": 7135,
+      "sha256": "536459386e43a32f05ee4bfb2c83dc6738bc3ee0dafc933a9fb132b671628c47"
+    },
+    "docs/competitors/projects/rektrade.zh-CN.md": {
+      "bytes": 5956,
+      "sha256": "fe41a64a141e2bd5849f625ce7a044b1921f91b1f7a85af264f9c8529b5aa7e9"
+    },
+    "docs/competitors/projects/stox.md": {
+      "bytes": 5458,
+      "sha256": "4b1218e314cc3d542bc2f0437d9222c0c08e5f8cfb6b9460bf802e7af26481b2"
+    },
+    "docs/competitors/projects/stox.zh-CN.md": {
+      "bytes": 4705,
+      "sha256": "55bec4952731cd847630ea7f204f7b38cc57f681e99ac4e3d24e958fbcc6ce24"
+    },
+    "docs/competitors/projects/trade-everything.md": {
+      "bytes": 7882,
+      "sha256": "f7f83926be0518ab8866ad8dbcffd08ab1213ce860fc05357194a1435c5492ca"
+    },
+    "docs/competitors/projects/trade-everything.zh-CN.md": {
+      "bytes": 6564,
+      "sha256": "9848f8b85679c07544ec2d16e338e7deb53ddbd8f4c099788f6e5bb130912949"
+    },
+    "docs/competitors/projects/yolo.md": {
+      "bytes": 11715,
+      "sha256": "e73ba99cd4fce786e450d8dce768c566fe1a231eace84fcad56f1dfba310ae4a"
+    },
+    "docs/competitors/projects/yolo.zh-CN.md": {
+      "bytes": 9968,
+      "sha256": "005f9d0a2656d75317e44401eb073dcc956ca12d4e0fe3857ecc8633a75225db"
+    },
+    "docs/competitors/refresh.md": {
+      "bytes": 5951,
+      "sha256": "bacea49190dcb59d84be9700dc4537f3feef3491aa3871e768e84ecfcac0c17a"
+    },
+    "docs/competitors/refresh.zh-CN.md": {
+      "bytes": 5126,
+      "sha256": "343bf404a8223a361d50de22d42708b2e0af9fbd30ce8858e5395132ac548481"
+    },
+    "docs/competitors/summary.zh-CN.md": {
+      "bytes": 16496,
+      "sha256": "bc600dc4199cfeba9727f1f45777ca29c9596abcfd1691a420430ebb130bccfe"
+    },
+    "research/competitors/background-a.json": {
+      "bytes": 11661,
+      "sha256": "fd5a9625128f9f4766325dd943013677824eb9a314e89b572ee86a1abc3a8a72"
+    },
+    "research/competitors/background-b.json": {
+      "bytes": 9851,
+      "sha256": "4441b629969911e81d114162db135ee7c7053dbb3df3cfa9e452f4c433500858"
+    },
+    "research/competitors/basic-facts.json": {
+      "bytes": 27902,
+      "sha256": "6d1e16c232545ae33760aac1de1df5b7a7c175c03372f35ae3a7625ab75a951a"
+    },
+    "research/competitors/browser-observations.json": {
+      "bytes": 5909,
+      "sha256": "4fe42bf89937592598ca1c7acabb219439fed149c8f4d1bfd0116cc64e82741b"
+    },
+    "research/competitors/candidates.json": {
+      "bytes": 5846,
+      "sha256": "813d627e98350d87428e2597a57a4a98d43fc66fb22b9678526b03b136e6032f"
+    },
+    "research/competitors/markets.json": {
+      "bytes": 65159,
+      "sha256": "c722109744049c859ab3961a13077d7148805ae0b90192d16d103857785d0006"
+    },
+    "research/competitors/milestones.json": {
+      "bytes": 13625,
+      "sha256": "1486a915de75de45ffcfa34ba08f6b11c21a3416061222e55388987fadc7c703"
+    },
+    "research/competitors/protocol.json": {
+      "bytes": 3446,
+      "sha256": "11900b76a877c7f7c8beb3fcd84ddd636ca8e1ca9b3a645e2b6e86ea3aa5ead5"
+    },
+    "research/competitors/review-basics.json": {
+      "bytes": 8606,
+      "sha256": "2cb8435f7987b6d15fab248420139df4e7291041f8e35df74e059aeed7452abf"
+    },
+    "research/competitors/sources/background-a.json": {
+      "bytes": 12900,
+      "sha256": "45aabc96d824218dcb524b0f271717700d0f16d4bed7ae28f786f50db48de4f5"
+    },
+    "research/competitors/sources/background-b.json": {
+      "bytes": 18840,
+      "sha256": "f1a79fc4d2e25ced111b571ade0b63be92afc5cd712d430631029d286a61107a"
+    },
+    "research/competitors/sources/basic-facts.json": {
+      "bytes": 27768,
+      "sha256": "ecb6c6c3fdf4cf7ebcfd05b74413cb1aadb177fd0e1cb16d717198aeac83cff5"
+    },
+    "research/competitors/sources/browser.json": {
+      "bytes": 11938,
+      "sha256": "92f4117db30af4cca62e9a5c6531aa0952b40eb0c74409909396d7d78c85b808"
+    },
+    "research/competitors/verification.json": {
+      "bytes": 6184,
+      "sha256": "8d2bcd9a9b07bdc95cb2becebc077a4b56daa786ce0d73b3ca4f7f4d967ff35a"
+    }
+  },
+  "self_manifest_note": "Self digest excluded to avoid recursive hashing; staged Git blob and tree bind this record.",
+  "checks": {
+    "source_validator": "passed164sources/67unchangedmetricrows",
+    "typecheck": "passed",
+    "custom_checks": {
+      "checked_at": "2026-10-28T03:28:49.368757+00:00",
+      "command": "python3 <private structural checker>",
+      "source_count": 164,
+      "structured_source_references": 123,
+      "local_links_resolved": 279,
+      "screenshot_hashes_matched": 7,
+      "source_graph_acyclic": true,
+      "current_subjects": 6,
+      "limits": [
+        "Custom structural/source/hash/file checks; anchors, website availability, source truth, identity and actual contract parameters not proven.",
+        "Frozen67-row business snapshot unchanged; no new adapter/code changes."
+      ],
+      "command_note": "Private script path omitted; checks actually executed."
+    },
+    "staged_diff_and_tree": "Must be verified immediately after explicit staging; exact publication receipt remains private until remote readback succeeds.",
+    "outgoing_history_review": "Parent9e5d626 and prior334fec0 already exist on the authorized public work branch and descend from main d62d8cb. Their outgoing text-only diffs and bounded source/data disclosures were inspected; the concurrent ten-file mechanism increment was preserved. No raw captures or new private identifiers found; its mechanism claims were not independently reaudited in this competitor task."
+  },
+  "screenshot_review": {
+    "count": 7,
+    "basis": "Explicit owner request; necessary anonymous public-interface excerpts, visually reviewed with no connected wallet/account identifiers. Raw DOM/network collections remain private.",
+    "hash_scope": "SHA-256 identifies retained JPEG pixels; DOM-only claims have a distinct source with null raw-body hash."
+  },
+  "root_background_a_check": {
+    "retained_hashes_matched": 6,
+    "scope": "Checked actual retained MONI/BidClub/namesake/Ember-shell/Cardboard-terms/Rektrade-mirror bytes. Sources without raw bytes remain attributed reader findings, not reauthenticated.",
+    "resolved_finding": "994-byte Ember page proves hosted app association, not visible Builtby text. Builtby attribution rebound in prose to project-account mirror bio."
+  },
+  "limitations": [
+    "Publication review is metadata/content minimization, not a security guarantee or independent authentication of source claims.",
+    "Historical publication-review.json hashes remain dated; this record covers the new increment only.",
+    "No code/adapter or business snapshot changed; COMP-M3 gaps remain partial."
+  ]
+}

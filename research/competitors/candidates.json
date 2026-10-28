@@ -81,23 +81,6 @@
         "EVD-COMP-CANDIDATES-001",
         "EVD-COMP-CANDIDATES-004"
       ]
-    },
-    {
-      "project_id": "parchment",
-      "name": "Parchment Trade",
-      "decision": "watchlist-not-selected",
-      "chain": null,
-      "chain_claim_in_discovery_list": "sui",
-      "official_url": null,
-      "official_account_claim": "https://x.com/tradeparchment",
-      "relationship": "unverified-discovery-lead",
-      "rationale": "Only mirrored introduction/Pyth interaction acquired; no established official application domain, deployment or real-money trading. 1000x alone is insufficient.",
-      "launch_at": null,
-      "independent_business_data_status": "unavailable",
-      "source_ids": [
-        "EVD-COMP-CANDIDATES-002",
-        "EVD-COMP-CANDIDATES-003"
-      ]
     }
   ],
   "exclusions": [
@@ -133,8 +116,7 @@
         "BluffTrade",
         "Papurrtrade",
         "33Trade",
-        "Kiltr",
-        "Parchment"
+        "Kiltr"
       ],
       "reason": "Discovery-list membership is not product/deployment/live-trading verification."
     }

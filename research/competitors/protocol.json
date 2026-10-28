@@ -73,16 +73,29 @@
     "handoff_and_gaps"
   ],
   "adapter_version": "competitors-defillama-v1",
-  "source_count": 103,
+  "source_count": 164,
   "snapshot_rows": 67,
   "snapshot_numeric_values": 28,
   "snapshot_unknown_values": 39,
   "market_inventory": {
     "path": "research/competitors/markets.json",
-    "subjects": 7,
+    "subjects": 6,
     "te_metadata_symbols": 208,
     "stox_config_symbols": 60,
-    "sha256": "2f979b05830f7883dbcd7742efe1dbc2560a79a31ffeb5441d52c6030221f13b"
+    "sha256": "c722109744049c859ab3961a13077d7148805ae0b90192d16d103857785d0006",
+    "scope_note": "Current scope is Papertrade benchmark plus five competitors; owner removed the former watchlist subject on 2026-10-28. Historical evidence and review ledgers are retained."
   },
-  "publication_authorization": "Owner explicitly requested GitHub update in the trading-assets follow-up; supersedes the initial local-only delivery boundary for the reviewed research subset."
+  "publication_authorization": "Owner explicitly requested GitHub update in the trading-assets follow-up; supersedes the initial local-only delivery boundary for the reviewed research subset.",
+  "public_basics_increment": {
+    "basic_facts": "research/competitors/basic-facts.json",
+    "backgrounds": [
+      "research/competitors/background-a.json",
+      "research/competitors/background-b.json"
+    ],
+    "browser_observations": "research/competitors/browser-observations.json",
+    "screenshots": 7,
+    "current_subjects": 6,
+    "business_snapshot_unchanged": true,
+    "publication_review": "research/competitors/publication-basics.json"
+  }
 }

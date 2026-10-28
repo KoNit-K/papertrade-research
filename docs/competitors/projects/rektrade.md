@@ -36,3 +36,9 @@ The public [stats endpoint](https://rektrade.fun/api/stats) reports cumulative v
 `/api/stats.at` is a supplier-reported Unix-seconds timestamp; the house response has an index height but no canonical block hash. Retrieval time and business timestamp remain separate. A zero queue/open-position snapshot is not evidence of lifetime solvency or no demand. No personal-wallet query, contract execution, security verification or full event replay was performed. The status route had a transport failure, which does not establish the site was down. [R005–R007]
 
 R001–R008 abbreviate `EVD-COMP-REKTRADE-001`–`008`. This profile's collection used eight low-rate public GET attempts including that failure; the metadata gives exact UTC retrieval times and successful-capture SHA-256. Raw account/identity-bearing response sections remain private.
+
+## Public basics, builders and community clues
+
+The home labels all seven markets1000x, while config givesSOL500/ZEC-NEAR-XMR200x; the conflict remains. Ember’s own domain serves a Rektrade entry; its project-account mirror bio says built by @embercurve. Retained project-feed material attributes a self-claimed REKT deployment to billymeth.eth/@biiiiymeister, a developer clue rather than legal-CEO or deployment-wallet verification. Ember/Rektrade interfaces are not counted as two venues.
+
+[Basic facts and leverage tiers](../basics.md) · [Background sources and access status](../backgrounds.md) · [Real screenshots and evidence IDs](../browser-checks.md). These additions do not close legal-identity, first-fill or deployed-parameter gaps.

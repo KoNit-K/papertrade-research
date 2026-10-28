@@ -1,0 +1,737 @@
+{
+  "schema_version": 1,
+  "assembled_at": "2026-10-28T03:02:57.388023+00:00",
+  "scope": "Product basics from dated retained official descriptions/API/frontend captures and existing source records. No new network, wallet/account interaction or contract/RPC request. Not a current execution guarantee.",
+  "projects": [
+    {
+      "project_id": "papertrade",
+      "name": "Papertrade",
+      "official_links": {
+        "website": "https://papertrade.xyz/",
+        "documentation": "https://docs.papertrade.xyz/",
+        "social_account_locator": "https://x.com/papertrade_xyz",
+        "social_scope": "Product-linked public account locator; original-post access may be unavailable. Link is not legal-entity authentication.",
+        "application": "https://exchange.papertrade.xyz/"
+      },
+      "chain": "HyperEVM999; USDC infrastructure on HyperCore",
+      "traded_crypto_underlyings": [
+        "BTC",
+        "ETH"
+      ],
+      "collateral_assets": [
+        "USDC"
+      ],
+      "trade_payout_assets": [
+        "USDC"
+      ],
+      "leverage": {
+        "min_x": null,
+        "max_x": 1000,
+        "increment_x": null,
+        "scope": "Official FAQ/documented ceiling; current per-market admission not observed",
+        "per_market": [
+          {
+            "symbol": "BTC",
+            "documented_max_x": 1000,
+            "effective_max_x": null
+          },
+          {
+            "symbol": "ETH",
+            "documented_max_x": 1000,
+            "effective_max_x": null
+          }
+        ],
+        "source_ids": [
+          "EVD-COMP-BASIC-PT-FAQ",
+          "EVD-COMP-BASIC-PT-BASELINE"
+        ],
+        "browser_btc_display_range_x": [
+          1,
+          1000
+        ]
+      },
+      "minimums": {
+        "current_min_margin": null,
+        "current_min_open_notional": null,
+        "historical_service_min_margin_usd": 10,
+        "historical_service_min_open_notional_usd": 1000,
+        "scope": "Retained trading:current observation at indexed blocks49121146-49121151; not a current frontend limit",
+        "source_ids": [
+          "EVD-COMP-BASIC-PT-SERVICE-NOTE"
+        ]
+      },
+      "position_limits": {
+        "current_max_notional_usd": null,
+        "scope": "Not established by retained baseline/FAQ/service-note reads; position-size controls are documented but no current limit authenticated"
+      },
+      "holding_limits": {
+        "minimum_manual_hold_seconds": null,
+        "maximum_hold_seconds": null,
+        "scope": "No fixed current duration established in the retained scope"
+      },
+      "headline_costs": {
+        "open_fee_percent": 0,
+        "funding_fee_percent": 0,
+        "ordinary_win_fee_percent_of_scaled_profit": 2,
+        "approved_builder_additional_percent_of_scaled_profit": 0.5,
+        "close_notional_fee_bps": 0,
+        "profit_adjustment": "Deadband then small-move holdback then asymmetric impact, then applicable win fee; 0.75-6bps standard and0.3-10bps off-hours holdback bands. Fee-waiver, cash/debt and queue branches matter.",
+        "scope": "Set2 retained documentation/research; normal branch, not total-cost or every-branch guarantee",
+        "source_ids": [
+          "EVD-COMP-BASIC-PT-BASELINE"
+        ]
+      },
+      "launch_evidence": {
+        "frontend_launch_claim_date": "2026-10-10",
+        "claim_scope": "Media/launch-plan lead, not independently checked original announcement or first fill",
+        "contract_set1_doc_date": "2026-10-07",
+        "contract_set2_doc_date": "2026-10-21",
+        "independent_first_fill_at": null,
+        "source_ids": [
+          "EVD-COMP-BASIC-PT-BASELINE",
+          "EVD-COMP-BASIC-PT-FAQ"
+        ]
+      },
+      "source_ids": [
+        "EVD-COMP-BASIC-PT-BASELINE",
+        "EVD-COMP-BASIC-PT-FAQ",
+        "EVD-COMP-BASIC-PT-SERVICE-NOTE"
+      ],
+      "unknowns_and_search_scope": [
+        "Current min leverage, margin and per-position size need browser/ticket or dated public trading configuration; old10USD service minimum must not be silently inherited.",
+        "No new direct read of previously denied official host."
+      ],
+      "browser_observations": [
+        "EVD-COMP-BROWSER-PT"
+      ]
+    },
+    {
+      "project_id": "yolo",
+      "name": "Jupiter YOLO",
+      "official_links": {
+        "website": "https://jup.ag/yolo",
+        "documentation": "https://docs.jup.ag/user-docs/labs/yolo",
+        "social_account_locator": "https://x.com/JupiterExchange",
+        "social_scope": "Product-linked public account locator; original-post access may be unavailable. Link is not legal-entity authentication."
+      },
+      "chain": "Solana",
+      "traded_crypto_underlyings": [
+        "SOL",
+        "BTC",
+        "ETH",
+        "ZEC",
+        "HYPE"
+      ],
+      "collateral_assets": [
+        "JupUSD"
+      ],
+      "trade_payout_assets": [
+        "JupUSD"
+      ],
+      "leverage": {
+        "min_x": 500,
+        "max_x": 1000,
+        "increment_x": 100,
+        "scope": "Official-page preflight description, not captured current program config",
+        "source_ids": [
+          "EVD-COMP-BASIC-YOLO-OVERVIEW",
+          "EVD-COMP-BASIC-YOLO-TRADING"
+        ]
+      },
+      "minimums": {
+        "min_margin": 5,
+        "unit": "JupUSD",
+        "scope": "Documented opening minimum; swaps/network costs separate",
+        "source_ids": [
+          "EVD-COMP-BASIC-YOLO-OVERVIEW",
+          "EVD-COMP-BASIC-YOLO-TRADING"
+        ]
+      },
+      "position_limits": {
+        "max_notional_by_market_usd": {
+          "SOL": 1000000,
+          "BTC": 1000000,
+          "ETH": 1000000,
+          "ZEC": 250000,
+          "HYPE": 250000
+        },
+        "scope": "Documented per-position caps; separate mutable market-side capacity",
+        "source_ids": [
+          "EVD-COMP-BASIC-YOLO-TRADING"
+        ]
+      },
+      "holding_limits": {
+        "minimum_manual_hold_seconds": 15,
+        "maximum_hold_seconds": 259200,
+        "automatic_profit_cap_collateral_multiple": 50,
+        "scope": "Docs: liquidation may occur during15s; keeper closes at72h or adjusted-profit cap",
+        "source_ids": [
+          "EVD-COMP-BASIC-YOLO-TRADING",
+          "EVD-COMP-BASIC-YOLO-FEES"
+        ]
+      },
+      "headline_costs": {
+        "open_fee_percent": 0,
+        "funding_fee_percent": 0,
+        "deadband_bps": 0.2,
+        "win_fee_percent_of_adjusted_profit": 2,
+        "close_or_liquidation_notional_fee_bps": 0.2,
+        "profit_adjustment": "0.9*N*d^2/(d+1983979/7259685000), d=max(favorable_fraction-0.00002,0); cap at50*collateral before2% winning fee.",
+        "rounding": "Profit/fees down and losses up to0.000001JupUSD",
+        "scope": "Official-page description; not independently replayed. Close fee is distinct from provider-defined profit-fee metrics.",
+        "source_ids": [
+          "EVD-COMP-BASIC-YOLO-FEES"
+        ]
+      },
+      "launch_evidence": {
+        "beta_announcement_date": "2026-10-15",
+        "mirror_displayed_at": "2026-10-15T12:59:00Z",
+        "original_post": "https://x.com/sssionggg/status/2110717157566988335",
+        "claim_scope": "Mirror/media attribution; exact original timestamp and independent first mainnet fill unverified",
+        "independent_first_fill_at": null,
+        "source_ids": [
+          "EVD-COMP-BASIC-YOLO-LAUNCH"
+        ]
+      },
+      "source_ids": [
+        "EVD-COMP-BASIC-YOLO-OVERVIEW",
+        "EVD-COMP-BASIC-YOLO-TRADING",
+        "EVD-COMP-BASIC-YOLO-FEES",
+        "EVD-COMP-BASIC-YOLO-LAUNCH"
+      ],
+      "unknowns_and_search_scope": [
+        "Preflight official-page bytes/exact retrieval times absent; current browser settings supersede documentation only when separately evidenced."
+      ],
+      "browser_observations": [
+        "EVD-COMP-BROWSER-YOLO"
+      ]
+    },
+    {
+      "project_id": "cardboard",
+      "name": "Cardboard Trade",
+      "official_links": {
+        "website": "https://cardboardtrade.xyz/",
+        "documentation": "https://docs.cardboardtrade.xyz/",
+        "social_account_locator": "https://x.com/cardboard_trade",
+        "social_scope": "Product-linked public account locator; original-post access may be unavailable. Link is not legal-entity authentication."
+      },
+      "chain": "Solana",
+      "traded_crypto_underlyings": [
+        "BTC",
+        "ETH",
+        "SOL"
+      ],
+      "collateral_assets": [
+        "USDC"
+      ],
+      "trade_payout_assets": [
+        "USDC"
+      ],
+      "leverage": {
+        "min_x": 1,
+        "max_x": 1000,
+        "increment_x": null,
+        "scope": "Official trading docs range; captured config.max_leverage=1000; market/depth admission still applies",
+        "source_ids": [
+          "EVD-COMP-BASIC-CARDBOARD-OVERVIEW",
+          "EVD-COMP-BASIC-CARDBOARD-TRADING",
+          "EVD-COMP-BASIC-CARDBOARD-CONFIG"
+        ]
+      },
+      "minimums": {
+        "min_margin": null,
+        "min_open_notional": null,
+        "unit": "USDC",
+        "scope": "Frontend consumes market.min_margin and min_notional; those market fields not retained in acquired config/analytics. Do not substitute standalone deposit minimum.",
+        "source_ids": [
+          "EVD-COMP-BASIC-CARDBOARD-CLIENT"
+        ]
+      },
+      "position_limits": {
+        "max_notional_usd": 10000000,
+        "scope": "Documented maximum order value; side capacity and signed payout minimum can bind earlier",
+        "source_ids": [
+          "EVD-COMP-BASIC-CARDBOARD-OVERVIEW",
+          "EVD-COMP-BASIC-CARDBOARD-TRADING"
+        ]
+      },
+      "holding_limits": {
+        "minimum_manual_hold_seconds": null,
+        "maximum_hold_seconds": null,
+        "scope": "No fixed duration established in retained docs/config/client search",
+        "source_ids": [
+          "EVD-COMP-BASIC-CARDBOARD-TRADING",
+          "EVD-COMP-BASIC-CARDBOARD-CLIENT"
+        ]
+      },
+      "headline_costs": {
+        "close_notional_fee_bps": 2,
+        "source_raw_round_trip_fee_ppm": 200,
+        "deadband_bps": 0,
+        "source_raw_deadband_ppm": 0,
+        "win_fee_percent": null,
+        "funding_fee_percent": 0,
+        "builder_markup_percent_of_base_fee_default": 10,
+        "builder_markup_percent_of_base_fee_max": 25,
+        "profit_adjustment": "Opening-locked depth/winning exposure then locked deadband and market win fee; close charge from profit first then returned margin where collectible",
+        "loss_side_fee_scope": "House-side gain allocation when queue empty, not added to adverse price loss",
+        "scope": "Captured config values plus trading docs; per-market win-fee tables were dynamic placeholders",
+        "source_ids": [
+          "EVD-COMP-BASIC-CARDBOARD-CONFIG",
+          "EVD-COMP-BASIC-CARDBOARD-FEES",
+          "EVD-COMP-BASIC-CARDBOARD-TRADING"
+        ]
+      },
+      "launch_evidence": {
+        "operational_post_lead_date": "2026-10-18",
+        "terms_version_date": "2026-10-25",
+        "beta_announcement_date": null,
+        "independent_first_fill_at": null,
+        "claim_scope": "Mirrored operational updates and dated Terms; not earliest mainnet evidence",
+        "source_ids": [
+          "EVD-COMP-CARDBOARD-014",
+          "EVD-COMP-CARDBOARD-011"
+        ]
+      },
+      "source_ids": [
+        "EVD-COMP-BASIC-CARDBOARD-OVERVIEW",
+        "EVD-COMP-BASIC-CARDBOARD-TRADING",
+        "EVD-COMP-BASIC-CARDBOARD-FEES",
+        "EVD-COMP-BASIC-CARDBOARD-CONFIG",
+        "EVD-COMP-BASIC-CARDBOARD-CLIENT"
+      ],
+      "unknowns_and_search_scope": [
+        "Retained config does not publish min margin, min notional or all per-market win fees; current ticket/API observation needed."
+      ],
+      "browser_observations": [
+        "EVD-COMP-BROWSER-CARDBOARD"
+      ]
+    },
+    {
+      "project_id": "trade-everything",
+      "name": "Trade Everything",
+      "official_links": {
+        "website": "https://tradeeverything.xyz/",
+        "documentation": "https://docs.tradeeverything.xyz/",
+        "social_account_locator": "https://x.com/TradeEverythin_",
+        "social_scope": "Product-linked public account locator; original-post access may be unavailable. Link is not legal-entity authentication."
+      },
+      "chain": "HyperEVM999 described; default/demo hosts are separate",
+      "traded_crypto_underlyings": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "HYPE",
+        "BCH"
+      ],
+      "collateral_assets": [
+        "USDC"
+      ],
+      "trade_payout_assets": [
+        "USDC"
+      ],
+      "leverage": {
+        "min_x": null,
+        "max_x": 1000,
+        "max_scope": "1000 only documented BTC/ETH crypto; equity headline500 applies top10 US names regular hours; all Draft descriptions, mainnet routes unresolved",
+        "equity_top10_session_max_x": {
+          "regular": 500,
+          "pre_market": 375,
+          "after_hours": 375,
+          "overnight": 250
+        },
+        "ordinary_equities": {
+          "regular": "min(4*B,100)",
+          "pre_market_and_after_hours": "min(3*B,100)",
+          "overnight": "min(2*B,100)",
+          "B_definition": "Best benchmark cap at Hyperliquid/HIP3, Binance first bracket or IBKR proxy; B<=3 gives regular cap10 in docs"
+        },
+        "stock_queued_collateral_max_x": 20,
+        "crypto_recovery_new_open_max_x": 10,
+        "crypto_recovery_restriction_seconds": 300,
+        "us_weekend_scope": "Trading-hours page: floor(1/99.5th-percentile historical gap), bounded2x to regular limit; earnings/corporate action cap5x. Leverage-page examples differ (NVDA25x versus hours-page10x). No single effective weekend cap established.",
+        "asian_by_market": [
+          {
+            "name": "Nikkei225",
+            "benchmark_B": 20,
+            "exchange_hours_max_x": 80,
+            "index_offhours_max_x": 40,
+            "lock_max_x": 10
+          },
+          {
+            "name": "KOSPI200",
+            "benchmark_B": 20,
+            "exchange_hours_max_x": 80,
+            "index_offhours_max_x": 40,
+            "lock_max_x": 10
+          },
+          {
+            "name": "SKhynix",
+            "benchmark_B": 50,
+            "exchange_hours_max_x": 100,
+            "index_offhours_max_x": null,
+            "lock_max_x": 25
+          },
+          {
+            "name": "SamsungElectronics",
+            "benchmark_B": 25,
+            "exchange_hours_max_x": 100,
+            "index_offhours_max_x": null,
+            "lock_max_x": 12
+          },
+          {
+            "name": "Xiaomi",
+            "benchmark_B": 25,
+            "exchange_hours_max_x": 100,
+            "index_offhours_max_x": null,
+            "lock_max_x": 12
+          },
+          {
+            "name": "SoftBankGroup",
+            "benchmark_B": 10,
+            "exchange_hours_max_x": 40,
+            "index_offhours_max_x": null,
+            "lock_max_x": 5
+          }
+        ],
+        "asian_scope": "Documented B and formulas; derived entries are arithmetic descriptions, not observed executable limits",
+        "offhours_spread_rule": "New-open cap lower of session maximum and5%/spread, at least1x where admissible; no quote/confidence can block opens",
+        "source_ids": [
+          "EVD-COMP-BASIC-TE-LEVERAGE",
+          "EVD-COMP-BASIC-TE-HOURS"
+        ],
+        "browser_demo_nvda_overnight_max_x": 250
+      },
+      "minimums": {
+        "min_margin": null,
+        "min_open_notional": null,
+        "scope": "Not specified in retained Draft introduction/fees/leverage/hours captures; mainnet config read previously502"
+      },
+      "position_limits": {
+        "per_stock_per_account_by_tier_usd": {
+          "A": 10000000,
+          "B": 2000000,
+          "C": 500000,
+          "D": 100000
+        },
+        "btc_eth_per_position_and_account_usd": 10000000,
+        "max_order_share_of_remaining_side_capacity_percent": 25,
+        "gross_entry_notional_default_usd": 1000000000,
+        "scope": "Draft risk descriptions; launch-stage, session, scenario and direction caps can bind earlier",
+        "source_ids": [
+          "EVD-COMP-BASIC-TE-LEVERAGE"
+        ]
+      },
+      "holding_limits": {
+        "minimum_manual_hold_seconds": null,
+        "maximum_hold_seconds": null,
+        "session_fill_delay_seconds": {
+          "regular": 1,
+          "pre_market": 2,
+          "after_hours": 2,
+          "overnight": 3,
+          "asian_markets": 1
+        },
+        "lock_scope": "USweekend/holiday and market-specific Asian locks stop fills; session changes may force partial trim. Fill delay is not minimum hold.",
+        "source_ids": [
+          "EVD-COMP-BASIC-TE-HOURS"
+        ]
+      },
+      "headline_costs": {
+        "open_fee_percent": 0,
+        "funding_fee_percent": 0,
+        "deadband_bps": 0.2,
+        "default_win_fee_percent_after_haircut": 2,
+        "max_documented_win_fee_percent": 10,
+        "loss_side_house_fee_percent": 2,
+        "profit_adjustment": "Nonlinear haircut retains at most90% before win fee; no fee beyond user price loss on losing branch; house-side fee conditional on empty queue",
+        "scope": "Draft docs; future funding requires at least24h notice; payment timing/routing pages conflict",
+        "source_ids": [
+          "EVD-COMP-BASIC-TE-FEES"
+        ]
+      },
+      "launch_evidence": {
+        "announcement_post_date": "2026-10-22",
+        "planned_mainnet_at": "2026-10-26T13:30:00Z",
+        "actual_mainnet_launch_verified": false,
+        "independent_first_fill_at": null,
+        "claim_scope": "Mirror/planned timestamp; demo/live wording and502mainnet reads do not establish actual mainnet launch",
+        "source_ids": [
+          "EVD-COMP-BASIC-TE-ANNOUNCEMENT"
+        ]
+      },
+      "source_ids": [
+        "EVD-COMP-BASIC-TE-LEVERAGE",
+        "EVD-COMP-BASIC-TE-HOURS",
+        "EVD-COMP-BASIC-TE-FEES",
+        "EVD-COMP-BASIC-TE-ANNOUNCEMENT"
+      ],
+      "unknowns_and_search_scope": [
+        "BTC/ETH Papertrade route conflicts with independent Pyth-market descriptions; five crypto names are Draft union, not five observed mainnet contracts.",
+        "US weekend examples conflict across docs; minimum margin and actual live caps unobserved."
+      ],
+      "browser_observations": [
+        "EVD-COMP-BROWSER-TE-HOME",
+        "EVD-COMP-BROWSER-TE-DEMO",
+        "EVD-COMP-BROWSER-TE-DOM"
+      ]
+    },
+    {
+      "project_id": "rektrade",
+      "name": "Rektrade",
+      "official_links": {
+        "website": "https://rektrade.fun/",
+        "documentation": "https://rektrade.fun/docs",
+        "social_account_locator": "https://x.com/rektradefun",
+        "social_scope": "Product-linked public account locator; original-post access may be unavailable. Link is not legal-entity authentication."
+      },
+      "chain": "HyperEVM999",
+      "traded_crypto_underlyings": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "ZEC",
+        "NEAR",
+        "XMR",
+        "HYPE"
+      ],
+      "collateral_assets": [
+        "USDC"
+      ],
+      "trade_payout_assets": [
+        "USDC"
+      ],
+      "leverage": {
+        "min_x": null,
+        "max_x": 1000,
+        "frontend_fixed_open_x": 1000,
+        "minimum_scope": "Fixed1000 frontend selection is not a universal contract minimum",
+        "markets_api_max_by_symbol": {
+          "BTC": 1000,
+          "ETH": 1000,
+          "SOL": 1000,
+          "ZEC": 1000,
+          "NEAR": 1000,
+          "XMR": 1000,
+          "HYPE": 1000
+        },
+        "config_api_max_by_symbol": {
+          "BTC": 1000,
+          "ETH": 1000,
+          "SOL": 500,
+          "ZEC": 200,
+          "NEAR": 200,
+          "XMR": 200,
+          "HYPE": 1000
+        },
+        "conflict": "markets all1000 conflicts with configSOL500/ZECNEARXMR200; effective admission not independently tested",
+        "source_ids": [
+          "EVD-COMP-BASIC-REKT-CONFIG",
+          "EVD-COMP-BASIC-REKT-MARKETS",
+          "EVD-COMP-BASIC-REKT-CLIENT"
+        ]
+      },
+      "minimums": {
+        "min_margin": 1.0,
+        "minimum_deposit": 5.0,
+        "unit": "USDC",
+        "scope": "Captured config USD6; margin and deposit minimum are distinct",
+        "source_ids": [
+          "EVD-COMP-BASIC-REKT-CONFIG",
+          "EVD-COMP-BASIC-REKT-CLIENT"
+        ]
+      },
+      "position_limits": {
+        "max_notional_by_symbol_usd": {
+          "BTC": 100000.0,
+          "ETH": 100000.0,
+          "SOL": 500000.0,
+          "ZEC": 250000.0,
+          "NEAR": 250000.0,
+          "XMR": 250000.0,
+          "HYPE": 100000.0
+        },
+        "max_open_positions_per_user": 32,
+        "scope": "Captured /api/markets notional units confirmed by USD6 frontend compare; not execution-tested",
+        "source_ids": [
+          "EVD-COMP-BASIC-REKT-MARKETS",
+          "EVD-COMP-BASIC-REKT-CONFIG",
+          "EVD-COMP-BASIC-REKT-CLIENT"
+        ]
+      },
+      "holding_limits": {
+        "minimum_manual_hold_seconds": 10,
+        "maximum_hold_seconds": null,
+        "max_payout_multiple_raw": 0,
+        "scope": "Config10s; raw maxPayoutX0 must not be interpreted as0 permitted profit or a timed hold cap",
+        "source_ids": [
+          "EVD-COMP-BASIC-REKT-CONFIG"
+        ]
+      },
+      "headline_costs": {
+        "open_notional_fee_bps": 0,
+        "funding_fee_percent": 0,
+        "deadband_bps": 0.2,
+        "base_impact_percent": 27.3,
+        "win_fee_percent": 5.0,
+        "win_tax_percent": 20.0,
+        "deposit_tax_percent": 5.0,
+        "loss_side_house_fee_percent": 5.0,
+        "scope": "API stages have different bases/order;5%win fee and20%win tax are not a single25% levy on rawPnL. House-side fee not extra adverse-price loss.",
+        "source_ids": [
+          "EVD-COMP-BASIC-REKT-CONFIG",
+          "EVD-COMP-BASIC-REKT-CLIENT"
+        ]
+      },
+      "launch_evidence": {
+        "official_account_mirror_live_claim_date": "2026-10-22",
+        "independent_first_fill_at": null,
+        "claim_scope": "Original post not authenticated; Ember is another frontend for same venue",
+        "source_ids": [
+          "EVD-COMP-BASIC-REKT-LAUNCH"
+        ]
+      },
+      "source_ids": [
+        "EVD-COMP-BASIC-REKT-CONFIG",
+        "EVD-COMP-BASIC-REKT-MARKETS",
+        "EVD-COMP-BASIC-REKT-CLIENT",
+        "EVD-COMP-BASIC-REKT-LAUNCH"
+      ],
+      "unknowns_and_search_scope": [
+        "Current executable cap conflicts remain unresolved; /api/markets underlying Hyperliquid dayVolume must not become product volume."
+      ],
+      "browser_observations": [
+        "EVD-COMP-BROWSER-REKT"
+      ]
+    },
+    {
+      "project_id": "stox",
+      "name": "STOX perps",
+      "official_links": {
+        "website": "https://stoxpreps.com/",
+        "documentation": "https://stoxpreps.com/",
+        "social_account_locator": "https://x.com/STOXPREPS",
+        "social_scope": "Product-linked public account locator; original-post access may be unavailable. Link is not legal-entity authentication.",
+        "documentation_scope": "Documentation is embedded in the application; no separately authenticated docs host retained."
+      },
+      "chain": "Configured RobinhoodChain4663",
+      "traded_crypto_underlyings": [],
+      "collateral_assets": [
+        "USDG"
+      ],
+      "trade_payout_assets": [
+        "USDG"
+      ],
+      "leverage": {
+        "min_x": 1,
+        "min_scope": "Frontend renderTicket clamps at least1 and slider lower end1",
+        "max_x": null,
+        "advertised_or_fallback_max_x": 1000,
+        "fallback_class_session_caps": {
+          "largecap": [
+            1000,
+            1000,
+            1000
+          ],
+          "highvol": [
+            1000,
+            1000,
+            1000
+          ],
+          "index": [
+            1000,
+            1000,
+            1000
+          ]
+        },
+        "session_array_order": [
+          "regular",
+          "extended",
+          "off_hours"
+        ],
+        "actual_cap_resolution": "LIVE_CHAIN loadMarkets reads Exchange.getMarketCfg(i) and Exchange.maxLeverage(i) for every market; mLev uses market.maxLev first, then cfg.maxLeverage[session]. Retained deployment.json has no cap values.",
+        "current_per_market_caps": null,
+        "scope": "Static client analysis; actual per-market runtime contract results not collected. Fallback13market class map is not all60 configured markets.",
+        "source_ids": [
+          "EVD-COMP-BASIC-STOX-CLIENT",
+          "EVD-COMP-BASIC-STOX-CONFIG"
+        ],
+        "browser_nvda_display_range_x": [
+          1,
+          1000
+        ]
+      },
+      "minimums": {
+        "current_min_margin": null,
+        "frontend_residual_close_floor_usdg": 5,
+        "scope": "Frontend partial-close code says remaining margin below5 collapses to full close; this is not an independently read current minMargin() value or proof of opening minimum.",
+        "source_ids": [
+          "EVD-COMP-BASIC-STOX-CLIENT"
+        ]
+      },
+      "position_limits": {
+        "current_max_notional_usdg": null,
+        "frontend_fallback_base_notional_usdg": 250000,
+        "frontend_fallback_tier_leverage_x": 200,
+        "frontend_formula": "cap at or below tier; cap*tier/leverage above tier; fallback at1000x gives50000USDG notional, not250000. Runtime market.cfg.maxPositionNotional and house.tierLev override defaults.",
+        "scope": "Fallback/preview computation, not measured contract enforcement or all-market cap",
+        "source_ids": [
+          "EVD-COMP-BASIC-STOX-CLIENT"
+        ]
+      },
+      "holding_limits": {
+        "minimum_manual_hold_seconds": null,
+        "maximum_hold_seconds": null,
+        "grid_seconds_config": 5,
+        "scope": "Config gridSeconds5 is a scheduling grid, not established minimum hold. Partial closes and keeper TP/SL are frontend features.",
+        "source_ids": [
+          "EVD-COMP-BASIC-STOX-CLIENT",
+          "EVD-COMP-BASIC-STOX-CONFIG"
+        ]
+      },
+      "headline_costs": {
+        "frontend_fallback_open_fee_percent_of_margin": 0.5,
+        "runtime_open_fee_percent": null,
+        "displayed_pnl_fee_percent": 2,
+        "displayed_balancing_pnl_fee_percent": 1,
+        "base_haircut_percent_range": [
+          5,
+          10
+        ],
+        "profit_adjustment": "Coverage-dependent base and near-entry haircut; staking tier and balancing can modify preview. openFeeBps read from contract, fallback50bps of margin.",
+        "scope": "Static frontend fallback/display labels; actual accounting not independently replayed",
+        "source_ids": [
+          "EVD-COMP-BASIC-STOX-CLIENT",
+          "EVD-COMP-BASIC-STOX-HTML"
+        ]
+      },
+      "launch_evidence": {
+        "frontend_config_launch_unix_seconds": 1792455148,
+        "frontend_config_launch_at": "2026-10-20T00:12:28Z",
+        "independent_first_fill_at": null,
+        "claim_scope": "launchTime configuration only; does not establish first trade or v2 deployment date",
+        "source_ids": [
+          "EVD-COMP-BASIC-STOX-CONFIG"
+        ]
+      },
+      "source_ids": [
+        "EVD-COMP-BASIC-STOX-CLIENT",
+        "EVD-COMP-BASIC-STOX-CONFIG",
+        "EVD-COMP-BASIC-STOX-HTML"
+      ],
+      "unknowns_and_search_scope": [
+        "No new chain reads. Actual60market effective caps/minMargin/maxPositionNotional/tierLeverage/openFeeBps remain unobserved; static defaults cannot fill them."
+      ],
+      "browser_observations": [
+        "EVD-COMP-BROWSER-STOX"
+      ]
+    }
+  ],
+  "network_attempts_this_workstream": 0,
+  "limitations": [
+    "Unknown fields are genuine remaining gaps after the named retained-source search; a missing field does not mean zero or no restriction.",
+    "Source record dates remain their original capture dates; assembly time is not a fresh business/configuration observation.",
+    "Public account links are locators, not legal-entity or original-post authenticity proof.",
+    "Never replace actual per-market/session/runtime caps with a marketing headline or frontend fallback."
+  ]
+}

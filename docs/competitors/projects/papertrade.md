@@ -47,3 +47,9 @@ This execution's official documentation GET returned HTTP 403 at approximately 0
 - Preserve the existing unresolved settlement and archival-state questions; this competitor study does not close them.
 
 [Source metadata](../../../research/competitors/sources/papertrade.json) · [Existing full review](../../current-product-review.md)
+
+## Public basics, builders and community clues
+
+Docs cap BTC/ETH at1000x; the selected BTC slider shows1–1000x. HONKAYO/MONI tentatively identifies Jez as ColinHong; WPT separately records Hong’s MIT/MorganStanley/StandardCrypto history, without establishing the alias. A BidClub transcript attributes2017onchain exploration, a2021NewYork meeting with Jez and a2–3person build to Blurr. No headquarters, nationality or institutional financing is inferred.
+
+[Basic facts and leverage tiers](../basics.md) · [Background sources and access status](../backgrounds.md) · [Real screenshots and evidence IDs](../browser-checks.md). These additions do not close legal-identity, first-fill or deployed-parameter gaps.

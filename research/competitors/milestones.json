@@ -235,6 +235,60 @@
         "COMP-M3 business-data gaps remain unchanged"
       ],
       "next_step": "Use the public market inventory and document summary; refresh supported business sources separately"
+    },
+    {
+      "id": "COMP-M7",
+      "title": "Public basic facts, attributed backgrounds and browser evidence",
+      "status": "complete",
+      "owner": "root with candidate_scout, metrics_method and yolo_sources",
+      "started_at": null,
+      "finished_at": "2026-10-28T03:28:49.259142+00:00",
+      "inputs": [
+        "Owner follow-up: add community-attributed backgrounds, missing leverage and ordinary public facts, inspect browser screenshots and remove the watchlist product",
+        "Existing retained source captures and six dossiers"
+      ],
+      "outputs": [
+        "docs/competitors/basics.md",
+        "docs/competitors/basics.zh-CN.md",
+        "docs/competitors/backgrounds.md",
+        "docs/competitors/backgrounds.zh-CN.md",
+        "docs/competitors/browser-checks.md",
+        "docs/competitors/browser-checks.zh-CN.md",
+        "research/competitors/basic-facts.json",
+        "research/competitors/background-a.json",
+        "research/competitors/background-b.json",
+        "research/competitors/browser-observations.json",
+        "research/competitors/review-basics.json"
+      ],
+      "evidence_ids": [
+        "EVD-COMP-BROWSER-PT",
+        "EVD-COMP-BROWSER-YOLO",
+        "EVD-COMP-BROWSER-CARDBOARD",
+        "EVD-COMP-BROWSER-REKT",
+        "EVD-COMP-BROWSER-TE-HOME",
+        "EVD-COMP-BROWSER-TE-DEMO",
+        "EVD-COMP-BROWSER-STOX",
+        "EVD-COMP-BGA-002",
+        "EVD-COMP-BGB-014"
+      ],
+      "checks": [
+        "pnpm validate:competitors: passed164sources and67metricrows",
+        "pnpm typecheck: passed",
+        "git diff --check: passed",
+        "Independent review:7pixel inspections,7screenshot hashes,48target source records/40retained hashes/8explicit nulls;164source DAG;131structured references",
+        "Root additionally matched six retained background-A captures and narrowed the Ember shell vs mirror attribution",
+        "Current scope:benchmark plus fivecompetitors; no code/adapter change; frozen67-row snapshot unchanged"
+      ],
+      "reviewer": "candidate_scout on independently authored basics/background-B/browser increment; root on A retained bytes and integrated publication subset",
+      "open_questions": [
+        "Primary YOLO current House/queue/leaderboard still unavailable; browser trade navigation returned ERR_CONNECTION_CLOSED",
+        "Rounded page counters have no precise business-as-of or established full-platform counting scope",
+        "Community identity/background links remain attributed, not independently legally authenticated; first fills/effective admission unverified",
+        "Original source truth, community alias identity and actual deployed parameters remain unverified; completed delivery does not close them."
+      ],
+      "next_step": "Publish the approved subset with expected-head leases and verify remote bytes; keep COMP-M3 partial",
+      "started_date": "2026-10-28",
+      "timing_note": "Exact increment start timestamp was not retained; first background output recorded at03:02:49UTC. No artificial start time assigned."
     }
   ]
 }

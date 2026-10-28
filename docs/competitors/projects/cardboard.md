@@ -40,3 +40,9 @@ The public aggregate [analytics endpoint](https://cardboardtrade.xyz/v1/analytic
 The response has no explicit business-as-of timestamp; keep it null and retain retrieval time separately. The system endpoint provides index/slot freshness but does not attach a canonical block hash to the analytics response. No independent cumulative-history completeness, wash-volume filter, beneficial-user count, fee/revenue reconciliation or payout-tail measurement was performed. Raw activity records stay private; public analysis uses aggregate fields only. [C016–C017]
 
 Evidence labels C001–C018 mean `EVD-COMP-CARDBOARD-001`–`018` in the metadata file. That file includes successful and failed requests, source SHA-256 and access/read limitations. Collection used 18 low-rate public GET attempts, with no login or wallet action.
+
+## Public basics, builders and community clues
+
+Docs and the BTC ticket show1–1000x; the screenshot displays a2bp close charge. Terms identify AttractorLabs,Inc. as interface operator, with @cardboard_trade the public development channel. A syndicated sanyi.eth community comment calls it a Papertrade clone, not verified code ancestry. The same-name AttractorLabs in a Founders,Inc. list lacks cross-links and is not merged into this team.
+
+[Basic facts and leverage tiers](../basics.md) · [Background sources and access status](../backgrounds.md) · [Real screenshots and evidence IDs](../browser-checks.md). These additions do not close legal-identity, first-fill or deployed-parameter gaps.

@@ -1,0 +1,605 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "EVD-COMP-BASIC-PT-BASELINE",
+      "project_id": "papertrade",
+      "title": "Basic facts: Existing set-2 product review at baseline commit",
+      "url": "https://github.com/KoNit-K/papertrade-research/blob/d3fba1edd93d2fb1d492c0cdbe26dcf6fffa0050/docs/current-product-review.md",
+      "provenance": "research_repository",
+      "retrieved_at": "2026-10-28T01:33:32.196293+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": "998266a71ad1c947cffb0b406bf018671a51997a5dea0cea41f408e200515c68",
+      "source_dependency_ids": [
+        "EVD-COMP-PAPERTRADE-BASELINE"
+      ],
+      "supports": [
+        "The existing research review documents the set-2 baseline, separate cash liabilities and protocol services."
+      ],
+      "limitations": [
+        "Local repository reading, not a new official-page or chain observation; inherits the review evidence limitations.",
+        "Reuses the dated evidence and scope of EVD-COMP-PAPERTRADE-BASELINE; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-PT-FAQ",
+      "project_id": "papertrade",
+      "title": "Basic facts: Current official Papertrade FAQ markets",
+      "url": "https://docs.papertrade.xyz/intro/faq/",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "observed_date": "2026-10-28",
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [
+        "EVD-COMP-MARKETS-PT-FAQ"
+      ],
+      "supports": [
+        "FAQ currently lists BTC and ETH, both up to 1000x leverage; additional HIP-3 markets are a capability, not a current listing.",
+        "USDC balance and settlement infrastructure is described separately from traded underlyings."
+      ],
+      "limitations": [
+        "Actually opened via web reader in the market-inventory update; no endpoint response bytes or precise transport timestamp were provided.",
+        "Official description does not establish deployed market activation, capacity or program parameters.",
+        "Reuses the dated evidence and scope of EVD-COMP-MARKETS-PT-FAQ; no fresh endpoint/contract execution check."
+      ]
+    },
+    {
+      "id": "EVD-COMP-BASIC-YOLO-OVERVIEW",
+      "project_id": "yolo",
+      "title": "Basic facts: YOLO overview",
+      "url": "https://docs.jup.ag/user-docs/labs/yolo",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [
+        "EVD-COMP-YOLO-001"
+      ],
+      "supports": [
+        "YOLO is a Jupiter Labs beta using JupUSD collateral and a separate House.",
+        "The documented markets include SOL, BTC, ETH, ZEC and HYPE."
+      ],
+      "limitations": [
+        "Read earlier in this conversation; exact retrieval time and original response bytes were not retained. Not a fresh execution-phase capture.",
+        "Reuses the dated evidence and scope of EVD-COMP-YOLO-001; no fresh endpoint/contract execution check."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "retained_evidence_reread_no_new_network",
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00"
+    },
+    {
+      "id": "EVD-COMP-BASIC-YOLO-TRADING",
+      "project_id": "yolo",
+      "title": "Basic facts: Trade on YOLO",
+      "url": "https://docs.jup.ag/user-docs/labs/yolo/trading",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [
+        "EVD-COMP-YOLO-002"
+      ],
+      "supports": [
+        "Documented fills use the onchain Pyth Pro price about two seconds after submission.",
+        "Earliest close is 15 seconds; automatic close occurs at 72 hours or the adjusted-profit cap.",
+        "Leaderboard ranks closed-trade realized PnL, open-and-close notional volume, or longest held position over 24H, 7D and All time.",
+        "The trade service co-signs opens and closes."
+      ],
+      "limitations": [
+        "Read earlier in this conversation; exact retrieval time and original response bytes were not retained. Not a fresh execution-phase capture.",
+        "Reuses the dated evidence and scope of EVD-COMP-YOLO-002; no fresh endpoint/contract execution check."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "retained_evidence_reread_no_new_network",
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00"
+    },
+    {
+      "id": "EVD-COMP-BASIC-YOLO-FEES",
+      "project_id": "yolo",
+      "title": "Basic facts: YOLO profit adjustment and fees",
+      "url": "https://docs.jup.ag/user-docs/labs/yolo/profit-and-fees",
+      "provenance": "official_doc",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [
+        "EVD-COMP-YOLO-003"
+      ],
+      "supports": [
+        "Winning calculation applies a 0.2 bp deadband, nonlinear adjustment, 50-times-collateral cap, and 2% win fee.",
+        "Every close and liquidation charges 0.2 bp of position size from collateral.",
+        "Profits and fees round down and losses round up to 0.000001 JupUSD.",
+        "Team-changeable settings include win fee, close fee, profit cap and 72-hour duration."
+      ],
+      "limitations": [
+        "Read earlier in this conversation; exact retrieval time and original response bytes were not retained. Not a fresh execution-phase capture.",
+        "Reuses the dated evidence and scope of EVD-COMP-YOLO-003; no fresh endpoint/contract execution check."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "retained_evidence_reread_no_new_network",
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00"
+    },
+    {
+      "id": "EVD-COMP-BASIC-YOLO-LAUNCH",
+      "project_id": "yolo",
+      "title": "Basic facts: Mirror of Siong YOLO launch",
+      "url": "https://teapawt.org/sssionggg/status/2110717157566988335",
+      "provenance": "social_mirror",
+      "retrieved_at": null,
+      "source_published_at": "2026-10-15T12:59:00Z",
+      "access_status": "partial",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [
+        "EVD-COMP-YOLO-012"
+      ],
+      "supports": [
+        "The mirror displays a Jupiter Labs launch announcement dated October 15, 2026 at 12:59 UTC."
+      ],
+      "limitations": [
+        "Mirror is not the original publisher; original post authenticity and timestamp are not independently authenticated.",
+        "Read earlier in this conversation; exact retrieval time and original response bytes were not retained. Not a fresh execution-phase capture.",
+        "Reuses the dated evidence and scope of EVD-COMP-YOLO-012; no fresh endpoint/contract execution check."
+      ],
+      "observed_date": "2026-10-28",
+      "retrieval_method": "retained_evidence_reread_no_new_network",
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00"
+    },
+    {
+      "id": "EVD-COMP-BASIC-CARDBOARD-OVERVIEW",
+      "project_id": "cardboard",
+      "title": "Basic facts: What is Cardboard Trade? \u00b7 Cardboard Trade Docs",
+      "url": "https://docs.cardboardtrade.xyz/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:24.190008+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "dd65afc7315e5b6d2a1339d74c22fc54badfb21085b11c3236d9a84362060778",
+      "source_dependency_ids": [
+        "EVD-COMP-CARDBOARD-001"
+      ],
+      "supports": [
+        "Officially describes Solana USDC house-counterparty trading on BTC, ETH and SOL with leverage up to 1000x."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Reuses the dated evidence and scope of EVD-COMP-CARDBOARD-001; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-CARDBOARD-TRADING",
+      "project_id": "cardboard",
+      "title": "Basic facts: Trades and pricing \u00b7 Cardboard Trade Docs",
+      "url": "https://docs.cardboardtrade.xyz/trading.html",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:25.771300+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "2c90f7e6b8f9dd2afbe392743f8c6538a77b44ec900b7fab05fd0e408a3e9358",
+      "source_dependency_ids": [
+        "EVD-COMP-CARDBOARD-002"
+      ],
+      "supports": [
+        "Documents accepted midpoint pricing, isolated uneditable positions and no periodic funding."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Reuses the dated evidence and scope of EVD-COMP-CARDBOARD-002; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-CARDBOARD-FEES",
+      "project_id": "cardboard",
+      "title": "Basic facts: Wins and losses \u00b7 Cardboard Trade Docs",
+      "url": "https://docs.cardboardtrade.xyz/wins-losses.html",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:30:30.433601+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "cb708a286cff85cf37bf92fc1be66042d6f438729f285ff9c822f324e8391b2d",
+      "source_dependency_ids": [
+        "EVD-COMP-CARDBOARD-004"
+      ],
+      "supports": [
+        "Describes winning deductions, loss-side fees and loss-eligible issuance."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Reuses the dated evidence and scope of EVD-COMP-CARDBOARD-004; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-CARDBOARD-CONFIG",
+      "project_id": "cardboard",
+      "title": "Basic facts: https://cardboardtrade.xyz/v1/config",
+      "url": "https://cardboardtrade.xyz/v1/config",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:32:43.924355+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "3d1543139f8fab5ae8d34c27120597c5afe3854227351f7e8044a240741588d6",
+      "source_dependency_ids": [
+        "EVD-COMP-CARDBOARD-015"
+      ],
+      "supports": [
+        "Official API reports maximum leverage, current deadband and notional-close-charge configuration."
+      ],
+      "limitations": [
+        "Supplier response, not independently authenticated canonical chain state.",
+        "Retrieval timestamp is not automatically the business-as-of timestamp.",
+        "Reuses the dated evidence and scope of EVD-COMP-CARDBOARD-015; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-CARDBOARD-CLIENT",
+      "project_id": "cardboard",
+      "title": "Basic facts: https://cardboardtrade.xyz/assets/index-BnNp2jGu.js",
+      "url": "https://cardboardtrade.xyz/assets/index-BnNp2jGu.js",
+      "provenance": "official-frontend-asset",
+      "retrieved_at": "2026-10-28T01:32:00.111125+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "3d452dbeddfe52e297c26be736bba8b14936ca02965f47986eba9342ba70678a",
+      "source_dependency_ids": [
+        "EVD-COMP-CARDBOARD-013"
+      ],
+      "supports": [
+        "Frontend uses public aggregate API routes and six-decimal USDC formatters."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Reuses the dated evidence and scope of EVD-COMP-CARDBOARD-013; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-TE-LEVERAGE",
+      "project_id": "trade-everything",
+      "title": "Basic facts: Leverage and positions \u00b7 trade everything docs",
+      "url": "https://docs.tradeeverything.xyz/learn/leverage/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:32:10.244583+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "f52da96a1c01433c7a0756a91748a33eb42497531d744f7ad3b420ac7b6e0508",
+      "source_dependency_ids": [
+        "EVD-COMP-TRADEEVERYTHING-016"
+      ],
+      "supports": [
+        "Draft leverage page describes an independent crypto basket and recovery controls."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding.",
+        "Reuses the dated evidence and scope of EVD-COMP-TRADEEVERYTHING-016; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-TE-HOURS",
+      "project_id": "trade-everything",
+      "title": "Basic facts: Trading hours \u00b7 trade everything docs",
+      "url": "https://docs.tradeeverything.xyz/learn/trading-hours/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:31:15.947823+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "caca26d659301dc1b0cb5db61ff3770c7ccdd5557e052df8046c3115ea9753f2",
+      "source_dependency_ids": [
+        "EVD-COMP-TRADEEVERYTHING-009"
+      ],
+      "supports": [
+        "Documents session-dependent leverage and managed exposure trims."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding.",
+        "Reuses the dated evidence and scope of EVD-COMP-TRADEEVERYTHING-009; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-TE-FEES",
+      "project_id": "trade-everything",
+      "title": "Basic facts: Fees \u00b7 trade everything docs",
+      "url": "https://docs.tradeeverything.xyz/learn/fees/",
+      "provenance": "official-documentation",
+      "retrieved_at": "2026-10-28T01:31:04.372121+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "097bd2845368b3a546dfc3c87c0a8425314e2ac35697336660398790951d9c6b",
+      "source_dependency_ids": [
+        "EVD-COMP-TRADEEVERYTHING-003"
+      ],
+      "supports": [
+        "Draft documentation describes winning deductions, house-side loss fees and fee recipients."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Documentation is marked Draft and lacks a deployment/version binding.",
+        "Reuses the dated evidence and scope of EVD-COMP-TRADEEVERYTHING-003; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-TE-ANNOUNCEMENT",
+      "project_id": "trade-everything",
+      "title": "Basic facts: Trade Everything (@TradeEverythin_) | teapawt",
+      "url": "https://teapawt.net/TradeEverythin_",
+      "provenance": "third-party-mirror-of-social-posts",
+      "retrieved_at": "2026-10-28T01:32:15.351337+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "8cf96fe3a597e1455cfa65163f79279d77b62df6d988f9b2af409966898f91a5",
+      "source_dependency_ids": [
+        "EVD-COMP-TRADEEVERYTHING-019"
+      ],
+      "supports": [
+        "Third-party mirror attributes a 22 October planned 26 October 13:30 UTC launch post to the official account."
+      ],
+      "limitations": [
+        "Mirror copy only; original account content and exact post timestamps were not authenticated.",
+        "Profile capture may contain multiple posts; source_published_at is null.",
+        "Reuses the dated evidence and scope of EVD-COMP-TRADEEVERYTHING-019; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-REKT-CONFIG",
+      "project_id": "rektrade",
+      "title": "Basic facts: https://rektrade.fun/api/config",
+      "url": "https://rektrade.fun/api/config",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:32:50.899724+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "f18aedc73babacd5063af04ef33be23ebbc1ae02e2c0ae898dac008a050ac40b",
+      "source_dependency_ids": [
+        "EVD-COMP-REKTRADE-004"
+      ],
+      "supports": [
+        "Official API reports chain 999, deployed contract identities and current parameter values."
+      ],
+      "limitations": [
+        "Supplier response, not independently authenticated canonical chain state.",
+        "Retrieval timestamp is not automatically the business-as-of timestamp.",
+        "Reuses the dated evidence and scope of EVD-COMP-REKTRADE-004; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-REKT-MARKETS",
+      "project_id": "rektrade",
+      "title": "Basic facts: https://rektrade.fun/api/markets",
+      "url": "https://rektrade.fun/api/markets",
+      "provenance": "official-api",
+      "retrieved_at": "2026-10-28T01:33:12.457861+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "71c8d744f71bd9f53a69ff844640455746ad28e25a9d232e4884c0648ec35d84",
+      "source_dependency_ids": [
+        "EVD-COMP-REKTRADE-008"
+      ],
+      "supports": [
+        "Official API lists seven markets and heterogeneous BBO, oracle and mark settlement indicators."
+      ],
+      "limitations": [
+        "Supplier response, not independently authenticated canonical chain state.",
+        "Retrieval timestamp is not automatically the business-as-of timestamp.",
+        "Reuses the dated evidence and scope of EVD-COMP-REKTRADE-008; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-REKT-CLIENT",
+      "project_id": "rektrade",
+      "title": "Basic facts: https://rektrade.fun/assets/index-AG-HGKxf.js",
+      "url": "https://rektrade.fun/assets/index-AG-HGKxf.js",
+      "provenance": "official-frontend-asset",
+      "retrieved_at": "2026-10-28T01:32:17.694018+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "00c116234a5ef321f4daf04793e75d62e71a648e1f8ad58c32fa065f380dfbaf",
+      "source_dependency_ids": [
+        "EVD-COMP-REKTRADE-002"
+      ],
+      "supports": [
+        "Official embedded documentation describes house trading, queue, loss issuance, staking and owner powers; frontend exposes public aggregate routes and six-decimal USDC formatting."
+      ],
+      "limitations": [
+        "Official source claims are not independent verification of deployed behavior.",
+        "Reuses the dated evidence and scope of EVD-COMP-REKTRADE-002; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-REKT-LAUNCH",
+      "project_id": "rektrade",
+      "title": "Basic facts: rektrade (@rektradefun) | teapawt",
+      "url": "https://teapawt.net/rektradefun",
+      "provenance": "third-party-mirror-of-social-posts",
+      "retrieved_at": "2026-10-28T01:32:19.496807+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "7774c6b008e2785ed29164ad527155c546b217c77c2549931869bef85bf8d2b5",
+      "source_dependency_ids": [
+        "EVD-COMP-REKTRADE-003"
+      ],
+      "supports": [
+        "Third-party mirror attributes a 22 October HyperEVM live announcement and shared-contract Ember interface statement to project accounts."
+      ],
+      "limitations": [
+        "Mirror copy only; original account content and exact post timestamps were not authenticated.",
+        "Profile capture may contain multiple posts; source_published_at is null.",
+        "Reuses the dated evidence and scope of EVD-COMP-REKTRADE-003; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-STOX-CLIENT",
+      "project_id": "stox",
+      "title": "Basic facts: STOX application JavaScript",
+      "url": "https://stoxpreps.com/app.js",
+      "provenance": "frontend_observation",
+      "retrieved_at": "2026-10-28T01:31:43.655292+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": 200,
+      "capture_sha256": "38df9b01bd438b72030a6803bd3de12508661c58006630587360984fa8fdd679",
+      "source_dependency_ids": [
+        "EVD-COMP-STOX-003"
+      ],
+      "supports": [
+        "Static application code names Robinhood Chain 4663 and references deployment.json, PriceRelay and Exchange contracts."
+      ],
+      "limitations": [
+        "Static code inspection only; not executed and not proof of deployed contracts.",
+        "Reuses the dated evidence and scope of EVD-COMP-STOX-003; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-STOX-CONFIG",
+      "project_id": "stox",
+      "title": "Basic facts: STOX frontend deployment configuration",
+      "url": "https://stoxpreps.com/deployment.json",
+      "provenance": "frontend_observation",
+      "retrieved_at": "2026-10-28T01:31:58.111992+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": 200,
+      "capture_sha256": "9e57b547a46c1897f6afe7b63dfd54011ae0d61dbf8006c5bd160d1394a46b20",
+      "source_dependency_ids": [
+        "EVD-COMP-STOX-004"
+      ],
+      "supports": [
+        "The frontend supplies Robinhood Chain 4663 contract configuration; this is not independent deployment verification."
+      ],
+      "limitations": [
+        "No chain reads, contract verification or creation-time lookup performed.",
+        "Reuses the dated evidence and scope of EVD-COMP-STOX-004; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-STOX-HTML",
+      "project_id": "stox",
+      "title": "Basic facts: STOX application",
+      "url": "https://stoxpreps.com/",
+      "provenance": "frontend_observation",
+      "retrieved_at": "2026-10-28T01:30:59.710405+00:00",
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "full",
+      "http_status": 200,
+      "capture_sha256": "9c19bdb423590eaa7dc14b8db1e8eef889107510ee1b3f9ce0df91197ed64509",
+      "source_dependency_ids": [
+        "EVD-COMP-STOX-001"
+      ],
+      "supports": [
+        "The app describes synthetic pooled trades, nontransferable House Shares, permanent House capital deposits, conditional orders and partial closes.",
+        "The page declares independence from Robinhood and Hyperliquid."
+      ],
+      "limitations": [
+        "Static HTML contains metric placeholders; no live business values obtained.",
+        "Marketing statements and controls have not been checked against deployed behavior.",
+        "Reuses the dated evidence and scope of EVD-COMP-STOX-001; no fresh endpoint/contract execution check."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "retained_evidence_reread_no_new_network"
+    },
+    {
+      "id": "EVD-COMP-BASIC-PT-SERVICE-NOTE",
+      "project_id": "papertrade",
+      "title": "Retained research note on the observed trading service minimums",
+      "url": "https://github.com/KoNit-K/papertrade-research/blob/d3fba1edd93d2fb1d492c0cdbe26dcf6fffa0050/docs/research-notes/008-core-credit-and-relayer-pressure.md",
+      "provenance": "local_research_baseline",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "partial",
+      "content_read": "full",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [
+        "EVD-COMP-PAPERTRADE-BASELINE"
+      ],
+      "supports": [
+        "Historical trading:current observation indexedThroughBlock49121146-49121151 reported minimum margin10 USD and opening notional1000 USD; zero leverage overrides meant no additional client override."
+      ],
+      "limitations": [
+        "Research-note attribution; not a fresh service request or current enforcement check.",
+        "Exact contemporary minimum/maximum leverage and position-size admission remain unknown."
+      ],
+      "recorded_at": "2026-10-28T03:02:57.388023+00:00",
+      "retrieval_method": "local_retained_research_note_reread"
+    }
+  ]
+}

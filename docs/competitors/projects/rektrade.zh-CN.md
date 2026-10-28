@@ -36,3 +36,9 @@ Rektrade具备house对手盘、赔付队列、亏损发行收入参与代币的�
 `/api/stats.at`是供应商提供的Unix秒业务时间，house有索引高度但无规范区块哈希。抓取时间与业务时间分列。单次零队列/零持仓不能证明历史偿付能力或没有需求。本轮无个人钱包查询、合约执行、安全验证或全事件回放。status接口发生传输失败，不能据此断言整站宕机。[R005—R007]
 
 R001—R008 对应 `EVD-COMP-REKTRADE-001`—`008`。本档案采集共8次低频公共GET，含上述失败；元数据记录UTC及成功capture的SHA-256，原始含账户/身份字段部分保持私有。
+
+## 基本信息、公开建设者及社区线索补充
+
+七个市场首页均标1000倍；config另给SOL500、ZEC/NEAR/XMR200倍，保留冲突。Ember自有域名提供Rektrade入口；项目账号镜像简介自称built by @embercurve；保留项目镜像中billymeth.eth（@biiiiymeister）自称部署REKT，是公开开发者自述线索，不是实名CEO或部署钱包核验。Ember与Rektrade的两入口不重复统计为两家。
+
+[基本资料与分档杠杆](../basics.zh-CN.md) · [背景出处与读取状态](../backgrounds.zh-CN.md) · [真实截图与证据编号](../browser-checks.zh-CN.md)。新资料补足公开信息，未消除法定身份、精确首笔成交和实盘参数缺口。

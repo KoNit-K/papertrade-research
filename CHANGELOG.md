@@ -6,6 +6,12 @@
 - Add cash/debt settlement branches, funding confirmations, fee scopes and a bounded sweep-pair observation to the bilingual reviews and Chinese narrative.
 - Link six scheduled upgrade actions to the retained execution payload; distinguish explorer labels from state verification and qualify session-signature findings.
 
+## Competitor public facts and attributed backgrounds — 2026-10-28
+
+- Add bilingual leverage/minimum/limit guides and source-scoped builder backgrounds for the benchmark and five competitors.
+- Retain seven reviewed browser viewports; separate rounded page counters and Demo state from deployed parameters and the earlier business snapshot.
+- Remove the owner-excluded watchlist subject from current coverage while preserving dated evidence ledgers.
+
 ## Current Chinese narrative and liquidation wording — 2026-10-28
 
 - Add a current-mechanism Chinese narrative for document drafting, with README navigation.

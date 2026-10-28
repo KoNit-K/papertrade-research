@@ -87,3 +87,9 @@ The separate data workstream obtained DefiLlama's provider-defined winning-profi
 | 017–019 | Browser unavailable and execution-phase mirror reader errors; no market data. |
 
 Next bounded collection should first restore an ordinary anonymous browser, capture dated House/queue values and all advertised leaderboard windows, and document actual public requests without probing private routes. Before profitability, solvency or permission conclusions, identify the program/version, oracle inputs, settings and complete execution/claim event semantics. Confirm whether leaderboard PnL recognizes queued claims before payment. Legal entity, team roles, initial funding and an independently versioned audit remain open. No signing, trades, funding, credentials, outreach, commits or pushes occurred in this dossier work.
+
+## Public basics, builders and community clues
+
+Official docs describe500–1000x in100x steps; the overview screenshot confirms the displayed range only. Public biographies tie Meow/Siong to the historical Jupiter/Mercurial/Meteora builder network; Siong’s early engineering history is from an old Mercurial team page, Meow’s from his personal site. Jupiter terms name BlockRaccoonS.A. and Panama law for the interface; this is not a separate YOLO entity or developer-location finding.
+
+[Basic facts and leverage tiers](../basics.md) · [Background sources and access status](../backgrounds.md) · [Real screenshots and evidence IDs](../browser-checks.md). These additions do not close legal-identity, first-fill or deployed-parameter gaps.

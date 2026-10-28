@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "EVD-COMP-BROWSER-YOLO",
+      "project_id": "yolo",
+      "title": "Reviewed anonymous viewport: yolo-overview",
+      "url": "https://docs.jup.ag/user-docs/labs/yolo",
+      "provenance": "official_page_browser_observation",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": "f734dd865e83337e5a3d99c345c4e36f8cf9ea8737089281d522c1e7e3bcc3c2",
+      "source_dependency_ids": [],
+      "supports": [
+        "Official overview displays 500–1000x, SOL/BTC/ETH/ZEC/HYPE and JupUSD."
+      ],
+      "limitations": [
+        "Single anonymous viewport, read without wallet, login or order submission; rendered values are supplier page assertions, not contract execution or aggregate reconciliation.",
+        "recorded_at is the screenshot save time; precise frame timestamp and business-as-of are unavailable.",
+        "Reviewed necessary public-interface excerpt only; no private account or wallet identity included."
+      ],
+      "observed_date": "2026-10-28",
+      "recorded_at": "2026-10-28T03:04:39.043Z",
+      "screenshot_path": "docs/competitors/assets/yolo-overview-20261028.jpg",
+      "hash_algorithm": "SHA-256"
+    },
+    {
+      "id": "EVD-COMP-BROWSER-CARDBOARD",
+      "project_id": "cardboard",
+      "title": "Reviewed anonymous viewport: cardboard-trade",
+      "url": "https://cardboardtrade.xyz/trade/btc",
+      "provenance": "official_page_browser_observation",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": "b5e1eaec21bbda50c1b5d83213ae92c7317db0ed2832ddabd3306dc4fa8b7399",
+      "source_dependency_ids": [],
+      "supports": [
+        "BTC/ETH/SOL navigation; BTC ticket shows x1–1000, default leverage10 and 2bp round-trip fee on close.",
+        "Default margin input1 is not proof of minimum admissible margin."
+      ],
+      "limitations": [
+        "Single anonymous viewport, read without wallet, login or order submission; rendered values are supplier page assertions, not contract execution or aggregate reconciliation.",
+        "recorded_at is the screenshot save time; precise frame timestamp and business-as-of are unavailable.",
+        "Reviewed necessary public-interface excerpt only; no private account or wallet identity included."
+      ],
+      "observed_date": "2026-10-28",
+      "recorded_at": "2026-10-28T03:05:30.316Z",
+      "screenshot_path": "docs/competitors/assets/cardboard-trade-20261028.jpg",
+      "hash_algorithm": "SHA-256"
+    },
+    {
+      "id": "EVD-COMP-BROWSER-STOX",
+      "project_id": "stox",
+      "title": "Reviewed anonymous viewport: stox-trade",
+      "url": "https://stoxpreps.com/",
+      "provenance": "official_page_browser_observation",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": "088fc75f7a0301e719002e3ccde719f57675579179ece7b65c673538ef06a1a9",
+      "source_dependency_ids": [],
+      "supports": [
+        "NVDA page shows MAX LEVERAGE1000x, x1–1000 slider and 5/20/50/100/500/1000 presets; USDG ticket.",
+        "Displayed market groups:22 USstocks,8ETFs,4indices,8commodities,3FX,15Asia&Global.",
+        "NVDA header displays rounded24hvolume$62.7M,longOI$250,shortOI$0; house-today$0,busts0,paid$0 are page labels, not independently reconciled onchain values."
+      ],
+      "limitations": [
+        "Single anonymous viewport, read without wallet, login or order submission; rendered values are supplier page assertions, not contract execution or aggregate reconciliation.",
+        "recorded_at is the screenshot save time; precise frame timestamp and business-as-of are unavailable.",
+        "Reviewed necessary public-interface excerpt only; no private account or wallet identity included."
+      ],
+      "observed_date": "2026-10-28",
+      "recorded_at": "2026-10-28T03:09:53.740Z",
+      "screenshot_path": "docs/competitors/assets/stox-trade-20261028.jpg",
+      "hash_algorithm": "SHA-256"
+    },
+    {
+      "id": "EVD-COMP-BROWSER-REKT",
+      "project_id": "rektrade",
+      "title": "Reviewed anonymous viewport: rektrade-home",
+      "url": "https://rektrade.fun/",
+      "provenance": "official_page_browser_observation",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": "3deea0582be2932a526115fc072b33ff008efe6533c29084d674c13e90efbf72",
+      "source_dependency_ids": [],
+      "supports": [
+        "Home lists BTC/ETH/SOL/ZEC/NEAR/XMR/HYPE, each labelled1000x; does not resolve lower limits in /api/config.",
+        "Rounded home counters:traded$135225758,losttohouse$69430,minted1228494REKT,housecash$1104; no business-as-of."
+      ],
+      "limitations": [
+        "Single anonymous viewport, read without wallet, login or order submission; rendered values are supplier page assertions, not contract execution or aggregate reconciliation.",
+        "recorded_at is the screenshot save time; precise frame timestamp and business-as-of are unavailable.",
+        "Reviewed necessary public-interface excerpt only; no private account or wallet identity included."
+      ],
+      "observed_date": "2026-10-28",
+      "recorded_at": "2026-10-28T03:11:15.943Z",
+      "screenshot_path": "docs/competitors/assets/rektrade-home-20261028.jpg",
+      "hash_algorithm": "SHA-256"
+    },
+    {
+      "id": "EVD-COMP-BROWSER-TE-HOME",
+      "project_id": "trade-everything",
+      "title": "Reviewed anonymous viewport: trade-everything-home",
+      "url": "https://tradeeverything.xyz/",
+      "provenance": "official_page_browser_observation",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": "35803e0cbf772ca029d63a37f30d040449fe9362a078fba1f710d798b3c01c5e",
+      "source_dependency_ids": [],
+      "supports": [
+        "Home claims200+globalstocks,500xmax,0marketimpact,0%funding.",
+        "Home displays Mainnet is live and advertised opening Mon26Oct13:30UTC; issuer claim, not verified first mainnet fill."
+      ],
+      "limitations": [
+        "Single anonymous viewport, read without wallet, login or order submission; rendered values are supplier page assertions, not contract execution or aggregate reconciliation.",
+        "recorded_at is the screenshot save time; precise frame timestamp and business-as-of are unavailable.",
+        "Reviewed necessary public-interface excerpt only; no private account or wallet identity included."
+      ],
+      "observed_date": "2026-10-28",
+      "recorded_at": "2026-10-28T03:11:53.156Z",
+      "screenshot_path": "docs/competitors/assets/trade-everything-home-20261028.jpg",
+      "hash_algorithm": "SHA-256"
+    },
+    {
+      "id": "EVD-COMP-BROWSER-TE-DEMO",
+      "project_id": "trade-everything",
+      "title": "Reviewed anonymous viewport: trade-everything-demo",
+      "url": "https://exchange.tradeeverything.xyz/trade/nvda",
+      "provenance": "official_page_browser_observation",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": "2d3c589113e75a2c5f96ff4591270eef7da77be235f25646e7a70922b8fba470",
+      "source_dependency_ids": [],
+      "supports": [
+        "Default environment is Demo, demoequity$10000; not actual customer deposit.",
+        "NVDA ticket at Overnight displays Max250x and selected125x; only part of the market list is inside the retained screenshot."
+      ],
+      "limitations": [
+        "Single anonymous viewport, read without wallet, login or order submission; rendered values are supplier page assertions, not contract execution or aggregate reconciliation.",
+        "recorded_at is the screenshot save time; precise frame timestamp and business-as-of are unavailable.",
+        "Reviewed necessary public-interface excerpt only; no private account or wallet identity included."
+      ],
+      "observed_date": "2026-10-28",
+      "recorded_at": "2026-10-28T03:14:27.320Z",
+      "screenshot_path": "docs/competitors/assets/trade-everything-demo-20261028.jpg",
+      "hash_algorithm": "SHA-256"
+    },
+    {
+      "id": "EVD-COMP-BROWSER-PT",
+      "project_id": "papertrade",
+      "title": "Reviewed anonymous viewport: papertrade-btc",
+      "url": "https://exchange.papertrade.xyz/trade/btc",
+      "provenance": "official_page_browser_observation",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": "4201dd73f85f37c5eb0f2d32c6818c26ac04d7507a60384365303b570d2d1a45",
+      "source_dependency_ids": [],
+      "supports": [
+        "BTC ticket shows x1Safe to Wildx1000, default10x, marginUSDCdefault1; defaults do not establish admission minimum.",
+        "BTC selected header shows rounded VOL24H$7.68B,LONGOI$84.2M,SHORTOI$32.6M; not established whole-platform total or exact unrounded measure."
+      ],
+      "limitations": [
+        "Single anonymous viewport, read without wallet, login or order submission; rendered values are supplier page assertions, not contract execution or aggregate reconciliation.",
+        "recorded_at is the screenshot save time; precise frame timestamp and business-as-of are unavailable.",
+        "Reviewed necessary public-interface excerpt only; no private account or wallet identity included."
+      ],
+      "observed_date": "2026-10-28",
+      "recorded_at": "2026-10-28T03:15:10.119Z",
+      "screenshot_path": "docs/competitors/assets/papertrade-btc-20261028.jpg",
+      "hash_algorithm": "SHA-256"
+    },
+    {
+      "id": "EVD-COMP-BROWSER-YOLO-TRADE-FAIL",
+      "project_id": "yolo",
+      "title": "YOLO trade page browser connection failure",
+      "url": "https://jup.ag/yolo/?market=SOL&mode=classic",
+      "provenance": "browser_access_attempt",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "failed",
+      "content_read": "none",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [],
+      "supports": [
+        "Browser navigation ended ERR_CONNECTION_CLOSED; no current House, queue or leaderboard was obtained."
+      ],
+      "limitations": [
+        "Connection failure is environment-specific and does not prove service-wide downtime."
+      ],
+      "observed_date": "2026-10-28"
+    },
+    {
+      "id": "EVD-COMP-BROWSER-TE-DOM",
+      "project_id": "trade-everything",
+      "title": "Trade Everything Demo browser DOM observation",
+      "url": "https://exchange.tradeeverything.xyz/trade/nvda",
+      "provenance": "official_page_browser_dom_observation",
+      "retrieved_at": null,
+      "source_published_at": null,
+      "access_status": "fetched",
+      "content_read": "partial",
+      "http_status": null,
+      "capture_sha256": null,
+      "source_dependency_ids": [
+        "EVD-COMP-BROWSER-TE-DEMO"
+      ],
+      "supports": [
+        "Browser DOM lists BTC,ETH,HYPE,SOL,BCH; BCH is below the retained screenshot viewport.",
+        "DOM describes the next NVDA pre-market session cap375x; the screenshot itself shows current overnightMax250x."
+      ],
+      "limitations": [
+        "Read via UI automation DOM snapshot in the same anonymous Demo session; original DOM response bytes not retained.",
+        "No screenshot hash is assigned to off-viewport DOM text; no mainnet activity or admission inferred."
+      ],
+      "observed_date": "2026-10-28"
+    }
+  ]
+}

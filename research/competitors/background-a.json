@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-28T03:02:49.907212+00:00",
+  "scope": "Public handles, explicitly attributed professional history and community-origin claims; no private identity, address or wallet linkage.",
+  "projects": [
+    {
+      "project_id": "papertrade",
+      "public_handles": [
+        "izebel_eth",
+        "blurr",
+        "UngusTrade"
+      ],
+      "claims": [
+        {
+          "claim_id": "BGA-PT-IDENTITY",
+          "label": "community_claim_unverified",
+          "summary_zh": "社区研究作者HONKAYO（MONI）将Jez识别为公开人物Colin Hong；WPT独立人物介绍支持Colin Hong的公开金融/教育履历，但WPT自身没有核对Jez别名。",
+          "source_ids": [
+            "EVD-COMP-BGA-002",
+            "EVD-COMP-BGA-WPT-READER"
+          ],
+          "source_urls": [
+            "https://research.moni.ai/articles/papertrade",
+            "https://www.worldpokertour.com/article/meet-the-final-table-of-the-wpt-prime-championship"
+          ],
+          "claim_date": "2026-10-02",
+          "basis": "MONI明确写Jez is Colin Hong；WPT介绍对应公开名字。",
+          "counterevidence_or_limits": "别名对应来自社区研究，未取得项目法律实体或本人签署身份声明。"
+        },
+        {
+          "claim_id": "BGA-PT-CAREER",
+          "label": "public_institution_profile",
+          "summary_zh": "WPT公开介绍列Colin Hong毕业于MIT（2015），在Morgan Stanley工作四年，并称当时任Standard Crypto Venture Partner、职业为天使投资人。",
+          "source_ids": [
+            "EVD-COMP-BGA-WPT-READER"
+          ],
+          "source_urls": [
+            "https://www.worldpokertour.com/article/meet-the-final-table-of-the-wpt-prime-championship"
+          ],
+          "claim_date": null,
+          "basis": "赛事主办方的人物介绍正文。",
+          "counterevidence_or_limits": "属于人物介绍当时的履历，不证明当前任职、Standard Crypto投资Papertrade或项目有机构背书。"
+        },
+        {
+          "claim_id": "BGA-PT-HANDLES",
+          "label": "community_claim_unverified",
+          "summary_zh": "社区作者Razzaer称联合创始人为Jez（izebel_eth）与Blurr，额外多签持有人为UngusTrade；应将Ungus的治理角色与联合创始人身份分开。",
+          "source_ids": [
+            "EVD-COMP-BGA-UNGUS-GUIDE"
+          ],
+          "source_urls": [
+            "https://solanaguides.com/papertrade-xyz"
+          ],
+          "claim_date": "2026-10-25",
+          "basis": "指南Who runs Papertrade段落明确列名。",
+          "counterevidence_or_limits": "这是第三方角色归因，未进行签名人链上验证；没有证据将Ungus列为联合创始人。"
+        },
+        {
+          "claim_id": "BGA-PT-BLURR",
+          "label": "interview_self_claim_via_transcript",
+          "summary_zh": "BidClub转录将Blurr描述为2017年前后开始链上探索的匿名开发者/交易者；其自述与Jez在2021年夏纽约结识，Papertrade由二三人构建，并回顾CryptoKitties、Compound等早期链上参与。",
+          "source_ids": [
+            "EVD-COMP-BGA-003"
+          ],
+          "source_urls": [
+            "https://bidclub.ai/e/papertrade-launch-1000x-leverage-onchain-war-sto"
+          ],
+          "claim_date": "2026-09-29",
+          "basis": "采访正文及摘要明确归于受访者Blurr。",
+          "counterevidence_or_limits": "转录/摘要可能有识别错误，原始音视频未独立复核；参与协议不等于受雇或创建这些协议。"
+        },
+        {
+          "claim_id": "BGA-PT-JEZ-NETWORK",
+          "label": "interview_self_claim_via_transcript",
+          "summary_zh": "PANews整理的Jez访谈称其曾任Millennium量化、为Lighter顾问，并与Will Price及Blurr以各自个人支票协作投资。",
+          "source_ids": [
+            "EVD-COMP-BGA-PANEWS-READER"
+          ],
+          "source_urls": [
+            "https://www.panews.io/articles/01a12eb9-598a-722e-8f60-1a3104d5c217"
+          ],
+          "claim_date": "2026-10-09",
+          "basis": "页面注明原访谈播出日，正文以Jez问答呈现。",
+          "counterevidence_or_limits": "仅为二手转录中的自述，不证明Lighter或Standard Crypto投资/运营Papertrade；不把投资圈当公司团队。"
+        },
+        {
+          "claim_id": "BGA-PT-GEO",
+          "label": "historical_public_geographic_clue",
+          "summary_zh": "WPT人物介绍标注Connecticut；Blurr采访谈到2021年在纽约与Jez结识。这些是历史人物/交往地域线索，不是Papertrade总部或2026运营地。",
+          "source_ids": [
+            "EVD-COMP-BGA-WPT-READER",
+            "EVD-COMP-BGA-003"
+          ],
+          "source_urls": [
+            "https://www.worldpokertour.com/article/meet-the-final-table-of-the-wpt-prime-championship",
+            "https://bidclub.ai/e/papertrade-launch-1000x-leverage-onchain-war-sto"
+          ],
+          "claim_date": null,
+          "basis": "两个公开来源明确写地点。",
+          "counterevidence_or_limits": "当前总部、注册地及团队所在地仍未确立；不由姓名、语言、教育或链推断国籍。"
+        }
+      ],
+      "operator_jurisdiction": null,
+      "current_operating_location": null
+    },
+    {
+      "project_id": "cardboard",
+      "public_handles": [
+        "cardboard_trade"
+      ],
+      "legal_operator_claim": "Attractor Labs, Inc.",
+      "claims": [
+        {
+          "claim_id": "BGA-CB-OPERATOR",
+          "label": "official_terms_claim",
+          "summary_zh": "10月25日版Cardboard官方条款称运营方为Attractor Labs, Inc.；公开运营账号为@cardboard_trade。",
+          "source_ids": [
+            "EVD-COMP-BGA-CARDBOARD-TERMS",
+            "EVD-COMP-CARDBOARD-014"
+          ],
+          "source_urls": [
+            "https://docs.cardboardtrade.xyz/terms.html",
+            "https://cardboardtrade.xyz/"
+          ],
+          "claim_date": "2026-10-25",
+          "basis": "官方条款Agreement and scope明确命名，先前保留的官方账号镜像列产品域名。",
+          "counterevidence_or_limits": "未发现可归因到具体个人handle的官方团队名单；运营公司名不自动给出注册法域。"
+        },
+        {
+          "claim_id": "BGA-CB-COMMUNITY",
+          "label": "community_claim_unverified",
+          "summary_zh": "KuCoin转载的社区作者sanyi.eth在10月18日称Cardboard是Papertrade的clone；此处只反映社区对产品来源的看法。",
+          "source_ids": [
+            "EVD-COMP-BGA-CARDBOARD-COMMUNITY"
+          ],
+          "source_urls": [
+            "https://www.kucoin.com/news/insight/NVDA/6ad48400c31ba80007320bdd"
+          ],
+          "claim_date": "2026-10-18",
+          "basis": "已实际打开的转载正文与作者/日期。",
+          "counterevidence_or_limits": "没有作者给出的源码同源或人员重叠证明，不能据此写两者为同一团队。"
+        },
+        {
+          "claim_id": "BGA-CB-NAMESAKE",
+          "label": "identity_disambiguation",
+          "summary_zh": "Founders, Inc.公开名单也有Attractor Labs，介绍为企业决策的人类行为模拟；没有取得其与Cardboard的交叉链接，因此不将该团队或历史项目并入Cardboard背景。",
+          "source_ids": [
+            "EVD-COMP-BGA-006"
+          ],
+          "source_urls": [
+            "https://f.inc/offseason/2/teams"
+          ],
+          "claim_date": null,
+          "basis": "页面Booth 7名称相同、业务描述不同。",
+          "counterevidence_or_limits": "这是同名碰撞排除，不是Cardboard另一项目或同一公司的正向证明。"
+        },
+        {
+          "claim_id": "BGA-CB-BUILDER-HANDLE",
+          "label": "official_account_claim_via_mirror",
+          "summary_zh": "保留的@cardboard_trade账号镜像中，10月21日发帖者以第一人称称将提供API/SDK，10月24—25日更新builder接入及SDK可用性；可作为公开产品开发交流handle，不据此认定实名创始人。",
+          "source_ids": [
+            "EVD-COMP-CARDBOARD-014"
+          ],
+          "source_urls": [
+            "https://teapawt.net/cardboard_trade"
+          ],
+          "claim_date": "2026-10-25",
+          "basis": "此前成功保留的账号帖子正文，产品域名与账号互相对应。",
+          "counterevidence_or_limits": "账号可由多人维护；没有证明该发帖者的姓名、具体雇佣职务、历史项目或所在地。"
+        }
+      ],
+      "operator_jurisdiction": null,
+      "current_operating_location": null
+    },
+    {
+      "project_id": "rektrade",
+      "public_handles": [
+        "rektradefun",
+        "embercurve",
+        "biiiiymeister"
+      ],
+      "claims": [
+        {
+          "claim_id": "BGA-RK-EMBER",
+          "label": "official_site_attribution",
+          "summary_zh": "Ember自有域名提供Rektrade应用入口；项目账号镜像简介自称built by @embercurve，保留公告称Ember与Rektrade是同一合约和keeper的两个入口，Furnace已退役。",
+          "source_ids": [
+            "EVD-COMP-BGA-007",
+            "EVD-COMP-BGA-REKT-MIRROR"
+          ],
+          "source_urls": [
+            "https://embercurve.fun/rekt/",
+            "https://teapawt.net/rektradefun"
+          ],
+          "claim_date": "2026-10-23",
+          "basis": "自有域名HTML应用壳证明入口关联；Built by归因来自项目账号镜像，未将其冒充HTML可见正文。",
+          "counterevidence_or_limits": "不是两家独立交易场所；官方镜像原帖及实际部署关联未独立认证。"
+        },
+        {
+          "claim_id": "BGA-RK-PERSON",
+          "label": "public_self_claim_unverified",
+          "summary_zh": "官方Rektrade账号镜像转载的billymeth.eth（@biiiiymeister）10月22日帖自称部署了REKT；因此可公开列为自述开发/发起handle线索，不能升级为经过核验的实名CEO。",
+          "source_ids": [
+            "EVD-COMP-BGA-REKT-MIRROR"
+          ],
+          "source_urls": [
+            "https://teapawt.net/rektradefun"
+          ],
+          "claim_date": "2026-10-22",
+          "basis": "保留正文含why I deployed $REKT，并由产品账号转推。",
+          "counterevidence_or_limits": "未查询或公开个人钱包对应关系；实名、法律职务、国籍及所在地未知。"
+        },
+        {
+          "claim_id": "BGA-RK-HISTORY",
+          "label": "official_account_claim_via_mirror",
+          "summary_zh": "同一保留公告将Rektrade接入Ember launchpad及modules，并称Furnace退役，提供了早期Ember/Furnace产品延续线索。",
+          "source_ids": [
+            "EVD-COMP-BGA-REKT-MIRROR"
+          ],
+          "source_urls": [
+            "https://teapawt.net/rektradefun"
+          ],
+          "claim_date": "2026-10-23",
+          "basis": "公告描述modules与原产品退役。",
+          "counterevidence_or_limits": "不据此推断该handle所有历史项目，不采用无依据的诈骗指控或KOL评论。"
+        }
+      ],
+      "operator_jurisdiction": null,
+      "current_operating_location": null
+    }
+  ],
+  "method_limits": [
+    "Community claims are attributed, not silently promoted to verified identities.",
+    "No nationality/geography inference from handle, chain, language or name.",
+    "Prior denied mirror hosts were not revisited; existing captures were re-read.",
+    "No Parchment research or inclusion in this increment."
+  ]
+}

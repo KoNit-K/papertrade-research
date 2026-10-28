@@ -2,7 +2,7 @@
 
 [中文](README.zh-CN.md) · [Chinese narrative](summary.zh-CN.md) · [Definitions](methodology.md) · [Refresh](refresh.md) · [Milestones](progress.md)
 
-Research date: **28 October 2026**. Five competitors are covered, with Papertrade as a separate benchmark; Parchment remains a watchlist lead. This is a comparison of product design and business observations, without token-market analysis. Source descriptions, supplier statistics and independently recomputed transformations retain different evidence scopes.
+Research date: **28 October 2026**. Five competitors are covered, with Papertrade as a separate benchmark. This is a comparison of product design and business observations, without token-market analysis. Source descriptions, supplier statistics and independently recomputed transformations retain different evidence scopes.
 
 ## Findings
 
@@ -25,7 +25,7 @@ Business visibility is uneven. Public product APIs provide useful Cardboard and 
 
 Legal entity, founders' verified biographies, headquarters and product-specific financing remain unknown where the dossier does not identify supporting evidence. Jupiter's brand attribution is not a finding about a YOLO contracting entity; a chain or oracle provider is not the product's issuer. Attractor Labs' name does not establish its jurisdiction. Geographic access restrictions do not establish company location.
 
-Parchment was not promoted: acquired mirrored Pyth interaction and a 1,000× introduction do not establish an official app domain, deployment or real-money activity. The discovery list also misclassified Trade Everything as Solana; its official architecture names HyperEVM. See the [candidate register](../../research/competitors/candidates.json).
+The discovery list misclassified Trade Everything as Solana; its official architecture names HyperEVM. See the [candidate register](../../research/competitors/candidates.json).
 
 ## Supported coins and assets
 
@@ -37,9 +37,23 @@ Parchment was not promoted: acquired mirrored Pyth interaction and a 1,000× int
 | Trade Everything | BTC, ETH, SOL, HYPE, BCH **in Draft docs** | 208 stock/ETF metadata entries; six Asian names additionally documented, potentially overlapping | USDC / USDC | Demo-host metadata and Draft scope; mainnet activation/crypto routes unverified |
 | Rektrade | BTC, ETH, SOL, ZEC, NEAR, XMR, HYPE | None established | USDC / USDC | Product market API; leverage caps conflict with config |
 | STOX | No crypto entry in retained config | 60 configured entries across stocks, ETF, commodity, FX, index and intl | USDG / USDG | Frontend configuration; not independently checked active-market registry |
-| Parchment | Unknown | Unknown | Unknown | Watchlist only |
 
-The [full market inventory and evidence scopes](markets.md) separate underlyings, collateral and rewards. Trade Everything’s five crypto names are Draft descriptions; STOX’s 60 entries are frontend configuration. Parchment’s inventory is unestablished.
+The [full market inventory and evidence scopes](markets.md) separate underlyings, collateral and rewards. Trade Everything’s five crypto names are Draft descriptions; STOX’s 60 entries are frontend configuration.
+
+## Public basics and leverage
+
+The [basic-facts guide](basics.md) covers official links, accounts, chain, collateral, leverage, minimums, limits, holding times and costs. [Builder and community background](backgrounds.md) separates biographies, self-claims and tentative associations. [Browser checks](browser-checks.md) retain seven real viewport screenshots with save times. Current coverage is Papertrade plus five competitors.
+
+| Platform | Leverage information | Evidence and admission boundary |
+|---|---|---|
+| Papertrade | BTC/ETH docs up to1000x; selected BTC slider1–1000x | Default10x/1USDC is not an admission minimum; effective minimum unverified |
+| YOLO | 500–1000x,100x steps | Official description; trade page connection failed, current directional capacity unverified |
+| Cardboard | Docs and BTC slider1–1000x | Configmax1000; default margin1 does not prove minimum1 |
+| Trade Everything | DraftBTC/ETH up to1000x; topUSregular500/pre-post375/overnight250x; other equities≤100x; Asian regular40/80/100x | Home advertises500x; default Demo NVDA overnight shows250x; session/risk rules are not execution-verified across mainnet |
+| Rektrade | Home/markets show1000x for seven markets; configSOL500/ZEC-NEAR-XMR200x | ConfigBTC/ETH/HYPE1000x; conflicting sources not resolved by real admission |
+| STOX | NVDA slider1–1000x,MAX1000x | Other markets and effective contract settings unverified; staticfallback is not chain state |
+
+Geography is equally scoped: Papertrade has historical NewYork-meeting and US-biography clues; Jupiter terms state a Panama interface-law scope. Current headquarters or nationality is not inferred from language, chain or company suffix. Tentative associations retain their direct source and uncertainty.
 
 ## Mechanism comparison
 
@@ -56,6 +70,9 @@ These are bounded source observations, not a deployed-contract feature certifica
 
 ## Business observations
 
+The adapter table retains the original09:31–09:35Beijing snapshot. Later11:04–11:15browser captures show rounded Papertrade BTC-view24hvolume$7.68B/longOI$84.2M/shortOI$32.6M and selected STOX NVDA-view24hvolume$62.7M/longOI$250/shortOI$0. Definitions, business-as-of and platform-wide coverage were not established; these page assertions are separate from adapter metrics. See [screenshots](browser-checks.md).
+
+
 Successful network reads: **01:31:54.850–01:35:04.865 UTC / 09:31:54.850–09:35:04.865 Beijing, 28 October 2026**. The two zero-request blocked runs were created separately at 01:36:57 UTC. Figures below are source assertions and byte-checked unit transformations, not a common-time balance sheet or market-share ranking. Full precision, per-field retrieval times, source URLs, evidence IDs and missing reasons are in the [67-row snapshot](../../research/competitors/snapshots/latest.json) and [CSV](../../research/competitors/snapshots/latest.csv); response hashes are in the [metrics source metadata](../../research/competitors/sources/metrics.json).
 
 | Product | Volume / recorded activity | Capital / debt fields | Data scope |
@@ -65,7 +82,7 @@ Successful network reads: **01:31:54.850–01:35:04.865 UTC / 09:31:54.850–09:
 | Cardboard | Reported cumulative notional **$7,407,335,307.36**; explicit provider 24h fields sum **$12,812,556.65**; **75,008** reported trades, **1,388** cumulative wallets | LP cash **$723,128.07**, treasury **$882,859.51**, queue **$0**, OI **$567,116.28** | Official aggregate API; business timestamp absent. Treasury and LP cash scopes are not reconciled and are not added. Counts are not 24h-active people. |
 | Rektrade | Reported cumulative notional **$135,225,758.26**; **1,449** reported trades, **52** cumulative wallets; no verified 24h volume | Free cash **$1,103.83**, treasury **$1,971.24**, queue **$0** | Official stats at 01:35:04 UTC; separate House response has no business timestamp. No net-profit or solvency inference. |
 | Trade Everything | Unknown | Unknown | Four selected mainnet config/aggregate reads returned 502; demo data excluded. |
-| STOX | Unknown | Unknown | Public HTML/config read, numeric fields placeholders; no aggregate adapter verified. |
+| STOX | Unknown | Unknown | Initial HTML/config values were placeholders; later rounded selected-NVDA counters are separately recorded; no aggregate adapter verified. |
 
 Cardboard's cumulative volume is not its one-day volume despite `range=1d`. Neither cumulative wallets nor cumulative losses establishes activity or retention. Rektrade's reported cumulative losses and winners paid are separately exported but are not reconciled net trader PnL. A zero queue snapshot does not establish that historical claims were always paid or future winners will be paid.
 
