@@ -2,7 +2,7 @@
 
 Reviewed: **2026-10-28**. [中文](current-product-review.zh-CN.md) · [Confirmed updates and evidence](research-notes/016-2026-10-28-sync.md).
 
-This review explains **documented Contract set 2**, rather than a live market-parameter snapshot. Official-page evidence comes from successful mediated page readings during this task's planning phase on October 28. The funding implementation references are the repository's dated client captures; vendor documentation is additional evidence about vendor capabilities. The upgrade transaction has separate receipt/block evidence. These evidence types are not interchangeable.
+This review explains **documented Contract set 2**, rather than a live market-parameter snapshot. Official-page evidence comes from successful mediated page readings on October 28, including a [responsiveness and queue follow-up](research-notes/017-responsiveness-and-queue-stages.md). Implementation references are the repository's dated client captures; vendor documentation is additional evidence about vendor capabilities. The upgrade transaction has separate receipt/block evidence. These evidence types are not interchangeable.
 
 ## Product and design
 
@@ -73,6 +73,70 @@ flowchart LR
 | Governance | Upgrade and parameter authority; builder approval/removal; exceptional deposit reconciliation. |
 
 These responsibilities come from [official architecture](https://docs.papertrade.xyz/how/architecture/), deposit and staking descriptions. The architecture shows why on-chain settlement still depends on service admission, batching, indexing and keeper operation. It does not identify an unpublished database, cloud vendor or service SLA. Session registration is relayer-mediated; revocation is a direct user-wallet path.
+
+## Why it can feel fast
+
+**Live prices, prompt feedback and completed settlement run on different clocks.** A moving chart can coexist with an order still waiting. The following client details were recovered from **October 22 build `2b8e2c45a33e`**; they explain the design, not measured performance of today's deployment.
+
+| What the user experiences | Recovered or documented mechanism | What still needs to finish |
+|---|---|---|
+| Quotes and candles keep moving | The captured client subscribes directly to Hyperliquid WebSocket `bbo` and `candle`; historical prices/candles have separate HTTP backfill paths. | A user's trade independently needs execution. The chart's size-weighted price and the execution BBO midpoint are not automatically identical. |
+| Balances, positions and operation status update without reloading | Account SSE supplies snapshots and patches. A patch must match `baseAccountRevision`; reconnect requires a fresh full snapshot. | The account index must catch up with the relevant operation. An accepted request alone is insufficient. |
+| Opening and closing need few clicks | A registered session key signs those intents without another main-wallet popup; the relayer pays gas for the trades it delivers. | Intake, batching and successful execution still follow. Withdrawal requires the main wallet. |
+| Funding has few manual steps | A deterministic personal address receives funds; bridge forwarding and the sweeper coordinate arrival, transfer and internal credit. | An external bridge, first proxy deployment, sweep/finalize and account indexing can each add time. |
+
+Here, WebSocket keeps a connection open for updates; SSE is a server-to-browser event stream. A revision is a state version number: the browser checks that an incremental update belongs to the snapshot it already has. These mechanisms let the page receive small updates without fetching the whole account again each time.
+
+The [captured data consumers](research-notes/013-market-state-funding-and-upgrade-followup.md#2-assemble-three-independent-data-planes) also discard older quote times within a connection epoch, resubscribe after reconnect and recover history separately. Account patches prevent applying a change to the wrong base state. **Design interpretation:** persistent push connections, incremental state and preauthorization reduce repeated fetching and wallet interaction. These mechanisms do not establish a latency, frame-rate, throughput or lossless-reconnection benchmark. Trading rules arrive through a separate `trading:current` stream; they are not the quote feed.
+
+The [current funding guide](https://docs.papertrade.xyz/learn/deposits-withdrawals/) describes Hyperliquid-origin deposits in seconds, while external-chain deposits depend on bridge completion. The [proxy explanation](https://docs.papertrade.xyz/how/deposits/) says funds can arrive before deployment and then be swept, removing a separate Exchange approval/deposit interaction from the guided user flow. Automation reduces manual steps; it still relies on operated services and the staged credit checks described below. Source-chain wallet approvals and bridge fees depend on the route.
+
+## Three different waits
+
+| Wait | What is pending | Completion condition |
+|---|---|---|
+| Execution request | Relayer selection/batching, on-chain processing and subsequent account reconciliation | The individual operation has a successful result or another definite terminal outcome. |
+| Payout claim | A settled obligation needs cash backing | Funded FIFO repayment makes the paid amount available. Priority does not supply a deadline. |
+| Withdrawal delivery | Available balance is withdrawn to HyperCore, then optionally sent onward | Confirm each stage through the selected final destination. |
+
+### Execution: accepted is a stage, not a fill
+
+```mermaid
+flowchart LR
+    A[Signed intent] --> B[Relayer execution queue]
+    B --> C[Batch on chain]
+    C --> D[Individual execution result]
+    D --> E[Account index and UI reconciliation]
+```
+
+The [official architecture](https://docs.papertrade.xyz/how/architecture/) requires the authorized relayer/batcher for opens and closes. The [historical batch follow-up](research-notes/007-queue-and-dividend-payment.md#execution-array-order-and-partial-failures-are-real-scheduler-fifo-is-unknown) contains a successful transaction with both successful and failed items: a batch receipt alone is not a fill confirmation. Batch array order is evidenced; cross-user FIFO, priority and retry selection are not established. The old public pressure metric tracks submitted gas rather than the whole backlog, so low reported saturation does not establish an empty execution queue. [Dated telemetry](research-notes/008-core-credit-and-relayer-pressure.md#real-backend-observation-anonymous-relayer-pressure).
+
+The captured client polls queue rank every two seconds, uses a 35-second ordinary-intent HTTP timeout and keeps ambiguous acknowledgements `unconfirmed`. Those are client behaviors. The [session guide](https://docs.papertrade.xyz/learn/session-keys/) gives each signed trade one hour of validity; none of these durations is a promised fill time or proves that a timed-out request was cancelled. Contracts read the execution price when processing the trade, so the price seen at the click is not reserved while it waits; an open position can be liquidated before its close request executes.
+
+### Payout: distinguish returned cash from a claim
+
+The [current payout guide](https://docs.papertrade.xyz/learn/lp-queue/) distinguishes cash-funded collateral from unpaid profit. The [technical model](https://docs.papertrade.xyz/how/solvency-queue/) describes FIFO claims and a `sideBucket` earmarked for their payment. Existing claims take priority over new winning payouts. Cash-funded returned margin becomes available after the close executes; a close at/past bust instead forfeits the margin through liquidation.
+
+**Conditional teaching example, not a real trade:** start with 100 USDC cash margin and 30 USDC net profit after applicable deductions. Assume the payout queue starts empty, this is not a liquidation, and the LP can directly pay 10 of that profit. Closing credits **110 available** (100 returned margin + 10 paid profit) and creates **20 queued**. If an earlier payout queue already exists, this direct-profit-payment assumption does not apply.
+
+**Claim-funded example:** consume 100 of queued balance as margin, then destroy 20 of that claim through a realized loss. **80 survives**; payment capacity and priority determine whether it becomes available or is queued again. There is no incoming 100 USDC deposit. Reusing debt for trading and withdrawing cash are different capabilities. These examples isolate balance arithmetic, not the complete fee ledger, integer execution or an exercised active queue. [Earlier ledger distinctions](research-notes/011-loss-governance-staking-and-payments.md#5-payment-capacity-when-many-traders-win).
+
+`sideBucket` is earmarked inside treasury cash, not an additional pot to count as free LP cash. `harvest(maxEntries)` advances funded repayments and consumes that earmark first. The documented keeper uses `harvest(32)` when funds are available: **32 is an entry-processing parameter, not seconds**. Repeated calls cannot create missing cash. User deposits also create user-balance obligations; they must not be counted as unrestricted new LP income. The existing history does not supply a real active-queue partial-repayment replay.
+
+### Withdrawal: follow the money beyond the platform status
+
+**Available balance → wallet authorization and withdrawal execution → CoreWriter → HyperCore credit → optional onward bridge → destination credit.** A cash-funded returned margin can be withdrawn subject to the product minimum and authorization; an unpaid profit claim must first become available. This is why payout debt does not explain every withdrawal delay.
+
+The captured official app sends withdrawal intents through its service and allows only one pending withdrawal in the client. That local restriction is not a universal contract queue: the architecture permits anyone to deliver a properly authorized withdrawal, while signature and balance checks still apply. [Client waiting rules](research-notes/007-queue-and-dividend-payment.md#frontend-waiting-rules-what-is-actually-in-the-current-client).
+
+| Captured onward-transfer state or evidence | How to read it |
+|---|---|
+| `submitted` / `in_transit` | Processing stages in the transfer model; neither alone establishes destination credit. |
+| `needs_signature` | The client requests refreshed onward-route authorization; the captured continuation does not create another Exchange withdrawal. |
+| Platform `settled` | For the captured external Circle route, the timeline additionally waits for Iris `forwardTxHash` before showing receipt. Even that hash needs a destination receipt to verify final delivery. |
+| `failed` | An error state alone does not locate the money or establish a refund. |
+
+These are [October 22 client semantics](research-notes/013-market-state-funding-and-upgrade-followup.md#5-withdrawal-has-two-authorizations-and-another-completion-boundary), not today's screen labels or measured waiting times. A [previous single withdrawal](research-notes/008-core-credit-and-relayer-pressure.md#selected-withdrawal-one-exact-official-ledger-match) has a matched HyperCore credit; it does not establish timing for all withdrawals or later bridge delivery. When diagnosing a wait, first identify the operation type and last confirmed stage; “queued” alone is ambiguous.
 
 ## Funding routes, providers and arrival
 

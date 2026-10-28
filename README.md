@@ -50,6 +50,8 @@
 
 [How trading works](docs/mechanism-map.md)
 
+**Why it can feel fast:** the October 22 client receives live quotes/candles and account updates through separate push channels; session keys avoid a wallet popup for every open/close. Personal deposit addresses, forwarding and automated sweeps reduce funding steps. Price updates, request acceptance and final settlement finish independently. [Experience and technical details](docs/current-product-review.md#why-it-can-feel-fast).
+
 ## PAPER mint curve
 
 **Before, the old curve gave fewer PAPER per $1 as it progressed. Now, new tokens are based on the total PAPER already issued.** As that total grows, the same loss can earn more tokens, while existing holders own a smaller share.
@@ -104,16 +106,19 @@ flowchart TB
     class Pool,PAPER accent
 ```
 
-| Two different waits | What is waiting? |
+| Three different waits | What is waiting? |
 |---|---|
 | **Order queue** | Your open or close request waits for the relayer to send it and for it to succeed. |
 | **Payout queue** | Profit that has already been recorded waits for enough money to pay it. The docs say the oldest claims are paid first. |
+| **Withdrawal delivery** | Available balance needs withdrawal execution and HyperCore credit; an onward route also needs destination-chain delivery. |
 
 For a position opened with cash, returned margin is recorded separately from profit still owed. Some positions use a claim on unpaid money instead of cash; a loss then reduces that claim and adds no new cash to the pool.
 
 New PAPER and the LP balance shown by the protocol do not tell you how much cash is ready to pay winners. A payout queue orders payments; it does not create money or promise a fixed wait. We still need real examples of partly paid claims to check the full process.
 
 [Order and payout queues](docs/research-notes/007-queue-and-dividend-payment.md) · [What affects payment](docs/research-notes/011-loss-governance-staking-and-payments.md#5-payment-capacity-when-many-traders-win)
+
+**Conditional, non-liquidation teaching example:** with an initially empty payout queue, 100 cash margin + 30 net profit, of which the LP can pay 10, produces **110 available + 20 queued** after the close executes. Existing queued claims have priority; this direct-payment example does not apply ahead of them. [Cash/debt examples and withdrawal stages](docs/current-product-review.md#three-different-waits).
 
 ## PAPER: the dividend token
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## Responsive UX and distinct waiting stages — 2026-10-28
+
+- Explain quote/candle push, account reconciliation, session signing and deposit orchestration in both product reviews.
+- Separate execution scheduling, FIFO payout claims and withdrawal delivery, with conditional cash/claim examples and onward-state meanings.
+- Add a scoped evidence map and concise README links while preserving the eight main sections.
+
 ## Product, services and contract-set-2 documentation — 2026-10-28
 
 - Add English/Chinese integrated reviews of product design, settlement, services, funding and business model.

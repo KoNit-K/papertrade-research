@@ -355,3 +355,9 @@ The [bilingual product review](current-product-review.md) uses documented contra
 - Guardian official report/PDF, Galaxy, CertiK, Udit and a fixed community SDK commit: source scope checked; only attributed metadata, implementation scope and reference links are adopted. No external aggregate statistic, attack attribution or deployment-remediation conclusion is promoted to an independently reproduced result.
 
 The existing document/chain validators keep their established input profiles. This prose evidence index does not extend those schemas or change historical claim/reproduction statuses.
+
+## Responsiveness and queue-stage follow-up — 2026-10-28
+
+[Note 017](research-notes/017-responsiveness-and-queue-stages.md) maps successful rereadings of the official LP queue, technical solvency, session-key, funding, architecture and CREATE2-deposit pages to the bilingual review's experience and waiting-stage explanations. All six pages identify contract set 2 and show a 2026-10-21 update date. Readings are mediated page content, with no upstream byte hash assigned.
+
+The supplement reuses October 22 build `2b8e2c45a33e` source identities from [CASE-010](../research/cases/010-market-funding-upgrade.json), historical batch/pressure evidence and the selected matched HyperCore credit. It does not relabel those inputs as a current client or performance sample. Session authorization, price/account push channels, funding orchestration, FIFO debt repayment and onward transfer states have separate evidence scopes. Teaching balances are conditional arithmetic, not newly executed trades.

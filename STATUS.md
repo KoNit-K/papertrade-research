@@ -1,5 +1,9 @@
 # Current status
 
+## Responsiveness and waiting-stage supplement — 2026-10-28
+
+The [English](docs/current-product-review.md#why-it-can-feel-fast) and [Chinese](docs/current-product-review.zh-CN.md#为什么体感快) reviews now explain why market/account updates, authorization and funding can feel responsive while execution, payout and onward delivery still take separate steps. [Note 017](docs/research-notes/017-responsiveness-and-queue-stages.md) binds the explanations to six successful official-page rereadings and dated client/transaction evidence. The cash/claim examples are conditional teaching arithmetic. This documentation increment supplies no new protocol execution or performance benchmark.
+
 ## Documentation synchronization — 2026-10-28
 
 The [bilingual product review](docs/current-product-review.md) connects documented set-2 product behavior, settlement, operational services, funding providers and business economics. [Confirmed updates](docs/research-notes/016-2026-10-28-sync.md) add full holdback bands, builder accounting/claims, signed keeper distribution, staged deposit recovery, vendor references and the named upgrade transaction’s checked block/time coordinates. Both READMEs retain their eight main sections. Local validation passed: 152 tests, type checking, the existing evidence-record validator and 226 local document links. These checks validate repository tooling and document structure, not full protocol reproduction.

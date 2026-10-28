@@ -2,7 +2,7 @@
 
 核查日期：**2026-10-28**。[English](current-product-review.md) · [确认更新与证据](research-notes/016-2026-10-28-sync.md)。
 
-本文按**官网描述的 Contract set 2**解释机制，不是实时市场参数快照。官方页面来自本任务规划阶段成功的网页读取；实现路径沿用仓库注明日期的客户端采集，供应商资料用于核对其能力。升级交易另有回执和区块证据。这几类证据不能互相替代。
+本文按**官网描述的 Contract set 2**解释机制，不是实时市场参数快照。官方页面来自 10 月 28 日成功的网页读取，包括[体验与排队补充核查](research-notes/017-responsiveness-and-queue-stages.md)；实现路径沿用仓库注明日期的客户端采集，供应商资料用于核对其能力。升级交易另有回执和区块证据。这几类证据不能互相替代。
 
 ## 产品形态与设计理念
 
@@ -73,6 +73,70 @@ flowchart LR
 | 治理 | 升级、参数、Builder 管理及异常充值补记。 |
 
 上述为[官方架构](https://docs.papertrade.xyz/how/architecture/)、充值和质押文档的职责划分。链上结算仍依赖请求接收、批处理、索引和 keeper；架构图不推测未公开的数据库、云厂商或 SLA。会话注册经过 relayer，用户撤销授权则有直接钱包调用路径。
+
+## 为什么体感快
+
+**行情刷新、操作反馈和最终结算，走的是不同的时钟。** K 线一直动，自己的订单仍可能在等。下面的客户端细节来自 **2026-10-22 构建 `2b8e2c45a33e`**，用于解释设计，不能当作今天部署的性能实测。
+
+| 用户看到的体验 | 已采集实现或官网机制 | 后面还要完成什么 |
+|---|---|---|
+| 报价和 K 线持续更新 | 客户端直接订阅 Hyperliquid WebSocket 的 `bbo`、`candle`，历史价格与 K 线另走 HTTP 补取。 | 用户自己的交易仍要独立执行；图表使用的按挂单量加权价格和合约执行用的 BBO 中间价，也不能直接画等号。 |
+| 余额、仓位和操作状态不用刷新网页就变化 | 账户 SSE 持续推送快照和增量；补丁的 `baseAccountRevision` 必须匹配，重连后重新取得完整快照。 | 账户索引要追上对应操作，收到请求回执还不够。 |
+| 开平仓点击很顺手 | 已注册的 session key 代签，省去逐笔主钱包弹窗；relayer 为其发送的交易付 gas。 | 仍要受理、组批和执行成功；提现要主钱包签名。 |
+| 充值需要手动操作的步骤少 | 可预先计算的个人地址收款，桥转发和 sweeper 串联到账、转移、内部入账。 | 外部桥、首次部署代理、归集确认和账户索引都可能增加等待。 |
+
+这里的 WebSocket 是保持连接来接收更新，SSE 是服务器向浏览器单向发送事件；revision 可以理解成“状态版本号”，用来检查小更新能否接在已有快照上。网页因而可以接收少量变化，而不用每次重新拉整个账户。
+
+[已采集的数据消费者](research-notes/013-market-state-funding-and-upgrade-followup.md#2-assemble-three-independent-data-planes)还会在一次连接周期内丢弃时间更旧的报价，断线重订阅后单独恢复历史；账户补丁则避免把更新接到错误的旧状态上。**设计解释：** 长连接推送、增量更新和预授权，减少了反复查询、整页刷新和钱包交互。这些机制可以解释体感，但没有给出延迟、帧率、吞吐或断线无丢失的实测保证。能否交易、杠杆限制等通过另一条 `trading:current` 通道更新，它不负责提供行情。
+
+[现行充值指南](https://docs.papertrade.xyz/learn/deposits-withdrawals/)把 Hyperliquid 来源描述为数秒入账，其他链则取决于桥完成。[个人代理说明](https://docs.papertrade.xyz/how/deposits/)解释了先收款、后部署与归集，用户在引导流程中不用再对 Exchange 单独做批准和充值操作。自动化减少手动步骤，仍依赖服务运行和后文的分阶段入账检查；来源链钱包批准和桥费要按路线看。
+
+## 到底在排什么队
+
+| 等待类型 | 在等什么 | 怎样才结束 |
+|---|---|---|
+| 执行请求等待 | relayer 选择请求、组织批次、上链处理，以及账户同步。 | 对应操作执行成功，或进入其他明确终态。 |
+| 盈利兑付等待 | 已结算的债权等待付款资金。 | 按 FIFO 规则偿付，已付部分变成可用余额；顺序不代表期限。 |
+| 提现处理等待 | 可用余额提到 HyperCore，再按选择继续转出。 | 逐段确认，直到选定目的地实际到账。 |
+
+### 请求受理：还要等自己的操作执行
+
+```mermaid
+flowchart LR
+    A[签名请求] --> B[relayer 执行队列]
+    B --> C[批次上链]
+    C --> D[逐项执行结果]
+    D --> E[账户索引与页面同步]
+```
+
+[官方架构](https://docs.papertrade.xyz/how/architecture/)要求开平仓经获准的 relayer 和批处理合约。[历史批次核查](research-notes/007-queue-and-dividend-payment.md#execution-array-order-and-partial-failures-are-real-scheduler-fifo-is-unknown)确实发现一笔成功交易中同时有成功项和失败项，因此整批回执成功不能代替自己的成交结果。批内按提交数组执行有证据；跨用户是否 FIFO、谁优先、怎样重试，尚未建立。旧公开压力指标按已提交 gas 计算饱和度，不覆盖全部等待请求，因此饱和度低也不能说明执行队列已清空。[注明日期的压力观察](research-notes/008-core-credit-and-relayer-pressure.md#real-backend-observation-anonymous-relayer-pressure)。
+
+已采集客户端每两秒刷新排位，普通 intent HTTP 超时为 35 秒，不明确的受理回执保留为 `unconfirmed`。这些是客户端行为。[会话文档](https://docs.papertrade.xyz/learn/session-keys/)规定每笔签名交易有效一小时；这些时长都不是保证成交时间，HTTP 超时也不证明请求已取消。合约处理交易时才读取执行价格，点击时看到的价格不会在排队期间锁住；已有仓位还可能在平仓请求执行前先被清算。
+
+### 盈利兑付：返还现金与排队债权分别看
+
+[现行队列指南](https://docs.papertrade.xyz/learn/lp-queue/)把现金保证金和未付盈利分开。[技术模型](https://docs.papertrade.xyz/how/solvency-queue/)描述 FIFO 债权及为其付款预留的 `sideBucket`，新赢家不能越过已有债权先拿钱。现金仓位在平仓执行后，剩余保证金回到可用余额；在 bust 或更差价格执行则按清算损失保证金。
+
+**条件教学例，不是真实交易：** 现金保证金 100 USDC，扣完适用调整和费用后的净盈利为 30。假设起初兑付队列为空、不触发清算，LP 此时只能直接支付其中 10。平仓后是 **110 可用余额**（返还保证金 100＋已付盈利 10），另有 **20 排队债权**。如果前面已有兑付队列，就不满足这个例子中“先直接付 10”的前提。
+
+**债权保证金例：** 用 100 排队余额作保证金，已实现亏损销毁其中 20，剩余债权为 **80**；它变为可用余额还是重新排队，仍取决于付款能力和先后顺序。这里没有又充值 100 USDC。可以继续交易与可以提现现金，是不同的能力。两例只拆解余额算术，没有重建完整费用账本、整数执行或真实活跃队列。[既有账务区别](research-notes/011-loss-governance-staking-and-payments.md#5-payment-capacity-when-many-traders-win)。
+
+`sideBucket` 是 treasury 现金内部的预留，不能重复算作自由 LP 现金。`harvest(maxEntries)` 推进有资金支持的偿付，并先消耗这部分预留。官网描述 keeper 在有钱可付时调用 `harvest(32)`，**32 是处理条目参数，不是 32 秒到账**。反复调用也不会产生缺少的现金。用户充值同时新增用户余额负债，不能当作 LP 可以自由使用的新收入。既有历史材料没有提供真实活跃队列的部分偿付复现。
+
+### 提现处理：沿资金路径确认到最后一站
+
+**可用余额 → 主钱包授权与提现执行 → CoreWriter → HyperCore 到账 → 可选跨链 → 目的链到账。** 返还的现金保证金可按产品最低额与授权规则提现；未付盈利债权要先变成可用余额。因此，“盈利等兑付”不能解释所有提现等待。
+
+已采集官方 App 通过服务提交提现 intent，并在客户端限制同一时间只挂一笔提现。这个本地限制不能当成通用合约队列：架构允许任何人递送正确授权的提现调用，签名和余额等检查仍然有效。[客户端等待规则](research-notes/007-queue-and-dividend-payment.md#frontend-waiting-rules-what-is-actually-in-the-current-client)。
+
+| 已采集的继续转出状态或证据 | 应该怎样理解 |
+|---|---|
+| `submitted`／`in_transit` | 转出模型里的处理阶段，单凭它们不能确认目的地到账。 |
+| `needs_signature` | 客户端要求更新继续转出授权；已采集的续签路径不会再创建一笔 Exchange 提现。 |
+| 平台 `settled` | 已采集外部 Circle 路线还要等 Iris 给出 `forwardTxHash`，时间线才显示收到；核实最终到账仍须目的链回执。 |
+| `failed` | 仅有错误状态，不能确定资金在哪，也不能认定已经退款。 |
+
+这些是[10 月 22 日客户端语义](research-notes/013-market-state-funding-and-upgrade-followup.md#5-withdrawal-has-two-authorizations-and-another-completion-boundary)，不是今天界面文案或等待时间实测。[一个历史提现样本](research-notes/008-core-credit-and-relayer-pressure.md#selected-withdrawal-one-exact-official-ledger-match)有精确匹配的 HyperCore 入账，但不能说明所有提现的时效或后续桥已到账。判断一笔等待时，先确认操作类型和最后已证实的阶段；只看“queued”这个词还不够。
 
 ## 充值提现、桥和服务商
 
