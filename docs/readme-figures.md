@@ -127,6 +127,10 @@ adds a 1×–5× multiplier over three days to the eligible deficit-repair porti
 It does not reward holding duration or multiply a whole cross-zero trade blindly.
 See [the exact acquired parameters and controlled-path checks](research-notes/014-official-announcement-crosscheck.md#2-supply-relative-issuance-and-insolvency-timing).
 
+### October 30 coefficient clarification
+
+Normalize the acquired coefficient `1101001766258568981998368146 / 10^36` per dollar to obtain `c ≈ 1.101001766e-9`. The continuous model `M ≈ S × expm1(c × g_eff)` gives **0.1101608091%** of starting supply for $1M weighted eligible basis. It explains the manuscript's rounded 0.11%; the existing 0.1% figure is intentionally a teaching recurrence. Neither is a complete integer replay. With fixed `c` and `g_eff`, `M/S` is independent of `S`, while an unchanged holding is diluted by later issuance. [Version and arithmetic review](research-notes/019-manuscript-reconciliation.md).
+
 ### Eligible loss and the displayed ratio
 
 The mint basis need not equal the user's gross loss: an empty-queue cash losing
@@ -254,3 +258,4 @@ The web-only/no-standalone-mobile-app description reflects the owner's current
 product observation; it does not mean mobile browsers cannot load the website.
 The README's order-book-depth wording concerns the execution-price formula. It does
 not remove price movement during relayer waiting or the separate PnL-side haircut.
+

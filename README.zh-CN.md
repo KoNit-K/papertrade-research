@@ -32,6 +32,8 @@
 
 **版本说明：** 本页介绍官网描述的 **Contract set 2**，官方记录为 **2026-10-21** 起；set 1 为 10 月 7–21 日。[10 月 28 日综合报告](docs/current-product-review.zh-CN.md)串联产品、合约、服务与资金路线。[确认更新与证据](docs/research-notes/016-2026-10-28-sync.md) · [官方变更表](https://docs.papertrade.xyz/dev/protocol-changes/)
 
+**10 月 30 日稿件整合：** [上线背景与业务快照](docs/business-snapshot.zh-CN.md)区分已核对的 TVL 历史、媒体转述的上线统计和待补原始查询的对比数据。[核验与修正记录](docs/research-notes/019-manuscript-reconciliation.md)说明发行公式、清算及竞品信息的处理。
+
 ## 特性介绍
 
 **竞品研究：** [YOLO、Cardboard、Trade Everything、Rektrade与STOX](docs/competitors/README.zh-CN.md)，含双语档案、带时点的业务观测和[手动刷新命令](docs/competitors/refresh.zh-CN.md)。
@@ -64,7 +66,7 @@
 
 | 想知道什么 | 以前 | 现在 |
 |---|---|---|
-| **亏损能拿多少 PAPER？** | 100 PAPER/$ 是旧规则中 LP 较低时的分支，后段早已可能降到 25 → 20 → 约 10。再次跨过 LP 门槛时可能突然下降；25/20 是例子，不是固定档位。 | 每 $1M 计入发币的亏损，大约增发当时 PAPER 总量的 0.1%。总量越大，同样亏损拿到的币越多，精确比例还要看参数。 |
+| **亏损能拿多少 PAPER？** | 100 PAPER/$ 是旧规则中 LP 较低时的分支，后段早已可能降到 25 → 20 → 约 10。再次跨过 LP 门槛时可能突然下降；25/20 是例子，不是固定档位。 | 按 10 月 22 日系数，连续模型下每 $1M 加权合格亏损约增发当时总供给的 0.11%。总量越大，同样基数拿到的币越多；增发占比不会仅因总供给扩大而下降。精确结果还取决于参数和整数计算。 |
 | **总量怎么增加？** | 在旧曲线下降的部分，同样亏损带来的新增币数越来越少。 | 亏损持续推动发币，每次按当时总量计算；没有固定的每日释放量，官网也明确写了**没有发行上限**。持币数不变，占总量的比例会下降。 |
 | **LP 不够还欠款时呢？** | 回到旧规则中低 LP 的发币分支。 | 缺口持续越久，奖励越高：3 天内从 1 倍升到 5 倍，只给符合条件、用于填补缺口的那部分亏损加成。 |
 
@@ -233,3 +235,4 @@ pnpm validate:records
 ---
 
 [参与贡献](CONTRIBUTING.md) · [数据政策](DATA_POLICY.md) · [Apache-2.0](LICENSE) · [第三方声明](THIRD_PARTY_NOTICES.md)
+

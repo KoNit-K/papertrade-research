@@ -16,7 +16,7 @@ Business visibility is uneven. Public product APIs provide useful Cardboard and 
 
 | Product / dossier | Origin and relationship | Date evidence and its limit |
 |---|---|---|
-| [Papertrade](projects/papertrade.md) | HyperEVM benchmark; existing set-2 research | Docs label set 1 from 7 October, set 2 from 21 October. Those are version dates; reported 10 October frontend launch was not independently anchored here. |
+| [Papertrade](projects/papertrade.md) | HyperEVM benchmark; existing set-2 research | Set 1 from October 7 and set 2 from October 21 are version dates. Launch reports support October 10 at 14:00 UTC / 22:00 Shanghai; the first executed public trade remains unverified. |
 | [Jupiter YOLO](projects/yolo.md) | Jupiter Labs on Solana; acknowledged design inspiration via attributed post | Beta announcement 15 October; Siong mirror shows 12:59 UTC / 20:59 Beijing. Original unavailable; first executed public trade unverified. |
 | [Cardboard](projects/cardboard.md) | Solana; Terms name **Attractor Labs, Inc.** as interface operator; strong mechanism analogue | Mirrored operational posts from 18 October; Terms dated 25 October. Exact first real trade and beta timestamp unknown. |
 | [Trade Everything](projects/trade-everything.md) | HyperEVM; separate Papertrade-community project explicitly borrowing its model | Announced mainnet opening 26 October 13:30 UTC / 21:30 Beijing. Draft/demo/live wording and failed mainnet reads prevent confirmation of actual launch execution. |
@@ -26,6 +26,8 @@ Business visibility is uneven. Public product APIs provide useful Cardboard and 
 Legal entity, founders' verified biographies, headquarters and product-specific financing remain unknown where the dossier does not identify supporting evidence. Jupiter's brand attribution is not a finding about a YOLO contracting entity; a chain or oracle provider is not the product's issuer. Attractor Labs' name does not establish its jurisdiction. Geographic access restrictions do not establish company location.
 
 The discovery list misclassified Trade Everything as Solana; its official architecture names HyperEVM. See the [candidate register](../../research/competitors/candidates.json).
+
+The [business supplement](../business-snapshot.md) adds Papertrade launch reports without replacing the October 28 adapter snapshot. [Review decisions](../research-notes/019-manuscript-reconciliation.md) retain existing source boundaries: YOLO's documented House/queue model does not establish loss-token issuance; Cardboard's October 25 terms date is not its verified launch; Rektrade's market/config leverage conflict remains; Trade Everything's 502/Demo observations do not prove it never opened; STOX's chain and capital-injection design do not establish Robinhood backing. Backpack/Mad Lads and GMX/Synthetix team hypotheses lack attributable supporting evidence in this review.
 
 ## Supported coins and assets
 

@@ -6,6 +6,8 @@ Reviewed: **2026-10-28**. [中文](current-product-review.zh-CN.md) · [Confirme
 
 This review explains **documented Contract set 2**, rather than a live market-parameter snapshot. Official-page evidence comes from successful mediated page readings on October 28, including a [responsiveness and queue follow-up](research-notes/017-responsiveness-and-queue-stages.md). Implementation references are the repository's dated client captures; vendor documentation is additional evidence about vendor capabilities. The upgrade transaction has separate receipt/block evidence. These evidence types are not interchangeable.
 
+**2026-10-30:** [Manuscript reconciliation / 稿件核验](research-notes/019-manuscript-reconciliation.md). October 28 source/version boundaries remain in force; this is a documentation update, not a new deployment certification.
+
 ## Product and design
 
 Papertrade offers leveraged synthetic exposure settled against a protocol pool. Hyperliquid supplies the price reference; Papertrade does not place an equivalent Hyperliquid perpetual order for every position. Its design combines a small trading form, session-key signing, relayer-paid trade gas, BBO-mid execution, loss-funded liquidity and a token that shares future distributions. [Official introduction](https://docs.papertrade.xyz/).
@@ -16,9 +18,29 @@ The previously inspected client used whole-position closes and separate long/sho
 
 **Design interpretation:** precompile pricing avoids running a separate matching engine; charging against successful outcomes makes extreme leverage usable without a notional fee consuming margin immediately. Loss-based issuance encourages users to supply the pool's risk capital indirectly. This also couples trader incentives, token dilution and future loss flow: PAPER issuance itself supplies no USDC.
 
+### Order books, pool-based perpetuals and synthetic settlement
+
+This compares settlement structures, not a universal leverage or fee schedule. Pool-based DEXs vary by product and version; an old GLP model does not represent every GMX market.
+
+| Dimension | CEX / onchain order-book perps | Pool-based perpetual DEXs | Papertrade, documented set 2 |
+|---|---|---|---|
+| Counterparty | Matched buy/sell orders with venue risk controls | Pool bears trader PnL under its rules | Protocol LP bears synthetic PnL |
+| Pricing | Matched fills; mark/index have distinct roles | Oracle/index plus product-specific price impact | Read-only HyperCore BBO midpoint |
+| Leverage | Market, tier and risk configuration | Protocol and market configuration | Advertised up to 1000×, subject to admission capacity |
+| Carry cost | Usually funding, with product-specific intervals | Borrowing/funding rules vary by version | No funding; profit adjustment and exit charges remain |
+| Open/close fees | Maker/taker, tier and order type | Trading and impact rules vary | Zero opening fee; adjusted winning PnL normally pays 2% |
+| Liquidation | Venue mark/margin/risk rules | Oracle/margin and keeper paths | Buffered bust trigger forfeits full isolated margin |
+| Custody/execution | CEX custody or onchain ledger | Contracts, with upgrade/operator boundaries | Contract ledger; permitted batch path for ordinary trades |
+| Token incentives | Usually not issued directly per losing trade | LP shares normally represent risk-bearing capital | Eligible losses mint PAPER; staking shares funded distributions |
+| Trading use | Hedging and directional exposure, depending on features | Similar, subject to pool limits | Extreme-leverage synthetic exposure and loss incentives |
+
+Papertrade submits no corresponding order to HyperCore, so that trade leg has no direct order-book fill impact. External hedging or arbitrage can still affect the reference market. A CFD-like comparison describes cash-difference settlement, not a legal classification. Pool-based products need not hedge every trade externally. Funding intervals also differ: [Hyperliquid documents hourly payments](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding), not a universal eight-hour schedule.
+
 ## Pricing risk and market controls
 
 The [pricing description](https://docs.papertrade.xyz/how/pricing-bbo/) rejects zero quotes and crossed books (`ask < bid`), but describes no maximum-deviation, TWAP or lookback breaker. Reading consensus state authenticates the quoted book; it does not establish that the quote is economically undistorted. Deadband, impact and OI controls can constrain payoffs or exposure without proving manipulation unprofitable.
+
+[Guardian's October 9 review](https://www.guardian.security/portfolio/papertrade/protocol-review-2026-10-09/) lists BBO manipulation as **KV-01, a known design vector**, outside its finding count; this does not mean it is eliminated. [CertiK's October 20 analysis](https://www-cn.certik.com/blog/papertrade-bbo-pricing-incident) describes project-reported attempts on October 10–11 and an examined account withdrawing **1,279,106.191184 USDC** more than it deposited. That is not proven attack profit, aggregate LP loss or net profit after external trading costs. Quote consumption and temporal overlap alone do not prove price distortion. This review read the analysis without replaying its transactions.
 
 | Control | Opens | Existing closes and liquidations | Restoration |
 |---|---|---|---|
@@ -70,6 +92,12 @@ Here `M` is margin, `L` realized loss and `G` positive gain after deadband, hold
 
 For a **teaching 4-bps favorable move**, the documented formulas yield holdback of about **1.05024 bps standard** or **2.03250 bps off-hours**. After the 0.2-bps deadband, effective moves are about 2.74976 or 1.76750 bps, before impact and fees. This is decimal arithmetic, not a current parameter snapshot or Solidity rounding. A synthetic already-scaled gain of 100 leaves 98 or 97.5 before returned margin. Exact combined fee-funding order is not inferred.
 
+### Keeper execution and the 1000× distance
+
+A price crossing does not execute a contract by itself. An external keeper submits a transaction; Exchange rereads execution-time BBO and checks the boundary. An ordinary close at the boundary also becomes hard liquidation. Previously acquired official descriptions say protocol keepers use higher priority fees, while liquidation is a public maintenance path. Priority fees do not guarantee ordering or establish the principal cause of order delays without transaction-level measurement.
+
+Ignoring integer rounding and assuming an exact 5bps buffer, a 1000× long triggers at `E × (1−1/1000) × (1+0.0005)`, about **0.05005%** adverse movement; a short is about **0.04995%**. Use **about 0.05%** in the explanation. The reported 0.052% is an attributed approximation, not the exact result of this assumption. Parameters, quote precision, rounding and direction determine the actual trigger.
+
 ## Liquidity, PAPER and distribution
 
 There is no ordinary direct LP-deposit path in the documented model. Cash losses fund the pool; winning obligations that cannot be paid become queued claims. A claim-funded position reuses a liability, so a loss on it is not new cash arriving from outside. FIFO ordering provides priority, not a payment deadline. [Introduction](https://docs.papertrade.xyz/) · [Cash/claim research](research-notes/007-queue-and-dividend-payment.md).
@@ -79,6 +107,21 @@ Current documented issuance depends on existing PAPER supply. During negative tr
 The stated revenue sources for stakers are the applicable 1% share of settled gains/losses when queue and funding conditions permit, and LP gains distributable above the documented $5M reward cap. Debt-funded liquidation is an exception. PAPER is initially transferable only through the allowed staking path; token supply and a holder's distribution entitlement are different quantities. [Official introduction](https://docs.papertrade.xyz/).
 
 The [staking documentation](https://docs.papertrade.xyz/paper/staking/) describes signed stake/unstake/claim delivery through the relayer and keeper-signed distribution. PaperStaking alone may push Exchange staker fees; distribution then advances `accRewardPerShare`. `pendingReward` includes already distributed rewards. Unstaking has no cooldown and preserves accrued rewards. Allocation depends on stake at distribution, so holding time alone is not an additional weighting rule.
+
+### Issuance change and proportional dilution
+
+| Item | Contract set 1, documented October 7–21 | Contract set 2, documented from October 21 |
+|---|---|---|
+| Base rule | About 100 PAPER/$ in the low-LP branch, then a tail declining with retained progress H | Issue relative to current supply S |
+| 25 / 20 / about 10 PAPER/$ | Curve examples, not fixed tiers or verified transition dates | Not inherited tiers |
+| Deficit incentive | Old low-LP branch | 1×–5× over three days, only on eligible deficit repair |
+| Release/cap | Historical formula retained for comparison | No documented supply cap or fixed daily release |
+
+The [October 22 coefficient](research-notes/014-official-announcement-crosscheck.md#2-supply-relative-issuance-and-insolvency-timing), normalized per dollar, is `c ≈ 1.101001766 × 10⁻⁹`. A continuous interval model is `M ≈ S × (exp(c × g_eff) − 1)`, where `g_eff` is weighted eligible dollar basis after eligibility and deficit treatment. $1M gives about **0.1101608%**, normally rounded to **0.11%**, of starting supply. This decimal model is not a complete integer implementation, current parameter lookup or production replay.
+
+With coefficient and basis fixed, `M/S ≈ exp(c × g_eff) − 1` is **independent of S**. Equal eligible losses mint more tokens as supply grows, without a shrinking proportional issuance. Unchanged holdings dilute from `h/S` to `h/(S+M)`; actual rewards depend on staking and cash. The existing 0.1% figure recurrence remains an explicitly simplified teaching assumption.
+
+The **8.903B supply / 9.802 PAPER per dollar marginal rate** are October 22 observations. The [named upgrade transaction](research-notes/016-2026-10-28-sync.md#upgrade-transaction-anchor) is in block **49169385**, **October 21 22:00:02 UTC / October 22 06:00:02 Shanghai**. This anchors the transaction, not a replay of every initialization effect.
 
 ## Service architecture and control
 
@@ -257,3 +300,5 @@ This diagram summarizes funding dependencies, not the order of every integer led
 The business combines a loss-funded trading pool, outcome-dependent monetization and a builder distribution channel. Trader losses, LP retained cash, protocol fees, staker allocations and operator profit are separate measures. Public fee rules do not disclose a complete operating-cost or owner-profit statement. “Self-bootstrapping” explains initial funding; it is not proof every future obligation can be paid on time.
 
 External references were checked for their actual scope: [Guardian's report](https://guardian.security/portfolio/papertrade/protocol-review-2026-10-09/) reviews named code and records remediation conditions; [Udit's explainer](https://uditsamani.com/papertrade-hyperevm/) explicitly derives from October 6 docs; the [inspected SDK commit](https://github.com/nirholas/papertrade-sdk/tree/483a760ef596564e5ad799357a92e5726dada9ba) predates set 2. They provide useful questions and historical implementations, not automatic confirmation of the current deployment. [Reference checks and source identities](research-notes/016-2026-10-28-sync.md#references-and-evidence-scope).
+
+[Launch context and business data](business-snapshot.md) add the anniversary narrative, early position statistics, TVL/revenue definitions and provisional comparison tables. Sustainability requires evidence on trading demand, paid cash and outstanding claims, retention and cash income per staked share; issuance and notional volume alone do not establish it.

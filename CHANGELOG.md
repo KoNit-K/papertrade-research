@@ -1,5 +1,12 @@
 # Changelog
 
+## Technical-sharing manuscript integration — 2026-10-30
+
+- Add launch context and bilingual business tables with explicit historical windows, source status, OI scope and missing liquidation footnotes.
+- Reconcile TVL history and income definitions; distinguish supply-relative issuance, holder dilution and cash backing.
+- Clarify 1000× bust arithmetic, keeper execution, pricing-risk evidence and structural venue comparisons in existing pages.
+- Preserve competitor identity/date boundaries, original snapshots, navigation, figures, code and historical mechanism evidence.
+
 ## Mechanism, funding and authority clarification — 2026-10-28
 
 - Explain BBO residual risk, permanent retirement, global opening pause and scoped administrator roles.
@@ -86,3 +93,4 @@
 
 This documentation prerelease contains no implemented model, independently
 reproduced settlement, completed REA investigation, or production trading tool.
+

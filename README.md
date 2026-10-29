@@ -32,6 +32,8 @@
 
 **Versions:** this page explains documented **Contract set 2**, which the official history dates from **2026-10-21**; set 1 ran October 7–21. The [October 28 review](docs/current-product-review.md) connects product, contracts, services and funding. [Confirmed updates and evidence](docs/research-notes/016-2026-10-28-sync.md) · [Official changes](https://docs.papertrade.xyz/dev/protocol-changes/)
 
+**October 30 manuscript integration:** [Launch background and business snapshots](docs/business-snapshot.md) distinguish checked TVL history, attributed launch statistics and author-supplied comparison tables awaiting original queries. [Review decisions](docs/research-notes/019-manuscript-reconciliation.md) explain formula, liquidation and competitor corrections.
+
 ## Features
 
 **Competitor research:** [YOLO, Cardboard, Trade Everything, Rektrade and STOX](docs/competitors/README.md) — bilingual dossiers, dated business observations and [manual refresh commands](docs/competitors/refresh.md).
@@ -64,7 +66,7 @@
 
 | Question | Before | Now |
 |---|---|---|
-| **How much PAPER does a loss earn?** | 100 PAPER/$ applied in the old low-LP branch. The later curve could already be at 25 → 20 → about 10. Crossing the LP threshold again could cause a sharp drop; 25/20 are examples, not fixed levels. | Roughly $1M of losses counted by the mint rules adds 0.1% of the PAPER already issued. A bigger total means more new tokens for the same loss. The exact rate depends on the settings. |
+| **How much PAPER does a loss earn?** | 100 PAPER/$ applied in the old low-LP branch. The later curve could already be at 25 → 20 → about 10. Crossing the LP threshold again could cause a sharp drop; 25/20 are examples, not fixed levels. | At the October 22 coefficient, $1M of weighted eligible loss corresponds to about 0.11% of then-current supply in the continuous model. A bigger supply gives more tokens for the same basis; the proportional issuance does not shrink merely because supply grows. Exact output depends on parameters and integer execution. |
 | **How does the total grow?** | In the falling part of the old curve, equal losses added fewer new tokens over time. | Losses keep adding tokens based on the total at that point. There is no fixed daily release, and the docs state **no supply cap**. If you keep the same number of tokens, your share of the total falls. |
 | **What if the LP owes more than it has?** | The old low-LP rate applied. | The longer the shortfall lasts, the bigger the bonus: 1× to 5× over 3 days. It only boosts the part of a loss that qualifies and helps fill the shortfall. |
 
@@ -233,3 +235,4 @@ Tests and validation run locally. Live collection is an explicit, separate comma
 ---
 
 [Contribute](CONTRIBUTING.md) · [Data policy](DATA_POLICY.md) · [Apache-2.0](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.md)
+

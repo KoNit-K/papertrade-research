@@ -16,6 +16,8 @@ The official documentation read during planning labels set 1 as 7–21 October a
 
 The local baseline discusses the project's public pseudonymous administrators and control roles. This increment has not independently verified founders' legal names, operating entity, jurisdiction, employment histories, capital providers or financing. Those fields remain unknown. No token allocation is not proof of no company financing.
 
+[Bankless and The Defiant launch reports](../../business-snapshot.md) support October 10 trading and the announced 14:00 UTC / 22:00 Shanghai schedule; this does not establish the first executed transaction. Contract set 1's October 7 date and set 2's October 21 date describe versions, not the same event. New manuscript business tables are explicitly provisional where original queries are missing; the existing source snapshot remains unchanged.
+
 ## Mechanism used for comparison
 
 The existing review describes isolated high-leverage positions against the protocol LP; prices based on HyperCore bid/ask midpoint; relayed order submission; and a separate payment queue after settlement. Eligible losses mint PAPER, with supply-relative issuance in set 2 and a conditional insolvency multiplier. PAPER staking can receive USDC distributions. The current transfer restriction and the timing/permissions of distribution matter to that benefit.

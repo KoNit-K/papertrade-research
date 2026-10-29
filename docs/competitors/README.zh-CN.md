@@ -16,7 +16,7 @@
 
 | 产品/档案 | 来历与关系 | 日期证据及限制 |
 |---|---|---|
-| [Papertrade](projects/papertrade.zh-CN.md) | HyperEVM比较基准；使用既有set 2研究 | 文档标set 1从10月7日、set 2从21日。这是版本日期；报道中的10月10日前端上线未在本次独立定锚。 |
+| [Papertrade](projects/papertrade.zh-CN.md) | HyperEVM比较基准；使用既有set 2研究 | Set 1 从 10 月 7 日、set 2 从 21 日是版本日期。上线报道支持 10 月 10 日 UTC 14:00／北京时间 22:00；首笔公开成交仍未独立核定。 |
 | [Jupiter YOLO](projects/yolo.zh-CN.md) | Jupiter Labs，Solana；有归因的设计借鉴 | 10月15日beta公告；Siong镜像显示12:59 UTC／北京时间20:59。原站不可得，首笔公开成交未验证。 |
 | [Cardboard](projects/cardboard.zh-CN.md) | Solana；条款将界面运营方写为 **Attractor Labs, Inc.**；强机制相似 | 镜像中10月18日起有运营更新，条款日期25日；首笔实盘及beta精确时刻未知。 |
 | [Trade Everything](projects/trade-everything.zh-CN.md) | HyperEVM；自称Papertrade社区中的独立项目，明确承认模型借鉴 | 预告10月26日13:30 UTC／北京时间21:30主网上线。Draft、demo、live措辞并存，主网读取失败，未确认实际执行上线。 |
@@ -26,6 +26,8 @@
 档案中没有证据的法定实体、创始人真实履历、总部和产品融资保持未知。Jupiter品牌归属不能代替YOLO签约实体；链或预言机提供商不自动成为发行方。Attractor Labs的名称不能证明注册地，地区访问限制也不证明公司所在地。
 
 发现清单把Trade Everything归到Solana，官方架构实际写HyperEVM。见[候选登记](../../research/competitors/candidates.json)。
+
+[业务补充](../business-snapshot.zh-CN.md)新增 Papertrade 上线报道，不替换 10 月 28 日适配器快照。[核验记录](../research-notes/019-manuscript-reconciliation.md)保留以下边界：YOLO 的 House／队列机制不等于亏损铸币；Cardboard 10 月 25 日是条款日期，未证实为上线日；Rektrade 的市场／配置杠杆冲突仍存在；Trade Everything 的 502 与 Demo 观察不能证明没有上线；STOX 的所在链和永久资本投入设计不能证明 Robinhood 背书或资方定向注资。Backpack／Mad Lads、GMX／Synthetix 团队来历的推测，本次没有可归属的支持证据，不写成已知背景。
 
 ## 支持哪些币种和资产？
 

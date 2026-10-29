@@ -1,5 +1,9 @@
 # Current status
 
+## Technical-sharing manuscript integration — 2026-10-30
+
+The [bilingual business supplement](docs/business-snapshot.md) and existing product/narrative pages integrate the latest manuscript by topic. [Note 019](docs/research-notes/019-manuscript-reconciliation.md) records source checks, arithmetic and exclusions. TVL history is provider-confirmed; cross-venue tables and the exact October 27 fee totals remain author-supplied where original queries are missing. The existing adapter snapshot and all protocol-reproduction milestones retain their original status. No signing, transactions or deployment were performed.
+
 ## Mechanism and funding clarification — 2026-10-28
 
 The [bilingual review](docs/current-product-review.md), [Chinese narrative](docs/papertrade-summary.zh-CN.md) and [scoped follow-up](docs/research-notes/018-mechanism-funding-and-authority.md) add documented BBO/retirement controls, cash/debt settlement branches, funding-stage/fee distinctions and authorization boundaries. A fixed explorer-reported sweep pair has consistent fields and scaled amounts; an offline six-action schedule/execution comparison matches. These are bounded documentation and provider-record checks, not complete current deployment, signature, settlement or bridge reproduction. Existing protocol-reproduction milestones retain their original status.
@@ -615,3 +619,4 @@ local evidence and found no outstanding blocking or high-priority issue in that
 scope. Production code and dependencies are unchanged; the production test suite,
 REA and historical execution were not rerun for publication. This custom JSON
 profile is not validated as a historical chain packet by the existing validator.
+
