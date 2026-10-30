@@ -10,6 +10,7 @@
   <a href="docs/mechanism-map.md"><img alt="Network: HyperEVM 999" src="https://img.shields.io/badge/HyperEVM-999-b7f58b?style=flat-square&amp;labelColor=17251d" /></a>
   <a href="STATUS.md"><img alt="Status: research preview" src="https://img.shields.io/badge/status-research_preview-d8e5db?style=flat-square&amp;labelColor=17251d" /></a>
   <a href="LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-d8e5db?style=flat-square&amp;labelColor=17251d" /></a>
+  <a href="https://madewithrea.com/builds/papertrade-research-frontend-contracts-fees-and-paper-rewards-with-rea"><img src="https://madewithrea.com/badges/featured.svg" alt="Featured on Made with REA" height="20" /></a>
 </p>
 
 <p align="center">
