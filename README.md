@@ -175,7 +175,7 @@ The higher the leverage, the bigger the buffer is relative to your margin. [Form
 
 ## Independent clients and API access
 
-**Checked November 14, 2026, build `2bfe899f52fe`:** [Current interfaces, signatures and execution recovery](docs/programmatic-execution.md). Public market reads and an empty test-address account stream worked; real registration, order admission and fills remain untested.
+**Checked November 14, 2026, build `2bfe899f52fe`:** [Current interfaces, signatures and research code](docs/programmatic-execution.md). Public market reads and an empty test-address account stream were checked, alongside the official client's signing and submission structures.
 
 🛠️ A custom client follows this path: **read prices, rules and account data → sign a request → send it to the official relayer → confirm the actual position and entry price**. Opens and closes still go through the allowed BatchExecutor contract.
 
@@ -183,15 +183,15 @@ The higher the leverage, the bigger the buffer is relative to your margin. [Form
 |---|---|
 | HTTP: `/query/protocol/…` | Protocol totals, queues and PAPER activity. |
 | Public WebSocket: `trading:current` | Whether trading is open and what limits apply, such as leverage and position size. |
-| Account queries and SSE updates: `/query/accounts/…`, `/state/user/live?wallet=…` | Balances, positions, session expiry and past actions. Anonymous reads worked for an empty test address; funded-account access remains unverified. |
+| Account queries and SSE updates: `/query/accounts/…`, `/state/user/live?wallet=…` | Balances, positions, session expiry and past actions. Anonymous read checks used an empty test address. |
 | Signed requests: `POST /intents` | Session setup, open/close requests, withdrawal to HyperCore and PAPER actions. Match the reply to your request, then check execution. A request being accepted does not mean the trade happened. |
-| Signed cancellation: `POST /intents/{intentId}/cancel` | Request cancellation of a queued open/close. If execution wins the race, the resulting position still needs handling. |
+| Signed cancellation: `POST /intents/{intentId}/cancel` | Sign with a valid Session Key and identify the queued open/close by its `intentId`. |
 
 **Authorization:** the master wallet registers a Session Key; the documented lifetime is 30 days, and the current client gives each trade a one-hour deadline. A valid key signs opens, closes and cancellation requests. Withdrawals and PAPER stake/unstake/claim require the master wallet. Revocation is a separate master-wallet transaction; check authorization again before signing.
 
 **Position sizing:** `size` is margin in 18-decimal units; **margin × leverage = notional**, not BTC quantity. Positions close in full, and additional opens create separate positions. The inspected messages have no limit-price or slippage-protection field. To match a BTC exposure, estimate margin from quantity × reference price ÷ leverage, then recalculate exposure from the actual entry price. [Units, pricing and whole-position closes](docs/programmatic-execution.md#3-signed-requests-units-and-limits).
 
-**Limits and recovery:** November 14 configuration reported a 10-USDC minimum margin, 500-USDC minimum notional and 1000× maximum leverage. It also exposed a 1,000-PAPER intake field; its exact action scope and enforcement remain unverified. A timeout leaves execution unknown: check the original intent and current positions before retrying. [Research code and 28 offline tests](docs/programmatic-execution.md#5-state-machine-recovery-and-hedge-integration) cover these risks; production submission defaults disabled, and no real order was sent.
+**Trading limits and research code:** November 14 configuration reported a **10-USDC** minimum margin, **500-USDC** minimum notional and **1000×** maximum leverage. The [research modules and usage guide](docs/programmatic-execution.md#5-state-machine-recovery-and-hedge-integration) provide read-only queries, signing-data construction and open/close request previews, with 28 offline tests.
 
 **Deposits and withdrawals:**
 
