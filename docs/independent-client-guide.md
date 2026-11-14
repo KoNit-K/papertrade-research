@@ -1,5 +1,7 @@
 # Independent client integration guide
 
+**November 14 current-client increment:** [Programmatic execution research](programmatic-execution.md) rechecks build `2bfe899f52fe`, public account/configuration reads, current implementation identities and isolated-domain signature recovery. It adds reusable previews, readers and execution-state tests. This dated increment supersedes the older guide only where it explicitly supplies new evidence; production registration/admission/fills remain unverified.
+
 **2026-10-28 documentation update:** [current product/service review](current-product-review.md) and [confirmed differences](research-notes/016-2026-10-28-sync.md) add documented builder win/loss routing, signed distribution, staged deposits and vendor API boundaries. Signing encodings and frontend construction below remain bound to their captured builds; the update does not certify a new production client.
 
 **Contract set 2 update:** [note 015](research-notes/015-contract-set-2.md) adds the official version names, approved-builder fee rule and the staking fee-push restriction. Earlier recovered interfaces below keep their stated version scope.

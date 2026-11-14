@@ -39,3 +39,13 @@ files and SDK/adapter implementations are not distributed. The event-signature
 lead is attributed to the pinned DefiLlama source in the research note. These
 original summaries do not relicense linked sources or assert rights over raw
 provider data. No wallet-to-report or personal identity association is included.
+
+## Programmatic execution research dependency
+
+viem 2.57.19 (MIT) supplies EIP-712 hashing, signature recovery and ABI encoding.
+It and its transitive dependencies are installed through the pinned lockfile,
+not vendored. Original Papertrade research wrappers, explanations and synthetic
+tests are project code; official frontend bundles, wallet storage, raw RPC
+responses and third-party SDK implementations are not redistributed. The
+[EIP-712 specification](https://eips.ethereum.org/EIPS/eip-712) supplies the
+independent standard reference used by the primitive digest test.

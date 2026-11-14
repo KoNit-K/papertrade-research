@@ -1,5 +1,13 @@
 # Current status
 
+## Programmatic execution research — 2026-11-14
+
+[The current execution report](docs/programmatic-execution.md), [note 020](docs/research-notes/020-programmatic-execution.md) and [CASE-013](research/cases/013-programmatic-execution.json) recheck official build `2bfe899f52fe`, chain-999 reference block 51219500 and three implementation identities that differ from the October study. Anonymous market history/configuration and a synthetic-address account history/SSE bootstrap were read successfully. Canonically sorted query parameters, 23-field market tuples and initial WS publications were checked against current responses. The 1000-PAPER intake field is observed; its exact action gate remains unresolved.
+
+The TypeScript research module supplies explicit unit conversion, unsigned registration/open/whole-close/cancel/funding-action previews, actual isolated-domain signature recovery, account reconciliation and execution tracking. Production open/close/cancel submission defaults disabled, accepts external signatures and has no automatic POST retries. There is no trading strategy or custody implementation. No production-domain signatures, real key registration, intent/cancel POST, funding, staking or claim were performed. A public successful batch receipt supplies an envelope only; individual item execution and current-runtime semantics are not reproduced.
+
+Actual checks: **196/196 tests passed**, including **28 new Papertrade tests**; strict type checking passed; the existing record validator accepted 13 claims, 6 evidence records and 1 version (it does not validate the separately scoped CASE-013 profile); **764 local document links** resolved. All 60 private HTTP/RPC capture records matched byte lengths/SHA-256. Initial full-suite execution failed only because the sandbox prohibited its existing loopback HTTP test from listening on 127.0.0.1; the final complete run with loopback permission passed. The unsigned hedge CLI example also ran successfully. No hosted CI or live execution benchmark was run, and existing protocol-reproduction milestones retain their original status.
+
 ## Technical-sharing manuscript integration — 2026-10-30
 
 The [bilingual business supplement](docs/business-snapshot.md) and existing product/narrative pages integrate the latest manuscript by topic. [Note 019](docs/research-notes/019-manuscript-reconciliation.md) records source checks, arithmetic and exclusions. TVL history is provider-confirmed; cross-venue tables and the exact October 27 fee totals remain author-supplied where original queries are missing. The existing adapter snapshot and all protocol-reproduction milestones retain their original status. No signing, transactions or deployment were performed.

@@ -175,16 +175,23 @@ flowchart TB
 
 ## 独立客户端与 API 接入
 
-🛠️ 自写客户端的流程是 **读取价格、规则和账户数据 → 签署请求 → 发给官方 relayer → 跟踪交易和余额变化**。开平仓仍要经过获准的 BatchExecutor 合约。
+**2026-11-14 核查，前端版本 `2bfe899f52fe`：**[当前接口、签名与研究代码](docs/programmatic-execution.md)。已联调公共市场查询和空测试地址的账户流，并整理官方客户端的签名与提交结构。
+
+🛠️ 自写客户端的流程是 **读取价格、规则和账户数据 → 签署请求 → 发给官方 relayer → 确认实际仓位与入场价**。开平仓仍要经过获准的 BatchExecutor 合约。
 
 | 接口 | 用来做什么 |
 |---|---|
 | HTTP：`/query/protocol/…` | 查看协议总量、队列和 PAPER 动态。 |
 | 公共 WebSocket：`trading:current` | 查看能否交易、杠杆和仓位大小限制。 |
-| 账户查询和实时更新：`/query/accounts/…`、`/state/user/live?wallet=…` | 查看自己的余额、仓位和历史操作；具体登录及访问规则还要核对。 |
+| 账户查询和 SSE 更新：`/query/accounts/…`、`/state/user/live?wallet=…` | 查看余额、仓位、会话有效期和历史操作；匿名读取联调使用空测试地址。 |
 | 签名请求：`POST /intents` | 设置会话授权、开平仓、提现到 HyperCore，以及 PAPER 操作。先把回复和请求对上，再查执行结果；被接收不等于已经成交。 |
+| 签名取消：`POST /intents/{intentId}/cancel` | 使用有效的 Session Key 签署取消请求，通过 `intentId` 指定排队中的开平仓指令。 |
 
-在[此前采集的客户端](docs/research-notes/012-independent-clients-orders-and-bridges.md#position-management-and-order-types)中，可选择若干仓位全平，再开仓形成独立仓位；当时检查未建立单仓部分平仓、原生限价／止盈止损或修改已有保证金／杠杆的接口。
+**授权范围：** 主钱包注册 Session Key，官方文档说明有效期为 30 天，当前客户端为每笔交易设置一小时有效期。有效的 Session Key 可签署开仓、平仓和取消请求；提现及 PAPER 质押、解押、领取需要主钱包签名。撤销授权需要主钱包另发链上交易，签名前应重新核对授权状态。
+
+**仓位怎么计算：** `size` 是 18 位精度的保证金，**保证金 × 杠杆 = 名义本金**。BTC 数量还取决于实际入场价。每笔仓位只能全平，再开仓会形成独立仓位；已检查的签名字段不含限价或滑点保护。匹配 BTC 敞口时，先按“数量 × 参考价格 ÷ 杠杆”估算保证金，成交后再按实际入场价核对。[单位、定价与整仓平仓](docs/programmatic-execution.md#3-signed-requests-units-and-limits)。
+
+**交易门槛与研究代码：** 11 月 14 日配置公布最低保证金 **10 USDC**、最低名义本金 **500 USDC**、最高杠杆 **1000×**。[研究模块与使用说明](docs/programmatic-execution.md#5-state-machine-recovery-and-hedge-integration)提供只读查询、签名数据构造及开平仓请求预览，并附 28 项离线测试。
 
 **充值和提现：**
 
