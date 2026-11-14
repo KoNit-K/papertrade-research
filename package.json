@@ -17,11 +17,13 @@
     "export:metadata": "node packages/export/cli.ts",
     "competitors:refresh": "node --use-env-proxy packages/competitors/cli.ts refresh",
     "competitors:report": "node packages/competitors/cli.ts report",
-    "validate:competitors": "node packages/competitors/cli.ts validate"
+    "validate:competitors": "node packages/competitors/cli.ts validate",
+    "papertrade": "node packages/research/papertrade/cli.ts"
   },
   "dependencies": {
     "@noble/hashes": "2.4.0",
-    "ajv": "8.17.1"
+    "ajv": "8.17.1",
+    "viem": "2.57.19"
   },
   "devDependencies": {
     "@types/node": "26.6.5",

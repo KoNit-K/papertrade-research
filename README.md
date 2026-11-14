@@ -175,6 +175,8 @@ The higher the leverage, the bigger the buffer is relative to your margin. [Form
 
 ## Independent clients and API access
 
+**2026-11-14 execution research:** [Current authorization, signing, account streams and recovery](docs/programmatic-execution.md) adds reusable TypeScript previews/readers and offline signature/state-machine tests. Public reads are live-checked; production submission defaults disabled and no real registration or order was sent. [Evidence and remaining live checklist](docs/research-notes/020-programmatic-execution.md).
+
 🛠️ A custom client follows this path: **read prices, rules and account data → sign a request → send it to the official relayer → follow the trade and balance changes**. Opens and closes still go through the allowed BatchExecutor contract.
 
 | Interface | What you use it for |

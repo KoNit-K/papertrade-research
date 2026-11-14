@@ -379,3 +379,7 @@ A fixed request/finalize pair was read through normal explorer navigation and ch
 [Note 019](research-notes/019-manuscript-reconciliation.md#source-checks-in-this-increment) records each new source and its actual access boundary. New readings cover Bankless/Defiant launch reports, BlockBeats statistics, PANews interview text, the DefiLlama history/methodology, Guardian KV-01, CertiK's account-level analysis and Hyperliquid funding/timing documentation. Papertrade official-page and fee-API rereads were unavailable; earlier dated mechanism evidence is retained without relabelling it as current.
 
 The [business supplement](business-snapshot.md) separates provider-confirmed historical TVL from author-supplied cross-venue tables and October 27 fee totals awaiting original exports. New arithmetic checks do not change source/claim confidence or fill nulls in existing structured records. No raw manuscript/chat, private capture, credentials or wallet-to-person linkage is published.
+
+## November 14 programmatic execution increment
+
+[Current execution report](programmatic-execution.md) and [CASE-013 metadata](../research/cases/013-programmatic-execution.json) bind reread official pages, dynamically discovered frontend modules and explicit-block public RPC observations to build `2bfe899f52fe`. Public synthetic-address history/SSE and anonymous trading configuration were read successfully. Cryptographic recovery and failure scenarios are local tests; live registration, admission, fills and cancellation remain unperformed.

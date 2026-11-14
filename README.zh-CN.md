@@ -175,6 +175,8 @@ flowchart TB
 
 ## 独立客户端与 API 接入
 
+**2026-11-14 程序化执行研究：**[当前授权、签名、账户流与失败恢复](docs/programmatic-execution.md)补充可复用 TypeScript 预览、只读查询和离线签名／状态机测试。公共只读接口已联调；真实提交默认关闭，本次未注册真实 Session Key 或发送订单。[证据与待验证清单](docs/research-notes/020-programmatic-execution.md)。
+
 🛠️ 自写客户端的流程是 **读取价格、规则和账户数据 → 签署请求 → 发给官方 relayer → 跟踪交易和余额变化**。开平仓仍要经过获准的 BatchExecutor 合约。
 
 | 接口 | 用来做什么 |
